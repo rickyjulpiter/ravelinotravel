@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Synergi Ravelino Tours & Travel by SistemPintar</title>
+    <title>Synergi Ravelino Tours & Travel</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png">
     <!-- Bootstrap core CSS -->
