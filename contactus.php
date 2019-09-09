@@ -22,9 +22,7 @@
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Destinations</a></li>
-                        <li class="breadcrumb-item"><a href="#">Bahamas Cruises</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Booking</li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                     </ul>
                 </nav>
             </div>
@@ -73,7 +71,7 @@
                         <div class="about-logo">
                             <img src="images/Yatra-01.png" alt="Image">
                         </div>
-                        <h4>Travel With Us</h4>
+                        <h4>Your Link To The Best Traveling</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <div class="contact-location">
                             <ul>
