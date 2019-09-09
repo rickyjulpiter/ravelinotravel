@@ -177,7 +177,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">North Sumatera</a></h4>
+                                <h4><a href="tour.php">North Sumatera</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -188,7 +188,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">West Sumatera</a></h4>
+                                <h4><a href="tour.php">West Sumatera</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -199,7 +199,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">South Sumatera</a></h4>
+                                <h4><a href="tour.php">South Sumatera</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -210,7 +210,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">Java Island</a></h4>
+                                <h4><a href="tour.php">Java Island</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -221,7 +221,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">Bali</a></h4>
+                                <h4><a href="tour.php">Bali</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -232,7 +232,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">West & East Nusa Tenggara</a></h4>
+                                <h4><a href="tour.php">West & East Nusa Tenggara</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -243,7 +243,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">Sulawesi</a></h4>
+                                <h4><a href="tour.php">Sulawesi</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -254,7 +254,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">Kalimantan</a></h4>
+                                <h4><a href="tour.php">Kalimantan</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -265,7 +265,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">Maluku</a></h4>
+                                <h4><a href="tour.php">Maluku</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
@@ -276,7 +276,7 @@
                     <div class="destination-item-1 box-item">
                         <div class="destination-content-1">
                             <div class="destination-upper">
-                                <h4><a href="tour-detail.html">Papua</a></h4>
+                                <h4><a href="tour.php">Papua</a></h4>
                             </div>
                             <div class="destination-lower clearfix">
                             </div>
