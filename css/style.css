@@ -60,6 +60,7 @@
   box-sizing: border-box; 
 }
 
+
 ol, ul {
   list-style: none;
 }
@@ -104,6 +105,7 @@ article,
 aside,
 footer {
   display: block; 
+  background-image: url(https://images.pexels.com/photos/1437828/pexels-photo-1437828.jpeg?cs=srgb&dl=daun-besar-daun-pisang-greenary-1437828.jpg&fm=jpg);
 }
 
 * {
@@ -120,6 +122,7 @@ body {
   line-height: 1.5;
   color: #333;
   font-weight: 300; 
+  background-image: url(https://images.pexels.com/photos/1437828/pexels-photo-1437828.jpeg?cs=srgb&dl=daun-besar-daun-pisang-greenary-1437828.jpg&fm=jpg);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -4507,7 +4510,9 @@ section.amazing-tours{
 .at-image{
   overflow: hidden;
   position: relative;
+  
 }
+
 .at-overlay{
   position: absolute;
   top: 0;

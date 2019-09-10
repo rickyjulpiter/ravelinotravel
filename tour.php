@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="https://www.larutadelsorigens.cat/wallpic/full/80-807611_berastagi-by-berastagi-indonesia.jpg" alt="Image" width="293px" height="195px">
+                        <img src="https://www.larutadelsorigens.cat/wallpic/full/80-807611_berastagi-by-berastagi-indonesia.jpg" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content">
                             <h3><a href="tour-area.php"  style="color: green">Brastagi, North Sumatra</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="https://www.en.safariwisata.co.id/wp-content/uploads/2019/04/IMG_20190227_134658_514.jpg" alt="Image" width="293px" height="195px">
+                        <img src="https://www.en.safariwisata.co.id/wp-content/uploads/2019/04/IMG_20190227_134658_514.jpg" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content">
                             <h3><a href="tour-area.php"  style="color: green">Dua Island, Aceh</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="https://steemitimages.com/DQmeQhFUfegFFSj2vBNqVUirhaX55ViLUX8Ua8C6CJGcJqd/0858062Aceh-Singkil-Pulau-Asok780x390.jpg" alt="Image" width="293px" height="195px">
+                        <img src="https://steemitimages.com/DQmeQhFUfegFFSj2vBNqVUirhaX55ViLUX8Ua8C6CJGcJqd/0858062Aceh-Singkil-Pulau-Asok780x390.jpg" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content">
                             <h3><a href="tour-area.php"  style="color: green">Asok Island, Aceh</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="https://4.bp.blogspot.com/-BC_VgwXvybY/VntCSid5ovI/AAAAAAAAL7I/foHh66dZMyc/s1600/pulaubalai1.JPG" alt="Image" width="293px" height="195px">
+                        <img src="https://4.bp.blogspot.com/-BC_VgwXvybY/VntCSid5ovI/AAAAAAAAL7I/foHh66dZMyc/s1600/pulaubalai1.JPG" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content">
                             <h3><a href="tour-area.php"  style="color: green">Balai Island, Aceh</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="http://1.bp.blogspot.com/-Z2XoSSzm7o0/U2ooa1tZsZI/AAAAAAAABw8/6sN-NPWgVj0/s1600/IMG_1591.jpg" alt="Image" width="293px" height="195px">
+                        <img src="http://1.bp.blogspot.com/-Z2XoSSzm7o0/U2ooa1tZsZI/AAAAAAAABw8/6sN-NPWgVj0/s1600/IMG_1591.jpg" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content">
                             <h3><a href="tour-area.php"  style="color: green">Balong Island, Aceh</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="http://1.bp.blogspot.com/-QQyYT4eQ5rM/VH1ja-HUZHI/AAAAAAAAAZg/y424d-QK3n0/s1600/Pulau%2Bbanyak.jpg" alt="Image" width="293px" height="195px">
+                        <img src="http://1.bp.blogspot.com/-QQyYT4eQ5rM/VH1ja-HUZHI/AAAAAAAAAZg/y424d-QK3n0/s1600/Pulau%2Bbanyak.jpg" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content">
                             <h3><a href="tour-area.php"  style="color: green">Bangkaru Island, Aceh</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>

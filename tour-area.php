@@ -143,7 +143,7 @@
                             <div class="sidebar-content sidebar-slider">
                                 <div class="sidebar-package">
                                     <div class="sidebar-package-image">
-                                        <img src="https://www.larutadelsorigens.cat/wallpic/full/80-807611_berastagi-by-berastagi-indonesia.jpg" alt="Images" width="261px" height="174px">
+                                        <img src="https://www.larutadelsorigens.cat/wallpic/full/80-807611_berastagi-by-berastagi-indonesia.jpg" alt="Images" width="261px" height="174px" style="object-fit: cover;">
                                     </div>
                                     <div class="destination-content sidebar-package-content">
                                         <h4><a href="hotel-detail.html">Brastagi, North Sumatra</a></h4>
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="sidebar-package">
                                     <div class="sidebar-package-image">
-                                        <img src="https://www.en.safariwisata.co.id/wp-content/uploads/2019/04/IMG_20190227_134658_514.jpg" alt="Images" width="261px" height="174px">
+                                        <img src="https://www.en.safariwisata.co.id/wp-content/uploads/2019/04/IMG_20190227_134658_514.jpg" alt="Images" width="261px" height="174px" style="object-fit: cover;">
                                     </div>
                                     <div class="destination-content sidebar-package-content">
                                         <h4><a href="hotel-detail.html">Dua Island, Aceh</a></h4>

@@ -17,7 +17,7 @@
     <!-- Navigation Bar Ends -->
 
     <!-- Banner -->
-    <section id="home_banner">
+    <section id="home_banner" style="background-image: url(https://images.pexels.com/photos/1437828/pexels-photo-1437828.jpeg?cs=srgb&dl=daun-besar-daun-pisang-greenary-1437828.jpg&fm=jpg);">
         <!-- Paradise Slider -->
         <div id="kenburns_061" class="carousel slide ps_indicators_txt_icon ps_control_txt_icon kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart" data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
             <!-- Wrapper For Slides -->
@@ -85,7 +85,7 @@
     <!--* End bucket*-->
 
     <!-- Amazing Tours -->
-    <section class="amazing-tours">
+    <section class="amazing-tours" >
         <div class="container">
             <div class="section-title text-center">
                 <h2>Amazing Tours</h2>
@@ -95,7 +95,7 @@
                 <div class="col-md-6 col-xs-12">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://wallpapershome.com/images/wallpapers/danau-toba-3840x2160-4k-hd-wallpaper-indonesia-sailing-ship-rocks-sea-1044.jpg" alt="Image" width="555px" height="373px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Indonesia_-_Lake_Toba_%2826224127503%29.jpg" alt="Image" width="555px" height="373px" style="object-fit: cover;">
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
@@ -106,7 +106,7 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Istano_Pagaruyuang.jpg/1200px-Istano_Pagaruyuang.jpg" alt="Image" width="263px" height="371px"> 
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Istano_Pagaruyuang.jpg/1200px-Istano_Pagaruyuang.jpg" alt="Image" width="263px" height="371px" style="object-fit: cover;"> 
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
@@ -117,7 +117,7 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://sumabeachlifestyle.com/wp-content/uploads/2016/04/IMG_7479-700x469.jpg" alt="Image" width="263px" height="371px">
+                            <img src="https://sumabeachlifestyle.com/wp-content/uploads/2016/04/IMG_7479-700x469.jpg" alt="Image" width="263px" height="371px" style="object-fit: cover;">
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
@@ -130,7 +130,7 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/08/cover-java.jpg" alt="Image" width="263px" height="371px">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/08/cover-java.jpg" alt="Image" width="263px" height="371px" style="object-fit: cover;">
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
@@ -141,7 +141,7 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg" alt="Image" width="263px" height="371px">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg" alt="Image" width="263px" height="371px"  style="object-fit: cover;">
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
@@ -152,7 +152,7 @@
                 <div class="col-md-6 col-xs-12">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://i.ytimg.com/vi/feoRIr5MNHM/maxresdefault.jpg" alt="Image" width="555px" height="373px">
+                            <img src="https://i.ytimg.com/vi/feoRIr5MNHM/maxresdefault.jpg" alt="Image" width="555px" height="373px" style="object-fit: cover;">
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
