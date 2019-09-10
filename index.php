@@ -17,7 +17,7 @@
     <!-- Navigation Bar Ends -->
 
     <!-- Banner -->
-    <section id="home_banner" style="background-image: url(https://images.pexels.com/photos/1437828/pexels-photo-1437828.jpeg?cs=srgb&dl=daun-besar-daun-pisang-greenary-1437828.jpg&fm=jpg);">
+    <section id="home_banner">
         <!-- Paradise Slider -->
         <div id="kenburns_061" class="carousel slide ps_indicators_txt_icon ps_control_txt_icon kbrns_zoomInOut thumb_scroll_x swipe_x ps_easeOutQuart" data-ride="carousel" data-pause="hover" data-interval="10000" data-duration="2000">
             <!-- Wrapper For Slides -->
