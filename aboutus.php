@@ -84,69 +84,6 @@
     </section>
     <!-- About Us Ends -->
 
-    <!-- Our Team -->
-    <section class="our-team">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="section-title text-center">
-                        <h2>Our Team</h2>
-                        <div class="section-icon section-icon-white">
-                            <i class="flaticon-diamond"></i>
-                        </div>       
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="images/testemonial1.jpg" alt="Image">
-                        </div>
-                        <div class="team-content">
-                            <h3>Peter Parker</h3>
-                            <p>Tour Advisor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="images/testemonial2.jpg" alt="Image">
-                        </div>
-                        <div class="team-content">
-                            <h3>Peter Parker</h3>
-                            <p>Tour Advisor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="images/testemonial3.jpg" alt="Image">
-                        </div>
-                        <div class="team-content">
-                            <h3>Peter Parker</h3>
-                            <p>Tour Advisor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="images/testemonial1.jpg" alt="Image">
-                        </div>
-                        <div class="team-content">
-                            <h3>Peter Parker</h3>
-                            <p>Tour Advisor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Our Team Ends -->
-
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="section-title text-center">
