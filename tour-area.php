@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title> Synergi Ravelino Tours & Travel</title>
+    
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--Custom CSS-->
-    <link href="css/hotel.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <!--Flaticons CSS-->
     <link href="font/flaticon.css" rel="stylesheet" type="text/css">
     <!--Plugin CSS-->
@@ -53,14 +54,15 @@
     <!-- BreadCrumb Ends -->
 
     <!-- hotel detail --> 
-    <section class="main-content detail pad-bottom-80">
+    <section class="main-content detail">
         <div class="container">
             <div class="row">
                 <div id="content" class="col-md-8">
-                    <div class="detail-content content-wrapper">
-                        <div class="section-title" style="width: 100%">
-                            <h2>Brastagi, <span>North Sumatra</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .</p>
+                    <div class="detail-content content-wrapper">   
+                        <div class="detail-info">
+                            <div class="detail-info-content clearfix">
+                                <h2>Brastagi, Sumatera Utara</h2>
+                            </div>
                         </div>
                         <div class="gallery detail-box">
                             <!-- Paradise Slider -->
@@ -70,21 +72,21 @@
                                     <!-- 1st Indicator -->
                                     <li data-target="#in_th_030" data-slide-to="0" class="active">
                                         <!-- 1st Indicator Image -->
-                                        <img src="images/hotel/room-1.jpg" alt="in_th_030_01_sm" />
+                                        <img src="images/detailslider1.jpg" alt="in_th_030_01_sm" />
                                     </li>
                                     <!-- 2nd Indicator -->
                                     <li data-target="#in_th_030" data-slide-to="1">
                                         <!-- 2nd Indicator Image -->
-                                        <img src="images/hotel/room-2.jpg" alt="in_th_030_02_sm" />
+                                        <img src="images/detailslider2.jpg" alt="in_th_030_02_sm" />
                                     </li>
                                     <!-- 3rd Indicator -->
                                     <li data-target="#in_th_030" data-slide-to="2">
                                         <!-- 3rd Indicator Image -->
-                                        <img src="images/hotel/room-3.jpg" alt="in_th_030_03_sm" />
+                                        <img src="images/detailslider3.jpg" alt="in_th_030_03_sm" />
                                     </li>
                                     <li data-target="#in_th_030" data-slide-to="3">
                                         <!-- 3rd Indicator Image -->
-                                        <img src="images/hotel/room-4.jpg" alt="in_th_030_03_sm" />
+                                        <img src="images/detailslider4.jpg" alt="in_th_030_03_sm" />
                                     </li>
                                 </ol> <!-- /Indicators -->
                                 <!-- Wrapper For Slides -->
@@ -92,24 +94,24 @@
                                     <!-- First Slide -->
                                     <div class="item active">
                                         <!-- Slide Background -->
-                                        <img src="images/hotel/room-1.jpg" alt="in_th_030_01" />                                        
+                                        <img src="images/detailslider1.jpg" alt="in_th_030_01" />                                        
                                     </div>
                                     <!-- End of Slide -->
                                     <!-- Second Slide -->
                                     <div class="item">
                                         <!-- Slide Background -->
-                                        <img src="images/hotel/room-2.jpg" alt="in_th_030_02" />
+                                        <img src="images/detailslider2.jpg" alt="in_th_030_02" />
                                     </div>
                                     <!-- End of Slide -->
                                     <!-- Third Slide -->
                                     <div class="item">
                                         <!-- Slide Background -->
-                                        <img src="images/hotel/room-3.jpg" alt="in_th_030_03" />
+                                        <img src="images/detailslider3.jpg" alt="in_th_030_03" />
                                     </div>
                                     <!-- End of Slide -->
                                     <div class="item">
                                         <!-- Slide Background -->
-                                        <img src="images/hotel/room-4.jpg" alt="in_th_030_03" />
+                                        <img src="images/detailslider4.jpg" alt="in_th_030_03" />
                                     </div>
                                 </div> <!-- End of Wrapper For Slides -->
                             </div> <!-- End Paradise Slider -->
@@ -119,7 +121,7 @@
                                 <h3>Description</h3>
                             </div>
                             <div class="description-content">
-                                <p>Brazil’s view takes you through clouds of mist and the opportunity to see these 275 falls, spanning nearly two miles! Argentina’s side allows you to walk along the boardwalk network and embark on a jungle train through the forest for unforgettable views. Hear the deafening roar and admire the brilliant rainbows created by the clouds of spray, and take in the majesty of this wonder of the world. From vibrant cities to scenic beauty, this vacation to Rio de Janeiro, Iguassu Falls, and Buenos Aires will leave you with vacation memories you’ll cherish for life.</p>
+                                <p>Berastagi merupakan salah satu kota di Sumatera Utara yang berhawa sejuk. Lokasinya tidak jauh dari kota Medan, kamu bisa menggunakan bus Sinabung atau Sutra yang harganya murah meriah sudah bisa membawamu ke berbagai tempat menarik di Berastagi. Tapi jika ingin lebih banyak mengunjungi tempat wisata di sekitar kabupaten Karo ini, lebih baik menggunakan kendaraan pribadi.</p>
                             </div>
                         </div>
                         <div class="location-map detail-box">
@@ -127,39 +129,75 @@
                                 <h3>Location Map</h3>
                             </div>
                             <div class="map-frame">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15934.616860254071!2d98.49615823720623!3d3.185312337492533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031028adff333f9%3A0x5eba62355c88647b!2sBerastagi%2C%20Gundaling%20II%2C%20Kec.%20Berastagi%2C%20Kabupaten%20Karo%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1567965038516!5m2!1sid!2sid" style="border:0;" allowfullscreen=""></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28185.510535377554!2d86.90746548742861!3d27.98811904127681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2z4KS44KSX4KSw4KSu4KS-4KSl4KS-!5e0!3m2!1sne!2snp!4v1544516755007" style="border:0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        
+                        <div class="top-attractions detail-box">
+                            <div class="detail-title">
+                                <h3>Avalaible Packages</h3>
+                            </div>
+                            <div class="top-attraction-content">
+                                <div class="att-item clearfix">
+                                    <div class="att-image">
+                                        <img src="images/bucket1.jpg" alt="Images">
+                                    </div>
+                                    <div class="att-content">
+                                        <div class="att-content-left">
+                                            <h5>07 DAYS /06 NIGHTS MEDAN – BRASTAGI – KETAMBE AND LAKE TOBA TOUR</h5>
+                                            <p>The Batak Tribe, also described as Austronesian ethnic groups are mainly found in North Sumatra, Indonesia.</p>
+                                        </div>
+                                        <div class="att-content-right">
+                                            <a href="tour-detail.php" style="margin-top:25px;" class="btn-blue btn-red">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="att-item clearfix">
+                                    <div class="att-image">
+                                        <img src="images/bucket1.jpg" alt="Images">
+                                    </div>
+                                    <div class="att-content">
+                                        <div class="att-content-left">
+                                            <h5>11 DAYS /09 NIGHTS MEDAN – TANGKAHAN - BUKIT LAWANG - BRASTAGI – KETAMBE AND LAKE TOBA TOUR</h5>
+                                            <p>The Batak Tribe, also described as Austronesian ethnic groups are mainly found in North Sumatra, Indonesia.</p>
+                                        </div>
+                                        <div class="att-content-right">
+                                            <a href="tour-detail.php" style="margin-top:25px;" class="btn-blue btn-red">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div id="sidebar-sticky" class="col-md-4">
                     <aside class="detail-sidebar sidebar-wrapper">
                         <div class="sidebar-item">
                             <div class="detail-title">
-                                <h3>Place of Interest</h3>
+                                <h3>Popular Packages</h3>
                             </div>
                             <div class="sidebar-content sidebar-slider">
                                 <div class="sidebar-package">
                                     <div class="sidebar-package-image">
-                                        <img src="https://www.larutadelsorigens.cat/wallpic/full/80-807611_berastagi-by-berastagi-indonesia.jpg" alt="Images" width="261px" height="174px" style="object-fit: cover;">
+                                        <img src="images/detailslider1.jpg" alt="Images">
                                     </div>
                                     <div class="destination-content sidebar-package-content">
-                                        <h4><a href="hotel-detail.html">Brastagi, North Sumatra</a></h4>
-                                        <a href="#" class=" btn-red">Detail Place</a>
+                                        <h4><a href="tour-detail.html">15 DAYS/14 NIGHTS MEDAN – BUKIT LAWANG – LAKE TOBA – BARUMUN NWS - KERINCI SEBLAT – PADANG OVERLAND TOURS</a></h4>
+                                        <br>
+                                        <a href="#" class="btn-blue btn-red">Book Now</a>
                                     </div>
                                 </div>
                                 <div class="sidebar-package">
                                     <div class="sidebar-package-image">
-                                        <img src="https://www.en.safariwisata.co.id/wp-content/uploads/2019/04/IMG_20190227_134658_514.jpg" alt="Images" width="261px" height="174px" style="object-fit: cover;">
+                                        <img src="images/detailslider1.jpg" alt="Images">
                                     </div>
                                     <div class="destination-content sidebar-package-content">
-                                        <h4><a href="hotel-detail.html">Dua Island, Aceh</a></h4>
-                                        <a href="#" class=" btn-red">Detail Place</a>
+                                        <h4><a href="tour-detail.html">15 DAYS / 14 NIGHTS PADANG - KERINCI SEBLAT - KUBU AND WAY KANAN ADVENTURE</a></h4>
+                                        <br>
+                                        <a href="#" class="btn-blue btn-red">Book Now</a>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="sidebar-item sidebar-helpline">
                             <div class="sidebar-helpline-content">
