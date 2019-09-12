@@ -21,7 +21,7 @@
                                         <li><a href="#">Tour & Destination</a></li>
                                         <li><a href="#">Tour Packages</a></li>
                                         <li><a href="#">Ticketing</a></li>
-                                        <li><a href="#">Car Rental</a></li>
+                                        <li><a href="rent-car.php">Car Rental</a></li>
                                     </ul>
                                 </li>
                                 <li class="<?php if($page=='contactus'){echo 'active';} ?>">
