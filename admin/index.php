@@ -1,4 +1,6 @@
 <?php
+include 'koneksi.php';
+
 session_start();
 if($_SESSION['status']!="login"){
   header("location:login.php");
@@ -56,12 +58,24 @@ if($_SESSION['status']!="login"){
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                  $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah")or die(mysqli_error());
+                  $nomor = 1;
+                  while($data = mysqli_fetch_array($query_mysql)){
+                    $id = $data['id_wisata'];
+                    $nama = $data['nama_wisata'];
+                    $deskripsi = $data['deskripsi_wisata'];
+                  ?>
                   <tr>
-                    <td>1</td>
-                    <td>Northen Sumatra</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .</td>
-                    <td><a href="" class="btn btn-primary btn-xs">Ubah</a> <a href="" class="btn btn-danger btn-xs">Hapus</a> </td>
+                    <td><?php echo $nomor++; ?></td>
+                    <td><?php echo $nama; ?></td>
+                    <td><?php echo $deskripsi; ?></td>
+                    <td>
+                      <a href='destinasi-ubah.php?id_wisata=<?php echo $id; ?>' class="btn btn-primary btn-xs">Ubah</a>
+                      <a href='destinasi-hapus.php?id_wisata=<?php echo $id; ?>' class="btn btn-danger btn-xs">Hapus</a>
+                    </td>
                   </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>
@@ -77,7 +91,6 @@ if($_SESSION['status']!="login"){
   </div>
   <?php include 'adm_template/footer.php'; ?>
 
-  
 </div>
 <!-- ./wrapper -->
 
