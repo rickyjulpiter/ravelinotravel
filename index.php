@@ -152,7 +152,7 @@
                 <div class="col-md-6 col-xs-12">
                     <div class="at-item box-item">
                         <div class="at-image">
-                            <img src="https://i.ytimg.com/vi/feoRIr5MNHM/maxresdefault.jpg" alt="Image" width="555px" height="373px" style="object-fit: cover;">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg" alt="Image" width="555px" height="373px" style="object-fit: cover;">
                             <div class="at-overlay"></div>
                         </div>
                         <div class="at-content">
