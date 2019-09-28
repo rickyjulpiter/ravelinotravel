@@ -68,18 +68,35 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-about footer-margin">
+                        <?php
+                        include 'admin/koneksi.php';
+                        $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_TentangTravel")or die(mysqli_error());
+                        while($data = mysqli_fetch_array($query_mysql)){
+                            $title = $data['nama_travel'];
+                            $slogan = $data['slogan_travel'];
+                            $gambar = $data['logo_travel'];
+                            $alamat = $data['alamat_travel'];
+                            $nohp = $data['nohp_travel'];
+                            $email = $data['email_travel'];
+                            if ($gambar == '') {
+                                $status = 'display:none;';
+                            }
+                            else {
+                                $logo = $gambar;
+                            }
+                        ?>
                         <div class="about-logo">
-                            <img src="images/Yatra-01.png" alt="Image">
+                            <img src="admin/images/<?php echo $logo ?>" alt="Image" style="<?php echo $status ?>">
                         </div>
-                        <h4>Your Link To The Best Traveling</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <h4><?php echo $slogan ?></h4>
                         <div class="contact-location">
                             <ul>
-                                <li><i class="flaticon-maps-and-flags" aria-hidden="true"></i> Location</li>
-                                <li><i class="flaticon-phone-call"></i> (012)-345-6789</li>                                        
-                                <li><i class="flaticon-mail"></i> tourntravel@testmail.com</li>
+                                <li><i class="flaticon-maps-and-flags" aria-hidden="true"></i> <?php echo $alamat ?></li>
+                                <li><i class="flaticon-phone-call"></i> <?php echo $nohp ?></li>                                        
+                                <li><i class="flaticon-mail"></i> <?php echo $email ?></li>
                             </ul>
                         </div>
+                        <?php } ?>
                         <div class="footer-social-links">
                             <ul>
                                 <li class="social-icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

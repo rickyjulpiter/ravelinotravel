@@ -1,8 +1,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Synergi Ravelino Tours & Travel</title>
+    <?php
+    include 'admin/koneksi.php';
+    $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_TentangTravel")or die(mysqli_error());
+    while($data = mysqli_fetch_array($query_mysql)){
+        $title = $data['nama_travel'];
+    ?>
+    <title><?php echo $title; ?></title>
+    <?php } ?>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png">
     <!-- Bootstrap core CSS -->

@@ -18,6 +18,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="tentang-travel.php" class="nav-link">
+              <i class="nav-icon fa fa-user"></i>
+              <p>
+                Tentang Travel
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="./logout.php" class="nav-link">
               <i class="fas fa-sign-out-alt"></i>
               <p>

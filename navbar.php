@@ -5,7 +5,22 @@
                     <!-- start Navbar (Header) -->
                     <nav class="navbar navbar-default navbar-sticky-function navbar-arrow">
                         <div class="logo pull-left">
-                            <a href="index.php"><img alt="Image" src="images/Yatra-01.png"></a>
+                            <a href="index.php">
+                                <?php
+                                include 'admin/koneksi.php';
+                                $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_TentangTravel")or die(mysqli_error());
+                                while($data = mysqli_fetch_array($query_mysql)){
+                                    $gambar = $data['logo_travel'];
+                                    if ($gambar == '') {
+                                        $status = 'display:none;';
+                                    }
+                                    else {
+                                        $logo = $gambar;
+                                    }
+                                ?>
+                                <img alt="Image" src="admin/images/<?php echo $logo ?>" style="<?php echo $status ?>">
+                                <?php } ?>
+                            </a>
                         </div>
                         <div id="navbar" class="navbar-nav-wrapper pull-right">
                             <ul class="nav navbar-nav" id="responsive-menu">
