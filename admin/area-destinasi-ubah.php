@@ -6,7 +6,7 @@ if($_SESSION['status']!="login"){
   header("location:login.php");
 }
 
-$idDestinasi = $_GET['id_wisata'];
+$id_wisata = $_GET['id_wisata'];
 ?>
 <style type="text/css">
     #image-preview{
@@ -53,15 +53,15 @@ $idDestinasi = $_GET['id_wisata'];
                         <!-- left column -->
                         <div class="col-md-12">
                             <!-- general form elements -->
-                            <div class="card card-info">
+                            <div class="card card-primary">
                                 <div class="card-header">
                                     <h3 class="card-title"></h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="destinasi-ubah-aksi.php" enctype="multipart/form-data">
+                                <form role="form" method="POST" action="area-destinasi-ubah-aksi.php" enctype="multipart/form-data">
                                 	<?
-                                	$data = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah WHERE id_wisata = '$idDestinasi'");
+                                	$data = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayahArea WHERE id_wisata_area = '$id_wisata'");
 									while($d = mysqli_fetch_array($data)){
 										//echo $d['nama_wisata'];
 										//echo $d['deskripsi_wisata'];
@@ -69,8 +69,8 @@ $idDestinasi = $_GET['id_wisata'];
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama Destinasi Wisata</label>
-                                            <input name="nama_wisata" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['nama_wisata']; ?>">
-                                            <input type="hidden" name="id_wisata" value="<?php echo $d['id_wisata']; ?>">
+                                            <input name="nama_wisata" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['nama_wisata_area']; ?>">
+                                            <input type="hidden" name="id_wisata" value="<?php echo $d['id_wisata_area']; ?>">
                                         </div>
                                         <div class="form-group">
                                         	<label for="exampleInputPassword1">Deskripsi Destinasi Wisata</label>
@@ -86,7 +86,7 @@ $idDestinasi = $_GET['id_wisata'];
 					                        </div>
 					                        <div class="pad">
 					                         	<div class="">
-					                         		<textarea name="deskripsi_wisata" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $d['deskripsi_wisata']; ?>
+					                         		<textarea name="deskripsi_wisata" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $d['deskripsi_wisata_area']; ?>
 					                                </textarea>
 					                            </div>
 					                        </div>
@@ -100,7 +100,7 @@ $idDestinasi = $_GET['id_wisata'];
                                             </div>
                                             <div>
                                                 <?php
-                                                if ($d['gambar_wisata'] == '') {
+                                                if ($d['gambar_wisata_area'] == '') {
                                                     $tampakGambar = 'display:none;';
                                                 }
                                                 else {
@@ -108,7 +108,7 @@ $idDestinasi = $_GET['id_wisata'];
                                                 }
                                                 ?>
                                                 
-                                                <img src="<?php echo "images/".$d['gambar_wisata']; ?>" alt="Image" width="293px" height="195px" style="object-fit: cover; <?php echo($tampakGambar); ?> ">
+                                                <img src="<?php echo "images/".$d['gambar_wisata_area']; ?>" alt="Image" width="293px" height="195px" style="object-fit: cover; <?php echo($tampakGambar); ?> ">
 
                                                 
                                             </div>

@@ -1,3 +1,6 @@
+<?php
+include 'admin/koneksi.php';
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
@@ -84,209 +87,37 @@
     </section>
     <!--* End bucket*-->
 
-    <!-- Amazing Tours -->
-    <section class="amazing-tours" >
+    <!-- Popular Packages --> 
+    <section class="amazing-tours popular-packages pad-bottom-80">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Amazing Tours</h2>
+                <h2>Tour Destination</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
             </div>
             <div class="row">
-                <div class="col-md-6 col-xs-12">
-                    <div class="at-item box-item">
-                        <div class="at-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Indonesia_-_Lake_Toba_%2826224127503%29.jpg" alt="Image" width="555px" height="373px" style="object-fit: cover;">
-                            <div class="at-overlay"></div>
-                        </div>
-                        <div class="at-content">
-                            <h3><a href="tour.php">North Sumatra</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="at-item box-item">
-                        <div class="at-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Istano_Pagaruyuang.jpg/1200px-Istano_Pagaruyuang.jpg" alt="Image" width="263px" height="371px" style="object-fit: cover;"> 
-                            <div class="at-overlay"></div>
-                        </div>
-                        <div class="at-content">
-                            <h3><a href="tour.php">West Sumatra</a></h3>
+                <?php
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah")or die(mysqli_error());
+                $nomor = 1;
+                while($data = mysqli_fetch_array($query_mysql)){
+                    $id = $data['id_wisata'];
+                    $nama = $data['nama_wisata'];
+                    $deskripsi = $data['deskripsi_wisata'];
+                    $gambar = $data['gambar_wisata'];
+                    ?>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="package-item">
+                        <img src="<?php echo "admin/images/".$gambar ?>" alt="Image" width="293px" height="195px" style="object-fit: cover;">
+                        <div class="package-content">
+                            <h3><a href="destination.php?nama_wisata=<?php echo $nama; ?>"  style="color: green"><?php echo $nama ?></a></h3>
+                            <p><?php echo $deskripsi ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="at-item box-item">
-                        <div class="at-image">
-                            <img src="https://sumabeachlifestyle.com/wp-content/uploads/2016/04/IMG_7479-700x469.jpg" alt="Image" width="263px" height="371px" style="object-fit: cover;">
-                            <div class="at-overlay"></div>
-                        </div>
-                        <div class="at-content">
-                            <h3><a href="tour.php">South Sumatra</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-xs-6">
-                    <div class="at-item box-item">
-                        <div class="at-image">
-                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/08/cover-java.jpg" alt="Image" width="263px" height="371px" style="object-fit: cover;">
-                            <div class="at-overlay"></div>
-                        </div>
-                        <div class="at-content">
-                            <h3><a href="tour.php">Java Island</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="at-item box-item">
-                        <div class="at-image">
-                            <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg" alt="Image" width="263px" height="371px"  style="object-fit: cover;">
-                            <div class="at-overlay"></div>
-                        </div>
-                        <div class="at-content">
-                            <h3><a href="tour.php">Bali Island</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div class="at-item box-item">
-                        <div class="at-image">
-                            <img src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg" alt="Image" width="555px" height="373px" style="object-fit: cover;">
-                            <div class="at-overlay"></div>
-                        </div>
-                        <div class="at-content">
-                            <h3><a href="tour.php">East Indonesia</a></h3>
-                        </div>
-                    </div>
-                </div>
+            <?php } ?>
             </div>
         </div>
     </section>
-    <!-- Amazing Tours Ends -->
-
-    <!-- Place of Interest -->
-    <section class="amazing-tours">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Place Of Interest</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">North Sumatera</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">West Sumatera</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">South Sumatera</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">Java Island</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">Bali</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">West & East Nusa Tenggara</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">Sulawesi</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">Kalimantan</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">Maluku</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="destination-item-1 box-item">
-                        <div class="destination-content-1">
-                            <div class="destination-upper">
-                                <h4><a href="tour.php">Papua</a></h4>
-                            </div>
-                            <div class="destination-lower clearfix">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Place of Interest Ends -->
+    <!-- Popular Packages Ends -->
 
     <!-- Trusted Partners -->
     <section class="trusted-partners" style="background-color: #009436">

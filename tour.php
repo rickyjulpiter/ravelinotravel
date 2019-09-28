@@ -36,7 +36,7 @@
 
 
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center">
+    <section class="breadcrumb-outer text-center" style="background: url('https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/2/2018/12/930-x-550-15.png')">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2>Place of Interest</h2>

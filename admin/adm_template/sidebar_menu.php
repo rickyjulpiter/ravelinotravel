@@ -2,10 +2,18 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">WISATA</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="index.php" class="nav-link">
               <i class="nav-icon far fa-map"></i>
               <p>
                 Destinasi Wisata
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="area-destinasi.php" class="nav-link">
+              <i class="nav-icon fas fa-map-pin"></i>
+              <p>
+                Area Destinasi Wisata
               </p>
             </a>
           </li>

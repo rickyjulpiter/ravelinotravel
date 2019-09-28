@@ -30,7 +30,7 @@ if($_SESSION['status']!="login"){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Destinasi Wisata</h1>
+            <h1 class="m-0 text-dark">Area Destinasi Wisata</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -44,8 +44,8 @@ if($_SESSION['status']!="login"){
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Destinasi Wisata Berdasarkan Wilayah 
-                <span style="margin-left: 10px;"><a href="destinasi-tambah.php" class="btn btn-info btn-xs">+ Tambah Destinasi Wisata</a></span>
+              <h3 class="card-title">Area Destinasi Wisata Berdasarkan Wilayah 
+                <span style="margin-left: 10px;"><a href="area-destinasi-tambah.php" class="btn btn-info btn-xs">+ Tambah Area Destinasi Wisata</a></span>
               </h3>
               
             </div>
@@ -63,19 +63,19 @@ if($_SESSION['status']!="login"){
                 </thead>
                 <tbody>
                   <?php
-                  $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah")or die(mysqli_error());
+                  $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayahArea")or die(mysqli_error());
                   $nomor = 1;
                   while($data = mysqli_fetch_array($query_mysql)){
-                    $id = $data['id_wisata'];
-                    $nama = $data['nama_wisata'];
-                    $deskripsi = $data['deskripsi_wisata'];
-                    if ($data['gambar_wisata'] == '')
+                    $id = $data['id_wisata_area'];
+                    $nama = $data['nama_wisata_area'];
+                    $deskripsi = $data['deskripsi_wisata_area'];
+                    if ($data['gambar_wisata_area'] == '')
                     {
                       $gambar = '';
                       $tampakGambar = 'display:none;';
                     }
                     else {
-                      $gambar = "images/".$data['gambar_wisata'];
+                      $gambar = "images/".$data['gambar_wisata_area'];
                     }
                   ?>
                   <tr>
@@ -84,8 +84,8 @@ if($_SESSION['status']!="login"){
                     <td><?php echo $deskripsi; ?></td>
                     <td><img src="<?php echo $gambar; ?>" alt="Image" width="293px" height="195px" style="object-fit: cover; <?php echo($tampakGambar); ?> "></td>
                     <td>
-                      <a href='destinasi-ubah.php?id_wisata=<?php echo $id; ?>' class="btn btn-info btn-block">Ubah</a>
-                      <a href='destinasi-hapus.php?id_wisata=<?php echo $id; ?>' class="btn btn-danger btn-block">Hapus</a>
+                      <a href='area-destinasi-ubah.php?id_wisata=<?php echo $id; ?>' class="btn btn-primary btn-xs">Ubah</a>
+                      <a href='area-destinasi-hapus.php?id_wisata=<?php echo $id; ?>' class="btn btn-danger btn-xs">Hapus</a>
                     </td>
                   </tr>
                   <?php } ?>

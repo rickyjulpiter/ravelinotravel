@@ -6,8 +6,8 @@ if($_SESSION['status']!="login"){
   header("location:login.php");
 }
 
-$idDestinasi = $_GET['id_wisata'];
 ?>
+
 <style type="text/css">
     #image-preview{
     display:none;
@@ -39,7 +39,7 @@ $idDestinasi = $_GET['id_wisata'];
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Ubah Detail Destinasi Wisata</h1>
+                            <h1>Tambah Destinasi Wisata</h1>
                         </div>
                     </div>
                 </div>
@@ -59,18 +59,11 @@ $idDestinasi = $_GET['id_wisata'];
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="destinasi-ubah-aksi.php" enctype="multipart/form-data">
-                                	<?
-                                	$data = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah WHERE id_wisata = '$idDestinasi'");
-									while($d = mysqli_fetch_array($data)){
-										//echo $d['nama_wisata'];
-										//echo $d['deskripsi_wisata'];
-									?>
+                                <form role="form" method="POST" action="destinasi-tambah-aksi.php" enctype="multipart/form-data">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama Destinasi Wisata</label>
-                                            <input name="nama_wisata" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['nama_wisata']; ?>">
-                                            <input type="hidden" name="id_wisata" value="<?php echo $d['id_wisata']; ?>">
+                                            <input name="nama_wisata" type="text" class="form-control" id="exampleInputEmail1" required="">
                                         </div>
                                         <div class="form-group">
                                         	<label for="exampleInputPassword1">Deskripsi Destinasi Wisata</label>
@@ -86,39 +79,25 @@ $idDestinasi = $_GET['id_wisata'];
 					                        </div>
 					                        <div class="pad">
 					                         	<div class="">
-					                         		<textarea name="deskripsi_wisata" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $d['deskripsi_wisata']; ?>
+					                         		<textarea name="deskripsi_wisata" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required="">
 					                                </textarea>
 					                            </div>
 					                        </div>
 					                           <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="customFile">Galeri Gambar</label>
+                                        	<label for="customFile">Galeri Gambar</label>
                                             <img id="image-preview" alt="image preview"/><br/>
-                                            <div class="custom-file">
-                                                <input type="file" class="" name="gambar_wisata" id="image-source" onchange="previewImage();">
-                                            </div>
-                                            <div>
-                                                <?php
-                                                if ($d['gambar_wisata'] == '') {
-                                                    $tampakGambar = 'display:none;';
-                                                }
-                                                else {
-                                                    echo "<label>Gambar Wisata Saat Ini</label><br>";
-                                                }
-                                                ?>
-                                                
-                                                <img src="<?php echo "images/".$d['gambar_wisata']; ?>" alt="Image" width="293px" height="195px" style="object-fit: cover; <?php echo($tampakGambar); ?> ">
-
-                                                
-                                            </div>
-                                        </div>
+						                    <div class="custom-file">
+						                    	<!--<input type="file" class="custom-file-input" id="customFile" name="gambar_wisata">-->
+                                                <input type="file" class="" name="gambar_wisata" id="image-source" onchange="previewImage();" required="">
+						                    </div>
+						                </div>
                                     </div>
-                                	<?php } ?>
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Ubah Data</button>
+                                        <button type="submit" class="btn btn-block btn-info">Tambah Wisata</button>
                                     </div>
                                 </form>
                             </div>
@@ -156,7 +135,6 @@ $idDestinasi = $_GET['id_wisata'];
             };
           };
       </script>
-
 </body>
 
 </html>
