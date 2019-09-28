@@ -55,8 +55,9 @@ if($_SESSION['status']!="login"){
                 <thead>
                   <tr>
                     <td>No</td>
-                    <td>Nama Wilayah</td>
-                    <td>Deskripsi Wilayah</td>
+                    <td>Nama Destinasi</td>
+                    <td>Deskripsi Destinasi</td>
+                    <td>Wilayah</td>
                     <td>Gambar</td>
                     <td>Aksi</td>
                   </tr>
@@ -69,6 +70,7 @@ if($_SESSION['status']!="login"){
                     $id = $data['id_wisata_area'];
                     $nama = $data['nama_wisata_area'];
                     $deskripsi = $data['deskripsi_wisata_area'];
+                    $wilayah = $data['nama_wisata'];
                     if ($data['gambar_wisata_area'] == '')
                     {
                       $gambar = '';
@@ -82,10 +84,11 @@ if($_SESSION['status']!="login"){
                     <td><?php echo $nomor++; ?></td>
                     <td><?php echo $nama; ?></td>
                     <td><?php echo $deskripsi; ?></td>
+                    <td><?php echo $wilayah; ?></td>
                     <td><img src="<?php echo $gambar; ?>" alt="Image" width="293px" height="195px" style="object-fit: cover; <?php echo($tampakGambar); ?> "></td>
                     <td>
-                      <a href='area-destinasi-ubah.php?id_wisata=<?php echo $id; ?>' class="btn btn-primary btn-xs">Ubah</a>
-                      <a href='area-destinasi-hapus.php?id_wisata=<?php echo $id; ?>' class="btn btn-danger btn-xs">Hapus</a>
+                      <a href='area-destinasi-ubah.php?id_wisata=<?php echo $id; ?>' class="btn btn-primary btn-block">Ubah</a>
+                      <a href='area-destinasi-hapus.php?id_wisata=<?php echo $id; ?>' class="btn btn-danger btn-block">Hapus</a>
                     </td>
                   </tr>
                   <?php } ?>

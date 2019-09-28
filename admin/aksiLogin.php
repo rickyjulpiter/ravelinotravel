@@ -4,10 +4,13 @@
 	include 'koneksi.php';
 
 	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$encrypt = md5($_POST['password']);
+
+	$password = $encrypt;
 	 
 	// menyeleksi data admin dengan username dan password yang sesuai
-	$data = mysqli_query($koneksi,"SELECT * FROM tbl_User WHERE email = '$email' AND password ='$password'");
+	$query = "SELECT * FROM tbl_User WHERE email = '$email' AND password ='$password'";
+	$data = mysqli_query($koneksi,$query);
 	 
 	// menghitung jumlah data yang ditemukan
 	$cek = mysqli_num_rows($data);

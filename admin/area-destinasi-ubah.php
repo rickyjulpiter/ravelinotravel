@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-
+error_reporting(0);
 session_start();
 if($_SESSION['status']!="login"){
   header("location:login.php");
@@ -53,7 +53,7 @@ $id_wisata = $_GET['id_wisata'];
                         <!-- left column -->
                         <div class="col-md-12">
                             <!-- general form elements -->
-                            <div class="card card-primary">
+                            <div class="card card-info">
                                 <div class="card-header">
                                     <h3 class="card-title"></h3>
                                 </div>
@@ -61,10 +61,8 @@ $id_wisata = $_GET['id_wisata'];
                                 <!-- form start -->
                                 <form role="form" method="POST" action="area-destinasi-ubah-aksi.php" enctype="multipart/form-data">
                                 	<?
-                                	$data = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayahArea WHERE id_wisata_area = '$id_wisata'");
+                                	$data = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayahArea WHERE id_wisata_area = '$id_wisata' LIMIT 1");
 									while($d = mysqli_fetch_array($data)){
-										//echo $d['nama_wisata'];
-										//echo $d['deskripsi_wisata'];
 									?>
                                     <div class="card-body">
                                         <div class="form-group">
@@ -91,6 +89,20 @@ $id_wisata = $_GET['id_wisata'];
 					                            </div>
 					                        </div>
 					                           <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Pilih Area Destinasi</label>
+                                            <select class="custom-select" name="kategori_wisata">
+                                                <option readonly><?php echo $d['nama_wisata']; ?></option> 
+                                                <?php
+                                                $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah")or die(mysqli_error());
+                                                $nomor = 1;
+                                                while($data = mysqli_fetch_array($query_mysql)){
+                                                    $nama = $data['nama_wisata'];
+                                                ?>
+                                                <option><?php echo $nama ; ?></option>
+                                                <?php } ?>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="customFile">Galeri Gambar</label>

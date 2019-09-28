@@ -86,6 +86,19 @@ if($_SESSION['status']!="login"){
 					                           <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
+                                            <label>Pilih Area Destinasi</label>
+                                            <select class="custom-select" name="kategori_wisata">
+                                                <?php
+                                                $query_mysql = mysqli_query($koneksi,"SELECT * FROM tbl_WisataWilayah")or die(mysqli_error());
+                                                $nomor = 1;
+                                                while($data = mysqli_fetch_array($query_mysql)){
+                                                    $nama = $data['nama_wisata'];
+                                                ?>
+                                                <option><?php echo $nama ; ?></option>
+                                            <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                         	<label for="customFile">Galeri Gambar</label>
                                             <img id="image-preview" alt="image preview"/><br/>
 						                    <div class="custom-file">
