@@ -1897,7 +1897,7 @@ input[type=file]{height: auto; padding: 10px;}
 	padding: 15px 30px;
 	margin: 0 0 30px 0;
 	border-radius: 4px 4px 0 0;
-	background-color: #005294;
+	background-color: #009436;
 	border-bottom: 1px solid #eaeaea;
 }
 
@@ -3118,7 +3118,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
 }
 .content-left{
   margin: 0;
-  background: #005294;
+  background: #009436;
   color: #fff;
   padding: 21px 0px;
   width: 300px;
@@ -3136,7 +3136,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
 	right: 0px;
 	top: 0px;
 	padding: 8px 15px;
-	color: #D60D45;
+	color: #e67e22;
 }
 .search-bar .form-group{
 	margin-bottom: 0;
@@ -3185,7 +3185,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
 	padding: 10px 0;
 	margin: 0;
 	color: #fff;
-	background: #005294;
+	background: #009436;
 }
 .notification-menu p{
 	font-size: 14px;
@@ -3220,7 +3220,7 @@ span.notify{
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #D60D45;
+  background: #e67e22;
   height: 25px;
   width: 25px;
   text-align: center;
@@ -3382,7 +3382,7 @@ a.canvasjs-chart-credit{display: none;}
 
 .dashboard-list-box .button.gray:before { display: none; }
 .dashboard-list-box .button.gray {
-	background-color: #D60D45;
+	background-color: #e67e22;
 	color: #fff;
 	transition: all 0.3s ease-in-out;
 }
@@ -3406,7 +3406,7 @@ a.canvasjs-chart-credit{display: none;}
 }
 
 .dashboard-list-box h4.gray {
-	background-color: #005294;
+	background-color: #009436;
 	color: #fff;
 }
 .table-box h4.gray {
@@ -3464,7 +3464,7 @@ a.canvasjs-chart-credit{display: none;}
 	padding: 11px 26px;
 	font-size: 16px;
 	margin-bottom: 3px;
-	background: #D60D45;
+	background: #e67e22;
 }
 .dashboard-form{
 	background: #fff;
@@ -4551,7 +4551,7 @@ a.close-list-item {
 }
 .t-id{
 	font-weight: 600;
-	color: #D60D45;
+	color: #e67e22;
 }
 /* All Mobile Sizes (devices and browser) */
 @media (max-width: 767px) {
@@ -4822,8 +4822,8 @@ a.close-list-item {
 }
 .booking-table span.unpaid,
 .booking-table span.cancel{
-	background: #D60D45;
-	border-color: #D60D45;
+	background: #e67e22;
+	border-color: #e67e22;
 }
 .booking-table span.pending{
 	background: #a95921;
@@ -4837,7 +4837,7 @@ a.close-list-item {
     font-size: 15px;
     line-height: 2.6;
     border-radius: 50%;
-    background: #005294;
+    background: #009436;
     margin: 0 2px;
 }
 .booking-table .button i{

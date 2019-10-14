@@ -2689,7 +2689,7 @@
 .head-style-1 .navbar-sticky .slicknav_btn.slicknav_open:before,
 .head-style-1 .navbar-sticky .slicknav_btn.slicknav_collapsed:before {
     text-decoration: none !important;
-    color: #005294 !important;
+    color: #009436 !important;
     border: none;
 }
 #dark .slicknav_btn.slicknav_open,
@@ -3279,7 +3279,7 @@
 /*------------------------------------------------------*/
 #testimonial_094{
   overflow: hidden;
-  min-height: 400px;
+  min-height: 200px;
   position: relative;
   z-index: 1;
 }
@@ -3436,7 +3436,7 @@
  
 }
 .testimonial_094_slide > h5 > a{
-  color: #005294;
+  color: #009436;
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
@@ -4979,7 +4979,7 @@
   font-weight: 700;
   text-shadow: none;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   -webkit-font-smoothing: antialiased;
 }
 .kenburns_061_slide > h2{
@@ -5094,9 +5094,9 @@
   }
   /*---------- SLIDE CAPTION ----------*/
   .kenburns_061_slide{
-    top: 20% !important;
+    top: 9% !important;
     left: 5%;
-    width: 100%;
+    width: 90%;
   }
   .kenburns_061_slide_right{
     right: 5%;
@@ -5203,7 +5203,7 @@
 
 @media(min-width: 1100px){
 	.kenburns_061_slide{
-		top: 25%;
+		top: 15%;
 	}
 }
 
@@ -5585,7 +5585,7 @@
     display: block;
     border: 0;
     background-position: 0 0;
-    background: #005294;
+    background: #009436;
 }
 
 .range-slider .ui-slider .ui-slider-handle {

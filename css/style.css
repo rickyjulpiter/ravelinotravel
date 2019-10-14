@@ -60,7 +60,6 @@
   box-sizing: border-box; 
 }
 
-
 ol, ul {
   list-style: none;
 }
@@ -104,7 +103,7 @@ section,
 article,
 aside,
 footer {
-  display: block;
+  display: block; 
 }
 
 * {
@@ -327,7 +326,6 @@ abtn-blue:hover{
 }
 .section-title h2{
   position: relative;
-  margin-top: 10px;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -368,7 +366,7 @@ abtn-blue:hover{
 /*
 breadcrumb*/
 section.breadcrumb-outer{
-  background: url(https://upload.wikimedia.org/wikipedia/commons/a/ae/Indonesia_-_Lake_Toba_%2826224127503%29.jpg) no-repeat;
+  background: url(../images/danautoba.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -1340,7 +1338,7 @@ span.deal-price {
   left: 0;
   margin: 0 auto;
   height: 100px;
-  width: 100px;
+  /* width: 100px; */
   text-align: center;
   border-radius: 50%;
   padding: 16px;
@@ -1800,7 +1798,7 @@ section.testimonials{
 /* ====================== */
 
 section.trusted-partners{
-  background: #009436;
+  background: #222935;
   text-align: center;
   padding: 0;
   overflow: hidden;
@@ -1814,7 +1812,7 @@ section.trusted-partners{
   top: 0;
   height: 100%;
   width: 35%;
-  background: #009436;
+  background: #191e27;
   z-index: 1;
 }
 .partners-logo li{
@@ -1876,7 +1874,7 @@ footer{
 }
 .footer-links{
   padding: 45px 0 41px;
-  /*border-top: 1px dashed #cccccc3b;*/
+  border-top: 1px dashed #cccccc3b;
   position: relative;
   z-index: 1;
 }
@@ -2511,7 +2509,7 @@ sidebar*/
   color: #fff;
 }
 .sidebar-helpline{
-  background: url(../images/adbg.jpg) no-repeat;
+  background: url(../images/danautoba.jpg) no-repeat;
   background-size: cover;
   position: relative;
   padding: 30px;
@@ -4508,9 +4506,7 @@ section.amazing-tours{
 .at-image{
   overflow: hidden;
   position: relative;
-  
 }
-
 .at-overlay{
   position: absolute;
   top: 0;

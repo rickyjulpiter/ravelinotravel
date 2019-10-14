@@ -3,24 +3,24 @@
 
 	include 'koneksi.php';
 
-	$email = $_POST['email'];
+	$username = $_POST['username'];
 	$encrypt = md5($_POST['password']);
 
 	$password = $encrypt;
 	 
 	// menyeleksi data admin dengan username dan password yang sesuai
-	$query = "SELECT * FROM tbl_User WHERE email = '$email' AND password ='$password'";
+	$query = "SELECT * FROM admin WHERE username = '$username' AND password ='$password'";
 	$data = mysqli_query($koneksi,$query);
 	 
 	// menghitung jumlah data yang ditemukan
 	$cek = mysqli_num_rows($data);
 	 
 	if($cek > 0){
-		$_SESSION['email'] = $email;
+		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:index.php");
+		header("location:tentang");
 	}
 	else{
-		header("location:login.php");
+		header("location:login");
 	}
 ?>
