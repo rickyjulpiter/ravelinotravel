@@ -1,12 +1,11 @@
 <?php
-include 'koneksi.php';
+include '../../koneksi.php';
 
 session_start();
 if($_SESSION['status']!="login"){
-  header("location:login");
+  header("location:../login");
 }
 
-$idTesti = $_GET['idTesti'];
 ?>
 <style type="text/css">
     #image-preview{
@@ -20,7 +19,7 @@ $idTesti = $_GET['idTesti'];
 <html>
 
 <!-- HEAD -->
-<?php include 'adm_template/head.php'; ?>
+<?php include '../adm_template/head.php'; ?>
 <!-- END HEAD -->
 
 <body class="hold-transition sidebar-mini">
@@ -30,7 +29,7 @@ $idTesti = $_GET['idTesti'];
 		<!-- /.navbar -->
 
 		<!-- Main Sidebar Container -->
-		<?php include 'adm_template/sidebar.php'; ?>
+		<?php include '../adm_template/sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -39,7 +38,7 @@ $idTesti = $_GET['idTesti'];
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Ubah Detail Testimonial</h1>
+                            <h1>Tambah Testimonial</h1>
                         </div>
                     </div>
                 </div>
@@ -59,22 +58,15 @@ $idTesti = $_GET['idTesti'];
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="testimonial-ubah-aksi" enctype="multipart/form-data">
-                                	<?
-                                	$queryDetailTesti = mysqli_query($koneksi,"SELECT * FROM testimonial WHERE id_testi = $idTesti");
-                                    $d = mysqli_fetch_assoc($queryDetailTesti);
-                                    $idTesti = $d['id_testi'];
-                                    $namaTesti = $d['nama_testi'];
-                                    $deskripsiTesti = $d['deskripsi_testi'];
-									?>
+                                <form role="form" method="POST" action="tambah-aksi" enctype="multipart/form-data">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $namaTesti; ?>">
-                                            <input type="hidden" name="id" value="<?php echo $idTesti; ?>">
+                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1">
+                                            <input type="hidden" name="id">
                                         </div>
                                         <div class="form-group">
-                                        	<label for="exampleInputPassword1">Deskripsi Testimonial</label>
+                                        	<label for="exampleInputPassword1">Deskripsi</label>
                                         	<!-- tools box -->
                                         	<div class="card-tools" style="margin-top: -22px;">
                                         		<button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -87,7 +79,7 @@ $idTesti = $_GET['idTesti'];
 					                        </div>
 					                        <div class="pad">
 					                         	<div class="">
-					                         		<textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $deskripsiTesti; ?>
+					                         		<textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
 					                                </textarea>
 					                            </div>
 					                        </div>
@@ -97,7 +89,7 @@ $idTesti = $_GET['idTesti'];
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Ubah Data Testimonial</button>
+                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Testimonial</button>
                                     </div>
                                 </form>
                             </div>
@@ -113,10 +105,10 @@ $idTesti = $_GET['idTesti'];
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <?php include 'adm_template/footer.php'; ?>
+        <?php include '../adm_template/footer.php'; ?>
     </div>
     <!-- ./wrapper -->
-    <?php include 'adm_template/script.php'; ?>
+    <?php include '../adm_template/script.php'; ?>
     <script src="plugins/summernote/summernote-bs4.min.js"></script>
     <script>
         $(function () {

@@ -3,10 +3,10 @@ include '../../koneksi.php';
 
 session_start();
 if($_SESSION['status']!="login"){
-  header("location:login");
+  header("location:../login");
 }
 
-$idUser = $_GET['idUser'];
+$idTesti = $_GET['idTesti'];
 ?>
 <style type="text/css">
     #image-preview{
@@ -20,7 +20,7 @@ $idUser = $_GET['idUser'];
 <html>
 
 <!-- HEAD -->
-<?php include 'adm_template/head.php'; ?>
+<?php include '../adm_template/head.php'; ?>
 <!-- END HEAD -->
 
 <body class="hold-transition sidebar-mini">
@@ -30,7 +30,7 @@ $idUser = $_GET['idUser'];
 		<!-- /.navbar -->
 
 		<!-- Main Sidebar Container -->
-		<?php include 'adm_template/sidebar.php'; ?>
+		<?php include '../adm_template/sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -39,7 +39,7 @@ $idUser = $_GET['idUser'];
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Ubah Admin</h1>
+                            <h1>Ubah Detail Testimonial</h1>
                         </div>
                     </div>
                 </div>
@@ -59,32 +59,45 @@ $idUser = $_GET['idUser'];
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="admin-ubah-aksi" enctype="multipart/form-data">
+                                <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                 	<?
-                                	$queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM admin WHERE id = $idUser");
-                                    $d = mysqli_fetch_assoc($queryDetailAdmin);
-                                    $idUser = $d['id'];
-                                    $namaUser = $d['username'];
+                                	$queryDetailTesti = mysqli_query($koneksi,"SELECT * FROM testimonial WHERE id_testi = $idTesti");
+                                    $d = mysqli_fetch_assoc($queryDetailTesti);
+                                    $idTesti = $d['id_testi'];
+                                    $namaTesti = $d['nama_testi'];
+                                    $deskripsiTesti = $d['deskripsi_testi'];
 									?>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Username</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $namaUser; ?>">
-                                            <input type="hidden" name="id" value="<?php echo $idUser; ?>">
+                                            <label for="exampleInputEmail1">Nama</label>
+                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $namaTesti; ?>">
+                                            <input type="hidden" name="id" value="<?php echo $idTesti; ?>">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Password Lama</label>
-                                            <input name="password_lama" type="password" class="form-control" id="exampleInputEmail1">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Password Baru</label>
-                                            <input name="password" type="password" class="form-control" id="exampleInputEmail1">
+                                        	<label for="exampleInputPassword1">Deskripsi Testimonial</label>
+                                        	<!-- tools box -->
+                                        	<div class="card-tools" style="margin-top: -22px;">
+                                        		<button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                        			<i class="fas fa-minus"></i>
+					                             </button>
+					                             <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+					                                 title="Remove">
+					                                 <i class="fas fa-times"></i>
+					                             </button>
+					                        </div>
+					                        <div class="pad">
+					                         	<div class="">
+					                         		<textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $deskripsiTesti; ?>
+					                                </textarea>
+					                            </div>
+					                        </div>
+					                           <!-- /. tools -->
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Ubah Data Admin</button>
+                                        <button type="submit" class="btn btn-block btn-info">Ubah Data Testimonial</button>
                                     </div>
                                 </form>
                             </div>
@@ -100,10 +113,10 @@ $idUser = $_GET['idUser'];
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <?php include 'adm_template/footer.php'; ?>
+        <?php include '../adm_template/footer.php'; ?>
     </div>
     <!-- ./wrapper -->
-    <?php include 'adm_template/script.php'; ?>
+    <?php include '../adm_template/script.php'; ?>
     <script src="plugins/summernote/summernote-bs4.min.js"></script>
     <script>
         $(function () {

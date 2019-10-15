@@ -3,7 +3,7 @@ include '../../koneksi.php';
 
 session_start();
 if($_SESSION['status']!="login"){
-  header("location:login");
+  header("location:../login");
 }
 ?>
 <style type="text/css">
@@ -18,7 +18,7 @@ if($_SESSION['status']!="login"){
 <html>
 
 <!-- HEAD -->
-<?php include 'adm_template/head.php'; ?>
+<?php include '../adm_template/head.php'; ?>
 <!-- END HEAD -->
 
 <body class="hold-transition sidebar-mini">
@@ -28,7 +28,7 @@ if($_SESSION['status']!="login"){
 		<!-- /.navbar -->
 
 		<!-- Main Sidebar Container -->
-		<?php include 'adm_template/sidebar.php'; ?>
+		<?php include '../adm_template/sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -57,7 +57,7 @@ if($_SESSION['status']!="login"){
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="admin-tambah-aksi" enctype="multipart/form-data">
+                                <form role="form" method="POST" action="tambah-aksi" enctype="multipart/form-data">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Username</label>
@@ -88,10 +88,10 @@ if($_SESSION['status']!="login"){
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <?php include 'adm_template/footer.php'; ?>
+        <?php include '../adm_template/footer.php'; ?>
     </div>
     <!-- ./wrapper -->
-    <?php include 'adm_template/script.php'; ?>
+    <?php include '../adm_template/script.php'; ?>
     <script src="plugins/summernote/summernote-bs4.min.js"></script>
     <script>
         $(function () {

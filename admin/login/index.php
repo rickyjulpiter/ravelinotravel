@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <!-- HEAD -->
-<?php include 'adm_template/head.php'; ?>
+<?php include '../adm_template/head.php'; ?>
 <!-- END HEAD -->
 
 <body class="hold-transition login-page">
@@ -48,9 +47,9 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

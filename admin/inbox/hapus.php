@@ -7,7 +7,7 @@ $queryDelete = "DELETE FROM pesan WHERE id = '$idPesan'";
 mysqli_query($koneksi,$queryDelete);
 echo "<script>
             alert('Berhasil dihapus');
-            window.location.href='inbox';
+            window.location.href='index';
             </script>";
             //header("location:tentang");
 ?>

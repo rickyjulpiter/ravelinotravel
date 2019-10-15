@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	include 'koneksi.php';
+	include '../../koneksi.php';
 
 	$username = $_POST['username'];
 	$encrypt = md5($_POST['password']);
@@ -18,9 +18,9 @@
 	if($cek > 0){
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:tentang");
+		header("location:../tentang");
 	}
 	else{
-		header("location:login");
+		header("location:index");
 	}
 ?>

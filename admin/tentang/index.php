@@ -3,7 +3,7 @@ include '../../koneksi.php';
 
 session_start();
 if($_SESSION['status']!="login"){
-  header("location:login");
+  header("location:../login");
 }
 
 ?>
@@ -58,7 +58,7 @@ if($_SESSION['status']!="login"){
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="tentang-aksi" enctype="multipart/form-data">
+                                <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                 	<?
                                 	$data = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1");
 									while($d = mysqli_fetch_array($data)){

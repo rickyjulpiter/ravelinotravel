@@ -3,14 +3,14 @@ include '../../koneksi.php';
 
 session_start();
 if($_SESSION['status']!="login"){
-  header("location:login");
+  header("location:../login");
 }
 ?>
 <!DOCTYPE html>
 <html>
 
 <!-- HEAD -->
-<?php include 'adm_template/head.php'; ?>
+<?php include '../adm_template/head.php'; ?>
 <!-- END HEAD -->
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -21,7 +21,7 @@ if($_SESSION['status']!="login"){
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <?php include 'adm_template/sidebar.php'; ?>
+  <?php include '../adm_template/sidebar.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -45,7 +45,7 @@ if($_SESSION['status']!="login"){
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">Daftar Admin Saat Ini
-                <span style="margin-left: 10px;"><a href="admin-tambah" class="btn btn-info btn-xs">+ Tambah Admin</a></span>
+                <span style="margin-left: 10px;"><a href="tambah" class="btn btn-info btn-xs">+ Tambah Admin</a></span>
               </h3>
               
             </div>
@@ -71,8 +71,8 @@ if($_SESSION['status']!="login"){
                     <td><?php echo $nomor++; ?></td>
                     <td><?php echo $namaUser; ?></td>
                     <td>
-                      <a href='admin-ubah?idUser=<?php echo $idUser; ?>' class="btn btn-info">Update</a>
-                      <a href='admin-hapus?idUser=<?php echo $idUser; ?>' class="btn btn-danger">Hapus</a>
+                      <a href='ubah?idUser=<?php echo $idUser; ?>' class="btn btn-info">Update</a>
+                      <a href='hapus?idUser=<?php echo $idUser; ?>' class="btn btn-danger">Hapus</a>
                     </td>
                   </tr>
                   <?php } ?>
@@ -89,13 +89,13 @@ if($_SESSION['status']!="login"){
     </section>
     <!-- /.content -->
   </div>
-  <?php include 'adm_template/footer.php'; ?>
+  <?php include '../adm_template/footer.php'; ?>
 
 </div>
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<?php include 'adm_template/script.php'; ?>
+<?php include '../adm_template/script.php'; ?>
 </body>
 <!-- DataTables -->
 <script>

@@ -10,7 +10,7 @@
     //echo($queryInsert);
     echo "<script>
 	alert('Berhasil ditambahkan');
-	window.location.href='admin';
+	window.location.href='index';
 	</script>";
     //header("location:admin");
     

@@ -21,13 +21,13 @@
         mysqli_query($koneksi,$queryUpdate);
         echo "<script>
         alert('Berhasil diupdate');
-        window.location.href='admin';
+        window.location.href='index';
         </script>";
-        header("location:admin");
+        //header("location:index");
     }
     else {
         //echo("salah");
-        header("location:admin");
+        header("location:index");
     }
     
 ?>

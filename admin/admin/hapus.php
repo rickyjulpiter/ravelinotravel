@@ -7,7 +7,7 @@ $queryDelete = "DELETE FROM admin WHERE id = '$idUser'";
 mysqli_query($koneksi,$queryDelete);
 echo "<script>
 	alert('Berhasil di hapus!');
-	window.location.href='admin';
+	window.location.href='index';
 	</script>";
 //header("location:admin");
 ?>
