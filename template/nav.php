@@ -40,7 +40,28 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" style="font-size: 12px;">Tour Packages</a>
+                                    <a href="#" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
+                                    <ul style="display: none;">
+                                        <?php
+                                        $query_destinasi = mysqli_query($koneksi,"SELECT * FROM destinasi")or die(mysqli_error());
+                                        while($data = mysqli_fetch_array($query_destinasi)){
+                                            $idDestinasi = $data['id'];
+                                            $namaDestinasi = $data['nama'];
+                                        ?>
+                                        <li>
+                                            <a href="#"><?php echo $namaDestinasi; ?> <i class="arrow-indicator fa fa-angle-right"></i></a>
+                                            <ul style="display: none;">
+                                                <?php 
+                                                $query_area_destinasi = mysqli_query($koneksi,"SELECT * FROM paket_wisata as pw INNER JOIN paket_wisata_detail as pwd ON pw.id_wisata = pwd.id_wisata INNER JOIN destinasi_area as da ON da.id_area = pwd.destinasi_area WHERE da.destinasi_id = '$idDestinasi'")or die(mysqli_error());
+                                                while ($area = mysqli_fetch_array($query_area_destinasi)) {
+                                                    $namaDestinasiArea = $area['nama_wisata'];
+                                                ?>
+                                                <li><a href="#"><?php echo $namaDestinasiArea; ?></a></li>
+                                                <?php } ?>
+                                            </ul>
+                                        </li>
+                                        <?php } ?>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="about" style="font-size: 12px;">Services</a>

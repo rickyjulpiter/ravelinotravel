@@ -59,9 +59,9 @@ if($_SESSION['status']!="login"){
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
-                                	<?
+                                	<?php
                                 	$data = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1");
-									while($d = mysqli_fetch_array($data)){
+									while($d = mysqli_fetch_array($data)) {
 										//echo $d['nama_wisata'];
 										//echo $d['deskripsi_wisata'];
 									?>

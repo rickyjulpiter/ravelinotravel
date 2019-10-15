@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 15, 2019 at 11:05 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 15 Okt 2019 pada 16.25
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.1.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `destinasi`
+-- Struktur dari tabel `destinasi`
 --
 
 CREATE TABLE `destinasi` (
@@ -55,7 +55,7 @@ CREATE TABLE `destinasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `destinasi`
+-- Dumping data untuk tabel `destinasi`
 --
 
 INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -65,7 +65,7 @@ INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `destinasi_area`
+-- Struktur dari tabel `destinasi_area`
 --
 
 CREATE TABLE `destinasi_area` (
@@ -76,7 +76,7 @@ CREATE TABLE `destinasi_area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `destinasi_area`
+-- Dumping data untuk tabel `destinasi_area`
 --
 
 INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `destinasi_id`) VALUES
@@ -87,7 +87,7 @@ INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `destina
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jenis_paket`
+-- Struktur dari tabel `jenis_paket`
 --
 
 CREATE TABLE `jenis_paket` (
@@ -98,7 +98,7 @@ CREATE TABLE `jenis_paket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `jenis_paket`
+-- Dumping data untuk tabel `jenis_paket`
 --
 
 INSERT INTO `jenis_paket` (`id_paket`, `nama_paket`, `deskripsi_paket`, `gambar_paket`) VALUES
@@ -110,7 +110,7 @@ INSERT INTO `jenis_paket` (`id_paket`, `nama_paket`, `deskripsi_paket`, `gambar_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata`
+-- Struktur dari tabel `paket_wisata`
 --
 
 CREATE TABLE `paket_wisata` (
@@ -124,12 +124,12 @@ CREATE TABLE `paket_wisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata`
+-- Dumping data untuk tabel `paket_wisata`
 --
 
 INSERT INTO `paket_wisata` (`id_wisata`, `nama_wisata`, `deskripsi_wisata`, `harga_wisata`, `fasilitas_wisata`, `gambar_wisata`, `jenis_paket`) VALUES
-(2, 'EVEREST BASE CAMPSS', '<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>					                                					                                ', '550000', '<table>\r\n                                    <thead>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure</td>\r\n                                            <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airport</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure Time</td>\r\n                                            <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Maximum travellers</td>\r\n                                            <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Languages</td>\r\n                                            <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Includes</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Excludes</td>\r\n                                            <td class=\"excludes\">\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Popular Places</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>                                                                                                                                                                                                                                                                                                                                                                            ', 'images/bali.jpg', 1),
-(4, 'EVEREST BASE CAMP', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', '550000', '<table>\r\n                                    <thead>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure</td>\r\n                                            <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airports</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure Time</td>\r\n                                            <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Maximum travellers</td>\r\n                                            <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Languages</td>\r\n                                            <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Includes</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Excludes</td>\r\n                                            <td class=\"excludes\">\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Popular Places</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>                                                                                                                                                                                                                                                                                                                        ', 'images/bali.jpg', 2),
+(2, 'TOUR BRASTAGI - YOGYAKARTA', '<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>					                                					                                ', '550000', '<table>\r\n                                    <thead>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure</td>\r\n                                            <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airport</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure Time</td>\r\n                                            <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Maximum travellers</td>\r\n                                            <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Languages</td>\r\n                                            <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Includes</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Excludes</td>\r\n                                            <td class=\"excludes\">\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Popular Places</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>                                                                                                                                                                                                                                                                                                                                                                            ', 'images/bali.jpg', 1),
+(4, 'TOUR FULL BRASTAGI', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', '550000', '<table>\r\n                                    <thead>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure</td>\r\n                                            <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airports</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure Time</td>\r\n                                            <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Maximum travellers</td>\r\n                                            <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Languages</td>\r\n                                            <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Includes</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Excludes</td>\r\n                                            <td class=\"excludes\">\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Popular Places</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>                                                                                                                                                                                                                                                                                                                        ', 'images/bali.jpg', 2),
 (5, 'EVEREST BASE CAMP', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '550000', '<table>\r\n                                    <thead>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure</td>\r\n                                            <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airport</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure Time</td>\r\n                                            <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Maximum travellers</td>\r\n                                            <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Languages</td>\r\n                                            <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Includes</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Excludes</td>\r\n                                            <td class=\"excludes\">\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Popular Places</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>', 'images/danautoba.jpg', 3),
 (6, 'EVEREST BASE CAMP', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '550000', '<table>\r\n                                    <thead>\r\n                                    </thead>\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure</td>\r\n                                            <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airport</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Departure Time</td>\r\n                                            <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Maximum travellers</td>\r\n                                            <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Languages</td>\r\n                                            <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Includes</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                    <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Excludes</td>\r\n                                            <td class=\"excludes\">\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                    <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                        <tr>\r\n                                            <td class=\"title\">Popular Places</td>\r\n                                            <td>\r\n                                                <ul>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                    <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                </ul>\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>', 'images/danautoba.jpg', 4),
 (9, 'EVEREST BASE CAMP', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', '550000', '                                                        <table>\r\n                                                            <thead>\r\n                                                            </thead>\r\n                                                            <tbody>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Departure</td>\r\n                                                                    <td><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> San Francisco International Airport</td>\r\n                                                                </tr>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Departure Time</td>\r\n                                                                    <td><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> Please arrive by 10:20 AM for a prompt departure at 10:50 AM</td>\r\n                                                                </tr>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Maximum travellers</td>\r\n                                                                    <td><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> 23</td>\r\n                                                                </tr>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Languages</td>\r\n                                                                    <td><i class=\"fa fa-file-audio-o\" aria-hidden=\"true\"></i> English, Thai, Malayt</td>\r\n                                                                </tr>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Includes</td>\r\n                                                                    <td>\r\n                                                                        <ul>\r\n                                                                            <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Airfare</li>\r\n                                                                            <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Transportation</li>\r\n                                                                            <li><i class=\"fa fa-check\" aria-hidden=\"true\"></i> Professional Guide</li>\r\n                                                                        </ul>\r\n                                                                    </td>\r\n                                                                </tr>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Excludes</td>\r\n                                                                    <td class=\"excludes\">\r\n                                                                        <ul>\r\n                                                                            <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Departure Taxes</li>\r\n                                                                            <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Entry Fees</li>\r\n                                                                            <li><i class=\"fa fa-times\" aria-hidden=\"true\"></i> Insurance</li>\r\n                                                                        </ul>\r\n                                                                    </td>\r\n                                                                </tr>\r\n                                                                <tr>\r\n                                                                    <td class=\"title\">Popular Places</td>\r\n                                                                    <td>\r\n                                                                        <ul>\r\n                                                                            <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                                            <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                                            <li><i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i> Eiffel Tower</li>\r\n                                                                        </ul>\r\n                                                                    </td>\r\n                                                                </tr>\r\n                                                            </tbody>\r\n                                                        </table>\r\n                                                    ', 'images/bali.jpg', 1),
@@ -145,7 +145,28 @@ INSERT INTO `paket_wisata` (`id_wisata`, `nama_wisata`, `deskripsi_wisata`, `har
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesan`
+-- Struktur dari tabel `paket_wisata_detail`
+--
+
+CREATE TABLE `paket_wisata_detail` (
+  `id` int(11) NOT NULL,
+  `id_wisata` int(11) NOT NULL,
+  `destinasi_area` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `paket_wisata_detail`
+--
+
+INSERT INTO `paket_wisata_detail` (`id`, `id_wisata`, `destinasi_area`) VALUES
+(3, 2, 1),
+(4, 2, 3),
+(5, 4, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pesan`
 --
 
 CREATE TABLE `pesan` (
@@ -159,7 +180,7 @@ CREATE TABLE `pesan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tentang`
+-- Struktur dari tabel `tentang`
 --
 
 CREATE TABLE `tentang` (
@@ -177,7 +198,7 @@ CREATE TABLE `tentang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tentang`
+-- Dumping data untuk tabel `tentang`
 --
 
 INSERT INTO `tentang` (`id`, `nama`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
@@ -186,7 +207,7 @@ INSERT INTO `tentang` (`id`, `nama`, `deskripsi`, `alamat`, `telepon`, `email`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimonial`
+-- Struktur dari tabel `testimonial`
 --
 
 CREATE TABLE `testimonial` (
@@ -197,7 +218,7 @@ CREATE TABLE `testimonial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `testimonial`
+-- Dumping data untuk tabel `testimonial`
 --
 
 INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_testi`) VALUES
@@ -208,101 +229,113 @@ INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `destinasi`
+-- Indeks untuk tabel `destinasi`
 --
 ALTER TABLE `destinasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `destinasi_area`
+-- Indeks untuk tabel `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
   ADD PRIMARY KEY (`id_area`);
 
 --
--- Indexes for table `jenis_paket`
+-- Indeks untuk tabel `jenis_paket`
 --
 ALTER TABLE `jenis_paket`
   ADD PRIMARY KEY (`id_paket`);
 
 --
--- Indexes for table `paket_wisata`
+-- Indeks untuk tabel `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   ADD PRIMARY KEY (`id_wisata`);
 
 --
--- Indexes for table `pesan`
+-- Indeks untuk tabel `paket_wisata_detail`
+--
+ALTER TABLE `paket_wisata_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `pesan`
 --
 ALTER TABLE `pesan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tentang`
+-- Indeks untuk tabel `tentang`
 --
 ALTER TABLE `tentang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `testimonial`
+-- Indeks untuk tabel `testimonial`
 --
 ALTER TABLE `testimonial`
   ADD PRIMARY KEY (`id_testi`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `destinasi`
+-- AUTO_INCREMENT untuk tabel `destinasi`
 --
 ALTER TABLE `destinasi`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `destinasi_area`
+-- AUTO_INCREMENT untuk tabel `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
   MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `jenis_paket`
+-- AUTO_INCREMENT untuk tabel `jenis_paket`
 --
 ALTER TABLE `jenis_paket`
   MODIFY `id_paket` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `paket_wisata`
+-- AUTO_INCREMENT untuk tabel `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   MODIFY `id_wisata` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `pesan`
+-- AUTO_INCREMENT untuk tabel `paket_wisata_detail`
+--
+ALTER TABLE `paket_wisata_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `pesan`
 --
 ALTER TABLE `pesan`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tentang`
+-- AUTO_INCREMENT untuk tabel `tentang`
 --
 ALTER TABLE `tentang`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `testimonial`
+-- AUTO_INCREMENT untuk tabel `testimonial`
 --
 ALTER TABLE `testimonial`
   MODIFY `id_testi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
