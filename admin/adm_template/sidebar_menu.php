@@ -5,10 +5,51 @@
             <a href="../tentang" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
               <p>
-                Tentang Travel
+                About Us
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="../destination" class="nav-link">
+              <i class="nav-icon fa fa-map-marker"></i>
+              <p>
+                Destination
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../destination-area" class="nav-link">
+              <i class="nav-icon fa fa-map-signs"></i>
+              <p>
+                Destination Area
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../destination-area" class="nav-link">
+              <i class="nav-icon fa fa-suitcase"></i>
+              <p>
+                Tour Packages
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../destination-area" class="nav-link">
+              <i class="nav-icon fa fa-user"></i>
+              <p>
+                Services
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../destination-area" class="nav-link">
+              <i class="nav-icon fa fa-camera"></i>
+              <p>
+                Photo Gallery
+              </p>
+            </a>
+          </li>
+          <!--
           <li class="nav-item">
             <a href="jenis-paket" class="nav-link">
               <i class="nav-icon fa fa-list"></i>
@@ -25,11 +66,12 @@
               </p>
             </a>
           </li>
+          -->
           <li class="nav-item">
             <a href="../testimonial/" class="nav-link">
-              <i class="nav-icon fa fa-comments"></i>
+              <i class="nav-icon fa fa-address-book"></i>
               <p>
-                Testimonial
+                Partnership
               </p>
             </a>
           </li>
@@ -45,7 +87,7 @@
             <a href="../admin" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
               <p>
-                Data Admin
+                Administrator
               </p>
             </a>
           </li>
@@ -53,7 +95,7 @@
             <a href="../../index" class="nav-link" target="_blank">
               <i class="nav-icon fa fa-share"></i>
               <p>
-                Lihat Situs
+                View Site
               </p>
             </a>
           </li>

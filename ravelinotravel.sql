@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 15 Okt 2019 pada 16.25
--- Versi server: 10.4.6-MariaDB
--- Versi PHP: 7.1.32
+-- Host: localhost
+-- Generation Time: Oct 16, 2019 at 08:05 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `destinasi`
+-- Table structure for table `destinasi`
 --
 
 CREATE TABLE `destinasi` (
@@ -55,17 +55,25 @@ CREATE TABLE `destinasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `destinasi`
+-- Dumping data for table `destinasi`
 --
 
 INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
-(1, 'Northern Sumatera', NULL, NULL),
-(2, 'West Jawa', NULL, NULL);
+(3, 'North Sumatra', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(4, 'West Sumatra', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(5, 'South Sumatra', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(6, 'Java Island', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(7, 'Bali', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(8, 'East Nusa Tenggara', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(9, 'Sulawesi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(10, 'Kalimantan', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(11, 'Maluku', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg'),
+(12, 'Papua', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.					                                ', 'images/bali.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `destinasi_area`
+-- Table structure for table `destinasi_area`
 --
 
 CREATE TABLE `destinasi_area` (
@@ -76,18 +84,17 @@ CREATE TABLE `destinasi_area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `destinasi_area`
+-- Dumping data for table `destinasi_area`
 --
 
 INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `destinasi_id`) VALUES
-(1, 'Berastagi', NULL, 1),
-(2, 'Medan', NULL, 1),
-(3, 'Yogyakarta', NULL, 2);
+(10, 'Brastagi', NULL, 3),
+(11, 'Dua Island', NULL, 3);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_paket`
+-- Table structure for table `jenis_paket`
 --
 
 CREATE TABLE `jenis_paket` (
@@ -98,7 +105,7 @@ CREATE TABLE `jenis_paket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jenis_paket`
+-- Dumping data for table `jenis_paket`
 --
 
 INSERT INTO `jenis_paket` (`id_paket`, `nama_paket`, `deskripsi_paket`, `gambar_paket`) VALUES
@@ -110,7 +117,7 @@ INSERT INTO `jenis_paket` (`id_paket`, `nama_paket`, `deskripsi_paket`, `gambar_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `paket_wisata`
+-- Table structure for table `paket_wisata`
 --
 
 CREATE TABLE `paket_wisata` (
@@ -124,7 +131,7 @@ CREATE TABLE `paket_wisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `paket_wisata`
+-- Dumping data for table `paket_wisata`
 --
 
 INSERT INTO `paket_wisata` (`id_wisata`, `nama_wisata`, `deskripsi_wisata`, `harga_wisata`, `fasilitas_wisata`, `gambar_wisata`, `jenis_paket`) VALUES
@@ -145,7 +152,7 @@ INSERT INTO `paket_wisata` (`id_wisata`, `nama_wisata`, `deskripsi_wisata`, `har
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `paket_wisata_detail`
+-- Table structure for table `paket_wisata_detail`
 --
 
 CREATE TABLE `paket_wisata_detail` (
@@ -155,7 +162,7 @@ CREATE TABLE `paket_wisata_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `paket_wisata_detail`
+-- Dumping data for table `paket_wisata_detail`
 --
 
 INSERT INTO `paket_wisata_detail` (`id`, `id_wisata`, `destinasi_area`) VALUES
@@ -166,7 +173,7 @@ INSERT INTO `paket_wisata_detail` (`id`, `id_wisata`, `destinasi_area`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pesan`
+-- Table structure for table `pesan`
 --
 
 CREATE TABLE `pesan` (
@@ -180,7 +187,7 @@ CREATE TABLE `pesan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tentang`
+-- Table structure for table `tentang`
 --
 
 CREATE TABLE `tentang` (
@@ -198,7 +205,7 @@ CREATE TABLE `tentang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tentang`
+-- Dumping data for table `tentang`
 --
 
 INSERT INTO `tentang` (`id`, `nama`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
@@ -207,7 +214,7 @@ INSERT INTO `tentang` (`id`, `nama`, `deskripsi`, `alamat`, `telepon`, `email`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `testimonial`
+-- Table structure for table `testimonial`
 --
 
 CREATE TABLE `testimonial` (
@@ -218,7 +225,7 @@ CREATE TABLE `testimonial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `testimonial`
+-- Dumping data for table `testimonial`
 --
 
 INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_testi`) VALUES
@@ -229,113 +236,113 @@ INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `destinasi`
+-- Indexes for table `destinasi`
 --
 ALTER TABLE `destinasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `destinasi_area`
+-- Indexes for table `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
   ADD PRIMARY KEY (`id_area`);
 
 --
--- Indeks untuk tabel `jenis_paket`
+-- Indexes for table `jenis_paket`
 --
 ALTER TABLE `jenis_paket`
   ADD PRIMARY KEY (`id_paket`);
 
 --
--- Indeks untuk tabel `paket_wisata`
+-- Indexes for table `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   ADD PRIMARY KEY (`id_wisata`);
 
 --
--- Indeks untuk tabel `paket_wisata_detail`
+-- Indexes for table `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pesan`
+-- Indexes for table `pesan`
 --
 ALTER TABLE `pesan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tentang`
+-- Indexes for table `tentang`
 --
 ALTER TABLE `tentang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `testimonial`
+-- Indexes for table `testimonial`
 --
 ALTER TABLE `testimonial`
   ADD PRIMARY KEY (`id_testi`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `destinasi`
+-- AUTO_INCREMENT for table `destinasi`
 --
 ALTER TABLE `destinasi`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `destinasi_area`
+-- AUTO_INCREMENT for table `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
-  MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `jenis_paket`
+-- AUTO_INCREMENT for table `jenis_paket`
 --
 ALTER TABLE `jenis_paket`
   MODIFY `id_paket` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `paket_wisata`
+-- AUTO_INCREMENT for table `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   MODIFY `id_wisata` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `paket_wisata_detail`
+-- AUTO_INCREMENT for table `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `pesan`
+-- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `tentang`
+-- AUTO_INCREMENT for table `tentang`
 --
 ALTER TABLE `tentang`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `testimonial`
+-- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
   MODIFY `id_testi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
