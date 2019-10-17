@@ -6,17 +6,7 @@ if($_SESSION['status']!="login"){
   header("location:../login");
 }
 
-if(!empty($_GET['idTourPackages'])){
-    $idTourPackages = $_GET['idTourPackages'];
-}
-else{
-    header("location:../tour-packages");   
-}
-$dataPaket = array();
-$query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata_detail WHERE paket_wisata_id = $idTourPackages")or die(mysqli_error());
-    while($data = mysqli_fetch_array($query_mysql)){
-        array_push($dataPaket, $data['destinasi_area_id']);
-    }
+
 ?>
 
 <style type="text/css">
@@ -50,7 +40,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Ubah Tour Packages</h1>
+                            <h1>Tambah Tour Packages</h1>
                         </div>
                     </div>
                 </div>
@@ -70,21 +60,11 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
-                                    <?php
-                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM paket_wisata WHERE id = $idTourPackages");
-                                    $d = mysqli_fetch_assoc($queryDetailAdmin);
-                                    $idDestinasi = $d['id'];
-                                    $nama = $d['nama'];
-                                    $deskripsi = $d['deskripsi'];
-                                    $peta = $d['peta'];
-                                    $timeline = $d['timeline'];
-                                    ?>
+                                <form role="form" method="POST" action="tambah-aksi" enctype="multipart/form-data">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
-                                            <input type="hidden" name="id" value="<?= $idTourPackages;?>">
+                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="">
                                         </div>
                                         <div class="form-group">
                                         	<label for="exampleInputPassword1">Deskripsi</label>
@@ -100,7 +80,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
 					                        </div>
 					                        <div class="pad">
 					                         	<div class="">
-					                         		<textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $deskripsi; ?>
+					                         		<textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
 					                                </textarea>
 					                            </div>
 					                        </div>
@@ -120,14 +100,14 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="peta" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $peta; ?>
+                                                    <textarea name="peta" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                                     </textarea>
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Timeline</label>
+                                            <label for="exampleInputPassword1">Timeline (BROKEN)</label>
                                             <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -140,7 +120,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="timeline" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $timeline; ?>
+                                                    <textarea name="timeline" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                                     </textarea>
                                                 </div>
                                             </div>
@@ -171,7 +151,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                                         $query_mysql2 = mysqli_query($koneksi,"SELECT * FROM destinasi_area WHERE destinasi_id = $id")or die(mysqli_error());
                                                         while($data2 = mysqli_fetch_array($query_mysql2)){
                                                         ?>
-                                                        <label><input type="checkbox" name="data_des[]" value="<?= $data2['id_area']?>" <?php echo (in_array($data2['id_area'], $dataPaket) ? 'checked' : ''); ?>> <?= $data2['nama_area'] ?></label>
+                                                        <label><input type="checkbox" name="data_des[]" value="<?= $data2['id_area']?>" > <?= $data2['nama_area'] ?></label>
 
                                                         <?php } ?>
                                                 <?php } ?>
@@ -183,7 +163,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Ubah Data Tour Packages</button>
+                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Tour Packages</button>
                                     </div>
                                 </form>
                             </div>
