@@ -67,8 +67,8 @@
                                 <li>
                                     <a href="about" style="font-size: 12px;">Services</a>
                                     <ul style="display: none;">
-                                        <li> <a href="#">Ticketing</a></li>
-                                        <li> <a href="#">Car Rental</a></li>
+                                        <li> <a href="ticket">Ticketing</a></li>
+                                        <li> <a href="rent">Car Rental</a></li>
                                     </ul>
                                 </li>
                                 <li>

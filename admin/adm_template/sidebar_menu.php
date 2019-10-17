@@ -1,6 +1,6 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-header">PENGATURAN</li>
+          <li class="nav-header">SETTINGS</li>
           <li class="nav-item">
             <a href="../tentang" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
@@ -38,6 +38,22 @@
               <i class="nav-icon fa fa-user"></i>
               <p>
                 Services
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../ticket" class="nav-link">
+              <i class="nav-icon fa fa-calendar"></i>
+              <p>
+                Ticketing
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../rental" class="nav-link">
+              <i class="nav-icon fa fa-car"></i>
+              <p>
+                Car Rental
               </p>
             </a>
           </li>
