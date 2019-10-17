@@ -61,7 +61,7 @@ $idRent = $_GET['idRent'];
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
-                                    <?
+                                    <?php
                                     $queryDetailPaket = mysqli_query($koneksi,"SELECT * FROM rent WHERE id = '$idRent'");
                                     $d = mysqli_fetch_assoc($queryDetailPaket);
                                     $id = $d['id'];

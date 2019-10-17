@@ -28,9 +28,11 @@ $namaWisata = $_GET['destination'];
     $namaDestinasi = $data['nama'];
     $deskripsi_singkatDestinasi = $data['deskripsi_singkat'];
     $deskripsiDestinasi = $data['deskripsi'];
+    $gambarDestinasi = $data['gambar'];
+
     ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center">
+    <section class="breadcrumb-outer text-center" style="background-image: url(<?php echo $gambarDestinasi ;?>)">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2><?php echo $namaDestinasi; ?></h2>
@@ -59,7 +61,7 @@ $namaWisata = $_GET['destination'];
                             <h2><?php echo $deskripsi_singkatDestinasi; ?></h2>
                         </div>
                         <div class="cover-image">
-                            <img src="images/breadcrumb.jpg" alt="Image">
+                            <img src="<?php echo $gambarDestinasi ;?>" alt="Image">
                         </div>
                         <div class="item-detail">
                             <?php echo($deskripsiDestinasi);?>

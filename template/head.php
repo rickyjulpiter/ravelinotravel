@@ -4,6 +4,7 @@
     $queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
     $tentang = mysqli_fetch_assoc($queryTentang);
     $nama = $tentang['nama'];
+    $slogan = $tentang['slogan'];
     $deskripsi = $tentang['deskripsi'];
     $alamat = $tentang['alamat'];
     $telepon = $tentang['telepon'];
