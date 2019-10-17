@@ -30,7 +30,6 @@
             <div class="row">
                 <?php
                 $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi LIMIT 6")or die(mysqli_error());
-                $nomor = 1;
                 while($data = mysqli_fetch_array($query_mysql)){
                     $idDestinasi = $data['id'];
                     $namaDestinasi = $data['nama'];
