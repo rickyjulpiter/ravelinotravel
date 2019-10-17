@@ -4,11 +4,6 @@
 
 <?php include 'template/head.php' ?>
 <body>
-    <!--
-    <a href="https://wa.me/<?php echo $telepon; ?>" class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-    </a>
-    -->
 
     <!-- Preloader -->
     <?php include 'template/preloader.php' ?>
@@ -23,10 +18,10 @@
     <!-- Navigation Bar Ends -->
 
     <!-- Banner -->
-    <?php include 'slider.php' ?>
+    <?php //include 'slider.php' ?>
 
 
-    <section class="amazing-tours popular-packages pad-bottom-80"style="padding-top: 30px;background: url(images/dealsbg.jpg) no-repeat;">
+    <section class="amazing-tours popular-packages pad-bottom-80"style="padding-top: 30px;">
         <div class="container">
             <div class="section-title text-center">
                 <h2>Tour Destination</h2>
@@ -41,12 +36,12 @@
                     $namaDestinasi = $data['nama'];
                     $deskripsiDestinasi = $data['deskripsi'];
                     $gambarDestinasi = $data['gambar'];
-                    ?>
+                ?>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="package-item">
-                        <img src="<?php echo $gambarDestinasi    ?>" alt="Image" width="293px" height="195px" style="object-fit: cover;">
+                        <img src="<?php echo $gambarDestinasi ?>" alt="Image" width="293px" height="195px" style="object-fit: cover;">
                         <div class="package-content" style="padding-bottom: 5px;"><center>
-                            <h2 style="text-align: center;"><a href="destination?nama_wisata=<?php echo $namaDestinasi; ?>"  style="color: green; text-align: center;" ><?php echo $namaDestinasi ?></a></h2></center>
+                            <h2 style="text-align: center;"><a href="destination-detail?destination=<?php echo $namaDestinasi; ?>"  style="color: green; text-align: center;" ><?php echo $namaDestinasi ?></a></h2></center>
                         </div>
                     </div>
                 </div>
