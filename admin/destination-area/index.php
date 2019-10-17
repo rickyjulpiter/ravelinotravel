@@ -63,11 +63,11 @@ if($_SESSION['status']!="login"){
                 </thead>
                 <tbody>
                   <?php
-                  $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi_area")or die(mysqli_error());
-                  $nomor = 1;
-                  while($data = mysqli_fetch_array($query_mysql)){
-                    $idDestinasiArea = $data['id_area'];
-                    $namaDestinasiArea = $data['nama_area'];
+                    $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi_area")or die(mysqli_error());
+                    $nomor = 1;
+                    while($data = mysqli_fetch_array($query_mysql)){
+                      $idDestinasiArea = $data['id_area'];
+                      $namaDestinasiArea = $data['nama_area'];
                     $deskripsiDestinasiArea = $data['deskripsi_area'];
                     $deskripsiDestinasiAreaSingkat = $data['deskripsi_area_singkat'];
                     $gambarDestinasiArea = $data['gambar_area'];

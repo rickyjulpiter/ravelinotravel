@@ -135,13 +135,14 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
+                                                    <img id="blah" src="../../<?= $gambar?>" alt="your image" style="width:50%"/><br><br>
                                                     <input type="file" name="gambar" id="gambar" accept="image/*">
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Id Destinasi</label>
+                                            <label for="exampleInputPassword1">Destinasi</label>
                                             <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -154,7 +155,16 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <input type="text" name="destinasi_id" id="destinasi_id" value="<?= $idDestinasi?>">
+                                                    <select name="destinasi">
+                                                    <?php
+                                                    $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi")or die(mysqli_error());
+                                                    while($data = mysqli_fetch_array($query_mysql)){
+                                                        $id = $data['id'];
+                                                        $nama = $data['nama'];
+                                                    ?>
+                                                        <option value="<?= $id?>" <?php if ($id == $idDestinasi) echo ' selected="selected"'; ?>><?= $nama ?></option>
+                                                    <?php } ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
