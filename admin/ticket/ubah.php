@@ -6,7 +6,7 @@ if($_SESSION['status']!="login"){
   header("location:../login");
 }
 
-$idRent = $_GET['idRent'];
+$idTicket = $_GET['idTicket'];
 
 ?>
 <style type="text/css">
@@ -40,7 +40,7 @@ $idRent = $_GET['idRent'];
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Add Car Rental</h1>
+                            <h1>Update Ticket</h1>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ $idRent = $_GET['idRent'];
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                     <?
-                                    $queryDetailPaket = mysqli_query($koneksi,"SELECT * FROM rent WHERE id = '$idRent'");
+                                    $queryDetailPaket = mysqli_query($koneksi,"SELECT * FROM ticket WHERE id = '$idTicket'");
                                     $d = mysqli_fetch_assoc($queryDetailPaket);
                                     $id = $d['id'];
                                     $nama = $d['nama'];
@@ -107,7 +107,7 @@ $idRent = $_GET['idRent'];
                                                     $tampakGambar = 'display:none;';
                                                 }
                                                 else {
-                                                    echo "<label>Gambar Mobil Saat Ini</label><br>";
+                                                    echo "<label>Gambar Ticket Saat Ini</label><br>";
                                                 }
                                                 ?>
                                                 <img src="<?php echo "../../".$gambar; ?>" width="30%" style="<?php echo($tampakGambar); ?>">

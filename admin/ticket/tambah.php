@@ -6,8 +6,6 @@ if($_SESSION['status']!="login"){
   header("location:../login");
 }
 
-$idRent = $_GET['idRent'];
-
 ?>
 <style type="text/css">
     #image-preview{
@@ -26,12 +24,12 @@ $idRent = $_GET['idRent'];
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <!-- Navbar -->
-        <?php //include 'adm_template/navbar.php'; ?>
-        <!-- /.navbar -->
+    	<!-- Navbar -->
+    	<?php //include 'adm_template/navbar.php'; ?>
+		<!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-        <?php include '../adm_template/sidebar.php'; ?>
+		<!-- Main Sidebar Container -->
+		<?php include '../adm_template/sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -40,7 +38,7 @@ $idRent = $_GET['idRent'];
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Add Car Rental</h1>
+                            <h1>Add New Ticket</h1>
                         </div>
                     </div>
                 </div>
@@ -60,20 +58,12 @@ $idRent = $_GET['idRent'];
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
-                                    <?
-                                    $queryDetailPaket = mysqli_query($koneksi,"SELECT * FROM rent WHERE id = '$idRent'");
-                                    $d = mysqli_fetch_assoc($queryDetailPaket);
-                                    $id = $d['id'];
-                                    $nama = $d['nama'];
-                                    $deskripsi = $d['deskripsi'];
-                                    $gambar = $d['gambar'];
-                                    ?>
+                                <form role="form" method="POST" action="tambah-aksi" enctype="multipart/form-data">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $nama; ?>">
-                                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1">
+                                            <input type="hidden" name="id">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Deskripsi Singkat</label>
@@ -89,7 +79,7 @@ $idRent = $_GET['idRent'];
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $deskripsi; ?>
+                                                    <textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                                     </textarea>
                                                 </div>
                                             </div>
@@ -101,25 +91,12 @@ $idRent = $_GET['idRent'];
                                             <div class="custom-file">
                                                 <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();">
                                             </div>
-                                            <div>
-                                                <?php
-                                                if ($gambar == '') {
-                                                    $tampakGambar = 'display:none;';
-                                                }
-                                                else {
-                                                    echo "<label>Gambar Mobil Saat Ini</label><br>";
-                                                }
-                                                ?>
-                                                <img src="<?php echo "../../".$gambar; ?>" width="30%" style="<?php echo($tampakGambar); ?>">
-
-                                                
-                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Update Data</button>
+                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Destination</button>
                                     </div>
                                 </form>
                             </div>
