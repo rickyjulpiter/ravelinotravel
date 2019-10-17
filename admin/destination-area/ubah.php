@@ -6,8 +6,8 @@ if($_SESSION['status']!="login"){
   header("location:../login");
 }
 
-if(!empty($_GET['idDestinasi'])){
-    $idDestinasi = $_GET['idDestinasi'];
+if(!empty($_GET['idDestinasiArea'])){
+    $idDestinasiArea = $_GET['idDestinasiArea'];
 }
 else{
     header("location:../destination");   
@@ -66,19 +66,20 @@ else{
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                     <?php
-                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM destinasi WHERE id = $idDestinasi");
+                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM destinasi_area WHERE id_area = $idDestinasiArea ");
                                     $d = mysqli_fetch_assoc($queryDetailAdmin);
-                                    $idDestinasi = $d['id'];
-                                    $nama = $d['nama'];
-                                    $deskripsi = $d['deskripsi'];
-                                    $deskripsi_singkat = $d['deskripsi_singkat'];
-                                    $gambar = $d['gambar'];
+                                    $idDestinasiArea = $d['id_area'];
+                                    $nama = $d['nama_area'];
+                                    $deskripsi = $d['deskripsi_area'];
+                                    $deskripsi_singkat = $d['deskripsi_area_singkat'];
+                                    $gambar = $d['gambar_area'];
+                                    $idDestinasi = $d['destinasi_id'];
                                     ?>
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
                                             <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
-                                            <input type="hidden" name="id" value="<?= $idDestinasi;?>">
+                                            <input type="hidden" name="id" value="<?= $idDestinasiArea;?>">
                                         </div>
                                         <div class="form-group">
                                         	<label for="exampleInputPassword1">Deskripsi</label>
@@ -135,6 +136,25 @@ else{
                                             <div class="pad">
                                                 <div class="">
                                                     <input type="file" name="gambar" id="gambar" accept="image/*">
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Id Destinasi</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <input type="text" name="destinasi_id" id="destinasi_id" value="<?= $idDestinasi?>">
                                                 </div>
                                             </div>
                                                <!-- /. tools -->

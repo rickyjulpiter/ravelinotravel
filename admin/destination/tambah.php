@@ -119,8 +119,7 @@ if($_SESSION['status']!="login"){
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="gambar" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-                                                    </textarea>
+                                                    <input type="file" name="gambar" id="gambar" accept="image/*">
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
@@ -165,6 +164,7 @@ if($_SESSION['status']!="login"){
                 ]
             });
         })
+
       </script>
       <script type="text/javascript">
           function previewImage() {
