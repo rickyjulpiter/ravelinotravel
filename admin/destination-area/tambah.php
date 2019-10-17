@@ -6,12 +6,6 @@ if($_SESSION['status']!="login"){
   header("location:../login");
 }
 
-if(!empty($_GET['idDestinasiArea'])){
-    $idDestinasiArea = $_GET['idDestinasiArea'];
-}
-else{
-    header("location:../destination-area");   
-}
 ?>
 <style type="text/css">
     #image-preview{
@@ -30,12 +24,12 @@ else{
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-    	<!-- Navbar -->
-    	<?php //include 'adm_template/navbar.php'; ?>
-		<!-- /.navbar -->
+        <!-- Navbar -->
+        <?php //include 'adm_template/navbar.php'; ?>
+        <!-- /.navbar -->
 
-		<!-- Main Sidebar Container -->
-		<?php include '../adm_template/sidebar.php'; ?>
+        <!-- Main Sidebar Container -->
+        <?php include '../adm_template/sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -44,7 +38,7 @@ else{
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Ubah Destination Area</h1>
+                            <h1>Tambah Destination Area</h1>
                         </div>
                     </div>
                 </div>
@@ -64,42 +58,31 @@ else{
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
-                                    <?php
-                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM destinasi_area WHERE id_area = $idDestinasiArea ");
-                                    $d = mysqli_fetch_assoc($queryDetailAdmin);
-                                    $idDestinasiArea = $d['id_area'];
-                                    $nama = $d['nama_area'];
-                                    $deskripsi = $d['deskripsi_area'];
-                                    $deskripsi_singkat = $d['deskripsi_area_singkat'];
-                                    $gambar = $d['gambar_area'];
-                                    $idDestinasi = $d['destinasi_id'];
-                                    ?>
+                                <form role="form" method="POST" action="tambah-aksi" enctype="multipart/form-data">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
-                                            <input type="hidden" name="id" value="<?= $idDestinasiArea;?>">
+                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="">
                                         </div>
                                         <div class="form-group">
-                                        	<label for="exampleInputPassword1">Deskripsi</label>
-                                        	<!-- tools box -->
-                                        	<div class="card-tools" style="margin-top: -22px;">
-                                        		<button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                        			<i class="fas fa-minus"></i>
-					                             </button>
-					                             <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
-					                                 title="Remove">
-					                                 <i class="fas fa-times"></i>
-					                             </button>
-					                        </div>
-					                        <div class="pad">
-					                         	<div class="">
-					                         		<textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $deskripsi; ?>
-					                                </textarea>
-					                            </div>
-					                        </div>
-					                           <!-- /. tools -->
+                                            <label for="exampleInputPassword1">Deskripsi</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <textarea name="deskripsi" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Deskripsi Singkat</label>
@@ -115,7 +98,7 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="deskripsi_singkat" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $deskripsi_singkat; ?>
+                                                    <textarea name="deskripsi_singkat" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                                     </textarea>
                                                 </div>
                                             </div>
@@ -135,7 +118,6 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <img id="blah" src="../../<?= $gambar?>" alt="your image" style="width:50%"/><br><br>
                                                     <input type="file" name="gambar" id="gambar" accept="image/*">
                                                 </div>
                                             </div>
@@ -162,7 +144,7 @@ else{
                                                         $id = $data['id'];
                                                         $nama = $data['nama'];
                                                     ?>
-                                                        <option value="<?= $id?>" <?php if ($id == $idDestinasi) echo ' selected="selected"'; ?>><?= $nama ?></option>
+                                                        <option value="<?= $id?>"><?= $nama ?></option>
                                                     <?php } ?>
                                                     </select>
                                                 </div>
