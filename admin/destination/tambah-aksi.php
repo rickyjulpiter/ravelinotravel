@@ -1,7 +1,11 @@
 <?php
     include '../../koneksi.php';
 
+<<<<<<< HEAD
     $target_dir = "../images/";
+=======
+        $target_dir = "../../images/";
+>>>>>>> f77c485b5a15f293e37f449c68f3751d35f7ded6
     $target_file = $target_dir . basename($_FILES["gambar"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

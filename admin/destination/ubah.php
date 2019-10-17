@@ -134,6 +134,7 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
+                                                    <img id="blah" src="../../<?= $gambar?>" alt="your image" style="width:50%"/><br><br>
                                                     <input type="file" name="gambar" id="gambar" accept="image/*">
                                                 </div>
                                             </div>

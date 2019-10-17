@@ -30,7 +30,7 @@ if($_SESSION['status']!="login"){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Destination Area List</h1>
+            <h1 class="m-0 text-dark">Tour Packages List</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -44,8 +44,8 @@ if($_SESSION['status']!="login"){
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Destination Area List
-                <span style="margin-left: 10px;"><a href="tambah" class="btn btn-info btn-xs">+ Add Destination Area</a></span>
+              <h3 class="card-title">Tour Packages List
+                <span style="margin-left: 10px;"><a href="tambah" class="btn btn-info btn-xs">+ Add Tour Packages</a></span>
               </h3>
               
             </div>
@@ -55,7 +55,7 @@ if($_SESSION['status']!="login"){
                 <thead>
                   <tr>
                     <td>No</td>
-                    <td>Destination Area Name</td>
+                    <td>Tour Packages Name</td>
                     <!--<td>Deskripsi</td>
                     <td>Gambar</td>-->
                     <td>Action</td>
@@ -63,22 +63,14 @@ if($_SESSION['status']!="login"){
                 </thead>
                 <tbody>
                   <?php
-                  $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi_area")or die(mysqli_error());
+                  $query_mysql = mysqli_query($koneksi,"SELECT * FROM paket_wisata")or die(mysqli_error());
                   $nomor = 1;
                   while($data = mysqli_fetch_array($query_mysql)){
-                    $idDestinasiArea = $data['id_area'];
-                    $namaDestinasiArea = $data['nama_area'];
-                    $deskripsiDestinasiArea = $data['deskripsi_area'];
-                    $deskripsiDestinasiAreaSingkat = $data['deskripsi_area_singkat'];
-                    $gambarDestinasiArea = $data['gambar_area'];
-                    $idDestinasi = $data['destinasi_id'];
-                    if ($gambarDestinasiArea == '') {
-                      $tampakGambar = 'display:none';
-                      $gambarDestinasi = '';
-                    }
-                    else {
-                      $tampakGambar = '';
-                    }
+                    $idPaket = $data['id'];
+                    $nama = $data['nama'];
+                    $deskripsi = $data['deskripsi'];
+                    $Peta = $data['peta'];
+                    $timeline = $data['timeline'];
                     /*
                     if ($data['gambar_paket'] == '')
                     {
@@ -92,12 +84,12 @@ if($_SESSION['status']!="login"){
                   ?>
                   <tr>
                     <td><?php echo $nomor++; ?></td>
-                    <td><?php echo $namaDestinasiArea; ?></td>
+                    <td><?php echo $nama; ?></td>
                     <!--<td><?php //echo $deskripsiDestinasi; ?></td>
                     <td><?php //echo $gambarDestinasi; ?></td>-->
                     <td>
-                      <a href='ubah?idDestinasiArea=<?php echo $idDestinasiArea; ?>' class="btn btn-info btn-xs">Detail & Update</a>
-                      <a href='hapus?idDestinasiArea=<?php echo $idDestinasiArea; ?>' class="btn btn-danger btn-xs">Delete</a>
+                      <a href='ubah?idTourPackages=<?php echo $idPaket; ?>' class="btn btn-info btn-xs">Detail & Update</a>
+                      <a href='hapus?idTourPackages=<?php echo $idPaket; ?>' class="btn btn-danger btn-xs">Delete</a>
                     </td>
                   </tr>
                   <?php } ?>

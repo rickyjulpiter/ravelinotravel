@@ -6,11 +6,11 @@ if($_SESSION['status']!="login"){
   header("location:../login");
 }
 
-if(!empty($_GET['idDestinasiArea'])){
-    $idDestinasiArea = $_GET['idDestinasiArea'];
+if(!empty($_GET['idTourPackages'])){
+    $idTourPackages = $_GET['idTourPackages'];
 }
 else{
-    header("location:../destination-area");   
+    header("location:../tour-packages");   
 }
 ?>
 <style type="text/css">
@@ -66,20 +66,19 @@ else{
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                     <?php
-                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM destinasi_area WHERE id_area = $idDestinasiArea ");
+                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM paket_wisata WHERE id = $idTourPackages");
                                     $d = mysqli_fetch_assoc($queryDetailAdmin);
-                                    $idDestinasiArea = $d['id_area'];
-                                    $nama = $d['nama_area'];
-                                    $deskripsi = $d['deskripsi_area'];
-                                    $deskripsi_singkat = $d['deskripsi_area_singkat'];
-                                    $gambar = $d['gambar_area'];
-                                    $idDestinasi = $d['destinasi_id'];
+                                    $idDestinasi = $d['id'];
+                                    $nama = $d['nama'];
+                                    $deskripsi = $d['deskripsi'];
+                                    $peta = $d['peta'];
+                                    $timeline = $d['timeline'];
                                     ?>
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
                                             <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
-                                            <input type="hidden" name="id" value="<?= $idDestinasiArea;?>">
+                                            <input type="hidden" name="id" value="<?= $idTourPackages;?>">
                                         </div>
                                         <div class="form-group">
                                         	<label for="exampleInputPassword1">Deskripsi</label>
@@ -102,7 +101,7 @@ else{
 					                           <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Deskripsi Singkat</label>
+                                            <label for="exampleInputPassword1">Peta</label>
                                             <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -115,14 +114,14 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="deskripsi_singkat" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $deskripsi_singkat; ?>
+                                                    <textarea name="deskripsi_singkat" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $peta; ?>
                                                     </textarea>
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Gambar</label>
+                                            <label for="exampleInputPassword1">Timeline (BROKEN)</label>
                                             <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -135,26 +134,8 @@ else{
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <input type="file" name="gambar" id="gambar" accept="image/*">
-                                                </div>
-                                            </div>
-                                               <!-- /. tools -->
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Id Destinasi</label>
-                                            <!-- tools box -->
-                                            <div class="card-tools" style="margin-top: -22px;">
-                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                                    <i class="fas fa-minus"></i>
-                                                 </button>
-                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
-                                                     title="Remove">
-                                                     <i class="fas fa-times"></i>
-                                                 </button>
-                                            </div>
-                                            <div class="pad">
-                                                <div class="">
-                                                    <input type="text" name="destinasi_id" id="destinasi_id" value="<?= $idDestinasi?>">
+                                                    <textarea name="deskripsi_singkat" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $timeline; ?>
+                                                    </textarea>
                                                 </div>
                                             </div>
                                                <!-- /. tools -->

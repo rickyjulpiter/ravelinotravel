@@ -44,7 +44,7 @@
                                     <a href="index.html" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
                                     <ul style="">
                                         <?php
-                                        $query_destinasi = mysqli_query($koneksi,"SELECT * FROM destinasi")or die(mysqli_error());
+                                        $query_destinasi = mysqli_query($koneksi,"SELECT DISTINCT(d.id),d.nama FROM paket_wisata_detail AS pwd INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area INNER JOIN destinasi AS d ON d.id = da.destinasi_id")or die(mysqli_error());
                                         while($data = mysqli_fetch_array($query_destinasi)){
                                             $idDestinasi = $data['id'];
                                             $namaDestinasi = $data['nama'];
@@ -52,7 +52,7 @@
                                         <li><a href="#"><?= $namaDestinasi ?><i class="arrow-indicator fa fa-angle-right"></i></a>  
                                             <ul>
                                                 <?php 
-                                                $query_area_destinasi = mysqli_query($koneksi,"SELECT * FROM paket_wisata_detail AS pwd INNER JOIN paket_wisata as pw ON pwd.paket_wisata_id = pw.id INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area WHERE da.destinasi_id = '$idDestinasi'")or die(mysqli_error());
+                                                $query_area_destinasi = mysqli_query($koneksi,"SELECT DISTINCT(pw.nama) FROM paket_wisata_detail AS pwd INNER JOIN paket_wisata as pw ON pwd.paket_wisata_id = pw.id INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area  WHERE da.destinasi_id = '$idDestinasi'")or die(mysqli_error());
                                                 while ($area = mysqli_fetch_array($query_area_destinasi)) {
                                                     $namaPaket = $area['nama'];
                                                 ?>
