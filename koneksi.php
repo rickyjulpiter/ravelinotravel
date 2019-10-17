@@ -1,8 +1,7 @@
 <?php 
 
-$koneksi = mysqli_connect("localhost","root","","ravelinotravel");
-
-//$koneksi = mysqli_connect("localhost","u4502442_fegatravel","A(#mE[6%O,z1","u4502442_fegatravel");
+//$koneksi = mysqli_connect("localhost","root","","ravelinotravel");
+$koneksi = mysqli_connect("localhost","u4502442_ravelinotravel","HB1~LE#fJhN@","u4502442_ravelinotravel");
  
 // Check connection
 if (mysqli_connect_errno()){
