@@ -38,7 +38,7 @@ if($_SESSION['status']!="login"){
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Tambah Testimonial</h1>
+                            <h1>Tambah Destination</h1>
                         </div>
                     </div>
                 </div>
@@ -85,11 +85,31 @@ if($_SESSION['status']!="login"){
 					                        </div>
 					                           <!-- /. tools -->
                                         </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Deskripsi Singkat</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <textarea name="deskripsi_singkat" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
+                                        </div>
                                     </div>
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Testimonial</button>
+                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Destination</button>
                                     </div>
                                 </form>
                             </div>

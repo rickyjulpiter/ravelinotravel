@@ -43,13 +43,24 @@
                                 <li>
                                     <a href="index.html" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
                                     <ul style="">
-                                        <li><a href="#">North Sumatra <i class="arrow-indicator fa fa-angle-right"></i></a>
+                                        <?php
+                                        $query_destinasi = mysqli_query($koneksi,"SELECT * FROM destinasi")or die(mysqli_error());
+                                        while($data = mysqli_fetch_array($query_destinasi)){
+                                            $idDestinasi = $data['id'];
+                                            $namaDestinasi = $data['nama'];
+                                        ?>
+                                        <li><a href="#"><?= $namaDestinasi ?><i class="arrow-indicator fa fa-angle-right"></i></a>  
                                             <ul>
-                                                <li><a href="tour?tourName=07 DAYS / 06 NIGHTS MEDAN - BUKIT LAWANG TRACKING AND RAFTING - A">07 DAYS / 06 NIGHTS MEDAN - BUKIT LAWANG TRACKING AND RAFTING - A</a></li>
-                                                <li><a href="#">Submenu paket dari North Sumatra 2</a></li>
-                                                <li><a href="#">Submenu paket dari North Sumatra 3</a></li>
+                                                <?php 
+                                                $query_area_destinasi = mysqli_query($koneksi,"SELECT * FROM paket_wisata_detail AS pwd INNER JOIN paket_wisata as pw ON pwd.paket_wisata_id = pw.id INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area WHERE da.destinasi_id = '$idDestinasi'")or die(mysqli_error());
+                                                while ($area = mysqli_fetch_array($query_area_destinasi)) {
+                                                    $namaPaket = $area['nama'];
+                                                ?>
+                                                <li><a href="tour?tourName=<?= $namaPaket;?>"><?= $namaPaket?></a></li>
+                                                <?php } ?>
                                             </ul>
                                         </li>
+                                        <?php } ?>
                                     </ul>
                                 </li>
                                 
