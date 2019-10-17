@@ -26,7 +26,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../destination-area" class="nav-link">
+            <a href="../tour-packages" class="nav-link">
               <i class="nav-icon fa fa-suitcase"></i>
               <p>
                 Tour Packages
