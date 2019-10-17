@@ -55,7 +55,7 @@ if($_SESSION['status']!="login"){
                 <thead>
                   <tr>
                     <td>No</td>
-                    <td>Destination Name</td>
+                    <td>Destination Area Name</td>
                     <!--<td>Deskripsi</td>
                     <td>Gambar</td>-->
                     <td>Action</td>
