@@ -17,7 +17,6 @@
         $add_lokasi_gambar = $_FILES['tambahgambar']['tmp_name'];    
     }
     
-    
     for($i=0; $i<sizeof($add_nama_gambar); $i++){
         if($add_nama_gambar[$i] != ''){
             $imageSave = "images/"."tour".$id."-".$i."-".$add_nama_gambar[$i];
@@ -28,15 +27,14 @@
             }
         }
     }
-
-    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$id'");
-    while($data = mysqli_fetch_array($query_mysql)){
-        $i=0;
+    for($i=0; $i<sizeof($nama_gambar); $i++){
+        $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE id = '$idgambar[$i]'");    
         if($nama_gambar[$i]!=''){
-            unlink('../../'.$data['gambar']);    
+            $data = mysqli_fetch_assoc($query_mysql);
+            unlink('../../'.$data['gambar']);      
         }
-        $i++;
     }
+    
 
     $queryDelete = "DELETE FROM paket_wisata_detail WHERE paket_wisata_id = '$id'";
     mysqli_query($koneksi,$queryDelete);
