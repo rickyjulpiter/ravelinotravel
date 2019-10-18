@@ -105,51 +105,25 @@ if($_SESSION['status']!="login"){
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Gambar</label>
-                                            <!-- tools box -->
-                                            <div class="card-tools" style="margin-top: -22px;">
-                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                                    <i class="fas fa-minus"></i>
-                                                 </button>
-                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
-                                                     title="Remove">
-                                                     <i class="fas fa-times"></i>
-                                                 </button>
+                                            <label for="customFile">Preview Gambar</label>
+                                            <img id="image-preview" alt="image preview"/><br/>
+                                            <div class="custom-file">
+                                                <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();" accept="image/*">
                                             </div>
-                                            <div class="pad">
-                                                <div class="">
-                                                    <input type="file" name="gambar" id="gambar" accept="image/*">
-                                                </div>
-                                            </div>
-                                               <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Destinasi</label>
                                             <!-- tools box -->
-                                            <div class="card-tools" style="margin-top: -22px;">
-                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                                    <i class="fas fa-minus"></i>
-                                                 </button>
-                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
-                                                     title="Remove">
-                                                     <i class="fas fa-times"></i>
-                                                 </button>
-                                            </div>
-                                            <div class="pad">
-                                                <div class="">
-                                                    <select name="destinasi">
-                                                    <?php
-                                                    $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi")or die(mysqli_error());
-                                                    while($data = mysqli_fetch_array($query_mysql)){
-                                                        $id = $data['id'];
-                                                        $nama = $data['nama'];
-                                                    ?>
-                                                        <option value="<?= $id?>"><?= $nama ?></option>
-                                                    <?php } ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                               <!-- /. tools -->
+                                            <select name="destinasi" class="form-control">
+                                                <?php
+                                                $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi")or die(mysqli_error());
+                                                while($data = mysqli_fetch_array($query_mysql)){
+                                                    $id = $data['id'];
+                                                    $nama = $data['nama'];
+                                                ?>
+                                                <option value="<?= $id?>"><?= $nama ?></option>
+                                                <?php } ?>
+                                            </select>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->

@@ -1,8 +1,8 @@
 <?php
 include '../../koneksi.php';
 
-$idRent = $_GET['idRent'];
-$queryDelete = "DELETE FROM ticket WHERE id = '$idRent'";
+$idTicket = $_GET['idTicket'];
+$queryDelete = "DELETE FROM ticket WHERE id = '$idTicket'";
 //echo($queryDelete);
 mysqli_query($koneksi,$queryDelete);
 echo "<script>
