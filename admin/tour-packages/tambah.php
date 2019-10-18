@@ -159,6 +159,28 @@ if($_SESSION['status']!="login"){
                                             </div>
                                                <!-- /. tools -->
                                         </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Gambar</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <input type="text" id="jumlah" placeholder="Masukkan banyak gambar">
+                                                    <button type="button" id="btn-proses">Proses</button>
+                                                    <div class="input-file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
+                                        </div>
                                     </div>
                                     <!-- /.card-body -->
 
@@ -210,6 +232,16 @@ if($_SESSION['status']!="login"){
               document.getElementById("image-preview").src = oFREvent.target.result;
             };
           };
+      </script>
+      <script type="text/javascript">
+          $('#btn-proses').on('click',function(){
+            var jumlah = $('#jumlah').val();
+            var save = "";
+            for(var i=0; i<jumlah; i++){
+                save = save + "<input type='file' name='gambar[]' accept='image/*'><br>"
+            }
+            $('.input-file').html(save);
+        });
       </script>
 
 </body>

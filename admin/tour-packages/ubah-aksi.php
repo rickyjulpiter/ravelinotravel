@@ -7,13 +7,34 @@
     $peta = $_POST['peta'];
     $timeline = $_POST['timeline'];
     $data_des = $_POST['data_des'];
+    $nama_gambar = $_FILES['gambar']['name'];
+    $lokasi_gambar = $_FILES['gambar']['tmp_name'];
+    
+    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$id'");
+    while($data = mysqli_fetch_array($query_mysql)){
+        unlink('../../'.$data['gambar']);
+    }
 
     $queryDelete = "DELETE FROM paket_wisata_detail WHERE paket_wisata_id = '$id'";
+    mysqli_query($koneksi,$queryDelete);
+
+    $queryDelete = "DELETE FROM paket_wisata_gambar WHERE paket_wisata_id = '$id'";
     mysqli_query($koneksi,$queryDelete);
 
     for($i=0; $i<sizeof($data_des); $i++){
         $queryInsert = "INSERT INTO paket_wisata_detail (paket_wisata_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
         mysqli_query($koneksi,$queryInsert);
+    }
+
+    for($i=0; $i<sizeof($nama_gambar); $i++){
+        if($nama_gambar[$i] != ''){
+            $imageSave = "images/"."tour".$id."-".$i."-".$nama_gambar[$i];
+            $folder = "../../images/"."tour".$id."-".$i."-".$nama_gambar[$i];
+            $queryInsert = "INSERT INTO paket_wisata_gambar (paket_wisata_id,gambar) VALUES ('$id','$imageSave')";
+            if(move_uploaded_file($lokasi_gambar[$i], "$folder")){
+                $data = mysqli_query($koneksi,$queryInsert);
+            }
+        }
     }
 
     $queryUpdate = "UPDATE paket_wisata SET
