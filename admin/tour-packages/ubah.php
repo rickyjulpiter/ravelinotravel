@@ -200,6 +200,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                                         $idgambar = $data['id'];
                                                     ?>
                                                     <img src="../../<?= $gambar?>"><br>
+                                                    <a href="hapus-gambar?idGambar=<?=$idgambar?>&idTour=<?= $idTourPackages?>" class="btn btn-danger">Hapus</a>
                                                     <label>Edit Gambar : <input type='file' name='gambar[]' accept='image/*'></label><br>
                                                     <input type='hidden' name='idgambar[]' value="<?= $idgambar?>">
                                                     <?php } ?>
@@ -222,7 +223,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                             <div class="pad">
                                                 <div class="">
                                                     <input type="text" id="jumlah" placeholder="Masukkan banyak gambar">
-                                                    <button type="button" id="btn-proses">Proses</button>
+                                                    <button class="btn btn-primary" type="button" id="btn-proses">Proses</button>
                                                     <div class="input-file">
                                                     </div>
                                                 </div>
