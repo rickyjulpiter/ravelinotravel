@@ -4,7 +4,7 @@
 	$lokasi_file= $_FILES['logo']['tmp_name'];
 	$nama_file = $_FILES['logo']['name'];
 
-	$folder = "../images/$nama_file";
+	$folder = "../../images/$nama_file";
 
 	$id = $_POST['id'];
 	$nama = $_POST['nama'];
