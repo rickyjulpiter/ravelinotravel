@@ -4,7 +4,7 @@
           <li class="nav-item">
             <a href="../tentang" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
-              <p>
+              <p style="color: white">
                 About Us
               </p>
             </a>
@@ -12,7 +12,7 @@
           <li class="nav-item">
             <a href="../destination" class="nav-link">
               <i class="nav-icon fa fa-map-marker"></i>
-              <p>
+              <p style="color: white">
                 Destination
               </p>
             </a>
@@ -20,7 +20,7 @@
           <li class="nav-item">
             <a href="../destination-area" class="nav-link">
               <i class="nav-icon fa fa-map-signs"></i>
-              <p>
+              <p style="color: white">
                 Destination Area
               </p>
             </a>
@@ -28,7 +28,7 @@
           <li class="nav-item">
             <a href="../tour-packages" class="nav-link">
               <i class="nav-icon fa fa-suitcase"></i>
-              <p>
+              <p style="color: white">
                 Tour Packages
               </p>
             </a>
@@ -36,7 +36,7 @@
           <li class="nav-item">
             <a href="../destination-area" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
-              <p>
+              <p style="color: white">
                 Services
               </p>
             </a>
@@ -44,7 +44,7 @@
           <li class="nav-item">
             <a href="../ticket" class="nav-link">
               <i class="nav-icon fa fa-calendar"></i>
-              <p>
+              <p style="color: white">
                 Ticketing
               </p>
             </a>
@@ -52,7 +52,7 @@
           <li class="nav-item">
             <a href="../rental" class="nav-link">
               <i class="nav-icon fa fa-car"></i>
-              <p>
+              <p style="color: white">
                 Car Rental
               </p>
             </a>
@@ -60,7 +60,7 @@
           <li class="nav-item">
             <a href="../destination-area" class="nav-link">
               <i class="nav-icon fa fa-camera"></i>
-              <p>
+              <p style="color: white">
                 Photo Gallery
               </p>
             </a>
@@ -86,7 +86,7 @@
           <li class="nav-item">
             <a href="../testimonial/" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
-              <p>
+              <p style="color: white">
                 Partnership
               </p>
             </a>
@@ -94,7 +94,7 @@
           <li class="nav-item">
             <a href="../inbox" class="nav-link">
               <i class="nav-icon fa fa-comment"></i>
-              <p>
+              <p style="color: white">
                 Inbox
               </p>
             </a>
@@ -102,7 +102,7 @@
           <li class="nav-item">
             <a href="../admin" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
-              <p>
+              <p style="color: white">
                 Administrator
               </p>
             </a>
@@ -110,7 +110,7 @@
           <li class="nav-item">
             <a href="../../index" class="nav-link" target="_blank">
               <i class="nav-icon fa fa-share"></i>
-              <p>
+              <p style="color: white">
                 View Site
               </p>
             </a>
@@ -118,7 +118,7 @@
           <li class="nav-item">
             <a href="../logout" class="nav-link">
               <i class="fas fa-sign-out-alt"></i>
-              <p>
+              <p style="color: white">
                 Logout
               </p>
             </a>
