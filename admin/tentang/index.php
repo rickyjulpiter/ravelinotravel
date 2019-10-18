@@ -72,6 +72,10 @@ if($_SESSION['status']!="login"){
                                             <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
                                         </div>
                                         <div class="form-group">
+                                            <label for="exampleInputEmail1">Slogan</label>
+                                            <input name="slogan" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['slogan']; ?>">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="exampleInputEmail1">Alamat</label>
                                             <input name="alamat" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['alamat']; ?>">
                                         </div>

@@ -177,6 +177,7 @@ INSERT INTO `rent` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 CREATE TABLE `tentang` (
   `id` int(10) NOT NULL,
   `nama` varchar(100) NOT NULL,
+  `slogan` text NOT NULL,
   `deskripsi` text NOT NULL,
   `alamat` text NOT NULL,
   `telepon` varchar(50) NOT NULL,
@@ -192,8 +193,8 @@ CREATE TABLE `tentang` (
 -- Dumping data for table `tentang`
 --
 
-INSERT INTO `tentang` (`id`, `nama`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
-(1, 'Synergi Ravelino Tours & Travel', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p><p><b>					                                					                                </b>					                                </p>					                                					                                					                                					                                					                                					                                					                                					                                					                                ', 'Jalan A.R hakim 175 A medan', '62811651399', 'ravelino@ravelinotravel.com', '#', '#', '#', '#', 'images/Yatra-01.png');
+INSERT INTO `tentang` (`id`, `nama`,`slogan`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
+(1, 'Synergi Ravelino Tours & Travel',`Your Link To The Best Traveling`, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p><p><b>					                                					                                </b>					                                </p>					                                					                                					                                					                                					                                					                                					                                					                                					                                ', 'Jalan A.R hakim 175 A medan', '62811651399', 'ravelino@ravelinotravel.com', '#', '#', '#', '#', 'images/Yatra-01.png');
 
 -- --------------------------------------------------------
 
