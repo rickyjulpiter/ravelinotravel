@@ -23,6 +23,7 @@ $namaTour = $_GET['tourName'];
     <?php
     $queryTour = mysqli_query($koneksi,"SELECT * FROM paket_wisata WHERE nama = '$namaTour'")or die(mysqli_error());
     $detail = mysqli_fetch_assoc($queryTour);
+    $idTourPackages = $detail['id'];  
     $nama_tour = $detail['nama'];
     $deskripsi_tour = $detail['deskripsi'];
     $peta_tour = $detail['peta'];
@@ -56,49 +57,35 @@ $namaTour = $_GET['tourName'];
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <!-- 1st Indicator -->
-                                    <li data-target="#in_th_030" data-slide-to="0" class="active">
+                                    <?php
+                                    $i=0;
+                                    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
+                                    while($data = mysqli_fetch_array($query_mysql)){
+                                        $gambar = $data['gambar'];
+                                    ?>
+                                    <li data-target="#in_th_030" data-slide-to="<?= $i?>" class="<?php if($i==1) echo 'active' ?>">
                                         <!-- 1st Indicator Image -->
-                                        <img src="images/detailslider1.jpg" alt="in_th_030_01_sm" />
+                                        <img src="<?= $gambar?>" alt="in_th_030_01_sm" />
                                     </li>
                                     <!-- 2nd Indicator -->
-                                    <li data-target="#in_th_030" data-slide-to="1">
-                                        <!-- 2nd Indicator Image -->
-                                        <img src="images/detailslider2.jpg" alt="in_th_030_02_sm" />
-                                    </li>
-                                    <!-- 3rd Indicator -->
-                                    <li data-target="#in_th_030" data-slide-to="2">
-                                        <!-- 3rd Indicator Image -->
-                                        <img src="images/detailslider3.jpg" alt="in_th_030_03_sm" />
-                                    </li>
-                                    <li data-target="#in_th_030" data-slide-to="3">
-                                        <!-- 3rd Indicator Image -->
-                                        <img src="images/detailslider4.jpg" alt="in_th_030_03_sm" />
-                                    </li>
+                                    <?php $i++; } ?>
                                 </ol> <!-- /Indicators -->
                                 <!-- Wrapper For Slides -->
                                 <div class="carousel-inner" role="listbox">
                                     <!-- First Slide -->
-                                    <div class="item active">
+                                    <?php
+                                    $i=0;
+                                    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
+                                    while($data = mysqli_fetch_array($query_mysql)){
+                                        $gambar = $data['gambar'];
+                                    ?>
+                                    <div class="item <?php if($i==1) echo "active" ?>">
                                         <!-- Slide Background -->
-                                        <img src="images/detailslider1.jpg" alt="in_th_030_01" />                                        
+                                        <img src="<?= $gambar?>" alt="in_th_030_01" />                                        
                                     </div>
+
                                     <!-- End of Slide -->
-                                    <!-- Second Slide -->
-                                    <div class="item">
-                                        <!-- Slide Background -->
-                                        <img src="images/detailslider2.jpg" alt="in_th_030_02" />
-                                    </div>
-                                    <!-- End of Slide -->
-                                    <!-- Third Slide -->
-                                    <div class="item">
-                                        <!-- Slide Background -->
-                                        <img src="images/detailslider3.jpg" alt="in_th_030_03" />
-                                    </div>
-                                    <!-- End of Slide -->
-                                    <div class="item">
-                                        <!-- Slide Background -->
-                                        <img src="images/detailslider4.jpg" alt="in_th_030_03" />
-                                    </div>
+                                    <?php $i++; } ?>
                                 </div> <!-- End of Wrapper For Slides -->
                             </div> <!-- End Paradise Slider -->
                         </div>

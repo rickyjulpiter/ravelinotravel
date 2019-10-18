@@ -194,13 +194,33 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                             <div class="pad">
                                                 <div class="">
                                                     <?php
-                                                    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
+                                                    $query_mysql = mysqli_query($koneksi,"SELECT id,gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
                                                     while($data = mysqli_fetch_array($query_mysql)){
                                                         $gambar = $data['gambar'];
+                                                        $idgambar = $data['id'];
                                                     ?>
                                                     <img src="../../<?= $gambar?>"><br>
-                                                    <p><?= $gambar?></p>
+                                                    <label>Edit Gambar : <input type='file' name='gambar[]' accept='image/*'></label><br>
+                                                    <input type='hidden' name='idgambar[]' value="<?= $idgambar?>">
                                                     <?php } ?>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Tambah Gambar</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
                                                     <input type="text" id="jumlah" placeholder="Masukkan banyak gambar">
                                                     <button type="button" id="btn-proses">Proses</button>
                                                     <div class="input-file">
@@ -268,7 +288,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
             var jumlah = $('#jumlah').val();
             var save = "";
             for(var i=0; i<jumlah; i++){
-                save = save + "<input type='file' name='gambar[]' accept='image/*'><br>"
+                save = save + "<input type='file' name='tambahgambar[]' accept='image/*'><br>"
             }
             $('.input-file').html(save);
         });
