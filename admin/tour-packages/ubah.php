@@ -194,17 +194,15 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                             <div class="pad">
                                                 <div class="">
                                                     <?php
-                                                    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
+                                                    $query_mysql = mysqli_query($koneksi,"SELECT id,gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
                                                     while($data = mysqli_fetch_array($query_mysql)){
                                                         $gambar = $data['gambar'];
+                                                        $idgambar = $data['id'];
                                                     ?>
                                                     <img src="../../<?= $gambar?>"><br>
-                                                    <p><?= $gambar?></p>
+                                                    <label>Edit Gambar : <input type='file' name='gambar[]' accept='image/*'></label><br>
+                                                    <input type='hidden' name='idgambar[]' value="<?= $idgambar?>">
                                                     <?php } ?>
-                                                    <input type="text" id="jumlah" placeholder="Masukkan banyak gambar">
-                                                    <button type="button" id="btn-proses">Proses</button>
-                                                    <div class="input-file">
-                                                    </div>
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
