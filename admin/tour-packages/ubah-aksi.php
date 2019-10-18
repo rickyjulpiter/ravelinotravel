@@ -10,8 +10,13 @@
     $nama_gambar = $_FILES['gambar']['name'];
     $lokasi_gambar = $_FILES['gambar']['tmp_name'];
     $idgambar = $_POST['idgambar'];
-    $add_nama_gambar = $_FILES['tambahgambar']['name'];
-    $add_lokasi_gambar = $_FILES['tambahgambar']['tmp_name'];
+    $add_nama_gambar = array();
+    $add_lokasi_gambar = array();
+    if(!empty($_FILES['tambahgambar']['name'])){
+        $add_nama_gambar = $_FILES['tambahgambar']['name'];
+        $add_lokasi_gambar = $_FILES['tambahgambar']['tmp_name'];    
+    }
+    
     
     for($i=0; $i<sizeof($add_nama_gambar); $i++){
         if($add_nama_gambar[$i] != ''){
