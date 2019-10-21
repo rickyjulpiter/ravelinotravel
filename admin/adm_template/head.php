@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   
   <!--Custom CSS-->
-  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <!--<link href="../../css/style.css" rel="stylesheet" type="text/css">-->
   <!--Flaticons CSS-->
   <!--<link href="../../font/flaticon.css" rel="stylesheet" type="text/css">-->
   <!--Plugin CSS-->

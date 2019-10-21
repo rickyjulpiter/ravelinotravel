@@ -38,7 +38,7 @@ if($_SESSION['status']!="login"){
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Tambah Destination</h1>
+                            <h1>Add Destination</h1>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@ if($_SESSION['status']!="login"){
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Destination</button>
+                                        <button type="submit" class="btn btn-block btn-info">Add Destination</button>
                                     </div>
                                 </form>
                             </div>

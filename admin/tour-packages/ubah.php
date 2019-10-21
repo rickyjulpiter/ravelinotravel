@@ -24,7 +24,96 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
     display:none;
     width : 293px;
     height : 195px;
-}
+    }
+    .timeline{
+      position: relative;
+    }
+    .timeline li {
+      position: relative;
+      margin-bottom: 30px;
+      background: #fff;
+      padding: 0px 15px 15px 110px;
+      border: 1px solid #f1f1f1;
+    }
+    .flag-wrapper {
+      margin-bottom: 10px;
+      margin-top: 15px;
+    }
+    .flag{
+      font-size: 18px;
+      color: #333;
+      font-weight: 600;
+      transition : all ease-in-out 0.3s;
+    }
+    .day-wrapper {
+      position: absolute;
+      height: 100%;
+      width: 60px;
+      background: #f1f1f1;
+      left: 0;
+      z-index: 1;
+      text-align: center;
+      transition: all ease-in-out 0.3s;
+      top: 0;
+    }
+    .timeline li:hover .day-wrapper{
+      background: #e67e22;
+    }
+    .timeline li:hover .flag{
+      color: #e67e22;
+    }
+    .day-wrapper span {
+      color: #009436;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 2;
+      background: #fff;
+      width: 100%;
+      display: inline-block;
+    }
+    .desc p:last-child{
+      margin-bottom: 0;
+    }
+
+    .description-content p:last-child{
+      margin-bottom: 0;
+    }
+    .detail table{
+      width: 100%;
+      margin-top: 10px;
+    }
+    .detail table td{
+      padding: 10px;
+    }
+    td.title{
+      font-weight: 500;
+    }
+    .detail table tr{
+      margin-bottom: 10px;
+      border: 1px solid #f1f1f1;
+    }
+    .detail table tr:last-child{
+      margin-bottom: 0;
+    }
+    .detail table td ul li{
+      margin-bottom: 5px;
+      width: 49%;
+      display: inline-block;
+    }
+    .detail table td ul li:last-child{
+      margin-bottom: 0;
+    }
+    .detail table td i{
+      width: 20px;
+      color: #009436;
+    }
+    .detail table tr:nth-child(even){
+      background: #fbfbfb;
+    }
+    td.excludes ul li i{
+      color: #e67e22; 
+    }
+
 </style>
 
 <!DOCTYPE html>
