@@ -18,11 +18,11 @@
     <section class="breadcrumb-outer text-center">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>Contact Us</h2>
+                <h2>Special Request</h2>
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        <li class="breadcrumb-item active" aria-current="page">Special Request</li>
                     </ul>
                 </nav>
             </div>
@@ -39,7 +39,7 @@
 
                         <div id="contactform-error-msg"></div>
 
-                        <form method="post" action="contact-aksi">
+                        <form method="post" action="request-aksi">
                             <div class="row">
                                 <div class="form-group col-xs-12">
                                     <label>Name:</label>
@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="comment-btn">
-                                         <input type="submit" class="btn-blue btn-red" id="submit" value="Send Message">
+                                         <input type="submit" class="btn-blue btn-red" id="submit" value="Send Request">
                                     </div>
                                 </div>
                             </div>

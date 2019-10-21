@@ -26,7 +26,7 @@
                     <!-- Left Slide Text Layer -->
                     <div class="kenburns_061_slide" data-animation="animated fadeInRight">
                         <h2><?php echo $namaDestinasi; ?></h2>
-                        <h1><?php echo (limit_words($deskripsiDestinasi,50))." ..."; ?></h1>
+                        <h1><?php echo limit_words(strip_tags($deskripsiDestinasi),50)."..."; ?></h1>
 
                         <a href="tour?tourName=<?php echo $namaDestinasi; ?>" class="btn-blue btn-red">Destination Detail</a>
                     </div><!-- /Left Slide Text Layer -->

@@ -60,7 +60,7 @@ function limit_words($string, $word_limit)
     <section class="popular-packages" style="padding-top: 50px; background: url(images/bgg.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Top Tour Packages</h2>
+                <h2 style="color: white;font-weight: 1000px;">Top Tour Packages</h2>
                 <div class="section-icon">
                     <i class="flaticon-diamond"></i>
                 </div>
@@ -85,9 +85,9 @@ function limit_words($string, $word_limit)
                         </div>
                         <div class="package-content">
                             <!--<h3><?php //echo $namaWisata; ?></h3>-->
-                            <p><?php echo (limit_words($deskripsiTour,20))." ..."; ?></p>
+                            <p><?php echo limit_words(strip_tags($deskripsiTour),20)."..."; ?></p>
                             <div class="package-info">
-                                <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Package Detail</a>
+                                <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ function limit_words($string, $word_limit)
     </section>
 
     <!-- Testimonials -->
-    <?php include 'partner.php' ?>
+    <?php //include 'partner.php' ?>
     <!-- Testimonials -->
 
     <!-- Footer -->
