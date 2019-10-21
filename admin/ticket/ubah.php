@@ -5,9 +5,6 @@ session_start();
 if($_SESSION['status']!="login"){
   header("location:../login");
 }
-
-$idTicket = $_GET['idTicket'];
-
 ?>
 <style type="text/css">
     #image-preview{
@@ -61,8 +58,11 @@ $idTicket = $_GET['idTicket'];
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
-                                    <?
-                                    $queryDetailPaket = mysqli_query($koneksi,"SELECT * FROM ticket WHERE id = '$idTicket'");
+                                    <?php
+                                    $idTicket = $_GET['idTicket'];
+                                    $query = "SELECT * FROM ticket WHERE id = '$idTicket'";
+                                    //echo($query);
+                                    $queryDetailPaket = mysqli_query($koneksi,$query);
                                     $d = mysqli_fetch_assoc($queryDetailPaket);
                                     $id = $d['id'];
                                     $nama = $d['nama'];

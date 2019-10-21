@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include '../../koneksi.php';
 
 $idPesan = $_GET['idPesan'];
 $queryDelete = "DELETE FROM pesan WHERE id = '$idPesan'";

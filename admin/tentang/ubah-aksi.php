@@ -4,10 +4,11 @@
 	$lokasi_file= $_FILES['logo']['tmp_name'];
 	$nama_file = $_FILES['logo']['name'];
 
-	$folder = "../images/$nama_file";
+	$folder = "../../images/$nama_file";
 
 	$id = $_POST['id'];
 	$nama = $_POST['nama'];
+	$slogan = $_POST['slogan'];
 	$alamat = $_POST['alamat'];
 	$email = $_POST['email'];
 	$telepon = $_POST['telepon'];
@@ -21,6 +22,7 @@
 	if ($nama_file != '') {
 		$queryUpdate = "UPDATE tentang SET
 						nama = '$nama',
+						slogan = '$slogan',
 						alamat = '$alamat',
 						email = '$email',
 						telepon = '$telepon',
@@ -44,6 +46,7 @@
 	else if ($nama_file == '') {
 		$queryUpdate = "UPDATE tentang SET
 						nama = '$nama',
+						slogan = '$slogan',
 						alamat = '$alamat',
 						email = '$email',
 						telepon = '$telepon',

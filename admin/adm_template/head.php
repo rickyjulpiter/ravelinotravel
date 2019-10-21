@@ -20,10 +20,18 @@
   <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.css">
+  
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+  <!--Custom CSS-->
+  <!--<link href="../../css/style.css" rel="stylesheet" type="text/css">-->
+  <!--Flaticons CSS-->
+  <!--<link href="../../font/flaticon.css" rel="stylesheet" type="text/css">-->
+  <!--Plugin CSS-->
+  <!--<link href="../../css/plugin.css" rel="stylesheet" type="text/css">-->
+  <!-- summernote -->
+  <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.css">
   <!-- Datatables -->
   <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 </head>

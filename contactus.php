@@ -39,7 +39,7 @@
 
                         <div id="contactform-error-msg"></div>
 
-                        <form method="post" action="kirim-pesan">
+                        <form method="post" action="contact-aksi">
                             <div class="row">
                                 <div class="form-group col-xs-12">
                                     <label>Name:</label>
@@ -71,8 +71,8 @@
                         <div class="about-logo">
                             <img src="<?php echo $logo; ?>" alt="Image">
                         </div>
-                        <h4>Travel With Us</h4>
-                        <p><?php echo $deskripsi; ?></p>
+                        <h4><?php echo $slogan; ?></h4>
+                        <p><?php //echo $deskripsi; ?></p>
                         <div class="contact-location">
                             <ul>
                                 <li><i class="flaticon-maps-and-flags" aria-hidden="true"></i> <?php echo $alamat; ?></li>

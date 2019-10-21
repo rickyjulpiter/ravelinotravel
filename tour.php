@@ -23,6 +23,7 @@ $namaTour = $_GET['tourName'];
     <?php
     $queryTour = mysqli_query($koneksi,"SELECT * FROM paket_wisata WHERE nama = '$namaTour'")or die(mysqli_error());
     $detail = mysqli_fetch_assoc($queryTour);
+    $idTourPackages = $detail['id'];  
     $nama_tour = $detail['nama'];
     $deskripsi_tour = $detail['deskripsi'];
     $peta_tour = $detail['peta'];
@@ -56,49 +57,35 @@ $namaTour = $_GET['tourName'];
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <!-- 1st Indicator -->
-                                    <li data-target="#in_th_030" data-slide-to="0" class="active">
+                                    <?php
+                                    $i=0;
+                                    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
+                                    while($data = mysqli_fetch_array($query_mysql)){
+                                        $gambar = $data['gambar'];
+                                    ?>
+                                    <li data-target="#in_th_030" data-slide-to="<?= $i?>" class="<?php if($i==1) echo 'active' ?>">
                                         <!-- 1st Indicator Image -->
-                                        <img src="images/detailslider1.jpg" alt="in_th_030_01_sm" />
+                                        <img src="<?= $gambar?>" alt="in_th_030_01_sm" />
                                     </li>
                                     <!-- 2nd Indicator -->
-                                    <li data-target="#in_th_030" data-slide-to="1">
-                                        <!-- 2nd Indicator Image -->
-                                        <img src="images/detailslider2.jpg" alt="in_th_030_02_sm" />
-                                    </li>
-                                    <!-- 3rd Indicator -->
-                                    <li data-target="#in_th_030" data-slide-to="2">
-                                        <!-- 3rd Indicator Image -->
-                                        <img src="images/detailslider3.jpg" alt="in_th_030_03_sm" />
-                                    </li>
-                                    <li data-target="#in_th_030" data-slide-to="3">
-                                        <!-- 3rd Indicator Image -->
-                                        <img src="images/detailslider4.jpg" alt="in_th_030_03_sm" />
-                                    </li>
+                                    <?php $i++; } ?>
                                 </ol> <!-- /Indicators -->
                                 <!-- Wrapper For Slides -->
                                 <div class="carousel-inner" role="listbox">
                                     <!-- First Slide -->
-                                    <div class="item active">
+                                    <?php
+                                    $i=0;
+                                    $query_mysql = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTourPackages' ")or die(mysqli_error());
+                                    while($data = mysqli_fetch_array($query_mysql)){
+                                        $gambar = $data['gambar'];
+                                    ?>
+                                    <div class="item <?php if($i==1) echo "active" ?>">
                                         <!-- Slide Background -->
-                                        <img src="images/detailslider1.jpg" alt="in_th_030_01" />                                        
+                                        <img src="<?= $gambar?>" alt="in_th_030_01" />                                        
                                     </div>
+
                                     <!-- End of Slide -->
-                                    <!-- Second Slide -->
-                                    <div class="item">
-                                        <!-- Slide Background -->
-                                        <img src="images/detailslider2.jpg" alt="in_th_030_02" />
-                                    </div>
-                                    <!-- End of Slide -->
-                                    <!-- Third Slide -->
-                                    <div class="item">
-                                        <!-- Slide Background -->
-                                        <img src="images/detailslider3.jpg" alt="in_th_030_03" />
-                                    </div>
-                                    <!-- End of Slide -->
-                                    <div class="item">
-                                        <!-- Slide Background -->
-                                        <img src="images/detailslider4.jpg" alt="in_th_030_03" />
-                                    </div>
+                                    <?php $i++; } ?>
                                 </div> <!-- End of Wrapper For Slides -->
                             </div> <!-- End Paradise Slider -->
                         </div>
@@ -134,26 +121,24 @@ $namaTour = $_GET['tourName'];
                                 <h3>Popular Tour Packages</h3>
                             </div>
                             <div class="sidebar-content sidebar-slider">
+                                <?php
+                                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
+                                while($data = mysqli_fetch_array($query_mysql)){
+                                    //$id = $data['id'];
+                                    $namaTour = $data['nama'];
+                                    $deskripsiTour = $data['deskripsi'];
+                                    $gambarTour = $data['gambar'];
+                                ?>
                                 <div class="sidebar-package">
                                     <div class="sidebar-package-image">
-                                        <img src="images/detailslider1.jpg" alt="Images">
+                                        <img src="<?php echo $gambarTour;?>" alt="Images">
                                     </div>
                                     <div class="destination-content sidebar-package-content">
-                                        <h4><a href="tour-detail.html">Royal Caribbean Cruises</a></h4>
-                                        <p><i class="flaticon-time"></i> 5 days starts from</p>
-                                        <a href="#" class="btn-blue btn-red">Tour Detail</a>
+                                        <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>
+                                        <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
                                     </div>
                                 </div>
-                                <div class="sidebar-package">
-                                    <div class="sidebar-package-image">
-                                        <img src="images/detailslider1.jpg" alt="Images">
-                                    </div>
-                                    <div class="destination-content sidebar-package-content">
-                                        <h4><a href="tour-detail.html">Royal Caribbean Cruises</a></h4>
-                                        <p><i class="flaticon-time"></i> 5 days starts from</p>
-                                        <a href="#" class="btn-blue btn-red">Tour Detail</a>
-                                    </div>
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="sidebar-item sidebar-helpline">

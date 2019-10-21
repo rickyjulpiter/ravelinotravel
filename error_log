@@ -14,3 +14,5 @@
 [19-Oct-2019 10:48:51 UTC] PHP Notice:  Undefined variable: gambarWisata in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/index.php on line 74
 [20-Oct-2019 13:17:39 UTC] PHP Notice:  Undefined variable: gambarWisata in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/index.php on line 74
 [20-Oct-2019 13:17:54 UTC] PHP Notice:  Undefined variable: gambarWisata in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/index.php on line 74
+[21-Oct-2019 18:20:14 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/slider.php on line 7
+[21-Oct-2019 18:20:53 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/slider.php on line 7

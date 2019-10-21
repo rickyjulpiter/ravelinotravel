@@ -1,6 +1,6 @@
 <?php 
 
-//$koneksi = mysqli_connect("localhost","root","","ravelinotravel");
+// $koneksi = mysqli_connect("localhost","root","","ravelinotravel");
 $koneksi = mysqli_connect("localhost","u4502442_ravelinotravel","HB1~LE#fJhN@","u4502442_ravelinotravel");
  
 // Check connection
