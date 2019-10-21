@@ -2,7 +2,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
-<?php include 'template/head.php' ?>
+<?php include 'template/head.php';
+function limit_words($string, $word_limit)
+{
+    $words = explode(" ",$string);
+    return implode(" ",array_splice($words,0,$word_limit));
+}
+
+?>
 <body>
 
     <!-- Preloader -->
@@ -61,11 +68,6 @@
             </div>
             <div class="row package-slider slider-button">
                 <?php
-                function limit_words($string, $word_limit)
-                {
-                    $words = explode(" ",$string);
-                    return implode(" ",array_splice($words,0,$word_limit));
-                }
                 $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 while($data = mysqli_fetch_array($query_mysql)){
                     //$id = $data['id'];

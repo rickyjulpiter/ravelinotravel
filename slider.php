@@ -4,10 +4,10 @@
             <!-- Wrapper For Slides -->
             <div class="carousel-inner" role="listbox">
                 <?php
-                $query_mysql = mysqli_query($koneksi,"SELECT * FROM slider LIMIT 3")or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 $no = 0;
                 while($data = mysqli_fetch_array($query_mysql)){
-                    $idDestinasi = $data['id'];
+                    //$idDestinasi = $data['id'];
                     $namaDestinasi = $data['nama'];
                     $deskripsiDestinasi = $data['deskripsi'];
                     $gambarDestiansi = $data['gambar'];
@@ -26,9 +26,9 @@
                     <!-- Left Slide Text Layer -->
                     <div class="kenburns_061_slide" data-animation="animated fadeInRight">
                         <h2><?php echo $namaDestinasi; ?></h2>
-                        <h1><?php echo $deskripsiDestinasi; ?></h1>
+                        <h1><?php echo (limit_words($deskripsiDestinasi,50))." ..."; ?></h1>
 
-                        <a href="paket-tour?jenis_wisata=<?php echo $idDestinasi; ?>" class="btn-blue btn-red">Destination Detail</a>
+                        <a href="tour?tourName=<?php echo $namaDestinasi; ?>" class="btn-blue btn-red">Destination Detail</a>
                     </div><!-- /Left Slide Text Layer -->
                 </div><!-- /item -->
                 <!-- End of Slide -->
