@@ -50,7 +50,7 @@
     </section>
     <!-- Banner Ends -->
 
-    <section class="popular-packages" style="padding-top: 50px;">
+    <section class="popular-packages" style="padding-top: 50px; background: url(images/bgg.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="section-title text-center">
                 <h2>Top Tour Packages</h2>
@@ -66,26 +66,26 @@
                     $words = explode(" ",$string);
                     return implode(" ",array_splice($words,0,$word_limit));
                 }
-                $query_mysql = mysqli_query($koneksi,"SELECT DISTINCT(B.paket_wisata_id), A.nama AS nama, A.deskripsi AS deskripsi, B.gambar FROM paket_wisata A, paket_wisata_gambar B WHERE A.id = B.paket_wisata_id")or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 while($data = mysqli_fetch_array($query_mysql)){
                     //$id = $data['id'];
-                    $nama = $data['nama'];
-                    $deskripsi = $data['deskripsi'];
-                    $gambar = $data['gambar'];
+                    $namaTour = $data['nama'];
+                    $deskripsiTour = $data['deskripsi'];
+                    $gambarTour = $data['gambar'];
                 ?>
                 <div class="col-sm-4">
                     <div class="package-item">
                         <div class="package-image">
-                            <img src="<?php echo $gambar;?>" alt="Image">
+                            <img src="<?php echo $gambarTour;?>" alt="Image" height="300">
                             <div class="package-price">
-                                <p><?php echo $nama; ?></span></p>
+                                <p><?php echo $namaTour; ?></span></p>
                             </div>
                         </div>
                         <div class="package-content">
                             <!--<h3><?php //echo $namaWisata; ?></h3>-->
-                            <p><?php echo (limit_words($deskripsi,20))." ..."; ?></p>
+                            <p><?php echo (limit_words($deskripsiTour,20))." ..."; ?></p>
                             <div class="package-info">
-                                <a href="tour?tourName=<?php echo $nama; ?>" class="btn-blue btn-red">Package Detail</a>
+                                <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Package Detail</a>
                             </div>
                         </div>
                     </div>

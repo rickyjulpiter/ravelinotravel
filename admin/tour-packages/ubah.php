@@ -209,8 +209,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                             </div>
                                             <div class="pad">
                                                 <div class="">
-                                                    <textarea name="peta" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $peta; ?>
-                                                    </textarea>
+                                                    <textarea name="peta" style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?= $peta; ?></textarea>
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
