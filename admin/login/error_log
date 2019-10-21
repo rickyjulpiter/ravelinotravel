@@ -1,0 +1,2 @@
+[17-Oct-2019 15:46:36 UTC] PHP Notice:  Undefined index: username in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/aksiLogin.php on line 6
+[17-Oct-2019 15:46:36 UTC] PHP Notice:  Undefined index: password in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/aksiLogin.php on line 7
