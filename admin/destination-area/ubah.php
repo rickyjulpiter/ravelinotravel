@@ -44,7 +44,7 @@ else{
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Ubah Destination Area</h1>
+                            <h1>Update Destination Area</h1>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@ else{
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Ubah Data Destination Area</button>
+                                        <button type="submit" class="btn btn-block btn-info">Update Data Destination Area</button>
                                     </div>
                                 </form>
                             </div>
