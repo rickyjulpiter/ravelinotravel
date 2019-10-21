@@ -40,7 +40,7 @@ if($_SESSION['status']!="login"){
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Tambah Tour Packages</h1>
+                            <h1>Add Tour Packages</h1>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ if($_SESSION['status']!="login"){
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Timeline (BROKEN)</label>
+                                            <label for="exampleInputPassword1">Timeline</label>
                                             <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -158,8 +158,8 @@ if($_SESSION['status']!="login"){
                                                  </button>
                                             </div>
                                             <div class="pad">
-                                                <div class="">
-                                                    <input type="text" id="jumlah" placeholder="Masukkan banyak gambar">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" id="jumlah" placeholder="Masukkan banyak gambar">
                                                     <button type="button" id="btn-proses">Proses</button>
                                                     <div class="input-file">
                                                     </div>
