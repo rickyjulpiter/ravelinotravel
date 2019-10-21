@@ -4,7 +4,7 @@
             <!-- Wrapper For Slides -->
             <div class="carousel-inner" role="listbox">
                 <?php
-                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON pw.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 $no = 0;
                 while($data = mysqli_fetch_array($query_mysql)){
                     //$idDestinasi = $data['id'];
