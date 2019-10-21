@@ -18,3 +18,4 @@
 [21-Oct-2019 18:20:53 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/slider.php on line 7
 [21-Oct-2019 18:24:43 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/index.php on line 71
 [21-Oct-2019 18:24:50 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/index.php on line 71
+[21-Oct-2019 18:31:17 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/slider.php on line 7
