@@ -25,7 +25,7 @@ function limit_words($string, $word_limit)
     <!-- Navigation Bar Ends -->
 
     <!-- Slider -->
-    <?php //include 'slider.php' ?>
+    <?php include 'slider.php' ?>
 
 
     <section class="amazing-tours popular-packages pad-bottom-80"style="padding-top: 30px;">
