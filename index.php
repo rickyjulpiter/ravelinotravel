@@ -68,9 +68,9 @@ function limit_words($string, $word_limit)
             </div>
             <div class="row package-slider slider-button">
                 <?php
+
                 $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 while($data = mysqli_fetch_array($query_mysql)){
-                    //$id = $data['id'];
                     $namaTour = $data['nama'];
                     $deskripsiTour = $data['deskripsi'];
                     $gambarTour = $data['gambar'];
@@ -78,16 +78,15 @@ function limit_words($string, $word_limit)
                 <div class="col-sm-4">
                     <div class="package-item">
                         <div class="package-image">
-                            <img src="<?php echo $gambarTour;?>" alt="Image" height="300">
+                            <img src="<?=$gambarTour;?>" alt="Image" height="300">
                             <div class="package-price">
-                                <p><?php echo $namaTour; ?></span></p>
+                                <p><?php echo $namaTour; ?></p>
                             </div>
                         </div>
                         <div class="package-content">
-                            <!--<h3><?php //echo $namaWisata; ?></h3>-->
-                            <p><?php echo (limit_words($deskripsiTour,20))." ..."; ?></p>
                             <div class="package-info">
-                                <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Package Detail</a>
+                                <p><?php echo limit_words(strip_tags($deskripsiTour),20)."..."; ?></p>
+                                <a href="tour?tourName=<?=$namaTour; ?>" class="btn-blue btn-red">Package Detail</a>
                             </div>
                         </div>
                     </div>
