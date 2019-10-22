@@ -70,7 +70,6 @@ function limit_words($string, $word_limit)
                 <?php
                 $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON pw.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 while($data = mysqli_fetch_array($query_mysql)){
-                    //$id = $data['id'];
                     $namaTour = $data['nama'];
                     $deskripsiTour = $data['deskripsi'];
                     $gambarTour = $data['gambar'];
@@ -78,9 +77,9 @@ function limit_words($string, $word_limit)
                 <div class="col-sm-4">
                     <div class="package-item">
                         <div class="package-image">
-                            <img src="<?php echo $gambarTour;?>" alt="Image" height="300">
+                            <img src="<?=$gambarTour;?>" alt="Image" height="300">
                             <div class="package-price">
-                                <p><?php echo $namaTour; ?></span></p>
+                                <p><?php echo $namaTour; ?></p>
                             </div>
                         </div>
                         <div class="package-content">
