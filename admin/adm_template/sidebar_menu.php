@@ -58,7 +58,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../galeri" class="nav-link">
+            <a href="../request" class="nav-link">
+              <i class="nav-icon fa fa-sticky-note"></i>
+              <p style="color: white">
+                Special Request
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../destination-area" class="nav-link">
               <i class="nav-icon fa fa-camera"></i>
               <p style="color: white">
                 Photo Gallery

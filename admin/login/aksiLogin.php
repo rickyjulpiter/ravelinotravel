@@ -2,20 +2,18 @@
 	session_start();
 
 	include '../../koneksi.php';
+	include 'config.php';
 
 	$username = $_POST['username'];
-	$encrypt = md5($_POST['password']);
+	$password = md5($_POST['password']);
 
-	$password = $encrypt;
-	 
-	// menyeleksi data admin dengan username dan password yang sesuai
-	$query = "SELECT * FROM admin WHERE username = '$username' AND password ='$password'";
-	$data = mysqli_query($koneksi,$query);
-	 
-	// menghitung jumlah data yang ditemukan
-	$cek = mysqli_num_rows($data);
-	 
-	if($cek > 0){
+	$sql ="SELECT * FROM admin WHERE username=:username AND password=:password";
+	$query = $dbh -> prepare($sql);
+	$query->bindParam(':username',$username, PDO::PARAM_STR);
+	$query->bindParam(':password',$password, PDO::PARAM_STR);
+	$query->execute();
+	$results = $query->fetchAll(PDO::FETCH_OBJ);
+	if ($query->rowCount() > 0) {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
 		header("location:../tentang");

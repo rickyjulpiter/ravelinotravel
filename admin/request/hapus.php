@@ -2,7 +2,7 @@
 include '../../koneksi.php';
 
 $idPesan = $_GET['idPesan'];
-$queryDelete = "DELETE FROM pesan WHERE id = '$idPesan'";
+$queryDelete = "DELETE FROM request WHERE id = '$idPesan'";
 //echo($queryDelete);
 mysqli_query($koneksi,$queryDelete);
 echo "<script>

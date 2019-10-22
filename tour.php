@@ -121,26 +121,24 @@ $namaTour = $_GET['tourName'];
                                 <h3>Popular Tour Packages</h3>
                             </div>
                             <div class="sidebar-content sidebar-slider">
+                                <?php
+                                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON pw.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
+                                while($data = mysqli_fetch_array($query_mysql)){
+                                    //$id = $data['id'];
+                                    $namaTour = $data['nama'];
+                                    $deskripsiTour = $data['deskripsi'];
+                                    $gambarTour = $data['gambar'];
+                                ?>
                                 <div class="sidebar-package">
                                     <div class="sidebar-package-image">
-                                        <img src="images/detailslider1.jpg" alt="Images">
+                                        <img src="<?php echo $gambarTour;?>" alt="Images">
                                     </div>
                                     <div class="destination-content sidebar-package-content">
-                                        <h4><a href="tour-detail.html">Royal Caribbean Cruises</a></h4>
-                                        <p><i class="flaticon-time"></i> 5 days starts from</p>
-                                        <a href="#" class="btn-blue btn-red">Tour Detail</a>
+                                        <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>
+                                        <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
                                     </div>
                                 </div>
-                                <div class="sidebar-package">
-                                    <div class="sidebar-package-image">
-                                        <img src="images/detailslider1.jpg" alt="Images">
-                                    </div>
-                                    <div class="destination-content sidebar-package-content">
-                                        <h4><a href="tour-detail.html">Royal Caribbean Cruises</a></h4>
-                                        <p><i class="flaticon-time"></i> 5 days starts from</p>
-                                        <a href="#" class="btn-blue btn-red">Tour Detail</a>
-                                    </div>
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="sidebar-item sidebar-helpline">

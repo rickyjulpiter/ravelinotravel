@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2019 at 01:15 PM
+-- Generation Time: Oct 21, 2019 at 08:09 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -219,6 +219,20 @@ CREATE TABLE IF NOT EXISTS `rent` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `request`
+--
+
+CREATE TABLE IF NOT EXISTS `request` (
+`id` int(10) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `telepon` varchar(100) DEFAULT NULL,
+  `pesan` text
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `slider`
 --
 
@@ -350,6 +364,12 @@ ALTER TABLE `rent`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `request`
+--
+ALTER TABLE `request`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
@@ -417,6 +437,11 @@ MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 ALTER TABLE `rent`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `request`
+--
+ALTER TABLE `request`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `slider`
 --

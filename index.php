@@ -24,7 +24,7 @@ function limit_words($string, $word_limit)
     <?php include 'template/nav.php' ?>
     <!-- Navigation Bar Ends -->
 
-    <!-- Banner -->
+    <!-- Slider -->
     <?php include 'slider.php' ?>
 
 
@@ -60,7 +60,7 @@ function limit_words($string, $word_limit)
     <section class="popular-packages" style="padding-top: 50px; background: url(images/bgg.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Top Tour Packages</h2>
+                <h2 style="color: white;font-weight: 1000px;">Top Tour Packages</h2>
                 <div class="section-icon">
                     <i class="flaticon-diamond"></i>
                 </div>
@@ -68,8 +68,12 @@ function limit_words($string, $word_limit)
             </div>
             <div class="row package-slider slider-button">
                 <?php
+<<<<<<< HEAD
 
                 $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON PW.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
+=======
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON pw.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
+>>>>>>> 54308a0e378aad196e35bfece4eedfd154828c30
                 while($data = mysqli_fetch_array($query_mysql)){
                     $namaTour = $data['nama'];
                     $deskripsiTour = $data['deskripsi'];
@@ -84,9 +88,16 @@ function limit_words($string, $word_limit)
                             </div>
                         </div>
                         <div class="package-content">
+<<<<<<< HEAD
                             <div class="package-info">
                                 <p><?php echo limit_words(strip_tags($deskripsiTour),20)."..."; ?></p>
                                 <a href="tour?tourName=<?=$namaTour; ?>" class="btn-blue btn-red">Package Detail</a>
+=======
+                            <!--<h3><?php //echo $namaWisata; ?></h3>-->
+                            <p><?php echo limit_words(strip_tags($deskripsiTour),20)."..."; ?></p>
+                            <div class="package-info">
+                                <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
+>>>>>>> 54308a0e378aad196e35bfece4eedfd154828c30
                             </div>
                         </div>
                     </div>
@@ -97,7 +108,7 @@ function limit_words($string, $word_limit)
     </section>
 
     <!-- Testimonials -->
-    <?php include 'partner.php' ?>
+    <?php //include 'partner.php' ?>
     <!-- Testimonials -->
 
     <!-- Footer -->
