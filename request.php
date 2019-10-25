@@ -38,7 +38,13 @@
                     <div id="contact-form" class="contact-form">
 
                         <div id="contactform-error-msg"></div>
-
+                        <?php
+                        if (isset($_GET['pesan'])) {
+                            if ($_GET['pesan'] == 'salah' ) {
+                                echo "<p>Captcha tidak sesuai</p";
+                            }
+                        }
+                        ?>
                         <form method="post" action="request-aksi">
                             <div class="row">
                                 <div class="form-group col-xs-12">
@@ -53,15 +59,37 @@
                                     <label>Phone Number:</label>
                                     <input type="text" name="telepon" class="form-control" id="phnumber" placeholder="XXXX-XXXXXX" required>
                                 </div>
+
                                 <div class="textarea col-xs-12">
                                     <label>Message:</label>
                                     <textarea name="pesan" placeholder="Enter a message" required></textarea>
                                 </div>
+                                <?php
+                                function generateRandomString($length = 10) {
+                                    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                                    $charactersLength = strlen($characters);
+                                    $randomString = '';
+                                    for ($i = 0; $i < $length; $i++) {
+                                        $randomString .= $characters[rand(0, $charactersLength - 1)];
+                                    }
+                                    return $randomString;
+                                }
+                                    $captchaCode = generateRandomString(5);
+                                ?>
+                                <div class="col-md-4">
+                                    
+                                </div>
+                                <div class="col-xs-12" style="margin-top: 10px;">
+                                    <label style="color: white;background-color: grey;font-weight: 20px;margin-right: 20px; padding: 10px"><?php echo $captchaCode; ?></label>
+                                    <input name="captcha" placeholder="Fill Captcha Here" required></input>
+                                </div>
                                 <div class="col-xs-12">
+                                    <input type="hidden" name="verif" value="<?php echo($captchaCode) ?>">
                                     <div class="comment-btn">
                                          <input type="submit" class="btn-blue btn-red" id="submit" value="Send Request">
                                     </div>
                                 </div>
+                                
                             </div>
                         </form>
                     </div>
