@@ -48,7 +48,7 @@ $namaWisata = $_GET['destination'];
     <!-- BreadCrumb Ends -->
 
     <!-- Detail -->
-    <section class="item-content">
+    <section class="item-content" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">

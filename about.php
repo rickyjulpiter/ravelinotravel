@@ -37,7 +37,7 @@ $deskripsiTentang = $tentang['deskripsi'];
     </section>
     <!-- BreadCrumb Ends -->
 
-    <section class="contact">
+    <section class="contact" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
