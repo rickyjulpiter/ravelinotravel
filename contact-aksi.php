@@ -7,24 +7,34 @@
     $telepon = $_POST['telepon'];
     $pesan = $_POST['pesan'];
 
-    $sql = "INSERT INTO pesan (nama,email,telepon,pesan) VALUES (:nama,:email,:telepon,:pesan)";
-    $query = $dbh->prepare($sql);
-    $query->bindParam(':nama',$nama,PDO::PARAM_STR);
-    $query->bindParam(':email',$email,PDO::PARAM_STR);
-    $query->bindParam(':telepon',$telepon,PDO::PARAM_STR);
-    $query->bindParam(':pesan',$pesan,PDO::PARAM_STR);
-    $query->execute();
-    $lastInsertId = $dbh->lastInsertId();
-    if($lastInsertId)
-    {
+    $captcha = $_POST['captcha'];
+    $verif = $_POST['verif'];
+
+    if ($captcha != $verif) {
         echo "<script>
-        alert('Your message has been sent, thank you!');
-        window.location.href='contactus';
-        </script>";
+                alert('Please check captcha');
+                window.history.back();
+            </script>";
     }
-    else 
-    {
-        echo "<script>alert('Something went wrong. Please try again');</script>";
-    }
-    
+    else if ($captcha == $verif) {
+        $sql = "INSERT INTO pesan (nama,email,telepon,pesan) VALUES (:nama,:email,:telepon,:pesan)";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':nama',$nama,PDO::PARAM_STR);
+        $query->bindParam(':email',$email,PDO::PARAM_STR);
+        $query->bindParam(':telepon',$telepon,PDO::PARAM_STR);
+        $query->bindParam(':pesan',$pesan,PDO::PARAM_STR);
+        $query->execute();
+        $lastInsertId = $dbh->lastInsertId();
+        if($lastInsertId)
+        {
+            echo "<script>
+            alert('Your message has been sent, thank you!');
+            window.location.href='contactus';
+            </script>";
+        }
+        else 
+        {
+            echo "<script>alert('Something went wrong. Please try again');</script>";
+        }
+    }   
 ?>
