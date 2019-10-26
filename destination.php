@@ -36,7 +36,7 @@
     <!-- BreadCrumb Ends -->
 
     <!-- Destinations -->
-    <section class="destinations">
+    <section class="destinations" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

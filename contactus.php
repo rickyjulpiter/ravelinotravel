@@ -31,7 +31,7 @@
     </section>
     <!-- BreadCrumb Ends -->
 
-    <section class="contact">
+    <section class="contact" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -57,7 +57,24 @@
                                     <label>Message:</label>
                                     <textarea name="pesan" placeholder="Enter a message" required></textarea>
                                 </div>
+                                <?php
+                                function generateRandomString($length = 10) {
+                                    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                                    $charactersLength = strlen($characters);
+                                    $randomString = '';
+                                    for ($i = 0; $i < $length; $i++) {
+                                        $randomString .= $characters[rand(0, $charactersLength - 1)];
+                                    }
+                                    return $randomString;
+                                }
+                                    $captchaCode = generateRandomString(5);
+                                ?>
+                                <div class="col-xs-12" style="margin-top: 10px;">
+                                    <label style="color: white;background-color: grey;font-weight: 20px;margin-right: 20px; padding: 10px"><?php echo $captchaCode; ?></label>
+                                    <input name="captcha" placeholder="Fill Captcha Here" required></input>
+                                </div>
                                 <div class="col-xs-12">
+                                    <input type="hidden" name="verif" value="<?php echo($captchaCode) ?>">
                                     <div class="comment-btn">
                                          <input type="submit" class="btn-blue btn-red" id="submit" value="Send Message">
                                     </div>
