@@ -1,6 +1,6 @@
 <?php
     include '../../koneksi.php';
-    echo exec('whoami');
+    //echo exec('whoami');
 
     $lokasi_file= $_FILES['gambar']['tmp_name'];
     $nama_file = $_FILES['gambar']['name'];
