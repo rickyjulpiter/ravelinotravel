@@ -2,3 +2,4 @@
 [17-Oct-2019 15:46:36 UTC] PHP Notice:  Undefined index: password in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/aksiLogin.php on line 7
 [29-Oct-2019 13:58:25 UTC] PHP Notice:  Undefined variable: usr_name in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/config.php on line 5
 [29-Oct-2019 15:00:33 UTC] PHP Notice:  Undefined variable: usr_name in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/config.php on line 5
+[29-Oct-2019 16:04:00 UTC] PHP Notice:  Undefined variable: usr_name in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/config.php on line 5

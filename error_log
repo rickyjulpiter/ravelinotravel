@@ -26,3 +26,6 @@
 [29-Oct-2019 15:35:53 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/koneksi.php on line 15
 [29-Oct-2019 15:35:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/template/head.php on line 4
 [29-Oct-2019 15:35:53 UTC] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/template/head.php on line 4
+[29-Oct-2019 16:04:14 UTC] PHP Warning:  include(../../koneksi.php): failed to open stream: No such file or directory in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/config.php on line 2
+[29-Oct-2019 16:04:14 UTC] PHP Warning:  include(): Failed opening '../../koneksi.php' for inclusion (include_path='.:/opt/alt/php70/usr/share/pear') in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/config.php on line 2
+[29-Oct-2019 16:04:14 UTC] PHP Notice:  Undefined variable: usr_name in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/login/config.php on line 5
