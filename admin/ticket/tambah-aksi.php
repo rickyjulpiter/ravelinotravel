@@ -9,7 +9,7 @@
 
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
 
     //$queryCariJenis = "SELECT * FROM rent WHERE nama_paket = '$jenis'";
     //$queryJenis = mysqli_query($koneksi,$queryCariJenis);

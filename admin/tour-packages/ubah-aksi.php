@@ -3,9 +3,9 @@
 
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
     $peta = $_POST['peta'];
-    $timeline = $_POST['timeline'];
+    $timeline = mysqli_escape_string($koneksi,$_POST['timeline']);
     $data_des = $_POST['data_des'];
     $nama_gambar = $_FILES['gambar']['name'];
     $lokasi_gambar = $_FILES['gambar']['tmp_name'];

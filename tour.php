@@ -45,8 +45,7 @@ $namaTour = $_GET['tourName'];
         <div class="section-overlay"></div>
     </section>
     <!-- BreadCrumb Ends -->
-
-    <section class="main-content detail">
+    <section class="main-content-detail" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div id="content" class="col-md-8">

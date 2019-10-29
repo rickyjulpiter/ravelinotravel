@@ -7,9 +7,9 @@
     $folder = "../../images/$nama_file";
 
     $id = $_POST['id'];
-    $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
-    $deskripsi_singkat = $_POST['deskripsi_singkat'];
+    $nama = mysqli_escape_string($koneksi,$_POST['nama']);
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
+    $deskripsi_singkat = mysqli_escape_string($koneksi,$_POST['deskripsi_singkat']);
 
     if ($nama_file != '') {
         $queryUpdate = "UPDATE destinasi SET
