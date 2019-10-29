@@ -355,7 +355,8 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['height', ['height']]
-                ]
+                ],
+                fontSizes: ['10', '11', '12', '14','15','16','17','18', '24']
             });
         })
 

@@ -7,7 +7,7 @@
                         <div class="logo pull-left">
                             <a href="index"><img alt="Image" src="<?php echo $logo; ?>" height="30%" width="30%"></a>
                         </div>
-                        <div id="navbar" class="navbar-nav-wrapper pull-right" style="">
+                        <div id="navbar" class="navbar-nav-wrapper" style="">
                             <ul class="nav navbar-nav" id="responsive-menu">
                                 <li>
                                     <a href="index" style="font-size: 12px;">Home</a>
