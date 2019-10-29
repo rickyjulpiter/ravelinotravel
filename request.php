@@ -31,20 +31,14 @@
     </section>
     <!-- BreadCrumb Ends -->
 
-    <section class="contact">
+    <section class="contact" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div id="contact-form" class="contact-form">
 
                         <div id="contactform-error-msg"></div>
-                        <?php
-                        if (isset($_GET['pesan'])) {
-                            if ($_GET['pesan'] == 'salah' ) {
-                                echo "<p>Captcha tidak sesuai</p";
-                            }
-                        }
-                        ?>
+
                         <form method="post" action="request-aksi">
                             <div class="row">
                                 <div class="form-group col-xs-12">
@@ -59,9 +53,20 @@
                                     <label>Phone Number:</label>
                                     <input type="text" name="telepon" class="form-control" id="phnumber" placeholder="XXXX-XXXXXX" required>
                                 </div>
-
+                                <div class="form-group col-xs-6">
+                                    <label>Whatsapp Number:</label>
+                                    <input type="number" name="whatsapp" class="form-control" id="email" placeholder="XXXX-XXXXXX" required>
+                                </div>
+                                <div class="form-group col-xs-6 col-left-padding">
+                                    <label>Address</label>
+                                    <input type="text" name="alamat" class="form-control" id="phnumber" placeholder="Your address" required>
+                                </div>
+                                <div class="form-group col-xs-12">
+                                    <label>Subject:</label>
+                                    <input type="text" name="tentang" class="form-control" id="Name" placeholder="Enter subject" required>
+                                </div>
                                 <div class="textarea col-xs-12">
-                                    <label>Message:</label>
+                                    <label>Message / reqeust:</label>
                                     <textarea name="pesan" placeholder="Enter a message" required></textarea>
                                 </div>
                                 <?php
@@ -76,9 +81,6 @@
                                 }
                                     $captchaCode = generateRandomString(5);
                                 ?>
-                                <div class="col-md-4">
-                                    
-                                </div>
                                 <div class="col-xs-12" style="margin-top: 10px;">
                                     <label style="color: white;background-color: grey;font-weight: 20px;margin-right: 20px; padding: 10px"><?php echo $captchaCode; ?></label>
                                     <input name="captcha" placeholder="Fill Captcha Here" required></input>
@@ -86,10 +88,9 @@
                                 <div class="col-xs-12">
                                     <input type="hidden" name="verif" value="<?php echo($captchaCode) ?>">
                                     <div class="comment-btn">
-                                         <input type="submit" class="btn-blue btn-red" id="submit" value="Send Request">
+                                         <input type="submit" class="btn-blue btn-red" id="submit" value="Send Message">
                                     </div>
                                 </div>
-                                
                             </div>
                         </form>
                     </div>
@@ -99,7 +100,7 @@
                         <div class="about-logo">
                             <img src="<?php echo $logo; ?>" alt="Image" style="width: 100%">
                         </div>
-                        <!--<h4><?php //echo $slogan; ?></h4>-->
+                        <h4><?php echo $slogan; ?></h4>
                         <p><?php //echo $deskripsi; ?></p>
                         <div class="contact-location">
                             <ul>
