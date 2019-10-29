@@ -6,7 +6,7 @@
 
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
 
     $folder = "../../images/".$nama."$nama_file";
     $save = 'images/'.$nama.'-'.$nama_file;

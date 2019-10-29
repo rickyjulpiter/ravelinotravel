@@ -2,7 +2,7 @@
     include '../../koneksi.php';
 
     $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
     $image = "images/".$nama."-".basename( $_FILES["gambar"]["name"]);
 
     $lokasi_file= $_FILES['gambar']['tmp_name'];
