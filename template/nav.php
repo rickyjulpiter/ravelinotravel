@@ -41,8 +41,8 @@
                                 </li>
                                 <!-- Contoh seharusnya gini rud, tapi pakailah kek sebelumnya, ini biar bisa nampak aja harusnya dia ngeredirect kemana -->
                                 <li>
-                                    <a href="index.html" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
-                                    <ul style="">
+                                    <a href="#" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
+                                    <ul>
                                         <?php
                                         $query_destinasi = mysqli_query($koneksi,"SELECT DISTINCT(d.id),d.nama FROM paket_wisata_detail AS pwd INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area INNER JOIN destinasi AS d ON d.id = da.destinasi_id")or die(mysqli_error());
                                         while($data = mysqli_fetch_array($query_destinasi)){
