@@ -1,7 +1,13 @@
 <?php include 'koneksi.php'; ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
-
+<?php 
+function limit_words($string, $word_limit)
+{
+    $words = explode(" ",$string);
+    return implode(" ",array_splice($words,0,$word_limit));
+}
+?>
 <?php include 'template/head.php' ?>
 <body>
 
@@ -50,7 +56,7 @@
                     $deskripsiTicket = $data['deskripsi'];
                     $gambarTicket = $data['gambar'];
                 ?>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                     <div class="destination-item destination-4-col">
                         <div class="destination-image">
                             <img src="<?php echo $gambarTicket; ?>" alt="Image">
@@ -61,7 +67,7 @@
                         </div>
                         <div class="destination-content">
                             <h3><a href="#"><?php echo $namaTicket; ?></a></h3>
-                            <p><?php echo $deskripsiTicket; ?></p>
+                            <p><?php echo limit_words(strip_tags($deskripsiTicket),20)."..."; ?></p>
                         </div>
                     </div>
                 </div>
