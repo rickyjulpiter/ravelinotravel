@@ -863,10 +863,10 @@ ul.nav-mini li i{color: #fff; padding-right: 5px;}
 
 /* Header */
 .logo img{
-  display: block;
+  /*display: block;*/
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 35%;
 }
 .logo h1{
   margin-bottom: 0;
