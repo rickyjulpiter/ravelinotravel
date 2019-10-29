@@ -172,7 +172,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
+                                            <input name="nama" type="text" data-filter='[a-zA-Z\s]*' class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
                                             <input type="hidden" name="id" value="<?= $idTourPackages;?>">
                                         </div>
                                         <div class="form-group">
@@ -382,6 +382,33 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
             $('.input-file').html(save);
         });
       </script>
+              <script type="text/javascript">
+        // Apply filter to all inputs with data-filter:
+var inputs = document.querySelectorAll('input[data-filter]');
+
+for (var i = 0; i < inputs.length; i++) {
+  var input = inputs[i];
+  var state = {
+    value: input.value,
+    start: input.selectionStart,
+    end: input.selectionEnd,
+    pattern: RegExp('^' + input.dataset.filter + '$')
+  };
+  
+  input.addEventListener('input', function(event) {
+    if (state.pattern.test(input.value)) {
+      state.value = input.value;
+    } else {
+      input.value = state.value;
+      input.setSelectionRange(state.start, state.end);
+    }
+  });
+
+  input.addEventListener('keydown', function(event) {
+    state.start = input.selectionStart;
+    state.end = input.selectionEnd;
+  });
+}</script>
 
 </body>
 
