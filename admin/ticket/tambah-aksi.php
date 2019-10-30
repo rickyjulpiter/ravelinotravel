@@ -1,6 +1,6 @@
 <?php
     include '../../koneksi.php';
-    echo exec('whoami');
+    // echo exec('whoami');
 
     $lokasi_file= $_FILES['gambar']['tmp_name'];
     $nama_file = $_FILES['gambar']['name'];
@@ -10,6 +10,8 @@
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $deskripsi = $_POST['deskripsi'];
+    $data_des = $_POST['data_des'];
+    $fasilitas = $_POST['fasilitas'];
 
     //$queryCariJenis = "SELECT * FROM rent WHERE nama_paket = '$jenis'";
     //$queryJenis = mysqli_query($koneksi,$queryCariJenis);
@@ -21,12 +23,23 @@
         $queryInsert = "INSERT INTO ticket (
                         nama,
                         deskripsi,
+                        fasilitas,
                         gambar
                         ) VALUES
-                        ('$nama','$deskripsi','images/$nama_file')
+                        ('$nama','$deskripsi','$fasilitas','images/$nama_file')
                         ";
         if (move_uploaded_file($lokasi_file, "$folder")) {
             mysqli_query($koneksi,$queryInsert);
+
+            $queryCheckMax = mysqli_query($koneksi,"SELECT MAX(id) FROM ticket");
+            $d = mysqli_fetch_assoc($queryCheckMax);
+            $id = $d['MAX(id)'];
+
+            for($i=0; $i<sizeof($data_des); $i++){
+                $queryInsert = "INSERT INTO ticket_detail (ticket_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
+                $d = mysqli_query($koneksi,$queryInsert);
+            }
+
             echo "<script>
             alert('Berhasil ditambahkan');
             window.location.href='index';
@@ -41,11 +54,22 @@
     else if ($nama_file == '') {
         $queryInsert = "INSERT INTO ticket (
                         nama,
-                        deskripsi
+                        deskripsi,
+                        fasilitas
                         ) VALUES
-                        ('$nama','$deskripsi')
+                        ('$nama','$deskripsi','$fasilitas')
                         ";
         mysqli_query($koneksi,$queryInsert);
+
+        $queryCheckMax = mysqli_query($koneksi,"SELECT MAX(id) FROM ticket");
+        $d = mysqli_fetch_assoc($queryCheckMax);
+        $id = $d['MAX(id)'];
+
+        for($i=0; $i<sizeof($data_des); $i++){
+            $queryInsert = "INSERT INTO ticket_detail (ticket_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
+            mysqli_query($koneksi,$queryInsert);
+        }
+
         echo "<script>
         alert('Berhasil ditambahkan');
         window.location.href='index';
