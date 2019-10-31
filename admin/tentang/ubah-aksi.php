@@ -8,7 +8,7 @@
 
 	$id = $_POST['id'];
 	$nama = $_POST['nama'];
-	$slogan = $_POST['slogan'];
+	$slogan = mysqli_escape_string($koneksi,$_POST['slogan']);
 	$alamat = $_POST['alamat'];
 	$email = $_POST['email'];
 	$telepon = $_POST['telepon'];

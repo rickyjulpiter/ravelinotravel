@@ -86,7 +86,7 @@
                 <div class="col-md-4">
                     <div class="contact-about footer-margin">
                         <div class="about-logo">
-                            <img src="<?php echo $logo; ?>" alt="Image">
+                            <img src="<?php echo $logo; ?>" alt="Image" style="width: 100%">
                         </div>
                         <h4><?php echo $slogan; ?></h4>
                         <p><?php //echo $deskripsi; ?></p>

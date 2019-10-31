@@ -1,7 +1,6 @@
 <?php
 	session_start();
-
-	include '../../koneksi.php';
+	
 	include 'config.php';
 
 	$username = $_POST['username'];

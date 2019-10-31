@@ -7,7 +7,7 @@
                         <div class="logo pull-left">
                             <a href="index"><img alt="Image" src="<?php echo $logo; ?>" height="30%" width="30%"></a>
                         </div>
-                        <div id="navbar" class="navbar-nav-wrapper pull-right" style="padding-top: 25px;">
+                        <div id="navbar" class="navbar-nav-wrapper" style="margin-top: -15px;">
                             <ul class="nav navbar-nav" id="responsive-menu">
                                 <li>
                                     <a href="index" style="font-size: 12px;">Home</a>
@@ -41,8 +41,8 @@
                                 </li>
                                 <!-- Contoh seharusnya gini rud, tapi pakailah kek sebelumnya, ini biar bisa nampak aja harusnya dia ngeredirect kemana -->
                                 <li>
-                                    <a href="index.html" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
-                                    <ul style="">
+                                    <a href="#" style="font-size: 12px;">Tour Packages <i class="fa fa-angle-down"></i></a>
+                                    <ul>
                                         <?php
                                         $query_destinasi = mysqli_query($koneksi,"SELECT DISTINCT(d.id),d.nama FROM paket_wisata_detail AS pwd INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area INNER JOIN destinasi AS d ON d.id = da.destinasi_id")or die(mysqli_error());
                                         while($data = mysqli_fetch_array($query_destinasi)){

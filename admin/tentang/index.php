@@ -136,9 +136,10 @@ if($_SESSION['status']!="login"){
                                                 }
                                                 else {
                                                     echo "<label>Logo Perusahaan Saat Ini</label><br>";
+                                                    //$tampakGambar = '';
                                                 }
                                                 ?>
-                                                <img src="<?php echo "../".$d['logo']; ?>" width="30%" style="<?php echo($tampakGambar); ?>">
+                                                <img src="<?php echo "../../".$d['logo']; ?>" width="30%" style="<?php echo($tampakGambar); ?>">
 
                                                 
                                             </div>

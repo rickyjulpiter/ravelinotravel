@@ -1,6 +1,6 @@
 <?php
     include '../../koneksi.php';
-    // echo exec('whoami');
+    //echo exec('whoami');
 
     $lokasi_file= $_FILES['gambar']['tmp_name'];
     $nama_file = $_FILES['gambar']['name'];
@@ -9,9 +9,10 @@
 
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
     $data_des = $_POST['data_des'];
     $fasilitas = $_POST['fasilitas'];
+    
 
     //$queryCariJenis = "SELECT * FROM rent WHERE nama_paket = '$jenis'";
     //$queryJenis = mysqli_query($koneksi,$queryCariJenis);

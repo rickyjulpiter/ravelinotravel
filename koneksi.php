@@ -1,8 +1,18 @@
 <?php 
+/*
+$svr_name = "localhost";
+$user = "root";
+$password = "";
+$dbname = "ravelinotravel";
+*/
 
-$koneksi = mysqli_connect("localhost","root","","ravelinotravel");
+$svr_name = "localhost";
+$user = "u4502442_ravelinotravel";
+$password = "HB1~LE#fJhN@";
+$dbname = "u4502442_ravelinotravel";
 
-// $koneksi = mysqli_connect("localhost","u4502442_ravelinotravel","HB1~LE#fJhN@","u4502442_ravelinotravel");
+
+$koneksi = mysqli_connect($svr_name,$user,$password,$dbname);
  
 // Check connection
 if (mysqli_connect_errno()){

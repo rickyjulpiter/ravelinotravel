@@ -8,9 +8,10 @@
 
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
     $data_des = $_POST['data_des'];
     $fasilitas = $_POST['fasilitas'];
+    
 
     if ($nama_file != '') {
         $queryUpdate = "UPDATE ticket SET
