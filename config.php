@@ -1,8 +1,8 @@
  <?php 
- include '../../koneksi.php';
+ include 'koneksi.php';
 // DB credentials.
 
-define('DB_HOST',$usr_name);
+define('DB_HOST',$svr_name);
 define('DB_USER',$user);
 define('DB_PASS',$password);
 define('DB_NAME',$dbname);
