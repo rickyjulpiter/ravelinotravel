@@ -31,11 +31,11 @@ function limit_words($string, $word_limit)
     <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>Ticket</h2>
+                <h2>Photo Gallery</h2>
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Ticket</li>
+                        <li class="breadcrumb-item active" aria-current="page">Photo Gallery</li>
                     </ul>
                 </nav>
             </div>
@@ -49,25 +49,21 @@ function limit_words($string, $word_limit)
         <div class="container">
             <div class="row">
                 <?php
-                $query_mysql = mysqli_query($koneksi,"SELECT * FROM ticket")or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM galeri")or die(mysqli_error());
                 while($data = mysqli_fetch_array($query_mysql)){
                     $idTicket = $data['id'];
                     $namaTicket = $data['nama'];
                     $deskripsiTicket = $data['deskripsi'];
                     $gambarTicket = $data['gambar'];
                 ?>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-6 col-sm-6">
                     <div class="destination-item destination-4-col">
                         <div class="destination-image">
-                            <img src="<?php echo $gambarTicket; ?>" alt="Image">
-                            <div class="destination-overlay"></div>
-                            <div class="destination-btn">
-                                <a href="#" class="btn-blue btn-red">Contact Us For Further Book</a>
-                            </div>
+                            <img src="<?php echo $gambarTicket; ?>" alt="Image" style="height: 300px;">
                         </div>
                         <div class="destination-content">
                             <h3><a href="#"><?php echo $namaTicket; ?></a></h3>
-                            <p><?php echo limit_words(strip_tags($deskripsiTicket),20)."..."; ?></p>
+                            <p><?php echo limit_words(strip_tags($deskripsiTicket),50)."..."; ?></p>
                         </div>
                     </div>
                 </div>

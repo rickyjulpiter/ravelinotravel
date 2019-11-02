@@ -1,6 +1,6 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
--- http://www.phpmyadmin.net
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
 -- Generation Time: Oct 29, 2019 at 07:12 AM
@@ -8,13 +8,15 @@
 -- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `ravelinotravel`
@@ -23,17 +25,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `admin` (
-`id` int(10) NOT NULL,
+CREATE TABLE `admin` (
+  `id` int(10) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -42,19 +44,19 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `destinasi`
+-- Struktur dari tabel `destinasi`
 --
 
-CREATE TABLE IF NOT EXISTS `destinasi` (
-`id` int(10) NOT NULL,
+CREATE TABLE `destinasi` (
+  `id` int(10) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
-  `deskripsi` text,
+  `deskripsi` text DEFAULT NULL,
   `deskripsi_singkat` text NOT NULL,
   `gambar` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `destinasi`
+-- Dumping data untuk tabel `destinasi`
 --
 
 INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `deskripsi_singkat`, `gambar`) VALUES
@@ -72,20 +74,20 @@ INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `deskripsi_singkat`, `gambar
 -- --------------------------------------------------------
 
 --
--- Table structure for table `destinasi_area`
+-- Struktur dari tabel `destinasi_area`
 --
 
-CREATE TABLE IF NOT EXISTS `destinasi_area` (
-`id_area` int(10) NOT NULL,
+CREATE TABLE `destinasi_area` (
+  `id_area` int(10) NOT NULL,
   `nama_area` varchar(100) DEFAULT NULL,
-  `deskripsi_area` text,
-  `deskripsi_area_singkat` text,
+  `deskripsi_area` text DEFAULT NULL,
+  `deskripsi_area_singkat` text DEFAULT NULL,
   `gambar_area` varchar(100) DEFAULT NULL,
   `destinasi_id` int(10) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `destinasi_area`
+-- Dumping data untuk tabel `destinasi_area`
 --
 
 INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `deskripsi_area_singkat`, `gambar_area`, `destinasi_id`) VALUES
@@ -142,19 +144,19 @@ INSERT INTO `galeri` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata`
+-- Struktur dari tabel `paket_wisata`
 --
 
-CREATE TABLE IF NOT EXISTS `paket_wisata` (
-`id` int(10) NOT NULL,
-  `nama` text,
-  `deskripsi` text,
-  `peta` text,
-  `timeline` text
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+CREATE TABLE `paket_wisata` (
+  `id` int(10) NOT NULL,
+  `nama` text DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `peta` text DEFAULT NULL,
+  `timeline` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata`
+-- Dumping data untuk tabel `paket_wisata`
 --
 
 INSERT INTO `paket_wisata` (`id`, `nama`, `deskripsi`, `peta`, `timeline`) VALUES
@@ -165,17 +167,17 @@ INSERT INTO `paket_wisata` (`id`, `nama`, `deskripsi`, `peta`, `timeline`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata_detail`
+-- Struktur dari tabel `paket_wisata_detail`
 --
 
-CREATE TABLE IF NOT EXISTS `paket_wisata_detail` (
-`id` int(11) NOT NULL,
+CREATE TABLE `paket_wisata_detail` (
+  `id` int(11) NOT NULL,
   `paket_wisata_id` int(11) NOT NULL,
   `destinasi_area_id` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata_detail`
+-- Dumping data untuk tabel `paket_wisata_detail`
 --
 
 INSERT INTO `paket_wisata_detail` (`id`, `paket_wisata_id`, `destinasi_area_id`) VALUES
@@ -187,17 +189,17 @@ INSERT INTO `paket_wisata_detail` (`id`, `paket_wisata_id`, `destinasi_area_id`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata_gambar`
+-- Struktur dari tabel `paket_wisata_gambar`
 --
 
-CREATE TABLE IF NOT EXISTS `paket_wisata_gambar` (
-`id` int(11) NOT NULL,
+CREATE TABLE `paket_wisata_gambar` (
+  `id` int(11) NOT NULL,
   `paket_wisata_id` int(11) NOT NULL,
   `gambar` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata_gambar`
+-- Dumping data untuk tabel `paket_wisata_gambar`
 --
 
 INSERT INTO `paket_wisata_gambar` (`id`, `paket_wisata_id`, `gambar`) VALUES
@@ -214,11 +216,11 @@ INSERT INTO `paket_wisata_gambar` (`id`, `paket_wisata_id`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesan`
+-- Struktur dari tabel `pesan`
 --
 
-CREATE TABLE IF NOT EXISTS `pesan` (
-`id` int(10) NOT NULL,
+CREATE TABLE `pesan` (
+  `id` int(10) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telepon` varchar(15) NOT NULL,
@@ -235,13 +237,13 @@ INSERT INTO `pesan` (`id`, `nama`, `email`, `telepon`, `pesan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rent`
+-- Struktur dari tabel `rent`
 --
 
-CREATE TABLE IF NOT EXISTS `rent` (
-`id` int(10) NOT NULL,
-  `nama` text,
-  `deskripsi` text,
+CREATE TABLE `rent` (
+  `id` int(10) NOT NULL,
+  `nama` text DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL,
   `gambar` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -270,18 +272,18 @@ INSERT INTO `request` (`id`, `nama`, `email`, `telepon`, `pesan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Struktur dari tabel `slider`
 --
 
-CREATE TABLE IF NOT EXISTS `slider` (
-`id` int(10) NOT NULL,
-  `nama` text,
-  `deskripsi` text,
+CREATE TABLE `slider` (
+  `id` int(10) NOT NULL,
+  `nama` text DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL,
   `gambar` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `slider`
+-- Dumping data untuk tabel `slider`
 --
 
 INSERT INTO `slider` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -290,11 +292,11 @@ INSERT INTO `slider` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tentang`
+-- Struktur dari tabel `tentang`
 --
 
-CREATE TABLE IF NOT EXISTS `tentang` (
-`id` int(10) NOT NULL,
+CREATE TABLE `tentang` (
+  `id` int(10) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `slogan` text NOT NULL,
   `deskripsi` text NOT NULL,
@@ -306,10 +308,10 @@ CREATE TABLE IF NOT EXISTS `tentang` (
   `instagram` text NOT NULL,
   `youtube` text NOT NULL,
   `logo` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tentang`
+-- Dumping data untuk tabel `tentang`
 --
 
 INSERT INTO `tentang` (`id`, `nama`, `slogan`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
@@ -318,18 +320,18 @@ INSERT INTO `tentang` (`id`, `nama`, `slogan`, `deskripsi`, `alamat`, `telepon`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimonial`
+-- Struktur dari tabel `testimonial`
 --
 
-CREATE TABLE IF NOT EXISTS `testimonial` (
-`id_testi` int(10) NOT NULL,
+CREATE TABLE `testimonial` (
+  `id_testi` int(10) NOT NULL,
   `nama_testi` varchar(100) NOT NULL,
   `deskripsi_testi` text NOT NULL,
-  `gambar_testi` text
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `gambar_testi` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `testimonial`
+-- Dumping data untuk tabel `testimonial`
 --
 
 INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_testi`) VALUES
@@ -338,13 +340,14 @@ INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ticket`
+-- Struktur dari tabel `ticket`
 --
 
-CREATE TABLE IF NOT EXISTS `ticket` (
-`id` int(10) NOT NULL,
-  `nama` text,
-  `deskripsi` text,
+CREATE TABLE `ticket` (
+  `id` int(10) NOT NULL,
+  `nama` text DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `fasilitas` text NOT NULL,
   `gambar` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -353,22 +356,22 @@ CREATE TABLE IF NOT EXISTS `ticket` (
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `destinasi`
+-- Indeks untuk tabel `destinasi`
 --
 ALTER TABLE `destinasi`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `destinasi_area`
+-- Indeks untuk tabel `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
- ADD PRIMARY KEY (`id_area`);
+  ADD PRIMARY KEY (`id_area`);
 
 --
 -- Indexes for table `galeri`
@@ -380,103 +383,114 @@ ALTER TABLE `galeri`
 -- Indexes for table `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `paket_wisata_detail`
+-- Indeks untuk tabel `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `paket_wisata_gambar`
+-- Indeks untuk tabel `paket_wisata_gambar`
 --
 ALTER TABLE `paket_wisata_gambar`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pesan`
+-- Indeks untuk tabel `pesan`
 --
 ALTER TABLE `pesan`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `rent`
+-- Indeks untuk tabel `rent`
 --
 ALTER TABLE `rent`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `request`
---
-ALTER TABLE `request`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `slider`
+-- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tentang`
+-- Indeks untuk tabel `tentang`
 --
 ALTER TABLE `tentang`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `testimonial`
+-- Indeks untuk tabel `testimonial`
 --
 ALTER TABLE `testimonial`
- ADD PRIMARY KEY (`id_testi`);
+  ADD PRIMARY KEY (`id_testi`);
 
 --
--- Indexes for table `ticket`
+-- Indeks untuk tabel `ticket`
 --
 ALTER TABLE `ticket`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indeks untuk tabel `ticket_detail`
+--
+ALTER TABLE `ticket_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `destinasi`
+-- AUTO_INCREMENT untuk tabel `destinasi`
 --
 ALTER TABLE `destinasi`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
--- AUTO_INCREMENT for table `destinasi_area`
+-- AUTO_INCREMENT untuk tabel `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
-MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
+  MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
 --
--- AUTO_INCREMENT for table `paket_wisata`
+-- AUTO_INCREMENT untuk tabel `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
--- AUTO_INCREMENT for table `paket_wisata_detail`
+-- AUTO_INCREMENT untuk tabel `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=138;
 --
--- AUTO_INCREMENT for table `paket_wisata_gambar`
+-- AUTO_INCREMENT untuk tabel `paket_wisata_gambar`
 --
 ALTER TABLE `paket_wisata_gambar`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
--- AUTO_INCREMENT for table `pesan`
+-- AUTO_INCREMENT untuk tabel `pesan`
 --
 ALTER TABLE `pesan`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `rent`
+-- AUTO_INCREMENT untuk tabel `rent`
 --
 ALTER TABLE `rent`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
@@ -486,24 +500,36 @@ MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `request`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT untuk tabel `slider`
 --
 ALTER TABLE `slider`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `tentang`
+-- AUTO_INCREMENT untuk tabel `tentang`
 --
 ALTER TABLE `tentang`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `testimonial`
+-- AUTO_INCREMENT untuk tabel `testimonial`
 --
 ALTER TABLE `testimonial`
-MODIFY `id_testi` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_testi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `ticket`
+-- AUTO_INCREMENT untuk tabel `ticket`
 --
 ALTER TABLE `ticket`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT untuk tabel `ticket_detail`
+--
+ALTER TABLE `ticket_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+COMMIT;
+
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -86,10 +86,49 @@ if($_SESSION['status']!="login"){
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
+                                            <label for="exampleInputPassword1">Fasilitas</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <textarea name="fasilitas" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
                                             <img id="image-preview" alt="image preview"/><br/>
                                             <div class="custom-file">
                                                 <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Destinasi Area</label>
+                                            <div class="">
+                                                <?php
+                                                $query_mysql = mysqli_query($koneksi,"SELECT DISTINCT(d.id),d.nama FROM destinasi AS d INNER JOIN destinasi_area AS da ON d.id = da.destinasi_id ")or die(mysqli_error());
+                                                while($data = mysqli_fetch_array($query_mysql)){
+                                                    $id = $data['id'];
+                                                    $nama = $data['nama'];
+                                                ?>
+                                                <h5><?= $nama ?></h5>
+                                                <?php
+                                                $query_mysql2 = mysqli_query($koneksi,"SELECT * FROM destinasi_area WHERE destinasi_id = $id")or die(mysqli_error());
+                                                while($data2 = mysqli_fetch_array($query_mysql2)){
+                                                    ?>
+                                                    <label><input type="checkbox" name="data_des[]" value="<?= $data2['id_area']?>" > <?= $data2['nama_area'] ?></label>
+                                                <?php } ?>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>

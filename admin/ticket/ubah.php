@@ -5,6 +5,18 @@ session_start();
 if($_SESSION['status']!="login"){
   header("location:../login");
 }
+if(!empty($_GET['idTicket'])){
+    $idTicket = $_GET['idTicket'];
+}
+else{
+    header("location:../tour-packages");   
+}
+
+$dataPaket = array();
+$query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM ticket_detail WHERE ticket_id = $idTicket")or die(mysqli_error());
+while($data = mysqli_fetch_array($query_mysql)){
+    array_push($dataPaket, $data['destinasi_area_id']);
+}
 ?>
 <style type="text/css">
     #image-preview{
@@ -59,7 +71,7 @@ if($_SESSION['status']!="login"){
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                     <?php
-                                    $idTicket = $_GET['idTicket'];
+                                
                                     $query = "SELECT * FROM ticket WHERE id = '$idTicket'";
                                     //echo($query);
                                     $queryDetailPaket = mysqli_query($koneksi,$query);
@@ -67,6 +79,7 @@ if($_SESSION['status']!="login"){
                                     $id = $d['id'];
                                     $nama = $d['nama'];
                                     $deskripsi = $d['deskripsi'];
+                                    $fasilitas = $d['fasilitas'];
                                     $gambar = $d['gambar'];
                                     ?>
                                     <div class="card-body">
@@ -96,6 +109,26 @@ if($_SESSION['status']!="login"){
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
+                                            <label for="exampleInputPassword1">Fasilitas</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <textarea name="fasilitas" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $fasilitas; ?>
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
                                             <img id="image-preview" alt="image preview"/><br/>
                                             <div class="custom-file">
@@ -114,6 +147,39 @@ if($_SESSION['status']!="login"){
 
                                                 
                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Destinasi Area</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
+                                            </div>
+                                            <div class="pad">
+                                                <div class="">
+                                                    <?php
+                                                    $query_mysql = mysqli_query($koneksi,"SELECT DISTINCT(d.id),d.nama FROM destinasi AS d INNER JOIN destinasi_area AS da ON d.id = da.destinasi_id ")or die(mysqli_error());
+                                                    while($data = mysqli_fetch_array($query_mysql)){
+                                                        $id = $data['id'];
+                                                        $nama = $data['nama'];
+                                                    ?>
+                                                    <h6><?= $nama ?></h2>
+                                                        <?php
+                                                        $query_mysql2 = mysqli_query($koneksi,"SELECT * FROM destinasi_area WHERE destinasi_id = $id")or die(mysqli_error());
+                                                        while($data2 = mysqli_fetch_array($query_mysql2)){
+                                                        ?>
+                                                        <label><input type="checkbox" name="data_des[]" value="<?= $data2['id_area']?>" <?php echo (in_array($data2['id_area'], $dataPaket) ? 'checked' : ''); ?>> <?= $data2['nama_area'] ?></label>
+
+                                                        <?php } ?>
+                                                <?php } ?>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
