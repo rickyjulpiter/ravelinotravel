@@ -6,3 +6,5 @@
 [02-Nov-2019 16:37:13 UTC] PHP Notice:  Undefined index: gambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/tour-packages/ubah-aksi.php on line 10
 [02-Nov-2019 16:37:13 UTC] PHP Notice:  Undefined index: idgambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/tour-packages/ubah-aksi.php on line 12
 [02-Nov-2019 16:40:28 UTC] PHP Notice:  Undefined index: gambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/tour-packages/tambah-aksi.php on line 9
+[02-Nov-2019 17:02:52 UTC] PHP Notice:  Undefined index: gambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/tour-packages/ubah-aksi.php on line 10
+[02-Nov-2019 17:02:52 UTC] PHP Notice:  Undefined index: idgambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/tour-packages/ubah-aksi.php on line 12
