@@ -22,7 +22,7 @@
 
 
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2>Car Rental</h2>
@@ -39,21 +39,21 @@
     <!-- BreadCrumb Ends -->
 
     <!-- Destinations -->
-    <section class="destinations destination-padding">
+    <section class="destinations destination-padding" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <?php
-                $query_mysql = mysqli_query($koneksi,"SELECT * FROM rent LIMIT 6")or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi,"SELECT * FROM rent")or die(mysqli_error());
                 while($data = mysqli_fetch_array($query_mysql)){
                     $idRent = $data['id'];
                     $namaRent = $data['nama'];
                     $deskripsiRent = $data['deskripsi'];
                     $gambarRent = $data['gambar'];
                 ?>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-4">
                     <div class="destination-item destination-4-col">
                         <div class="destination-image">
-                            <img src="<?php echo $gambarRent; ?>" alt="Image">
+                            <img src="<?php echo $gambarRent; ?>" alt="Image" style="height: 200px;">
                             <div class="destination-overlay"></div>
                             <div class="destination-btn">
                                 <a href="#" class="btn-blue btn-red">Contact Us For Further Book</a>
