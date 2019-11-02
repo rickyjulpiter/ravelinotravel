@@ -30,7 +30,7 @@ $namaTour = $_GET['tourName'];
     $timeline_tour = $detail['timeline'];
     ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2><?php echo($nama_tour);?></h2>

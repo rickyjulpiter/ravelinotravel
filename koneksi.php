@@ -1,10 +1,10 @@
 <?php 
-/*
-$svr_name = "localhost";
+
+/*$svr_name = "localhost";
 $user = "root";
 $password = "";
-$dbname = "ravelinotravel";
-*/
+$dbname = "ravelinotravel";*/
+
 
 $svr_name = "localhost";
 $user = "u4502442_ravelinotravel";

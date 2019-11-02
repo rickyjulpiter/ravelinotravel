@@ -32,7 +32,7 @@ $namaWisata = $_GET['destination'];
 
     ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center" style="background-image: url(<?php echo $gambarDestinasi ;?>)">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2><?php echo $namaDestinasi; ?></h2>

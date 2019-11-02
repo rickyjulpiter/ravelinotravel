@@ -21,7 +21,7 @@ $deskripsiTentang = $tentang['deskripsi'];
     <?php include 'template/nav.php' ?>
     <!-- Navigation Bar Ends -->
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2>About Us</h2>
@@ -75,7 +75,7 @@ $deskripsiTentang = $tentang['deskripsi'];
                 <div class="col-md-4">
                     <div class="contact-about footer-margin">
                         <div class="about-logo">
-                            <img src="<?php echo $logo; ?>" alt="Image">
+                            <img src="<?php echo $logo; ?>" alt="Image" style="width: 100%">
                         </div>
                         <h4><?php echo $slogan; ?></h4>
                         <p><?php //echo $deskripsi; ?></p>
