@@ -1,3 +1,6 @@
 [03-Nov-2019 14:56:36 UTC] PHP Notice:  Undefined variable: tampakGambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/destination-area/ubah.php on line 139
 [03-Nov-2019 14:59:36 UTC] PHP Notice:  Undefined variable: tampakGambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/destination-area/ubah.php on line 139
 [03-Nov-2019 15:17:08 UTC] PHP Notice:  Undefined variable: tampakGambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/destination-area/ubah.php on line 139
+[03-Nov-2019 17:30:39 UTC] PHP Notice:  Undefined variable: tampakGambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/destination-area/ubah.php on line 139
+[03-Nov-2019 17:32:30 UTC] PHP Notice:  Undefined variable: tampakGambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/destination-area/ubah.php on line 139
+[03-Nov-2019 17:41:33 UTC] PHP Notice:  Undefined index: status in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/destination-area/index.php on line 5
