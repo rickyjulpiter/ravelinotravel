@@ -172,7 +172,7 @@ $query_mysql = mysqli_query($koneksi,"SELECT destinasi_area_id FROM paket_wisata
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" data-filter='[a-zA-Z\s]*' class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
+                                            <input name="nama" type="text" data-filter='.*' class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
                                             <input type="hidden" name="id" value="<?= $idTourPackages;?>">
                                         </div>
                                         <div class="form-group">

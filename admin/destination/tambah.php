@@ -62,7 +62,7 @@ if($_SESSION['status']!="login"){
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" data-filter='[a-zA-Z\s]*' class="form-control" id="exampleInputEmail1" pattern="\d*">
+                                            <input name="nama" type="text" data-filter='.*' class="form-control" id="exampleInputEmail1" pattern="\d*">
                                             <input type="hidden" name="id">
                                         </div>
                                         <div class="form-group">

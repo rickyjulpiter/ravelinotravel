@@ -5,7 +5,7 @@
                     <!-- start Navbar (Header) -->
                     <nav class="navbar navbar-default navbar-sticky-function navbar-arrow">
                         <div class="logo pull-left">
-                            <a href="index"><img alt="Image" src="<?php echo $logo; ?>" style="float: left;width: 30%;"><img alt="Image" src="images/indo.png" style="float: right;width: 20%;"></a>
+                            <a href="index"><img alt="Image" src="<?php echo $logo; ?>" style="float: left;width: 25%;"><img alt="Image" src="images/indo.png" style="float: right;width: 20%;"></a>
                         </div>
                         <div id="navbar" class="navbar-nav-wrapper" style="margin-top: -15px; /*margin-bottom: -20px*/;">
                             <ul class="nav navbar-nav" id="responsive-menu">
