@@ -1,9 +1,9 @@
 <?php
     include '../../koneksi.php';
 
-    $nama = $_POST['nama'];
-    $deskripsi = $_POST['deskripsi'];
-    $deskripsi_singkat = $_POST['deskripsi_singkat'];
+    $nama = mysqli_escape_string($koneksi,$_POST['nama']);
+    $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
+    $deskripsi_singkat = mysqli_escape_string($koneksi,$_POST['deskripsi_singkat']);
     $destinasi = $_POST['destinasi'];
     $image = "images/".$nama."-".basename( $_FILES["gambar"]["name"]);
 
