@@ -105,7 +105,7 @@ $namaTour = $_GET['tourName'];
                         </div>
                         <div class="detail-timeline detail-box">
                             <div class="detail-title">
-                                <h3>Tour Timeline</h3>
+                                <h3>Tour Itinerary</h3>
                             </div>
                             <div class="timeline-content">
                                 <?php echo $timeline_tour; ?>
