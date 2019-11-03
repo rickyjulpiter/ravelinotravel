@@ -91,14 +91,14 @@
             </a>
           </li>
           -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="../testimonial/" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
               <p style="color: white">
                 Partnership
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="../inbox" class="nav-link">
               <i class="nav-icon fa fa-comment"></i>
