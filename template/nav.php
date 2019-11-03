@@ -4,10 +4,10 @@
                 <div class="header_menu">
                     <!-- start Navbar (Header) -->
                     <nav class="navbar navbar-default navbar-sticky-function navbar-arrow">
-                        <div class="logo pull-left">
+                        <div class="logo pull-left" style="margin-bottom: -20px;">
                             <a href="index"><img alt="Image" src="<?php echo $logo; ?>" style="float: left;width: 25%;"><img alt="Image" src="images/indo.png" style="float: right;width: 20%;"></a>
                         </div>
-                        <div id="navbar" class="navbar-nav-wrapper" style="margin-top: -15px; /*margin-bottom: -20px*/;">
+                        <div id="navbar" class="navbar-nav-wrapper" style="margin-top: -15px; margin-bottom: -10px;">
                             <ul class="nav navbar-nav" id="responsive-menu">
                                 <li>
                                     <a href="index" style="font-size: 12px;">Home</a>
