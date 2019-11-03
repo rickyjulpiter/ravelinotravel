@@ -9,14 +9,14 @@
 	$id = $_POST['id'];
 	$nama = $_POST['nama'];
 	$slogan = mysqli_escape_string($koneksi,$_POST['slogan']);
-	$alamat = $_POST['alamat'];
-	$email = $_POST['email'];
-	$telepon = $_POST['telepon'];
+	$alamat = mysqli_escape_string($koneksi,$_POST['alamat']);
+	$email = mysqli_escape_string($koneksi,$_POST['email']);
+	$telepon = mysqli_escape_string($koneksi,$_POST['telepon']);
 	$facebook = $_POST['facebook'];
 	$twitter = $_POST['twitter'];
 	$instagram = $_POST['instagram'];
 	$youtube = $_POST['youtube'];
-	$deskripsi = $_POST['deskripsi'];
+	$deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi'];
 	
 
 	if ($nama_file != '') {

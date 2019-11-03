@@ -116,6 +116,14 @@ $gambarPaket = $detailWisata['gambar_paket'];
                             </div>
                             
                         </div>
+                        <?php include 'koneksi.php';
+                        $queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
+                        $tentang = mysqli_fetch_assoc($queryTentang);
+                        $namaTentang = $tentang['nama'];
+                        $deskripsiTentang = $tentang['deskripsi'];
+                        $telepon = $tentang['telepon'];
+                        $email = $tentang['email'];
+                        ?>
                         <div class="sidebar-item sidebar-helpline">
                             <div class="sidebar-helpline-content">
                                 <h3>Any Questions?</h3>

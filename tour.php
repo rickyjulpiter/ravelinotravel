@@ -140,12 +140,20 @@ $namaTour = $_GET['tourName'];
                                 <?php } ?>
                             </div>
                         </div>
+                        <?php include 'koneksi.php';
+                        $queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
+                        $tentang = mysqli_fetch_assoc($queryTentang);
+                        // $namaTentang = $tentang['nama'];
+                        // $deskripsiTentang = $tentang['deskripsi'];
+                        $telepon = $tentang['telepon'];
+                        $email = $tentang['email'];
+                        ?>
                         <div class="sidebar-item sidebar-helpline">
                             <div class="sidebar-helpline-content">
                                 <h3>Any Questions?</h3>
                                 <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sedpr do eiusmod tempor incididunt ut.</p>
-                                <p><i class="flaticon-phone-call"></i> (012)-345-6789</p>
-                                <p><i class="flaticon-mail"></i> tourntravel@testmail.com</p>
+                                <p><i class="flaticon-phone-call"></i> <?php echo $telepon; ?></p>
+                                <p><i class="flaticon-mail"></i> <?php echo $email; ?></p>
                             </div>
                         </div>
                     </aside>
