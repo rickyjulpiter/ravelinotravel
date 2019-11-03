@@ -866,7 +866,7 @@ ul.nav-mini li i{color: #fff; padding-right: 5px;}
   /*display: block;*/
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  /*width: 35%;*/
 }
 .logo h1{
   margin-bottom: 0;
@@ -5817,7 +5817,7 @@ section#mt_services {
     background-size: cover;
   }
   .logo img{
-    width: 100%;
+    /*width: 100%;*/
   }
   .search-content{
     padding: 30px 30px 0;
@@ -6243,5 +6243,56 @@ section#mt_services {
 @media(max-width: 359px){
   .sale-content {
     padding: 10px 30px;
+  }
+}
+
+.logo {
+  margin-bottom: -20px;
+}
+
+.logo1 {
+  float: left;
+  width: 25%;
+}
+
+.logo2 {
+  float: right;
+  width: 20%;
+}
+
+.kenburns_061_slide p{
+  font-size: 27px;
+}
+
+.kenburns_061_slide h2{
+  padding-top: 50px;
+}
+
+@media(max-width: 991px){
+  .logo1 {
+    width: 40%;
+  }
+  .logo2 {
+    width: 30%;
+  }
+  .logo {
+    margin-bottom: 1px;
+  }
+  .kenburns_061_slide p {
+    font-size: 16px;
+  }
+
+  .kenburns_061_slide h2{
+    padding-top: 5px;
+  }
+
+}
+
+@media(max-width: 991px){
+  .logo2 {
+    display: none;
+  }
+  .logo {
+    margin-bottom: 0px;
   }
 }

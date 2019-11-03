@@ -25,8 +25,8 @@
                     <img src="<?php echo $gambarDestiansi; ?>" alt="kenburns_061_01" />
                     <!-- Left Slide Text Layer -->
                     <div class="kenburns_061_slide" data-animation="animated fadeInRight">
-                        <h2 style="padding-top: 50px;"><?php echo $namaDestinasi; ?></h2>
-                        <p style="color: white;font-size: 27px;"><?php echo limit_words(strip_tags($deskripsiDestinasi),50)."..."; ?></p>
+                        <h2 style="/*padding-top: 50px*/;"><?php echo $namaDestinasi; ?></h2>
+                        <p class="slider1" style="color: white;/*font-size: 27px*/;"><?php echo limit_words(strip_tags($deskripsiDestinasi),50)."..."; ?></p>
 
                         <a href="tour?tourName=<?php echo $namaDestinasi; ?>" class="btn-blue btn-red">Destination Detail</a>
                     </div><!-- /Left Slide Text Layer -->
