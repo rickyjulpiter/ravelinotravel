@@ -78,7 +78,7 @@ else{
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" data-filter='[a-zA-Z\s]*' class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
+                                            <input name="nama" type="text" data-filter='.*' class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
                                             <input type="hidden" name="id" value="<?= $idDestinasiArea;?>">
                                         </div>
                                         <div class="form-group">
