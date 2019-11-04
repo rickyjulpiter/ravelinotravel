@@ -33,14 +33,14 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="../destination-area" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
               <p style="color: white">
                 Services
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="../ticket" class="nav-link">
               <i class="nav-icon fa fa-calendar"></i>
