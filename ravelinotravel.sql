@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Nov 2019 pada 07.35
+-- Waktu pembuatan: 05 Nov 2019 pada 07.39
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.1.32
 
@@ -433,6 +433,7 @@ CREATE TABLE `ticket` (
   `id` int(10) NOT NULL,
   `nama` text DEFAULT NULL,
   `deskripsi` text DEFAULT NULL,
+  `fasilitas` text NOT NULL,
   `gambar` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -440,8 +441,8 @@ CREATE TABLE `ticket` (
 -- Dumping data untuk tabel `ticket`
 --
 
-INSERT INTO `ticket` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
-(1, 'Mickey Holiday Ticket', '<div>Funland started to attend as one of Mikie Holiday Resort facilities since October 10, 2000, to serve visitors who stay at Mikie Holiday Resort and guests that are not staying. Located on the edge of the highway Berastagi Medan, Funland becomes one of the major tourist attractions in the country for Berastagi city that had cool air and altitude above 1,400 meters above sea level. Funland is also a place for a family holidays with the first outdoor concept in North Sumatra.</div><div><br></div><div>A busy life and living in the city every day have made people become stress and forget about the fun and entertainment. Free time with your family, loved ones, friends become difficult to obtain. To refresh your day with family you need a place of recreation in a relaxed atmosphere, comfortable and harmonious.</div><div><br></div><div>Funland offers choices of over 30 kinds of attractions that can be played only by using 1 ticket in the middle of nature that can rebuild your harmony and joy with family.</div><div><br></div><div>To pamper and add a relaxing family fun time, Funland provides an outlet selling a variety of delicious and tasteful dishes at the Frisbee, more than Fried Chicken, Snack Bar, Jungle Resto, Dome, and Bumper Bonanza.</div><div><br></div><div>With the motto \"We Give You The Best in Family Entertainment\" we will always provide the best for your family.</div>                                                    ', 'images/mickey.jpg');
+INSERT INTO `ticket` (`id`, `nama`, `deskripsi`, `fasilitas`, `gambar`) VALUES
+(1, 'Mickey Holiday Ticket', '<div>Funland started to attend as one of Mikie Holiday Resort facilities since October 10, 2000, to serve visitors who stay at Mikie Holiday Resort and guests that are not staying. Located on the edge of the highway Berastagi Medan, Funland becomes one of the major tourist attractions in the country for Berastagi city that had cool air and altitude above 1,400 meters above sea level. Funland is also a place for a family holidays with the first outdoor concept in North Sumatra.</div><div><br></div><div>A busy life and living in the city every day have made people become stress and forget about the fun and entertainment. Free time with your family, loved ones, friends become difficult to obtain. To refresh your day with family you need a place of recreation in a relaxed atmosphere, comfortable and harmonious.</div><div><br></div><div>Funland offers choices of over 30 kinds of attractions that can be played only by using 1 ticket in the middle of nature that can rebuild your harmony and joy with family.</div><div><br></div><div>To pamper and add a relaxing family fun time, Funland provides an outlet selling a variety of delicious and tasteful dishes at the Frisbee, more than Fried Chicken, Snack Bar, Jungle Resto, Dome, and Bumper Bonanza.</div><div><br></div><div>With the motto \"We Give You The Best in Family Entertainment\" we will always provide the best for your family.</div>                                                    ', '', 'images/mickey.jpg');
 
 -- --------------------------------------------------------
 
