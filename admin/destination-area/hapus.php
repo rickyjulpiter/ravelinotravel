@@ -3,13 +3,16 @@ include '../../koneksi.php';
 
 $id = $_GET['idDestinasiArea'];
 
-$queryDetailPaket = mysqli_query($koneksi,"SELECT gambar_area FROM destinasi_area WHERE id_area = '$id'");
-$d = mysqli_fetch_assoc($queryDetailPaket);
-$gambar = $d['gambar_area'];
+$query_mysql = mysqli_query($koneksi,"SELECT gambar FROM destinasi_area_gambar WHERE destinasi_area_id = '$id' ")or die(mysqli_error());
+
+while($data = mysqli_fetch_array($query_mysql)){
+	$gambar = $data['gambar'];
+	unlink('../../'.$gambar);
+}
+
 $queryDelete = "DELETE FROM destinasi_area WHERE id_area = '$id'";
-//echo($queryDelete);
 mysqli_query($koneksi,$queryDelete);
-unlink('../../'.$gambar);
+
 echo "<script>
 	alert('Berhasil di hapus!');
 	window.location.href='index';
