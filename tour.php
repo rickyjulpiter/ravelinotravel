@@ -151,7 +151,7 @@ $namaTour = $_GET['tourName'];
                         <div class="sidebar-item sidebar-helpline">
                             <div class="sidebar-helpline-content">
                                 <h3>Any Questions?</h3>
-                                <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sedpr do eiusmod tempor incididunt ut.</p>
+                                <p>If you require any further information, please call or write us to our below contact.</p>
                                 <p><i class="flaticon-phone-call"></i> <?php echo $telepon; ?></p>
                                 <p><i class="flaticon-mail"></i> <?php echo $email; ?></p>
                             </div>

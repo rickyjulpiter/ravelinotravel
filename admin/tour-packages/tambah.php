@@ -143,7 +143,7 @@ if($_SESSION['status']!="login"){
                                             </div>
                                             <div class="pad">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" id="jumlah" placeholder="Masukkan banyak gambar">
+                                                    <input class="form-control" type="number" id="jumlah" placeholder="Masukkan banyak gambar" min="1" max="3" maxlength="1">
                                                     <button type="button" id="btn-proses">Proses</button>
                                                     <div class="input-file">
                                                     </div>
