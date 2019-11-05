@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 05, 2019 at 01:15 PM
--- Server version: 10.2.27-MariaDB
--- PHP Version: 7.2.7
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 05 Nov 2019 pada 07.35
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.1.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u4502442_ravelinotravel`
+-- Database: `ravelinotravel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `destinasi`
+-- Struktur dari tabel `destinasi`
 --
 
 CREATE TABLE `destinasi` (
@@ -56,7 +56,7 @@ CREATE TABLE `destinasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `destinasi`
+-- Dumping data untuk tabel `destinasi`
 --
 
 INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `deskripsi_singkat`, `gambar`) VALUES
@@ -74,7 +74,7 @@ INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `deskripsi_singkat`, `gambar
 -- --------------------------------------------------------
 
 --
--- Table structure for table `destinasi_area`
+-- Struktur dari tabel `destinasi_area`
 --
 
 CREATE TABLE `destinasi_area` (
@@ -87,7 +87,7 @@ CREATE TABLE `destinasi_area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `destinasi_area`
+-- Dumping data untuk tabel `destinasi_area`
 --
 
 INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `deskripsi_area_singkat`, `gambar_area`, `destinasi_id`) VALUES
@@ -119,19 +119,14 @@ INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `deskrip
 (42, 'Jayapura', '                                                    ', '                                                    ', NULL, 21),
 (43, 'Asmat Tribe', '                                                    ', '                                                    ', NULL, 21),
 (44, 'Medan', '<div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">There are many tourist attractions in Medan, North Sumatra that you can visit when the holidays arrive. Medan is the 3rd largest city in Indonesia after Jakarta and Surabaya with ethnic, ethnic and cultural diversity in it such as the Batak, Malay, Javanese, Chinese, and other ethnic groups.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">The capital of North Sumatra is not only rich in cultural diversity but also holds quite a diverse tourism potential.&nbsp;</span><span style=\"font-size: 24px;\">One of the tourism icons in Medan, North Sumatra, which is interesting to visit is Lake Toba which was once named the largest volcanic lake in the world.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">With a variety of charms, Lake Toba is one of the most reliable and most popular natural attractions in North Sumatra. Even famous to the corners of the world.&nbsp;</span><span style=\"font-size: 24px;\">Clearwater with a beautiful view of the verdant mountains further adds to its appeal.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">Not to mention the existence of Samosir Island in the middle of the lake which is so iconic with the legendary stories that accompany it.&nbsp;</span><span style=\"font-size: 24px;\">Now, besides visiting Lake Toba and traveling to Samosir Island, you can also explore other beautiful places in Medan that are no less interesting.</span></div>                                                    					                                					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 24px;\">There are many tourist attractions in Medan, North Sumatra that you can visit when the holidays arrive. Medan is the 3rd largest city in Indonesia after Jakarta and Surabaya with ethnic, ethnic and cultural diversity in it such as the Batak, Malay, Javanese, Chinese, and other ethnic groups.</span></div>', 'images/Medan-medan.jpg', 12),
-(45, 'Bukit Lawang', '<div align=\"justify\">Bukit Lawang is a small tourist village on the bank of Bahorok River in the North Sumatra province of Indonesia. Situated approximately 86 km northwest of the city of Medan, Bukit Lawang is known for the largest animal sanctuary of Sumatran orangutan (around 5,000 orangutans occupying the area) and also the main access point to the Gunung Leuser National Park from the east side.</div><div align=\"justify\">The park is named after one of its highest points, the 3,381m Mount Leuser (Gunung Leuser). The Gunung Leuser National Park was originally created as a wildlife reserve.&nbsp;</div><div align=\"justify\">Along with the two other National Parks (Kerinci Seblat and Bukit Barisan Selatan) on the island, it comprises the UNESCO World Heritage site of \'The Tropical Rainforest Heritage of Sumatra\' (status since 2004).&nbsp;</div><div align=\"justify\">In 1973 a Swiss organization set up an orangutan rehabilitation center in Bukit Lawang (Bukit Lawang literally means \"door to the hills\"). The purpose of the center was to rehabilitate orangutans released from captivity. The rangers at the center teach the orangutan all the necessary skills to survive in the wild. After an intense period of quarantine, readjustment to the natural habitat and reintegration into the (semi-)wild population, the orangutan is released back into the jungle. All orangutans released are still monitored by the rangers through the feeding platform not exist anymore due to orangutan is getting more and wilder.</div><div align=\"justify\">Seeing orangutans is a magical experience. About 10,000 live in this area. In Bukit Lawang, you can usually see them near the rehabilitation center and at the feeding platform during the morning and afternoon feeding sessions. In Ketambe, you can go to 1-7 days treks into the jungle.&nbsp;</div><div align=\"justify\">The best experience is an encounter in the jungle where there are many semi-wild and wild animals. The wild orangutan can be difficult to spot unless you go
-deep
-into the jungle. There are also white and black gibbons that make an amazing noise calling out to each other, and Thomas Leaf monkeys.
-If you are lucky, you may be able to see hornbills, toucans, moon snakes, monitor lizards.&nbsp;</div><div align=\"justify\">Since there are very few
-(hundreds) still alive, it is very improbable that either the Sumatran Tiger or the Sumatran Rhinoceros will be encountered, although footprints and droppings have been reported.
-If you really want to see a tiger, you have to go deep and be patient (waiting for weeks).&nbsp;</div><div align=\"justify\">A jungle trek is a must. Seeing the orangutan in the wild may be one of the best experiences you will have in your life.&nbsp;</div><div align=\"justify\">Everyone who is planning to go on a jungle trek is asked to refrain from any physical contact with the orangutans. Getting too close to an orangutan increases the risk of passing on disease and viral infection, which jeopardizes the orangutan\'s chances of survival and in turn the health and survival of the wild orangutan population in the entire area. All guests should keep at least 10 meters away and move away if an orangutan approaches. The motto of any jungle adventure should be taken only pictures, leave only footprints.</div>                                                    					                                					                                					                                					                                ', 'To explore the nature of Bukit Lawang, we provide you short 3 hours jungle trekking, fulldays jungle trekking, 2 days jungle trekking or longer trekking for 4 to 6 days jungle trekking accompanied by our experienced and skill full tour guide.                                                                                                                                                                                                                                                                    ', 'images/sumatra-bukit-lawang-gunung-leuser-nationalpark-orang-utan-2016-and (77).JPG', 12),
+(45, 'Bukit Lawang', '<div align=\"justify\">Bukit Lawang is a small tourist village on the bank of Bahorok River in the North Sumatra province of Indonesia. Situated approximately 86 km northwest of the city of Medan, Bukit Lawang is known for the largest animal sanctuary of Sumatran orangutan (around 5,000 orangutans occupying the area) and also the main access point to the Gunung Leuser National Park from the east side.</div><div align=\"justify\">The park is named after one of its highest points, the 3,381m Mount Leuser (Gunung Leuser). The Gunung Leuser National Park was originally created as a wildlife reserve.&nbsp;</div><div align=\"justify\">Along with the two other National Parks (Kerinci Seblat and Bukit Barisan Selatan) on the island, it comprises the UNESCO World Heritage site of \'The Tropical Rainforest Heritage of Sumatra\' (status since 2004).&nbsp;</div><div align=\"justify\">In 1973 a Swiss organization set up an orangutan rehabilitation center in Bukit Lawang (Bukit Lawang literally means \"door to the hills\"). The purpose of the center was to rehabilitate orangutans released from captivity. The rangers at the center teach the orangutan all the necessary skills to survive in the wild. After an intense period of quarantine, readjustment to the natural habitat and reintegration into the (semi-)wild population, the orangutan is released back into the jungle. All orangutans released are still monitored by the rangers through the feeding platform not exist anymore due to orangutan is getting more and wilder.</div><div align=\"justify\">Seeing orangutans is a magical experience. About 10,000 live in this area. In Bukit Lawang, you can usually see them near the rehabilitation center and at the feeding platform during the morning and afternoon feeding sessions. In Ketambe, you can go to 1-7 days treks into the jungle.&nbsp;</div><div align=\"justify\">The best experience is an encounter in the jungle where there are many semi-wild and wild animals. The wild orangutan can be difficult to spot unless you go\r\ndeep\r\ninto the jungle. There are also white and black gibbons that make an amazing noise calling out to each other, and Thomas Leaf monkeys.\r\nIf you are lucky, you may be able to see hornbills, toucans, moon snakes, monitor lizards.&nbsp;</div><div align=\"justify\">Since there are very few\r\n(hundreds) still alive, it is very improbable that either the Sumatran Tiger or the Sumatran Rhinoceros will be encountered, although footprints and droppings have been reported.\r\nIf you really want to see a tiger, you have to go deep and be patient (waiting for weeks).&nbsp;</div><div align=\"justify\">A jungle trek is a must. Seeing the orangutan in the wild may be one of the best experiences you will have in your life.&nbsp;</div><div align=\"justify\">Everyone who is planning to go on a jungle trek is asked to refrain from any physical contact with the orangutans. Getting too close to an orangutan increases the risk of passing on disease and viral infection, which jeopardizes the orangutan\'s chances of survival and in turn the health and survival of the wild orangutan population in the entire area. All guests should keep at least 10 meters away and move away if an orangutan approaches. The motto of any jungle adventure should be taken only pictures, leave only footprints.</div>                                                    					                                					                                					                                					                                ', 'To explore the nature of Bukit Lawang, we provide you short 3 hours jungle trekking, fulldays jungle trekking, 2 days jungle trekking or longer trekking for 4 to 6 days jungle trekking accompanied by our experienced and skill full tour guide.                                                                                                                                                                                                                                                                    ', 'images/sumatra-bukit-lawang-gunung-leuser-nationalpark-orang-utan-2016-and (77).JPG', 12),
 (46, 'Tangkahan', '<div align=\"justify\">                                                    					                                Tangkahan, referred to as the hidden paradise in Sumatra located in border area of Gunung Leuser National Park, is an ecotourism area in the Langkat district of North Sumatra, just two hours drive from the neighbouring ecotourism site of Bukit Lawang or four hours drive from Medan.<br></div><div align=\"justify\">Tangkahan is combinations of vegetation and topography makes it a marvellous tourist spot rarely found elsewhere. The Batang and Buluh rivers, converging exactly in this zone, are typical of rainforest streams, with diverse varieties of vegetation and colourful rocks and Sumatra Elephants on their banks. The clear, bluish green river water against the panoramic view creates a mystical atmosphere. <br>Tangkahan is also the base of the Conservation Response Unit (CRU), consisting of a team of ex-captive Sumatran Elephants and their mahouts (elephant tenders) that regularly patrols the national park to protect from any possible encroachment.<br>Tangkahan is a remote village in Northern Sumatra where you have the opportunity to sleep in the jungle with the â€˜big fiveâ€™ of Indonesia â€“ the Sumatran elephant, the Sumatran tiger, the Sumatran rhinoceros, the Sumatran orangutan, and the clouded leopard.<br>Experience a different kind of Sumatran adventure at the Tangkahan ecotourism destination located in North Sumatra Province near the Mount Leuser National Park. This ecotourism site was established in 2001 as a part of the local communityâ€™s effort in revitalizing the ecosystem through environmentally based tourism activities. <br>Have a blast learning and exploring Tangkahan! The activities prepared by the local community are aimed at preserving and protecting the forest and wildlife, such as elephants, tigers and other endangered species. Youâ€™ll kick off your journey into this hidden area by crossing the river on a bamboo raft like Indiana Jones! Then, once you enter Tangkahan, a cozy village nestled in the midst of Sumatraâ€™s lush and exotic forest will warmly welcome you. <br>You can choose to take part in various types of activities during your stay, starting from a visit to the Elephant Camp up to trekking in the forest and observing the supervision of wildlife. At the Elephant Camp, you can have fun bathing the elephants and feeding them as if they were your own pet. Or, you can enjoy do some other activities such ase river tubing, exploring caves and bathing in the natural hot water bath.<br>If you love knowledge, then learn about the importance of environmentally based tourism from the tour guides and local residents because Tangkahan is an example of how this concept has been successfully implemented. The people managed to convert an area that was prone to having the trees illegally cut down to an ecotourism area that many enjoy. <br><br></div><br>					                                ', '<div align=\"justify\">Vising elephant camp, washing the elephant, feed the elephant, trekking in the jungle and fantastic river tubing are some interesting activity to do in this area<br></div>                                                    ', 'images/DSCF6334.JPG', 12),
 (47, 'Mentawai - Siberut Island', '<div align=\"justify\">                                                    Siberut Island<br><br>Becomes part of Mentawai Islands, Siberut is the largest island at the northernmost and becomes the main important island for Mentawai People.&nbsp; The Mentawai tribe still maintains the lifestyle and traditions passed down from their ancestors from thousands of years ago. They live in houses locally called â€˜umaâ€™, made from wooden scaffolds which house contains several families each.<br><br>Siberut is located in the Indian Ocean, approximately 100 km off the west coast of West Sumatra, and separated from the main island by the Mentawai Strait. The island lies some 155 km from the provinceâ€™s capital city of Padang. Those who love nature and craving for beautiful scenery, Pulau Siberut invites the adventure thirsty to come and explore all the wealth it possesses, including the rich culture, customs, and exotic tropical environment.<br><br>Exploring Siberut can be done by trekking in the protected tropical forests and this very much recommended, while, enjoying the scenery around the island, that is another interesting adventure to be had. Other activities during staying in Siberut is boating, rowing, trekking through the (sometimes muddy) forest paths, enjoying the beauty of the rainforest, as well as observations of the rare species of both plants and animals.<br><br>The Siberut National Park is home to four types of wildlife primates found only in Siberut, they are Bokkoi (Macaca pagensis), Lutung Mentawai / Joja (Presbytis Potenziani Siberug), Bilou (Hylobates klossii), and Simakobu (Nasalis siberu concolor) . In addition to these endemic primates, there are also 4 different types of endemic squirrel species, 17 mammals, and 130 species of birds (4 of which are endemic).<br><br>Mentawai Tribe<br>At Siberut, there are at least 30,000 people of Mentawai tribe, who live isolated from the modern community. The Mentawai tribe is said to have migrated to the Mentawai islands from Nias island to the north, living an isolated life here for centuries until been â€œdiscoveredâ€ by the Dutch in 1621.<br><br>The tribe has its own language, culture, customs and some still profess a belief in animism. Mentawai people has very humble and simple appearence , where Mentawai men wear only a loincloth made from the bark of the gum tree, while women only wear a simple skirt made of palm or banana leaves.<br><br>Besides clothing, they also recognize a certain â€œtimeless clothingâ€; their proud and characteristic Mentawai tribal tattoo, which sometimes entails tattooing the whole body in the traditional way, following a variety of tribal rituals. It is a common to see Mentawai people covered from head to toe in tattoos. Their main food is sago and they raise pigs and hunt monkeys for their daily food.</div>', '                                                    A challenging trek through the jungle into the heart of the Siberut Island to meet the indigenous people of the Mentawai and experience the daily life of Mentawai such as making loin clothes, making tatoo, fishing, hunting etc', 'images/Mentawai - Siberut Island-DSC_0404.JPG', 13);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galeri`
+-- Struktur dari tabel `galeri`
 --
 
 CREATE TABLE `galeri` (
@@ -142,7 +137,7 @@ CREATE TABLE `galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `galeri`
+-- Dumping data untuk tabel `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -152,7 +147,7 @@ INSERT INTO `galeri` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata`
+-- Struktur dari tabel `paket_wisata`
 --
 
 CREATE TABLE `paket_wisata` (
@@ -164,7 +159,7 @@ CREATE TABLE `paket_wisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata`
+-- Dumping data untuk tabel `paket_wisata`
 --
 
 INSERT INTO `paket_wisata` (`id`, `nama`, `deskripsi`, `peta`, `timeline`) VALUES
@@ -184,7 +179,7 @@ INSERT INTO `paket_wisata` (`id`, `nama`, `deskripsi`, `peta`, `timeline`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata_detail`
+-- Struktur dari tabel `paket_wisata_detail`
 --
 
 CREATE TABLE `paket_wisata_detail` (
@@ -194,7 +189,7 @@ CREATE TABLE `paket_wisata_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata_detail`
+-- Dumping data untuk tabel `paket_wisata_detail`
 --
 
 INSERT INTO `paket_wisata_detail` (`id`, `paket_wisata_id`, `destinasi_area_id`) VALUES
@@ -232,7 +227,7 @@ INSERT INTO `paket_wisata_detail` (`id`, `paket_wisata_id`, `destinasi_area_id`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_wisata_gambar`
+-- Struktur dari tabel `paket_wisata_gambar`
 --
 
 CREATE TABLE `paket_wisata_gambar` (
@@ -242,7 +237,7 @@ CREATE TABLE `paket_wisata_gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `paket_wisata_gambar`
+-- Dumping data untuk tabel `paket_wisata_gambar`
 --
 
 INSERT INTO `paket_wisata_gambar` (`id`, `paket_wisata_id`, `gambar`) VALUES
@@ -295,7 +290,7 @@ INSERT INTO `paket_wisata_gambar` (`id`, `paket_wisata_id`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesan`
+-- Struktur dari tabel `pesan`
 --
 
 CREATE TABLE `pesan` (
@@ -307,7 +302,7 @@ CREATE TABLE `pesan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pesan`
+-- Dumping data untuk tabel `pesan`
 --
 
 INSERT INTO `pesan` (`id`, `nama`, `email`, `telepon`, `pesan`) VALUES
@@ -316,7 +311,7 @@ INSERT INTO `pesan` (`id`, `nama`, `email`, `telepon`, `pesan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rent`
+-- Struktur dari tabel `rent`
 --
 
 CREATE TABLE `rent` (
@@ -327,7 +322,7 @@ CREATE TABLE `rent` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rent`
+-- Dumping data untuk tabel `rent`
 --
 
 INSERT INTO `rent` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -337,7 +332,7 @@ INSERT INTO `rent` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `request`
+-- Struktur dari tabel `request`
 --
 
 CREATE TABLE `request` (
@@ -352,7 +347,7 @@ CREATE TABLE `request` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `request`
+-- Dumping data untuk tabel `request`
 --
 
 INSERT INTO `request` (`id`, `nama`, `email`, `telepon`, `wa`, `alamat`, `subject`, `pesan`) VALUES
@@ -363,7 +358,7 @@ INSERT INTO `request` (`id`, `nama`, `email`, `telepon`, `wa`, `alamat`, `subjec
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Struktur dari tabel `slider`
 --
 
 CREATE TABLE `slider` (
@@ -374,7 +369,7 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `slider`
+-- Dumping data untuk tabel `slider`
 --
 
 INSERT INTO `slider` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -383,7 +378,7 @@ INSERT INTO `slider` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tentang`
+-- Struktur dari tabel `tentang`
 --
 
 CREATE TABLE `tentang` (
@@ -402,7 +397,7 @@ CREATE TABLE `tentang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tentang`
+-- Dumping data untuk tabel `tentang`
 --
 
 INSERT INTO `tentang` (`id`, `nama`, `slogan`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
@@ -411,7 +406,7 @@ INSERT INTO `tentang` (`id`, `nama`, `slogan`, `deskripsi`, `alamat`, `telepon`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimonial`
+-- Struktur dari tabel `testimonial`
 --
 
 CREATE TABLE `testimonial` (
@@ -422,7 +417,7 @@ CREATE TABLE `testimonial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `testimonial`
+-- Dumping data untuk tabel `testimonial`
 --
 
 INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_testi`) VALUES
@@ -431,7 +426,7 @@ INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ticket`
+-- Struktur dari tabel `ticket`
 --
 
 CREATE TABLE `ticket` (
@@ -442,187 +437,211 @@ CREATE TABLE `ticket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ticket`
+-- Dumping data untuk tabel `ticket`
 --
 
 INSERT INTO `ticket` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 (1, 'Mickey Holiday Ticket', '<div>Funland started to attend as one of Mikie Holiday Resort facilities since October 10, 2000, to serve visitors who stay at Mikie Holiday Resort and guests that are not staying. Located on the edge of the highway Berastagi Medan, Funland becomes one of the major tourist attractions in the country for Berastagi city that had cool air and altitude above 1,400 meters above sea level. Funland is also a place for a family holidays with the first outdoor concept in North Sumatra.</div><div><br></div><div>A busy life and living in the city every day have made people become stress and forget about the fun and entertainment. Free time with your family, loved ones, friends become difficult to obtain. To refresh your day with family you need a place of recreation in a relaxed atmosphere, comfortable and harmonious.</div><div><br></div><div>Funland offers choices of over 30 kinds of attractions that can be played only by using 1 ticket in the middle of nature that can rebuild your harmony and joy with family.</div><div><br></div><div>To pamper and add a relaxing family fun time, Funland provides an outlet selling a variety of delicious and tasteful dishes at the Frisbee, more than Fried Chicken, Snack Bar, Jungle Resto, Dome, and Bumper Bonanza.</div><div><br></div><div>With the motto \"We Give You The Best in Family Entertainment\" we will always provide the best for your family.</div>                                                    ', 'images/mickey.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ticket_detail`
+--
+
+CREATE TABLE `ticket_detail` (
+  `id` int(11) NOT NULL,
+  `ticket_id` int(11) NOT NULL,
+  `destinasi_area_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `destinasi`
+-- Indeks untuk tabel `destinasi`
 --
 ALTER TABLE `destinasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `destinasi_area`
+-- Indeks untuk tabel `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
   ADD PRIMARY KEY (`id_area`);
 
 --
--- Indexes for table `galeri`
+-- Indeks untuk tabel `galeri`
 --
 ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `paket_wisata`
+-- Indeks untuk tabel `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `paket_wisata_detail`
+-- Indeks untuk tabel `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `paket_wisata_gambar`
+-- Indeks untuk tabel `paket_wisata_gambar`
 --
 ALTER TABLE `paket_wisata_gambar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pesan`
+-- Indeks untuk tabel `pesan`
 --
 ALTER TABLE `pesan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `rent`
+-- Indeks untuk tabel `rent`
 --
 ALTER TABLE `rent`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `request`
+-- Indeks untuk tabel `request`
 --
 ALTER TABLE `request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `slider`
+-- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tentang`
+-- Indeks untuk tabel `tentang`
 --
 ALTER TABLE `tentang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `testimonial`
+-- Indeks untuk tabel `testimonial`
 --
 ALTER TABLE `testimonial`
   ADD PRIMARY KEY (`id_testi`);
 
 --
--- Indexes for table `ticket`
+-- Indeks untuk tabel `ticket`
 --
 ALTER TABLE `ticket`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indeks untuk tabel `ticket_detail`
+--
+ALTER TABLE `ticket_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `destinasi`
+-- AUTO_INCREMENT untuk tabel `destinasi`
 --
 ALTER TABLE `destinasi`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `destinasi_area`
+-- AUTO_INCREMENT untuk tabel `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
   MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `galeri`
+-- AUTO_INCREMENT untuk tabel `galeri`
 --
 ALTER TABLE `galeri`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `paket_wisata`
+-- AUTO_INCREMENT untuk tabel `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `paket_wisata_detail`
+-- AUTO_INCREMENT untuk tabel `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
 
 --
--- AUTO_INCREMENT for table `paket_wisata_gambar`
+-- AUTO_INCREMENT untuk tabel `paket_wisata_gambar`
 --
 ALTER TABLE `paket_wisata_gambar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
--- AUTO_INCREMENT for table `pesan`
+-- AUTO_INCREMENT untuk tabel `pesan`
 --
 ALTER TABLE `pesan`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `rent`
+-- AUTO_INCREMENT untuk tabel `rent`
 --
 ALTER TABLE `rent`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `request`
+-- AUTO_INCREMENT untuk tabel `request`
 --
 ALTER TABLE `request`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT untuk tabel `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tentang`
+-- AUTO_INCREMENT untuk tabel `tentang`
 --
 ALTER TABLE `tentang`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `testimonial`
+-- AUTO_INCREMENT untuk tabel `testimonial`
 --
 ALTER TABLE `testimonial`
   MODIFY `id_testi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `ticket`
+-- AUTO_INCREMENT untuk tabel `ticket`
 --
 ALTER TABLE `ticket`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `ticket_detail`
+--
+ALTER TABLE `ticket_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
