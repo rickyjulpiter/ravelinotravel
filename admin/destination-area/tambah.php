@@ -13,6 +13,11 @@ if($_SESSION['status']!="login"){
     width : 293px;
     height : 195px;
 }
+.img-prev{
+    display:none;
+    width : 293px;
+    height : 195px;
+}
 </style>
 
 <!DOCTYPE html>
@@ -105,11 +110,26 @@ if($_SESSION['status']!="login"){
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
-                                            <label for="customFile">Preview Gambar</label>
-                                            <img id="image-preview" alt="image preview"/><br/>
-                                            <div class="custom-file">
-                                                <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();" accept="image/*">
+                                            <label for="exampleInputPassword1">Gambar</label>
+                                            <!-- tools box -->
+                                            <div class="card-tools" style="margin-top: -22px;">
+                                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                 </button>
+                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                                                     title="Remove">
+                                                     <i class="fas fa-times"></i>
+                                                 </button>
                                             </div>
+                                            <div class="pad">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="number" id="jumlah" placeholder="Masukkan banyak gambar" min="1" max="3">
+                                                    <button type="button" id="btn-proses">Proses</button>
+                                                    <div class="input-file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                               <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Destinasi</label>
@@ -150,6 +170,17 @@ if($_SESSION['status']!="login"){
     <!-- ./wrapper -->
     <?php include '../adm_template/script.php'; ?>
     <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <script type="text/javascript">
+          $('#btn-proses').on('click',function(){
+            var jumlah = $('#jumlah').val();
+            var save = "";
+            for(var i=0; i<jumlah; i++){
+                save = save + "<img class='img-prev' id='image-preview-is"+(i+1)+"' alt='image preview'/><br/><input type='file' id='is"+(i+1)+"' name='gambar[]' onchange='previewImage(this);' accept='image/*'><br>"
+            }
+            $('.input-file').html(save);
+        });
+      </script>
+      
     <script>
         $(function () {
             // Summernote
@@ -167,13 +198,13 @@ if($_SESSION['status']!="login"){
         })
       </script>
       <script type="text/javascript">
-          function previewImage() {
-            document.getElementById("image-preview").style.display = "block";
+          function previewImage(save) {
+            document.getElementById("image-preview-"+save.id).style.display = "block";
             var oFReader = new FileReader();
-             oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+             oFReader.readAsDataURL(document.getElementById(save.id).files[0]);
 
             oFReader.onload = function(oFREvent) {
-              document.getElementById("image-preview").src = oFREvent.target.result;
+              document.getElementById("image-preview-"+save.id).src = oFREvent.target.result;
             };
           };
       </script>

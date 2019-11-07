@@ -60,7 +60,42 @@ $namaWisata = $_GET['destination'];
                             <h2><?php echo $deskripsi_singkatDestinasi; ?></h2>
                         </div>
                         <div class="cover-image">
-                            <img src="<?= $gambar?>" alt="Image">
+                            <!-- Paradise Slider -->
+                            <div id="in_th_030" class="carousel slide in_th_brdr_img_030 thumb_scroll_x swipe_x ps_easeOutQuint" data-ride="carousel" data-pause="hover" data-interval="4000" data-duration="2000">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <!-- 1st Indicator -->
+                                    <?php
+                                    $i=0;
+                                    $query_mysql = mysqli_query($koneksi,"SELECT dag.gambar FROM destinasi_area_gambar AS dag INNER JOIN destinasi_area AS da ON dag.destinasi_area_id = da.id_area WHERE da.nama_area = '$namaWisata' ")or die(mysqli_error());
+                                    while($data = mysqli_fetch_array($query_mysql)){
+                                        $gambar = $data['gambar'];
+                                    ?>
+                                    <li data-target="#in_th_030" data-slide-to="<?= $i?>" class="<?php if($i==1) echo 'active' ?>">
+                                        <!-- 1st Indicator Image -->
+                                        <img src="<?= $gambar?>" alt="in_th_030_01_sm" />
+                                    </li>
+                                    <!-- 2nd Indicator -->
+                                    <?php $i++; } ?>
+                                </ol> <!-- /Indicators -->
+                                <!-- Wrapper For Slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <!-- First Slide -->
+                                    <?php
+                                    $i=0;
+                                    $query_mysql = mysqli_query($koneksi,"SELECT dag.gambar FROM destinasi_area_gambar AS dag INNER JOIN destinasi_area AS da ON dag.destinasi_area_id = da.id_area WHERE da.nama_area = '$namaWisata' ")or die(mysqli_error());
+                                    while($data = mysqli_fetch_array($query_mysql)){
+                                        $gambar = $data['gambar'];
+                                    ?>
+                                    <div class="item <?php if($i==0) echo "active" ?>">
+                                        <!-- Slide Background -->
+                                        <img src="<?= $gambar?>" alt="in_th_030_01" />                                        
+                                    </div>
+
+                                    <!-- End of Slide -->
+                                    <?php $i++; } ?>
+                                </div> <!-- End of Wrapper For Slides -->
+                            </div> <!-- End Paradise Slider -->
                         </div>
                         <div class="item-detail">
                             <?php echo($deskripsiDestinasi);?>
