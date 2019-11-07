@@ -1801,14 +1801,14 @@ section.testimonials{
 /* ====================== */
 
 section.trusted-partners{
-  background: #222935;
+  /* background: #222935; */
   text-align: center;
   padding: 0;
   overflow: hidden;
   position: relative;
 }
 
-.trusted-partners:before{
+/* .trusted-partners:before{
   position: absolute;
   content: '';
   left: -5%;
@@ -1817,7 +1817,7 @@ section.trusted-partners{
   width: 35%;
   background: #191e27;
   z-index: 1;
-}
+} */
 .partners-logo li{
   padding: 0 30px;
   margin-bottom: 0;

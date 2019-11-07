@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Nov 2019 pada 17.30
--- Versi server: 10.4.6-MariaDB
--- Versi PHP: 7.1.32
+-- Generation Time: Nov 07, 2019 at 06:49 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `destinasi`
+-- Table structure for table `destinasi`
 --
 
 CREATE TABLE `destinasi` (
@@ -56,16 +56,16 @@ CREATE TABLE `destinasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `destinasi`
+-- Dumping data for table `destinasi`
 --
 
 INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `deskripsi_singkat`, `gambar`) VALUES
-(12, 'Northern Sumatra', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">ï»¿</span><span style=\"font-size: 18px;\">ï»¿</span><span style=\"font-size: 18px;\">SumatraÂ is one of Indonesias large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers.</span></div><div style=\"text-align: justify;\"><span style=\"font-size: 24px;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Visiting Sumatra can mean never ending action. It has both unique and adventurous activities, starting from the Orangutan sanctuary in Bukit Lawang, some world-class diving sites in Pulau Weh and surfing in the wild Mentawai Islands. You can also enjoy spicy Padang Cuisines, relax on the shore of Lake Toba, bag the top of Mount Kerinci of Jambi, stop by the granite beaches of Belitung, and see dolphins at Kiluan, Lampung. The land is also filled with a humongous variety of unique as well as common rainforest fauna. You can spot not only red-haired orangutans, but also all sorts of monkeys that swing on treetops, in addition to Sumatran tigers, rhinoceroses and elephants.</span></div><div style=\"text-align: justify;\"><span style=\"font-size: 24px;\"><br></span></div><div style=\"text-align: justify;\"><div style=\"\"><span style=\"font-size: 18px;\">With almost 40 million inhabitants on this island, the varieties of cultures in Sumatra will also give you non-stop thrills. From the devout Muslims of Aceh, outspoken and friendly Batak people, matrilineal Minangkabau of Padang, sizable Chinese communities of Bangka-Belitung, to semi-primitive tribesmen of Nias; all of them, with their own distinct cultures and languages, living on one island, united by mutual respect for centuries.</span></div><div style=\"\"><span style=\"font-size: 24px;\"><br></span></div><div style=\"\"><span style=\"font-size: 18px;\">To visit Sumatra, you can use both air and sea lines to reach the capital. As for reaching small villages or remote islands such as the Mentawai Islands, you have to travel overland from the capital before boarding a boat with a local guide inside.</span></div></div>					                                					                                					                                					                                					                                					                                					                                					                                ', '<span style=\"font-size: 18px;\">SumatraÂ is one of Indonesias large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers.</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ', 'images/1.png'),
-(13, 'West Sumatra', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">SumatraÂ is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>					                                					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">SumatraÂ is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>                                                                                                        ', 'images/2.png'),
-(14, 'South Sumatra', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">SumatraÂ is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>					                                					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">SumatraÂ is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>                                                                                                        ', 'images/3.png'),
-(15, 'Java Island', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Java was also the center of the Indonesian struggle for independence during the 1930s and 1940s. Java dominates Indonesia politically, economically and culturally. Four of Indonesia\'s eight UNESCO world heritage sites are located in Java: Ujung Kulon National Park, Borobudur Temple, Prambanan Temple, and Sangiran Early Man Site.\r\n\r\nFormed mostly as the result of volcanic eruptions from geologic subduction between Sunda Plate and Australian Plate, Java is the 13th largest island in the world and the fifth-largest in Indonesia by landmass at about 138,800 square kilometers (53,600 sq mi).</span></div><div style=\"text-align: justify;\"><span style=\"font-size: 18px;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">A chain of volcanic mountains forms an east-west spine along the island. Three main languages are spoken on the island: Javanese, Sundanese, and Madurese, where Javanese is the most spoken; it is the native language of about 60 million Javanese people in Indonesia, most of whom live on Java. Furthermore, most residents are bilingual, speaking Indonesian (the official language of Indonesia) as their first or second language. While the majority of the people of Java are Muslim, Java\'s population comprises people of diverse religious beliefs, ethnicities, and cultures.</span></div>					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Java is an island of the Greater Sunda Islands chain, bordered by the Indian Ocean on the south and the Java Sea on the north. It is administered by Indonesia. With a population of over 141 million (Java only) or 145 million (including the inhabitants of its surrounding islands), Java has 56.7 percent of the Indonesian population and is the world\'s most populous island. The Indonesian capital city, Jakarta, is located on its northwestern coast. Much of Indonesian history took place on Java. It was the center of powerful Hindu-Buddhist empires, the Islamic sultanates, and the core of the colonial Dutch East Indies.</span></div>                                                                                                                                                                                                                ', 'images/4.png'),
-(16, 'Bali & Nusa Tenggara', '					                                					                                					                                					                                					                                ', '                                                                                                                                                                                                                                                                    ', 'images/5.png'),
-(17, 'East Indonesia', '					                                					                                					                                					                                ', '                                                                                                                                                                                                                ', 'images/6.png'),
+(12, 'Northern Sumatra', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">ï»¿</span><span style=\"font-size: 18px;\">ï»¿</span><span style=\"font-size: 18px;\">SumatraÂ is one of Indonesias large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers.</span></div><div style=\"text-align: justify;\"><span style=\"font-size: 24px;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Visiting Sumatra can mean never ending action. It has both unique and adventurous activities, starting from the Orangutan sanctuary in Bukit Lawang, some world-class diving sites in Pulau Weh and surfing in the wild Mentawai Islands. You can also enjoy spicy Padang Cuisines, relax on the shore of Lake Toba, bag the top of Mount Kerinci of Jambi, stop by the granite beaches of Belitung, and see dolphins at Kiluan, Lampung. The land is also filled with a humongous variety of unique as well as common rainforest fauna. You can spot not only red-haired orangutans, but also all sorts of monkeys that swing on treetops, in addition to Sumatran tigers, rhinoceroses and elephants.</span></div><div style=\"text-align: justify;\"><span style=\"font-size: 24px;\"><br></span></div><div style=\"text-align: justify;\"><div style=\"\"><span style=\"font-size: 18px;\">With almost 40 million inhabitants on this island, the varieties of cultures in Sumatra will also give you non-stop thrills. From the devout Muslims of Aceh, outspoken and friendly Batak people, matrilineal Minangkabau of Padang, sizable Chinese communities of Bangka-Belitung, to semi-primitive tribesmen of Nias; all of them, with their own distinct cultures and languages, living on one island, united by mutual respect for centuries.</span></div><div style=\"\"><span style=\"font-size: 24px;\"><br></span></div><div style=\"\"><span style=\"font-size: 18px;\">To visit Sumatra, you can use both air and sea lines to reach the capital. As for reaching small villages or remote islands such as the Mentawai Islands, you have to travel overland from the capital before boarding a boat with a local guide inside.</span></div></div>					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                ', '<span style=\"font-size: 18px;\">SumatraÂ is one of Indonesias large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers.</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ', 'images/1.png'),
+(13, 'West Sumatra', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Sumatra&nbsp;is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Sumatra&nbsp;is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>                                                    ', 'images/2.png'),
+(14, 'South Sumatra', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Sumatra&nbsp;is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Sumatra&nbsp;is one of Indonesiaâ€™s large island and the sixth largest island in the world. Wild and rugged, Sumatra is a blend of mother nature extremes, blessed with natural wealth as well as proneness to natural disasters. An island of extraordinary beauty, it bubbles with life and vibrates under the power of nature. Eruptions, earthquakes and tsunamis are Sumatran headline grabbers. Steaming volcanoes brew and bluster while standing guard over lakes that sleepily lap the edges of craters. Orangutan-filled jungles host not only our red-haired cousins, but also tigers, rhinos and elephants. And down at sea level, idyllic deserted beaches are bombarded by clear barrels of surf.</span></div>                                                    ', 'images/3.png'),
+(15, 'Java Island', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Java was also the center of the Indonesian struggle for independence during the 1930s and 1940s. Java dominates Indonesia politically, economically and culturally. Four of Indonesia\'s eight UNESCO world heritage sites are located in Java: Ujung Kulon National Park, Borobudur Temple, Prambanan Temple, and Sangiran Early Man Site.\r\n\r\nFormed mostly as the result of volcanic eruptions from geologic subduction between Sunda Plate and Australian Plate, Java is the 13th largest island in the world and the fifth-largest in Indonesia by landmass at about 138,800 square kilometers (53,600 sq mi).</span></div><div style=\"text-align: justify;\"><span style=\"font-size: 18px;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">A chain of volcanic mountains forms an east-west spine along the island. Three main languages are spoken on the island: Javanese, Sundanese, and Madurese, where Javanese is the most spoken; it is the native language of about 60 million Javanese people in Indonesia, most of whom live on Java. Furthermore, most residents are bilingual, speaking Indonesian (the official language of Indonesia) as their first or second language. While the majority of the people of Java are Muslim, Java\'s population comprises people of diverse religious beliefs, ethnicities, and cultures.</span></div>', '<div style=\"text-align: justify;\"><span style=\"font-size: 18px;\">Java is an island of the Greater Sunda Islands chain, bordered by the Indian Ocean on the south and the Java Sea on the north. It is administered by Indonesia. With a population of over 141 million (Java only) or 145 million (including the inhabitants of its surrounding islands), Java has 56.7 percent of the Indonesian population and is the world\'s most populous island. The Indonesian capital city, Jakarta, is located on its northwestern coast. Much of Indonesian history took place on Java. It was the center of powerful Hindu-Buddhist empires, the Islamic sultanates, and the core of the colonial Dutch East Indies.</span></div>                                                                                                                                                            ', 'images/4.png'),
+(16, 'Bali & Nusa Tenggara', '					                                					                                					                                					                                ', '                                                                                                                                                                                                                ', 'images/5.png'),
+(17, 'East Indonesia', '					                                					                                					                                ', '                                                                                                                                                            ', 'images/6.png'),
 (18, 'Sulawesi', '					                                ', '                                                    ', NULL),
 (19, 'Kalimantan', '					                                ', '                                                    ', NULL),
 (20, 'Maluku', '					                                ', '                                                    ', NULL),
@@ -74,7 +74,7 @@ INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `deskripsi_singkat`, `gambar
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `destinasi_area`
+-- Table structure for table `destinasi_area`
 --
 
 CREATE TABLE `destinasi_area` (
@@ -87,11 +87,11 @@ CREATE TABLE `destinasi_area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `destinasi_area`
+-- Dumping data for table `destinasi_area`
 --
 
 INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `deskripsi_area_singkat`, `gambar_area`, `destinasi_id`) VALUES
-(17, 'Brastagi', '<div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Berastagi (Dutch: Brastagi), meaning \"rice store\", is a town and district of Karo Regency situated on a crossroads on the main route linking the Karo highlands of Northern Sumatra to the coastal city of Medan. Berastagi town is located around 66 kilometers (41 miles) south of Medan and about 1,300 meters (4300 feet) above sea level. The village rose to significance when Dutch settlers in Sumatra opened a boarding school there in the 1920s.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Located in the Barisan Mountains area, the mean annual temperature of the district is 18 Â°C (64 Â°F). During the day the temperature rises over 25 Â°C (77 Â°F) but at night to early morning it could drop to as low as 12 to 16 Â°C (53 to 61 Â°), it could also reach 9 Â°C (48 Â°F) during the rainy season. The weather can be fair and sunny during the day but may become foggy around dusk to night.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">The main economic activities in Berastagi centers on the colorful fruit and vegetable market, as well as tourism. Berastagi is famous for its passion fruit. The main attractions of the town are the two active volcanoes; Mount Sibayak, with its hot springs, and Mount Sinabung. Each mountain can be climbed in one day, but a guide is needed.[1]</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><b><span style=\"font-size: 18px;\">Berastagi Fruit Market</span></b></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">The town is also a stop on the way to Lake Toba. The dominant ethnic and linguistic group is Karo Batak.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Berastagi is 11 km from the capital Karo Regency government in Kabanjahe. Airport bus from Kabanjahe directly to the new Kuala Namu International Airport v.v. is available.</span></div>					                                					                                					                                					                                					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 24px;\">The picturesque town of Berastagi in the beautiful Karo highlands, is 70 km from Medan on the way to Lake Toba. Situated at an altitude of 1,300 meters, the town has a cool climate, ranging between 17-20 degrees Centigrade, making a refreshing break from the heat of the city. Days are extremely pleasant while nights can be quite cool.</span></div>                                                                                                                                                            ', 'images/LUMBHINI 2.JPG', 12),
+(17, 'Brastagi', '<div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Berastagi (Dutch: Brastagi), meaning \"rice store\", is a town and district of Karo Regency situated on a crossroads on the main route linking the Karo highlands of Northern Sumatra to the coastal city of Medan. Berastagi town is located around 66 kilometers (41 miles) south of Medan and about 1,300 meters (4300 feet) above sea level. The village rose to significance when Dutch settlers in Sumatra opened a boarding school there in the 1920s.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Located in the Barisan Mountains area, the mean annual temperature of the district is 18 Â°C (64 Â°F). During the day the temperature rises over 25 Â°C (77 Â°F) but at night to early morning it could drop to as low as 12 to 16 Â°C (53 to 61 Â°), it could also reach 9 Â°C (48 Â°F) during the rainy season. The weather can be fair and sunny during the day but may become foggy around dusk to night.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">The main economic activities in Berastagi centers on the colorful fruit and vegetable market, as well as tourism. Berastagi is famous for its passion fruit. The main attractions of the town are the two active volcanoes; Mount Sibayak, with its hot springs, and Mount Sinabung. Each mountain can be climbed in one day, but a guide is needed.[1]</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><b><span style=\"font-size: 18px;\">Berastagi Fruit Market</span></b></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">The town is also a stop on the way to Lake Toba. The dominant ethnic and linguistic group is Karo Batak.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Berastagi is 11 km from the capital Karo Regency government in Kabanjahe. Airport bus from Kabanjahe directly to the new Kuala Namu International Airport v.v. is available.</span></div>					                                					                                					                                					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 24px;\">The picturesque town of Berastagi in the beautiful Karo highlands, is 70 km from Medan on the way to Lake Toba. Situated at an altitude of 1,300 meters, the town has a cool climate, ranging between 17-20 degrees Centigrade, making a refreshing break from the heat of the city. Days are extremely pleasant while nights can be quite cool.</span></div>                                                                                                        ', 'images/LUMBHINI 2.JPG', 12),
 (18, 'Dua Island Aceh', '                                                    ', '                                                    ', NULL, 12),
 (19, 'Asok Island', '                                                    ', '                                                    ', NULL, 12),
 (20, 'Sipiso-piso', '                                                    ', '                                                    ', NULL, 12),
@@ -105,7 +105,7 @@ INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `deskrip
 (28, 'Bogor', '                                                    ', '                                                    ', NULL, 15),
 (29, 'Bandung', '                                                    ', '                                                    ', NULL, 15),
 (30, 'Borobudur Temple', '                                                    ', '                                                    ', NULL, 15),
-(31, 'Yogyakarta', '<div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">This city is one of the foremost cultural centers of Indonesia. From strolling through the living museum of The Kraton or The Keraton (Sultanâ€™s Palace), to hanging out at the famous Alun Alun, to watching silversmiths produce amazing jewelry at Kotagede and maybe try a splurge shopping up at Malioboro road.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Chasing sunrise in famous temples like Prambanan and Borobudur in the neighboring town of Magelang, are only some of the many more ways to never get bored in this relatively small yet bustling city.Â </span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">The Wonders of the Ancient Heritage</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">You can experience all five wonders in this artsy city. Starting from indulging in the natural wonders, by visiting scenic beaches and photogenic landscape. Parangtritis, Indrayanti, Pok Tunggal, Siung, Krakal, and Jogan are some of the famous beaches in town.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Breathtaking points such as Puncak Becici, Pinus Pengger, and Jurang Tembelan are only several of plenty more exciting back-to-nature destinations in Yogyakarta!</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">For culinary wonders, donâ€™t forget to try the Gudeg first, special cooking of traditional Javanese recipe that is iconic to this city. The Bakpia is a traditional snack with many enticing flavors that are popular for souvenirs. For a beverage, you can try the Jammu, a natural herb mix beverage based on ancient tradition used for natural remedies.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Batik is the national treasure based on Javanese word of â€œambaâ€ and â€œtitikâ€, meaning to write the dots. It is an art of decorating fabric using wax and dyeing process. Yogyakarta has a signature batik pattern that is usually made with a bright white basic. Some of the motifs are namely The Parang Kusumo, Kawung and Truntum, each was created with the special philosophy behind its every dots.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">There are Batik Tulis, Batik Cap, Batik Print and the mixed result of the techniques. The most expensive is the Batik Tulis, which are made of 100% hand paint ornaments. It will become even more expensive if it is made from precious silk fabric. Making a fine quality Batik Tulis can range from a day of production to a meticulous months-long process, depend on the size and sheer complicated details of the design.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Wayang is also an amazing art heritage known from Yogyakarta. There are the Wayang Kulit or leather puppet, played on a shadow puppet show by the dalang or puppet master through a screen lit by lights. Wayang Orang is the life-size performances depicting the same philosophical messages from ancient stories and is presented by men and women in elaborate traditional costumes.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">You can discover the Recreation wonders, by visiting the tourism villages in Yogyakarta. Tembi, Pentingsari, and Nglanggeran are three of the places that you can start with. Experience the authentic daily life of the locals, and learn some new skills, such as playing the gamelan, weaving janur and perform a Javanese traditional dance!</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Adventure wonders are also aplenty in Yogyakarta. Starting with exploring Mount Merapi National Park, riding the thrilling jeep ride and hiking Mount Nglanggeran, an ancient volcano located in a beautiful village.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Rock climbing can be done in Siung beach, while cave tubing is a major attraction in Goa Pindul, and you can try to visit Jomblang cave for an extraordinary caving experience.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Yogyakarta is indeed a city with numerous attractions to enjoy. All of this and many more to explore have brought Yogyakarta as the second most visited destination in Indonesia after Bali.</span></div><div style=\"text-align: justify; \"><br></div></div>                                                    					                                					                                					                                					                                ', '<div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">Yogyakarta, together with its twin city Surakarta (Solo), is the cradle of civilization on Java. This city was the seat of power that produced the magnificent temples of Borobudur and Prambanan in the 8th and 9th centuries and the new powerful Mataram kingdom of the 16th and 17th centuries.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">Yogyakarta was known with the slogan of â€œJogja The Neverending Asiaâ€œ for its endless appeals. Today, it is also renowned as â€œ Jogja Istimewa â€œ, a tagline that elaborates its special values.</span></div>                                                                                                                                                                                                                                                                    ', 'images/image11.jpg', 15),
+(31, 'Yogyakarta', '<div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">This city is one of the foremost cultural centers of Indonesia. From strolling through the living museum of The Kraton or The Keraton (Sultanâ€™s Palace), to hanging out at the famous Alun Alun, to watching silversmiths produce amazing jewelry at Kotagede and maybe try a splurge shopping up at Malioboro road.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Chasing sunrise in famous temples like Prambanan and Borobudur in the neighboring town of Magelang, are only some of the many more ways to never get bored in this relatively small yet bustling city.&nbsp;</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">The Wonders of the Ancient Heritage</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">You can experience all five wonders in this artsy city. Starting from indulging in the natural wonders, by visiting scenic beaches and photogenic landscape. Parangtritis, Indrayanti, Pok Tunggal, Siung, Krakal, and Jogan are some of the famous beaches in town.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Breathtaking points such as Puncak Becici, Pinus Pengger, and Jurang Tembelan are only several of plenty more exciting back-to-nature destinations in Yogyakarta!</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">For culinary wonders, donâ€™t forget to try the Gudeg first, special cooking of traditional Javanese recipe that is iconic to this city. The Bakpia is a traditional snack with many enticing flavors that are popular for souvenirs. For a beverage, you can try the Jammu, a natural herb mix beverage based on ancient tradition used for natural remedies.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Batik is the national treasure based on Javanese word of â€œambaâ€ and â€œtitikâ€, meaning to write the dots. It is an art of decorating fabric using wax and dyeing process. Yogyakarta has a signature batik pattern that is usually made with a bright white basic. Some of the motifs are namely The Parang Kusumo, Kawung and Truntum, each was created with the special philosophy behind its every dots.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">There are Batik Tulis, Batik Cap, Batik Print and the mixed result of the techniques. The most expensive is the Batik Tulis, which are made of 100% hand paint ornaments. It will become even more expensive if it is made from precious silk fabric. Making a fine quality Batik Tulis can range from a day of production to a meticulous months-long process, depend on the size and sheer complicated details of the design.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Wayang is also an amazing art heritage known from Yogyakarta. There are the Wayang Kulit or leather puppet, played on a shadow puppet show by the dalang or puppet master through a screen lit by lights. Wayang Orang is the life-size performances depicting the same philosophical messages from ancient stories and is presented by men and women in elaborate traditional costumes.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">You can discover the Recreation wonders, by visiting the tourism villages in Yogyakarta. Tembi, Pentingsari, and Nglanggeran are three of the places that you can start with. Experience the authentic daily life of the locals, and learn some new skills, such as playing the gamelan, weaving janur and perform a Javanese traditional dance!</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Adventure wonders are also aplenty in Yogyakarta. Starting with exploring Mount Merapi National Park, riding the thrilling jeep ride and hiking Mount Nglanggeran, an ancient volcano located in a beautiful village.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Rock climbing can be done in Siung beach, while cave tubing is a major attraction in Goa Pindul, and you can try to visit Jomblang cave for an extraordinary caving experience.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 18px;\">Yogyakarta is indeed a city with numerous attractions to enjoy. All of this and many more to explore have brought Yogyakarta as the second most visited destination in Indonesia after Bali.</span></div><div style=\"text-align: justify; \"><br></div></div>                                                    					                                					                                					                                ', '<div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">Yogyakarta, together with its twin city Surakarta (Solo), is the cradle of civilization on Java. This city was the seat of power that produced the magnificent temples of Borobudur and Prambanan in the 8th and 9th centuries and the new powerful Mataram kingdom of the 16th and 17th centuries.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">Yogyakarta was known with the slogan of â€œJogja The Neverending Asiaâ€œ for its endless appeals. Today, it is also renowned as â€œ Jogja Istimewa â€œ, a tagline that elaborates its special values.</span></div>                                                                                                                                                                                                                ', 'images/image11.jpg', 15),
 (32, 'Denpasar', '                                                    ', '                                                    ', NULL, 16),
 (33, 'Klungkung', '                                                    ', '                                                    ', NULL, 16),
 (34, 'Kupang', '                                                    ', '                                                    ', NULL, 17),
@@ -118,15 +118,15 @@ INSERT INTO `destinasi_area` (`id_area`, `nama_area`, `deskripsi_area`, `deskrip
 (41, 'Seram', '                                                    ', '                                                    ', NULL, 20),
 (42, 'Jayapura', '                                                    ', '                                                    ', NULL, 21),
 (43, 'Asmat Tribe', '                                                    ', '                                                    ', NULL, 21),
-(44, 'Medan', '<div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">There are many tourist attractions in Medan, North Sumatra that you can visit when the holidays arrive. Medan is the 3rd largest city in Indonesia after Jakarta and Surabaya with ethnic, ethnic and cultural diversity in it such as the Batak, Malay, Javanese, Chinese, and other ethnic groups.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">The capital of North Sumatra is not only rich in cultural diversity but also holds quite a diverse tourism potential.Â </span><span style=\"font-size: 24px;\">One of the tourism icons in Medan, North Sumatra, which is interesting to visit is Lake Toba which was once named the largest volcanic lake in the world.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">With a variety of charms, Lake Toba is one of the most reliable and most popular natural attractions in North Sumatra. Even famous to the corners of the world.Â </span><span style=\"font-size: 24px;\">Clearwater with a beautiful view of the verdant mountains further adds to its appeal.</span></div><div style=\"text-align: justify; \"><br></div><div style=\"text-align: justify; \"><span style=\"font-size: 24px;\">Not to mention the existence of Samosir Island in the middle of the lake which is so iconic with the legendary stories that accompany it.Â </span><span style=\"font-size: 24px;\">Now, besides visiting Lake Toba and traveling to Samosir Island, you can also explore other beautiful places in Medan that are no less interesting.</span></div>                                                    					                                					                                					                                ', '<div style=\"text-align: justify;\"><span style=\"font-size: 24px;\">There are many tourist attractions in Medan, North Sumatra that you can visit when the holidays arrive. Medan is the 3rd largest city in Indonesia after Jakarta and Surabaya with ethnic, ethnic and cultural diversity in it such as the Batak, Malay, Javanese, Chinese, and other ethnic groups.</span></div>                                                    ', 'images/Medan-medan.jpg', 12),
-(45, 'Bukit Lawang', '<div align=\"justify\">Bukit Lawang is a small tourist village on the bank of Bahorok River in the North Sumatra province of Indonesia. Situated approximately 86 km northwest of the city of Medan, Bukit Lawang is known for the largest animal sanctuary of Sumatran orangutan (around 5,000 orangutans occupying the area) and also the main access point to the Gunung Leuser National Park from the east side.</div><div align=\"justify\">The park is named after one of its highest points, the 3,381m Mount Leuser (Gunung Leuser). The Gunung Leuser National Park was originally created as a wildlife reserve.Â </div><div align=\"justify\">Along with the two other National Parks (Kerinci Seblat and Bukit Barisan Selatan) on the island, it comprises the UNESCO World Heritage site of \'The Tropical Rainforest Heritage of Sumatra\' (status since 2004).Â </div><div align=\"justify\">In 1973 a Swiss organization set up an orangutan rehabilitation center in Bukit Lawang (Bukit Lawang literally means \"door to the hills\"). The purpose of the center was to rehabilitate orangutans released from captivity. The rangers at the center teach the orangutan all the necessary skills to survive in the wild. After an intense period of quarantine, readjustment to the natural habitat and reintegration into the (semi-)wild population, the orangutan is released back into the jungle. All orangutans released are still monitored by the rangers through the feeding platform not exist anymore due to orangutan is getting more and wilder.</div><div align=\"justify\">Seeing orangutans is a magical experience. About 10,000 live in this area. In Bukit Lawang, you can usually see them near the rehabilitation center and at the feeding platform during the morning and afternoon feeding sessions. In Ketambe, you can go to 1-7 days treks into the jungle.Â </div><div align=\"justify\">The best experience is an encounter in the jungle where there are many semi-wild and wild animals. The wild orangutan can be difficult to spot unless you go\r\ndeep\r\ninto the jungle. There are also white and black gibbons that make an amazing noise calling out to each other, and Thomas Leaf monkeys.\r\nIf you are lucky, you may be able to see hornbills, toucans, moon snakes, monitor lizards.Â </div><div align=\"justify\">Since there are very few\r\n(hundreds) still alive, it is very improbable that either the Sumatran Tiger or the Sumatran Rhinoceros will be encountered, although footprints and droppings have been reported.\r\nIf you really want to see a tiger, you have to go deep and be patient (waiting for weeks).Â </div><div align=\"justify\">A jungle trek is a must. Seeing the orangutan in the wild may be one of the best experiences you will have in your life.Â </div><div align=\"justify\">Everyone who is planning to go on a jungle trek is asked to refrain from any physical contact with the orangutans. Getting too close to an orangutan increases the risk of passing on disease and viral infection, which jeopardizes the orangutan\'s chances of survival and in turn the health and survival of the wild orangutan population in the entire area. All guests should keep at least 10 meters away and move away if an orangutan approaches. The motto of any jungle adventure should be taken only pictures, leave only footprints.</div>                                                    					                                					                                					                                					                                					                                ', 'To explore the nature of Bukit Lawang, we provide you short 3 hours jungle trekking, fulldays jungle trekking, 2 days jungle trekking or longer trekking for 4 to 6 days jungle trekking accompanied by our experienced and skill full tour guide.                                                                                                                                                                                                                                                                                                                        ', 'images/sumatra-bukit-lawang-gunung-leuser-nationalpark-orang-utan-2016-and (77).JPG', 12),
-(46, 'Tangkahan', '<div align=\"justify\">                                                    					                                Tangkahan, referred to as the hidden paradise in Sumatra located in border area of Gunung Leuser National Park, is an ecotourism area in the Langkat district of North Sumatra, just two hours drive from the neighbouring ecotourism site of Bukit Lawang or four hours drive from Medan.<br></div><div align=\"justify\">Tangkahan is combinations of vegetation and topography makes it a marvellous tourist spot rarely found elsewhere. The Batang and Buluh rivers, converging exactly in this zone, are typical of rainforest streams, with diverse varieties of vegetation and colourful rocks and Sumatra Elephants on their banks. The clear, bluish green river water against the panoramic view creates a mystical atmosphere. <br>Tangkahan is also the base of the Conservation Response Unit (CRU), consisting of a team of ex-captive Sumatran Elephants and their mahouts (elephant tenders) that regularly patrols the national park to protect from any possible encroachment.<br>Tangkahan is a remote village in Northern Sumatra where you have the opportunity to sleep in the jungle with the â€˜big fiveâ€™ of Indonesia â€“ the Sumatran elephant, the Sumatran tiger, the Sumatran rhinoceros, the Sumatran orangutan, and the clouded leopard.<br>Experience a different kind of Sumatran adventure at the Tangkahan ecotourism destination located in North Sumatra Province near the Mount Leuser National Park. This ecotourism site was established in 2001 as a part of the local communityâ€™s effort in revitalizing the ecosystem through environmentally based tourism activities. <br>Have a blast learning and exploring Tangkahan! The activities prepared by the local community are aimed at preserving and protecting the forest and wildlife, such as elephants, tigers and other endangered species. Youâ€™ll kick off your journey into this hidden area by crossing the river on a bamboo raft like Indiana Jones! Then, once you enter Tangkahan, a cozy village nestled in the midst of Sumatraâ€™s lush and exotic forest will warmly welcome you. <br>You can choose to take part in various types of activities during your stay, starting from a visit to the Elephant Camp up to trekking in the forest and observing the supervision of wildlife. At the Elephant Camp, you can have fun bathing the elephants and feeding them as if they were your own pet. Or, you can enjoy do some other activities such ase river tubing, exploring caves and bathing in the natural hot water bath.<br>If you love knowledge, then learn about the importance of environmentally based tourism from the tour guides and local residents because Tangkahan is an example of how this concept has been successfully implemented. The people managed to convert an area that was prone to having the trees illegally cut down to an ecotourism area that many enjoy. <br><br></div><br>					                                					                                ', '<div align=\"justify\">Vising elephant camp, washing the elephant, feed the elephant, trekking in the jungle and fantastic river tubing are some interesting activity to do in this area<br></div>                                                                                                        ', 'images/DSCF6334.JPG', 12),
-(47, 'Mentawai - Siberut Island', '<div align=\"justify\">                                                    Siberut Island<br><br>Becomes part of Mentawai Islands, Siberut is the largest island at the northernmost and becomes the main important island for Mentawai People.Â  The Mentawai tribe still maintains the lifestyle and traditions passed down from their ancestors from thousands of years ago. They live in houses locally called â€˜umaâ€™, made from wooden scaffolds which house contains several families each.<br><br>Siberut is located in the Indian Ocean, approximately 100 km off the west coast of West Sumatra, and separated from the main island by the Mentawai Strait. The island lies some 155 km from the provinceâ€™s capital city of Padang. Those who love nature and craving for beautiful scenery, Pulau Siberut invites the adventure thirsty to come and explore all the wealth it possesses, including the rich culture, customs, and exotic tropical environment.<br><br>Exploring Siberut can be done by trekking in the protected tropical forests and this very much recommended, while, enjoying the scenery around the island, that is another interesting adventure to be had. Other activities during staying in Siberut is boating, rowing, trekking through the (sometimes muddy) forest paths, enjoying the beauty of the rainforest, as well as observations of the rare species of both plants and animals.<br><br>The Siberut National Park is home to four types of wildlife primates found only in Siberut, they are Bokkoi (Macaca pagensis), Lutung Mentawai / Joja (Presbytis Potenziani Siberug), Bilou (Hylobates klossii), and Simakobu (Nasalis siberu concolor) . In addition to these endemic primates, there are also 4 different types of endemic squirrel species, 17 mammals, and 130 species of birds (4 of which are endemic).<br><br>Mentawai Tribe<br>At Siberut, there are at least 30,000 people of Mentawai tribe, who live isolated from the modern community. The Mentawai tribe is said to have migrated to the Mentawai islands from Nias island to the north, living an isolated life here for centuries until been â€œdiscoveredâ€ by the Dutch in 1621.<br><br>The tribe has its own language, culture, customs and some still profess a belief in animism. Mentawai people has very humble and simple appearence , where Mentawai men wear only a loincloth made from the bark of the gum tree, while women only wear a simple skirt made of palm or banana leaves.<br><br>Besides clothing, they also recognize a certain â€œtimeless clothingâ€; their proud and characteristic Mentawai tribal tattoo, which sometimes entails tattooing the whole body in the traditional way, following a variety of tribal rituals. It is a common to see Mentawai people covered from head to toe in tattoos. Their main food is sago and they raise pigs and hunt monkeys for their daily food.</div>					                                ', '                                                    A challenging trek through the jungle into the heart of the Siberut Island to meet the indigenous people of the Mentawai and experience the daily life of Mentawai such as making loin clothes, making tatoo, fishing, hunting etc                                                    ', 'images/Mentawai - Siberut Island-DSC_0404.JPG', 13);
+(45, 'Bukit Lawang', '<div align=\"justify\">Bukit Lawang is a small tourist village on the bank of Bahorok River in the North Sumatra province of Indonesia. Situated approximately 86 km northwest of the city of Medan, Bukit Lawang is known for the largest animal sanctuary of Sumatran orangutan (around 5,000 orangutans occupying the area) and also the main access point to the Gunung Leuser National Park from the east side.</div><div align=\"justify\">The park is named after one of its highest points, the 3,381m Mount Leuser (Gunung Leuser). The Gunung Leuser National Park was originally created as a wildlife reserve.&nbsp;</div><div align=\"justify\">Along with the two other National Parks (Kerinci Seblat and Bukit Barisan Selatan) on the island, it comprises the UNESCO World Heritage site of \'The Tropical Rainforest Heritage of Sumatra\' (status since 2004).&nbsp;</div><div align=\"justify\">In 1973 a Swiss organization set up an orangutan rehabilitation center in Bukit Lawang (Bukit Lawang literally means \"door to the hills\"). The purpose of the center was to rehabilitate orangutans released from captivity. The rangers at the center teach the orangutan all the necessary skills to survive in the wild. After an intense period of quarantine, readjustment to the natural habitat and reintegration into the (semi-)wild population, the orangutan is released back into the jungle. All orangutans released are still monitored by the rangers through the feeding platform not exist anymore due to orangutan is getting more and wilder.</div><div align=\"justify\">Seeing orangutans is a magical experience. About 10,000 live in this area. In Bukit Lawang, you can usually see them near the rehabilitation center and at the feeding platform during the morning and afternoon feeding sessions. In Ketambe, you can go to 1-7 days treks into the jungle.&nbsp;</div><div align=\"justify\">The best experience is an encounter in the jungle where there are many semi-wild and wild animals. The wild orangutan can be difficult to spot unless you go\r\ndeep\r\ninto the jungle. There are also white and black gibbons that make an amazing noise calling out to each other, and Thomas Leaf monkeys.\r\nIf you are lucky, you may be able to see hornbills, toucans, moon snakes, monitor lizards.&nbsp;</div><div align=\"justify\">Since there are very few\r\n(hundreds) still alive, it is very improbable that either the Sumatran Tiger or the Sumatran Rhinoceros will be encountered, although footprints and droppings have been reported.\r\nIf you really want to see a tiger, you have to go deep and be patient (waiting for weeks).&nbsp;</div><div align=\"justify\">A jungle trek is a must. Seeing the orangutan in the wild may be one of the best experiences you will have in your life.&nbsp;</div><div align=\"justify\">Everyone who is planning to go on a jungle trek is asked to refrain from any physical contact with the orangutans. Getting too close to an orangutan increases the risk of passing on disease and viral infection, which jeopardizes the orangutan\'s chances of survival and in turn the health and survival of the wild orangutan population in the entire area. All guests should keep at least 10 meters away and move away if an orangutan approaches. The motto of any jungle adventure should be taken only pictures, leave only footprints.</div>                                                    					                                					                                					                                					                                ', 'To explore the nature of Bukit Lawang, we provide you short 3 hours jungle trekking, fulldays jungle trekking, 2 days jungle trekking or longer trekking for 4 to 6 days jungle trekking accompanied by our experienced and skill full tour guide.                                                                                                                                                                                                                                                                    ', 'images/sumatra-bukit-lawang-gunung-leuser-nationalpark-orang-utan-2016-and (77).JPG', 12),
+(46, 'Tangkahan', '<div align=\"justify\">                                                    					                                Tangkahan, referred to as the hidden paradise in Sumatra located in border area of Gunung Leuser National Park, is an ecotourism area in the Langkat district of North Sumatra, just two hours drive from the neighbouring ecotourism site of Bukit Lawang or four hours drive from Medan.<br></div><div align=\"justify\">Tangkahan is combinations of vegetation and topography makes it a marvellous tourist spot rarely found elsewhere. The Batang and Buluh rivers, converging exactly in this zone, are typical of rainforest streams, with diverse varieties of vegetation and colourful rocks and Sumatra Elephants on their banks. The clear, bluish green river water against the panoramic view creates a mystical atmosphere. <br>Tangkahan is also the base of the Conservation Response Unit (CRU), consisting of a team of ex-captive Sumatran Elephants and their mahouts (elephant tenders) that regularly patrols the national park to protect from any possible encroachment.<br>Tangkahan is a remote village in Northern Sumatra where you have the opportunity to sleep in the jungle with the â€˜big fiveâ€™ of Indonesia â€“ the Sumatran elephant, the Sumatran tiger, the Sumatran rhinoceros, the Sumatran orangutan, and the clouded leopard.<br>Experience a different kind of Sumatran adventure at the Tangkahan ecotourism destination located in North Sumatra Province near the Mount Leuser National Park. This ecotourism site was established in 2001 as a part of the local communityâ€™s effort in revitalizing the ecosystem through environmentally based tourism activities. <br>Have a blast learning and exploring Tangkahan! The activities prepared by the local community are aimed at preserving and protecting the forest and wildlife, such as elephants, tigers and other endangered species. Youâ€™ll kick off your journey into this hidden area by crossing the river on a bamboo raft like Indiana Jones! Then, once you enter Tangkahan, a cozy village nestled in the midst of Sumatraâ€™s lush and exotic forest will warmly welcome you. <br>You can choose to take part in various types of activities during your stay, starting from a visit to the Elephant Camp up to trekking in the forest and observing the supervision of wildlife. At the Elephant Camp, you can have fun bathing the elephants and feeding them as if they were your own pet. Or, you can enjoy do some other activities such ase river tubing, exploring caves and bathing in the natural hot water bath.<br>If you love knowledge, then learn about the importance of environmentally based tourism from the tour guides and local residents because Tangkahan is an example of how this concept has been successfully implemented. The people managed to convert an area that was prone to having the trees illegally cut down to an ecotourism area that many enjoy. <br><br></div><br>					                                ', '<div align=\"justify\">Vising elephant camp, washing the elephant, feed the elephant, trekking in the jungle and fantastic river tubing are some interesting activity to do in this area<br></div>                                                    ', 'images/DSCF6334.JPG', 12),
+(47, 'Mentawai - Siberut Island', '<div align=\"justify\">                                                    Siberut Island<br><br>Becomes part of Mentawai Islands, Siberut is the largest island at the northernmost and becomes the main important island for Mentawai People.&nbsp; The Mentawai tribe still maintains the lifestyle and traditions passed down from their ancestors from thousands of years ago. They live in houses locally called â€˜umaâ€™, made from wooden scaffolds which house contains several families each.<br><br>Siberut is located in the Indian Ocean, approximately 100 km off the west coast of West Sumatra, and separated from the main island by the Mentawai Strait. The island lies some 155 km from the provinceâ€™s capital city of Padang. Those who love nature and craving for beautiful scenery, Pulau Siberut invites the adventure thirsty to come and explore all the wealth it possesses, including the rich culture, customs, and exotic tropical environment.<br><br>Exploring Siberut can be done by trekking in the protected tropical forests and this very much recommended, while, enjoying the scenery around the island, that is another interesting adventure to be had. Other activities during staying in Siberut is boating, rowing, trekking through the (sometimes muddy) forest paths, enjoying the beauty of the rainforest, as well as observations of the rare species of both plants and animals.<br><br>The Siberut National Park is home to four types of wildlife primates found only in Siberut, they are Bokkoi (Macaca pagensis), Lutung Mentawai / Joja (Presbytis Potenziani Siberug), Bilou (Hylobates klossii), and Simakobu (Nasalis siberu concolor) . In addition to these endemic primates, there are also 4 different types of endemic squirrel species, 17 mammals, and 130 species of birds (4 of which are endemic).<br><br>Mentawai Tribe<br>At Siberut, there are at least 30,000 people of Mentawai tribe, who live isolated from the modern community. The Mentawai tribe is said to have migrated to the Mentawai islands from Nias island to the north, living an isolated life here for centuries until been â€œdiscoveredâ€ by the Dutch in 1621.<br><br>The tribe has its own language, culture, customs and some still profess a belief in animism. Mentawai people has very humble and simple appearence , where Mentawai men wear only a loincloth made from the bark of the gum tree, while women only wear a simple skirt made of palm or banana leaves.<br><br>Besides clothing, they also recognize a certain â€œtimeless clothingâ€; their proud and characteristic Mentawai tribal tattoo, which sometimes entails tattooing the whole body in the traditional way, following a variety of tribal rituals. It is a common to see Mentawai people covered from head to toe in tattoos. Their main food is sago and they raise pigs and hunt monkeys for their daily food.</div>', '                                                    A challenging trek through the jungle into the heart of the Siberut Island to meet the indigenous people of the Mentawai and experience the daily life of Mentawai such as making loin clothes, making tatoo, fishing, hunting etc', 'images/Mentawai - Siberut Island-DSC_0404.JPG', 13),
+(48, 'Medan', '<p align=\"justify\">                                                    Medan, the capital of North Sumatra province, is an economic hub and commercial center for the region. This is the largest city in Sumatra Island, whose long been attracting residents from all over Indonesia to come and stay here. Due to these ethnic diversities, Medan is known for scrumptious delectable culinary spots, rich with many flavors. <br>The Medan metropolitan area is home to 4.6 million people, making it the fifth most populous metropolitan area in the country and the largest outside of Java.Medan is a multicultural metropolis and a busy trading city bordered by the Strait of Malacca. A gateway to the western part of Indonesia, Medan is supported by the Port of Belawan and Kualanamu International Airport, both of which are connected to the city centre via toll road and railway. According to the National Development Planning Agency, Medan is one of the four main central cities of Indonesia, alongside Jakarta, Surabaya, and Makassar.<br><br>Medan was dubbed by the Dutch Parijs van Sumatra due to the city\'s resemblance to Paris. Lamudi, a worldwide real estate portal, recognized Medan as one among six cities in Asia to feature and preserve several colonial architectural sites, while accompanying its growth as a metropolitan city. Medan is also known as the \"City of Million Shophouses\", as the majority of the population work in the trade sector, opening shops right under their houses. In recent years, the city has undergone rapid development, which made the residential property prices in Medan trend upward. According to Bank Indonesia (BI).<br><br>Tourists can expect a diversity of cultures in this city, as almost every ethnicity in the country is represented in this place: Acehnese, Batak, Chinese, Indians, Javanese, Malay and Minang, however, there is no ethnic group that is considered a majority.<br></p><p align=\"justify\">Before Medan became a sprawling city, it was a trading and seafaring town under Islamic Malay leadership during its early days. It was in the 19th century when the city\'s commercial potential was uncovered. Because of plantation agriculture, Medan transformed from a small town to the prosperous city that it is today.<br><br>The influence of the Dutch and all other cultures that have made their mark in the city are clearly imprinted on the metropolis, as exemplified by the attractions and architectural landmarks found in Medan.<br><br>One example is the Maimoon Palace, which was built in 1888 by the Sultan of Deli. This grand attraction is a 30-room structure built with Malay, Mogul and Italian influences. Out of the 30 rooms, only the main room is accessible to the public. This is where tourists can find the opulent inaugural throne. Meanwhile, the back wing of the palace is occupied by the members of the family of the current Sultan.<br><br>Another famous attraction in Medan is the Tjong A Fie Mansion. The landmark is named after the Chinese-Indonesian merchant who used to live there. Like the Maimoon Palace, the most remarkable thing about the mansion is its architecture, which is a fusion of Victorian and Chinese styles.<br><br>Other attractions worth seeing include the Sri Mariamman Temple, the Mesjid Raya Mosque and the Bukit Barisan Military Museum.<br></p>					                                					                                					                                ', '<p align=\"justify\">                                                    <span style=\"font-size: 14px;\">For travelers, Medan is famous as the entry point to North Sumatra. \r\nAside from serving as the gateway to the region, the city also functions\r\n as a commercial and economic hub, this Indonesian city attracts not \r\nonly shoppers, but also business professionals and entrepreneurs. Medan \r\nis a modern metropolis and like other Asian cities, it can be very busy \r\nand suffer from heavy traffic.</span></p><p align=\"justify\"><span style=\"font-size: 14px;\">Medan has many tourist attractions that make the city one of the popular places to visit in Indonesia such as : Sultan Palace, Grand Mosque (Masjid Raya Al Mashun), Tjong A Fie Mansion, North Sumatra Museum, Graha Maria Annai Velangkanni Church, Chinese temple, Hindu\'s temple, several old colonial building which was built during Dutch time etc.</span><br></p>                                                                                                                                                            ', 'images/Medan-GREAT MOSQUE.JPG', 12);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `destinasi_area_gambar`
+-- Table structure for table `destinasi_area_gambar`
 --
 
 CREATE TABLE `destinasi_area_gambar` (
@@ -136,7 +136,7 @@ CREATE TABLE `destinasi_area_gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `destinasi_area_gambar`
+-- Dumping data for table `destinasi_area_gambar`
 --
 
 INSERT INTO `destinasi_area_gambar` (`id`, `destinasi_area_id`, `gambar`) VALUES
@@ -151,7 +151,7 @@ INSERT INTO `destinasi_area_gambar` (`id`, `destinasi_area_id`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `destinasi_gambar`
+-- Table structure for table `destinasi_gambar`
 --
 
 CREATE TABLE `destinasi_gambar` (
@@ -161,7 +161,7 @@ CREATE TABLE `destinasi_gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `destinasi_gambar`
+-- Dumping data for table `destinasi_gambar`
 --
 
 INSERT INTO `destinasi_gambar` (`id`, `destinasi_id`, `gambar`) VALUES
@@ -177,7 +177,7 @@ INSERT INTO `destinasi_gambar` (`id`, `destinasi_id`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `galeri`
+-- Table structure for table `galeri`
 --
 
 CREATE TABLE `galeri` (
@@ -188,17 +188,16 @@ CREATE TABLE `galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `galeri`
+-- Dumping data for table `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
-(1, 'Danau Toba', 'Pemandangan Danau Toba', 'images/Danau Toba-tongging-ok.webp'),
 (3, 'Bali', 'Pemandangan Bali', 'images/Bali-bali.jfif');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `paket_wisata`
+-- Table structure for table `paket_wisata`
 --
 
 CREATE TABLE `paket_wisata` (
@@ -210,7 +209,7 @@ CREATE TABLE `paket_wisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `paket_wisata`
+-- Dumping data for table `paket_wisata`
 --
 
 INSERT INTO `paket_wisata` (`id`, `nama`, `deskripsi`, `peta`, `timeline`) VALUES
@@ -230,7 +229,7 @@ INSERT INTO `paket_wisata` (`id`, `nama`, `deskripsi`, `peta`, `timeline`) VALUE
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `paket_wisata_detail`
+-- Table structure for table `paket_wisata_detail`
 --
 
 CREATE TABLE `paket_wisata_detail` (
@@ -240,7 +239,7 @@ CREATE TABLE `paket_wisata_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `paket_wisata_detail`
+-- Dumping data for table `paket_wisata_detail`
 --
 
 INSERT INTO `paket_wisata_detail` (`id`, `paket_wisata_id`, `destinasi_area_id`) VALUES
@@ -278,7 +277,7 @@ INSERT INTO `paket_wisata_detail` (`id`, `paket_wisata_id`, `destinasi_area_id`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `paket_wisata_gambar`
+-- Table structure for table `paket_wisata_gambar`
 --
 
 CREATE TABLE `paket_wisata_gambar` (
@@ -288,7 +287,7 @@ CREATE TABLE `paket_wisata_gambar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `paket_wisata_gambar`
+-- Dumping data for table `paket_wisata_gambar`
 --
 
 INSERT INTO `paket_wisata_gambar` (`id`, `paket_wisata_id`, `gambar`) VALUES
@@ -341,7 +340,19 @@ INSERT INTO `paket_wisata_gambar` (`id`, `paket_wisata_id`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pesan`
+-- Table structure for table `partner`
+--
+
+CREATE TABLE `partner` (
+  `id` int(11) NOT NULL,
+  `nama` text NOT NULL,
+  `gambar` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pesan`
 --
 
 CREATE TABLE `pesan` (
@@ -353,7 +364,7 @@ CREATE TABLE `pesan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pesan`
+-- Dumping data for table `pesan`
 --
 
 INSERT INTO `pesan` (`id`, `nama`, `email`, `telepon`, `pesan`) VALUES
@@ -362,7 +373,7 @@ INSERT INTO `pesan` (`id`, `nama`, `email`, `telepon`, `pesan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `rent`
+-- Table structure for table `rent`
 --
 
 CREATE TABLE `rent` (
@@ -373,7 +384,7 @@ CREATE TABLE `rent` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `rent`
+-- Dumping data for table `rent`
 --
 
 INSERT INTO `rent` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -383,7 +394,7 @@ INSERT INTO `rent` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `request`
+-- Table structure for table `request`
 --
 
 CREATE TABLE `request` (
@@ -398,7 +409,7 @@ CREATE TABLE `request` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `request`
+-- Dumping data for table `request`
 --
 
 INSERT INTO `request` (`id`, `nama`, `email`, `telepon`, `wa`, `alamat`, `subject`, `pesan`) VALUES
@@ -409,7 +420,7 @@ INSERT INTO `request` (`id`, `nama`, `email`, `telepon`, `wa`, `alamat`, `subjec
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `slider`
+-- Table structure for table `slider`
 --
 
 CREATE TABLE `slider` (
@@ -420,7 +431,7 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `slider`
+-- Dumping data for table `slider`
 --
 
 INSERT INTO `slider` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
@@ -429,7 +440,7 @@ INSERT INTO `slider` (`id`, `nama`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tentang`
+-- Table structure for table `tentang`
 --
 
 CREATE TABLE `tentang` (
@@ -448,16 +459,16 @@ CREATE TABLE `tentang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tentang`
+-- Dumping data for table `tentang`
 --
 
 INSERT INTO `tentang` (`id`, `nama`, `slogan`, `deskripsi`, `alamat`, `telepon`, `email`, `facebook`, `twitter`, `instagram`, `youtube`, `logo`) VALUES
-(1, 'Synergi Ravelino Tours & Travel', 'Your Link To The Best Traveling', '<p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">Synergi Ravelino Tours & Travel (1998) is a leading Dutch-Indonesian travel agency and tour operator. We offer a wide and varied choice of fascinating flexible programs that ensure fresh and lively ways to see Sumatra and other parts of Indonesia.</span></font></p><p style=\"line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><b><span style=\"font-size: 18px;\">Our services cover:</span></b></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Ticketing: Domestic and international.</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Package Tours: Inbound (adventure, culture, leisure & eco) and outbound tours.</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Ferry tickets</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Multi-lingual tour guide services</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Car & tourist coach rental</span></font></p><p style=\"line-height: 1.2;\"><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">-</span><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">Â </span><font color=\"#03536a\"><span style=\"font-size: 18px;\">Minibus tours for 2 up to 6 persons (on request)</span></font></p><p style=\"line-height: 1.2;\"><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">-</span><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">Â </span><font color=\"#03536a\"><span style=\"font-size: 18px;\">Hotel vouchers</span></font></p><p style=\"line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\"><i>We are committed to providing excellence and quality to our clients.</i></span></font></p><p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">For the out- and incoming clients, we specialize in tailor-made itineraries for groups and individuals without forgetting competitive prices or compromising our high level of service. Every client is important to us and we are happy to offer the most competitive rates whether it is for the individual client or for groups in their hundreds. All our itineraries are subject to change to suit the interests of the individual or group.</span></font></p><p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">Our guides are experienced, multi-lingual licensed professionals, with extensive knowledge of geography, history, religion, and local customs. We provide our guides with comprehensive information about their groups so that their holiday will be remembered as \"the Indonesia experience\" and not just as another run-of-the-mill sightseeing tour.</span></font></p><p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">The management of Synergi Ravelino Tours & Travel is one of the pioneers of leisure travel to Sumatra. Therefore we also provide personalized study tours for our professional counterparts from abroad. References can be provided upon request.</span></font></p>					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                ', 'Jalan A.R Hakim 174 A Medan', '+62-61 7352981', 'ravelino@ravelinotravel.com', '#', '#', '#', '#', 'images/sdsd.png');
+(1, 'Synergi Ravelino Tours & Travel', 'Your Link To The Best Traveling', '<p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">Synergi Ravelino Tours & Travel (1998) is a leading Dutch-Indonesian travel agency and tour operator. We offer a wide and varied choice of fascinating flexible programs that ensure fresh and lively ways to see Sumatra and other parts of Indonesia.</span></font></p><p style=\"line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><b><span style=\"font-size: 18px;\">Our services cover:</span></b></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Ticketing: Domestic and international.</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Package Tours: Inbound (adventure, culture, leisure & eco) and outbound tours.</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Ferry tickets</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Multi-lingual tour guide services</span></font></p><p style=\"line-height: 1.2;\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">- Car & tourist coach rental</span></font></p><p style=\"line-height: 1.2;\"><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">-</span><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">Â </span><font color=\"#03536a\"><span style=\"font-size: 18px;\">Minibus tours for 2 up to 6 persons (on request)</span></font></p><p style=\"line-height: 1.2;\"><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">-</span><span style=\"color: rgb(3, 83, 106); font-size: 18px;\">Â </span><font color=\"#03536a\"><span style=\"font-size: 18px;\">Hotel vouchers</span></font></p><p style=\"line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\"><i>We are committed to providing excellence and quality to our clients.</i></span></font></p><p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">For the out- and incoming clients, we specialize in tailor-made itineraries for groups and individuals without forgetting competitive prices or compromising our high level of service. Every client is important to us and we are happy to offer the most competitive rates whether it is for the individual client or for groups in their hundreds. All our itineraries are subject to change to suit the interests of the individual or group.</span></font></p><p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">Our guides are experienced, multi-lingual licensed professionals, with extensive knowledge of geography, history, religion, and local customs. We provide our guides with comprehensive information about their groups so that their holiday will be remembered as \"the Indonesia experience\" and not just as another run-of-the-mill sightseeing tour.</span></font></p><p style=\"text-align: justify; line-height: 1.4;\" trebuchet=\"\" ms\",=\"\" tahoma;=\"\" font-size:=\"\" 13px;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><font color=\"#03536a\"><span style=\"font-size: 18px;\">The management of Synergi Ravelino Tours & Travel is one of the pioneers of leisure travel to Sumatra. Therefore we also provide personalized study tours for our professional counterparts from abroad. References can be provided upon request.</span></font></p>					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                					                                ', 'Jalan A.R Hakim 174 A Medan', '+62-61 7352981 / +62 822 7466 0962 (WA)', 'ravelino@ravelinotravel.comtessting', '#', '#', '#', '#', 'images/sdsd.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `testimonial`
+-- Table structure for table `testimonial`
 --
 
 CREATE TABLE `testimonial` (
@@ -468,7 +479,7 @@ CREATE TABLE `testimonial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `testimonial`
+-- Dumping data for table `testimonial`
 --
 
 INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_testi`) VALUES
@@ -477,7 +488,7 @@ INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `deskripsi_testi`, `gambar_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ticket`
+-- Table structure for table `ticket`
 --
 
 CREATE TABLE `ticket` (
@@ -489,16 +500,16 @@ CREATE TABLE `ticket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ticket`
+-- Dumping data for table `ticket`
 --
 
 INSERT INTO `ticket` (`id`, `nama`, `deskripsi`, `fasilitas`, `gambar`) VALUES
-(1, 'Mickey Holiday Ticket', '<div>Funland started to attend as one of Mikie Holiday Resort facilities since October 10, 2000, to serve visitors who stay at Mikie Holiday Resort and guests that are not staying. Located on the edge of the highway Berastagi Medan, Funland becomes one of the major tourist attractions in the country for Berastagi city that had cool air and altitude above 1,400 meters above sea level. Funland is also a place for a family holidays with the first outdoor concept in North Sumatra.</div><div><br></div><div>A busy life and living in the city every day have made people become stress and forget about the fun and entertainment. Free time with your family, loved ones, friends become difficult to obtain. To refresh your day with family you need a place of recreation in a relaxed atmosphere, comfortable and harmonious.</div><div><br></div><div>Funland offers choices of over 30 kinds of attractions that can be played only by using 1 ticket in the middle of nature that can rebuild your harmony and joy with family.</div><div><br></div><div>To pamper and add a relaxing family fun time, Funland provides an outlet selling a variety of delicious and tasteful dishes at the Frisbee, more than Fried Chicken, Snack Bar, Jungle Resto, Dome, and Bumper Bonanza.</div><div><br></div><div>With the motto \"We Give You The Best in Family Entertainment\" we will always provide the best for your family.</div>                                                                                                                                                                                                                                                                                                                        ', '- Makan gratis                                                    <br>- Makan bayar', 'images/mickey.jpg');
+(1, 'Mickey Holiday Ticket', '<div>Funland started to attend as one of Mikie Holiday Resort facilities since October 10, 2000, to serve visitors who stay at Mikie Holiday Resort and guests that are not staying. Located on the edge of the highway Berastagi Medan, Funland becomes one of the major tourist attractions in the country for Berastagi city that had cool air and altitude above 1,400 meters above sea level. Funland is also a place for a family holidays with the first outdoor concept in North Sumatra.</div><div><br></div><div>A busy life and living in the city every day have made people become stress and forget about the fun and entertainment. Free time with your family, loved ones, friends become difficult to obtain. To refresh your day with family you need a place of recreation in a relaxed atmosphere, comfortable and harmonious.</div><div><br></div><div>Funland offers choices of over 30 kinds of attractions that can be played only by using 1 ticket in the middle of nature that can rebuild your harmony and joy with family.</div><div><br></div><div>To pamper and add a relaxing family fun time, Funland provides an outlet selling a variety of delicious and tasteful dishes at the Frisbee, more than Fried Chicken, Snack Bar, Jungle Resto, Dome, and Bumper Bonanza.</div><div><br></div><div>With the motto \"We Give You The Best in Family Entertainment\" we will always provide the best for your family.</div>                                                    ', '', 'images/mickey.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ticket_detail`
+-- Table structure for table `ticket_detail`
 --
 
 CREATE TABLE `ticket_detail` (
@@ -508,223 +519,228 @@ CREATE TABLE `ticket_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ticket_detail`
---
-
-INSERT INTO `ticket_detail` (`id`, `ticket_id`, `destinasi_area_id`) VALUES
-(2, 1, 17);
-
---
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `destinasi`
+-- Indexes for table `destinasi`
 --
 ALTER TABLE `destinasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `destinasi_area`
+-- Indexes for table `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
   ADD PRIMARY KEY (`id_area`);
 
 --
--- Indeks untuk tabel `destinasi_area_gambar`
+-- Indexes for table `destinasi_area_gambar`
 --
 ALTER TABLE `destinasi_area_gambar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `destinasi_gambar`
+-- Indexes for table `destinasi_gambar`
 --
 ALTER TABLE `destinasi_gambar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `galeri`
+-- Indexes for table `galeri`
 --
 ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `paket_wisata`
+-- Indexes for table `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `paket_wisata_detail`
+-- Indexes for table `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `paket_wisata_gambar`
+-- Indexes for table `paket_wisata_gambar`
 --
 ALTER TABLE `paket_wisata_gambar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pesan`
+-- Indexes for table `partner`
+--
+ALTER TABLE `partner`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pesan`
 --
 ALTER TABLE `pesan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `rent`
+-- Indexes for table `rent`
 --
 ALTER TABLE `rent`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `request`
+-- Indexes for table `request`
 --
 ALTER TABLE `request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `slider`
+-- Indexes for table `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tentang`
+-- Indexes for table `tentang`
 --
 ALTER TABLE `tentang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `testimonial`
+-- Indexes for table `testimonial`
 --
 ALTER TABLE `testimonial`
   ADD PRIMARY KEY (`id_testi`);
 
 --
--- Indeks untuk tabel `ticket`
+-- Indexes for table `ticket`
 --
 ALTER TABLE `ticket`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ticket_detail`
+-- Indexes for table `ticket_detail`
 --
 ALTER TABLE `ticket_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `destinasi`
+-- AUTO_INCREMENT for table `destinasi`
 --
 ALTER TABLE `destinasi`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT untuk tabel `destinasi_area`
+-- AUTO_INCREMENT for table `destinasi_area`
 --
 ALTER TABLE `destinasi_area`
-  MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id_area` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT untuk tabel `destinasi_area_gambar`
+-- AUTO_INCREMENT for table `destinasi_area_gambar`
 --
 ALTER TABLE `destinasi_area_gambar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `destinasi_gambar`
+-- AUTO_INCREMENT for table `destinasi_gambar`
 --
 ALTER TABLE `destinasi_gambar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT untuk tabel `galeri`
+-- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `paket_wisata`
+-- AUTO_INCREMENT for table `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `paket_wisata_detail`
+-- AUTO_INCREMENT for table `paket_wisata_detail`
 --
 ALTER TABLE `paket_wisata_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
 
 --
--- AUTO_INCREMENT untuk tabel `paket_wisata_gambar`
+-- AUTO_INCREMENT for table `paket_wisata_gambar`
 --
 ALTER TABLE `paket_wisata_gambar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
--- AUTO_INCREMENT untuk tabel `pesan`
+-- AUTO_INCREMENT for table `partner`
+--
+ALTER TABLE `partner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `rent`
+-- AUTO_INCREMENT for table `rent`
 --
 ALTER TABLE `rent`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `request`
+-- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `slider`
+-- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `tentang`
+-- AUTO_INCREMENT for table `tentang`
 --
 ALTER TABLE `tentang`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `testimonial`
+-- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
   MODIFY `id_testi` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `ticket`
+-- AUTO_INCREMENT for table `ticket`
 --
 ALTER TABLE `ticket`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `ticket_detail`
+-- AUTO_INCREMENT for table `ticket_detail`
 --
 ALTER TABLE `ticket_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

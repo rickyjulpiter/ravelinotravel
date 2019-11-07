@@ -1,4 +1,4 @@
-<?php include 'koneksi.php'; 
+<?php include 'koneksi.php';
 
 $namaWisata = $_GET['destination'];
 
@@ -7,6 +7,7 @@ $namaWisata = $_GET['destination'];
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
 <?php include 'template/head.php' ?>
+
 <body>
 
     <!-- Preloader -->
@@ -21,9 +22,9 @@ $namaWisata = $_GET['destination'];
     <?php include 'template/nav.php' ?>
     <!-- Navigation Bar Ends -->
 
-    <?php 
+    <?php
     $query_sql = "SELECT * FROM destinasi WHERE nama = '$namaWisata'";
-    $queryDetailDestinasi = mysqli_query($koneksi,$query_sql)or die(mysqli_error());
+    $queryDetailDestinasi = mysqli_query($koneksi, $query_sql) or die(mysqli_error());
     $data = mysqli_fetch_assoc($queryDetailDestinasi);
     $namaDestinasi = $data['nama'];
     $deskripsi_singkatDestinasi = $data['deskripsi_singkat'];
@@ -67,39 +68,41 @@ $namaWisata = $_GET['destination'];
                                 <ol class="carousel-indicators">
                                     <!-- 1st Indicator -->
                                     <?php
-                                    $i=0;
-                                    $query_mysql = mysqli_query($koneksi,"SELECT dg.gambar FROM destinasi_gambar AS dg INNER JOIN destinasi AS d ON dg.destinasi_id = d.id WHERE d.nama = '$namaDestinasi' ")or die(mysqli_error());
-                                    while($data = mysqli_fetch_array($query_mysql)){
+                                    $i = 0;
+                                    $query_mysql = mysqli_query($koneksi, "SELECT dg.gambar FROM destinasi_gambar AS dg INNER JOIN destinasi AS d ON dg.destinasi_id = d.id WHERE d.nama = '$namaDestinasi' ") or die(mysqli_error());
+                                    while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
-                                    ?>
-                                    <li data-target="#in_th_030" data-slide-to="<?= $i?>" class="<?php if($i==1) echo 'active' ?>">
-                                        <!-- 1st Indicator Image -->
-                                        <img src="<?= $gambar?>" alt="in_th_030_01_sm" />
-                                    </li>
-                                    <!-- 2nd Indicator -->
-                                    <?php $i++; } ?>
+                                        ?>
+                                        <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 1) echo 'active' ?>">
+                                            <!-- 1st Indicator Image -->
+                                            <img src="<?= $gambar ?>" alt="in_th_030_01_sm" style="width:100px; height:100px;background-size: cover;" />
+                                        </li>
+                                        <!-- 2nd Indicator -->
+                                    <?php $i++;
+                                    } ?>
                                 </ol> <!-- /Indicators -->
                                 <!-- Wrapper For Slides -->
                                 <div class="carousel-inner" role="listbox">
                                     <!-- First Slide -->
                                     <?php
-                                    $i=0;
-                                    $query_mysql = mysqli_query($koneksi,"SELECT dg.gambar FROM destinasi_gambar AS dg INNER JOIN destinasi AS d ON dg.destinasi_id = d.id WHERE d.nama = '$namaDestinasi' ")or die(mysqli_error());
-                                    while($data = mysqli_fetch_array($query_mysql)){
+                                    $i = 0;
+                                    $query_mysql = mysqli_query($koneksi, "SELECT dg.gambar FROM destinasi_gambar AS dg INNER JOIN destinasi AS d ON dg.destinasi_id = d.id WHERE d.nama = '$namaDestinasi' ") or die(mysqli_error());
+                                    while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
-                                    ?>
-                                    <div class="item <?php if($i==0) echo "active" ?>">
-                                        <!-- Slide Background -->
-                                        <img src="<?= $gambar?>" alt="in_th_030_01" />                                        
-                                    </div>
+                                        ?>
+                                        <div class="item <?php if ($i == 0) echo "active" ?>">
+                                            <!-- Slide Background -->
+                                            <img src="<?= $gambar ?>" alt="in_th_030_01" style="width:100%;" />
+                                        </div>
 
-                                    <!-- End of Slide -->
-                                    <?php $i++; } ?>
+                                        <!-- End of Slide -->
+                                    <?php $i++;
+                                    } ?>
                                 </div> <!-- End of Wrapper For Slides -->
                             </div> <!-- End Paradise Slider -->
                         </div>
                         <div class="item-detail">
-                            <?php echo($deskripsiDestinasi);?>
+                            <?php echo ($deskripsiDestinasi); ?>
                         </div>
                     </div>
                 </div>
@@ -109,7 +112,7 @@ $namaWisata = $_GET['destination'];
 
     <!-- Footer -->
     <?php include 'template/footer.php' ?>
-    <!-- Footer Ends -->  
+    <!-- Footer Ends -->
 
     <!-- Back to top start -->
     <div id="back-to-top">
@@ -125,4 +128,5 @@ $namaWisata = $_GET['destination'];
     <script src="js/main-1.js"></script>
     <script src="js/preloader.js"></script>
 </body>
+
 </html>
