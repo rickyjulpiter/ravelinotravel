@@ -1,3 +1,0 @@
-[29-Oct-2019 14:58:58 UTC] PHP Warning:  exec() has been disabled for security reasons in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/ticket/tambah-aksi.php on line 3
-[29-Oct-2019 14:58:59 UTC] PHP Notice:  Undefined index: status in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/ticket/index.php on line 5
-[29-Oct-2019 15:02:05 UTC] PHP Notice:  Undefined variable: tampakGambar in /home/u4502442/public_html/sistempintar/demo/ravelinotravel/admin/ticket/ubah.php on line 113
