@@ -58,6 +58,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="../partner" class="nav-link">
+              <i class="nav-icon fa fa-users"></i>
+              <p style="color: white">
+                Partners
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="../request" class="nav-link">
               <i class="nav-icon fa fa-sticky-note"></i>
               <p style="color: white">
