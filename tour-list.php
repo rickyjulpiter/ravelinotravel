@@ -80,13 +80,13 @@ $idList = $data['id'];
                                     </div>
                                     <div class="col-md-8">
                                         <div class="destination-fw-desc fw-content">
-                                            <h3><a href="tour-detail.html"><?= $namaPaket ?></a></h3>
+                                            <h3><a href="tour?tourName=<?php echo $namaPaket; ?>"><?= $namaPaket ?></a></h3>
                                             <p><?php echo limit_words(strip_tags($deskripsiPaket), 20) . "..."; ?></p>
                                             <!-- <div class="destination-fw-content">
                                             <p class="fw-info"><i class="fa fa-user-o" aria-hidden="true"></i> 23</p>
                                             <p class="fw-info"><i class="fa fa-clock-o" aria-hidden="true"></i> 18 May - 27 May</p>
                                             </div> -->
-                                            <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red btn-xs pull-right">Tour Detail</a>
+                                            <a href="tour?tourName=<?php echo $namaPaket; ?>" class="btn-blue btn-red btn-xs pull-right">Tour Detail</a>
                                         </div>
                                     </div>
                                 </div>
@@ -128,13 +128,15 @@ $idList = $data['id'];
                         // $deskripsiTentang = $tentang['deskripsi'];
                         $telepon = $tentang['telepon'];
                         $email = $tentang['email'];
+                        $whatsapp = $tentang['whatsapp'];
                         ?>
                         <div class="sidebar-item sidebar-helpline">
                             <div class="sidebar-helpline-content">
                                 <h3>Any Questions?</h3>
                                 <p>If you require any further information, please call or write us to our below contact.</p>
-                                <p><i class="flaticon-phone-call"></i> <?php echo $telepon; ?></p>
-                                <p><i class="flaticon-mail"></i> <?php echo $email; ?></p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $telepon; ?></p>
+                                <p><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></p>
+                                <p><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></p>
                             </div>
                         </div>
                     </aside>
