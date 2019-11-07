@@ -16,7 +16,7 @@
 	$twitter = $_POST['twitter'];
 	$instagram = $_POST['instagram'];
 	$youtube = $_POST['youtube'];
-	$deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi'];
+	$deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
 	
 
 	if ($nama_file != '') {
