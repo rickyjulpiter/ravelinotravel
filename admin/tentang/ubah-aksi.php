@@ -12,6 +12,7 @@
 	$alamat = mysqli_escape_string($koneksi,$_POST['alamat']);
 	$email = mysqli_escape_string($koneksi,$_POST['email']);
 	$telepon = mysqli_escape_string($koneksi,$_POST['telepon']);
+	$whatsapp = mysqli_escape_string($koneksi, $_POST['whatsapp']);
 	$facebook = $_POST['facebook'];
 	$twitter = $_POST['twitter'];
 	$instagram = $_POST['instagram'];
@@ -26,6 +27,7 @@
 						alamat = '$alamat',
 						email = '$email',
 						telepon = '$telepon',
+						whatsapp = '$whatsapp',
 						facebook = '$facebook',
 						twitter = '$twitter',
 						instagram = '$instagram',
@@ -50,6 +52,7 @@
 						alamat = '$alamat',
 						email = '$email',
 						telepon = '$telepon',
+						whatsapp = '$whatsapp',
 						facebook = '$facebook',
 						twitter = '$twitter',
 						instagram = '$instagram',
