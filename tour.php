@@ -1,6 +1,7 @@
 <?php include 'koneksi.php';
 
 $namaTour = $_GET['tourName'];
+echo $namaTour;
 //echo($namaTour);
 ?>
 <!DOCTYPE html>
@@ -63,7 +64,7 @@ $namaTour = $_GET['tourName'];
                                     while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
                                         ?>
-                                        <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 1) echo 'active' ?>">
+                                        <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 0) echo 'active' ?>">
                                             <!-- 1st Indicator Image -->
                                             <img src="<?= $gambar ?>" alt="in_th_030_01_sm" />
                                         </li>
