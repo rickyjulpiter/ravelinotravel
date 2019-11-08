@@ -9,6 +9,20 @@ function limit_words($string, $word_limit)
     return implode(" ", array_splice($words, 0, $word_limit));
 }
 ?>
+<style>
+    .dropdownUL ul {
+        list-style: none;
+        /* height: 1000px; */
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .dropdownUL li {
+        /* height: 300px; */
+        /* background: #ccc;
+        border-bottom: black 1px solid; */
+    }
+</style>
 
 <body>
 

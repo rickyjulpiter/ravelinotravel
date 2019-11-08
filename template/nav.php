@@ -20,7 +20,7 @@
                                 </li>
                                 <li>
                                     <a href="#" style="font-size: 12px;">Destination <i class="fa fa-angle-down"></i></a>
-                                    <ul style="display: none;" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
+                                    <ul style="display: none;" class="dropdownUL">
                                         <?php
                                         $query_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi") or die(mysqli_error());
                                         while ($data = mysqli_fetch_array($query_destinasi)) {
