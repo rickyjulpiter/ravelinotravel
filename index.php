@@ -44,16 +44,18 @@ function limit_words($string, $word_limit)
                     $deskripsiDestinasi = $data['deskripsi'];
                     $gambarDestinasi = $data['gambar'];
                     ?>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="package-item">
-                            <img src="<?php echo $gambarDestinasi ?>" alt="Image" width="100%" height="100%" style="object-fit: cover;">
-                            <div class="package-content" style="padding-bottom: 5px;">
-                                <center>
-                                    <h2 style="text-align: center;"><a href="destination-detail?destination=<?php echo $namaDestinasi; ?>" style="color: green; text-align: center;"><?php echo $namaDestinasi ?></a></h2>
-                                </center>
+                    <a href="destination-detail?destination=<?php echo $namaDestinasi; ?>">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="package-item">
+                                <img src="<?php echo $gambarDestinasi ?>" alt="Image" width="100%" height="100%" style="object-fit: cover;">
+                                <div class="package-content" style="padding-bottom: 5px;">
+                                    <center>
+                                        <h2 style="text-align: center;"><a href="destination-detail?destination=<?php echo $namaDestinasi; ?>" style="color: green; text-align: center;"><?php echo $namaDestinasi ?></a></h2>
+                                    </center>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 <?php } ?>
             </div>
         </div>
@@ -84,7 +86,7 @@ function limit_words($string, $word_limit)
                                             ?></h3>-->
                                 <p><?php echo limit_words(strip_tags($deskripsiTour), 20) . "..."; ?></p>
                                 <div class="package-info">
-                                    <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
+                                    <a href="tour?tourID=<?php echo $data['id']; ?>" class="btn-blue btn-red">Tour Detail</a>
                                 </div>
                             </div>
                         </div>

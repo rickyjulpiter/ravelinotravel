@@ -60,7 +60,7 @@ $idList = $data['id'];
                 <div class="col-md-8">
                     <div class="destination-outer">
                         <?php
-                        $query_area_destinasi = mysqli_query($koneksi, "SELECT DISTINCT(pw.nama),pw.deskripsi,pwg.gambar FROM paket_wisata_detail AS pwd
+                        $query_area_destinasi = mysqli_query($koneksi, "SELECT DISTINCT(pw.nama),pw.id,pw.deskripsi,pwg.gambar FROM paket_wisata_detail AS pwd
                                                             INNER JOIN paket_wisata as pw ON pwd.paket_wisata_id = pw.id 
                                                             INNER JOIN destinasi_area AS da ON pwd.destinasi_area_id = da.id_area 
                                                             INNER JOIN paket_wisata_gambar AS pwg ON pwg.paket_wisata_id = pw.id
@@ -86,7 +86,7 @@ $idList = $data['id'];
                                             <p class="fw-info"><i class="fa fa-user-o" aria-hidden="true"></i> 23</p>
                                             <p class="fw-info"><i class="fa fa-clock-o" aria-hidden="true"></i> 18 May - 27 May</p>
                                             </div> -->
-                                            <a href="tour?tourName=<?php echo $namaPaket; ?>" class="btn-blue btn-red btn-xs pull-right">Tour Detail</a>
+                                            <a href="tour?tourID=<?php echo $area['id']; ?>" class="btn-blue btn-red btn-xs pull-right">Tour Detail</a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@ $idList = $data['id'];
                                         </div>
                                         <div class="destination-content sidebar-package-content">
                                             <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>
-                                            <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
+                                            <a href="tour?tourID=<?php echo $data['id']; ?>" class="btn-blue btn-red">Tour Detail</a>
                                         </div>
                                     </div>
                                 <?php } ?>
