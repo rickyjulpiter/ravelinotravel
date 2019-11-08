@@ -1,6 +1,13 @@
 <?php include 'koneksi.php';
 
-$namaTour = $_GET['tourName'];
+// $namaTour = $_GET['tourName'];
+
+if (isset($_GET['tourName'])) {
+    $namaTour = $_GET['tourName'];
+}
+else if (isset($_GET['tourID'])){
+    $idTour = $_GET['tourID'];
+}
 //echo($namaTour);
 ?>
 <!DOCTYPE html>
@@ -22,7 +29,7 @@ $namaTour = $_GET['tourName'];
     <?php include 'template/nav.php' ?>
     <!-- Navigation Bar Ends -->
     <?php
-    $queryTour = mysqli_query($koneksi, "SELECT * FROM paket_wisata WHERE nama = '$namaTour'") or die(mysqli_error());
+    $queryTour = mysqli_query($koneksi, "SELECT * FROM paket_wisata WHERE id = '$idTour '") or die(mysqli_error());
     $detail = mysqli_fetch_assoc($queryTour);
     $idTourPackages = $detail['id'];
     $nama_tour = $detail['nama'];
@@ -63,7 +70,7 @@ $namaTour = $_GET['tourName'];
                                     while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
                                         ?>
-                                        <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 1) echo 'active' ?>">
+                                        <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 0) echo 'active' ?>">
                                             <!-- 1st Indicator Image -->
                                             <img src="<?= $gambar ?>" alt="in_th_030_01_sm" />
                                         </li>
@@ -80,7 +87,7 @@ $namaTour = $_GET['tourName'];
                                     while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
                                         ?>
-                                        <div class="item <?php if ($i == 1) echo "active" ?>">
+                                        <div class="item <?php if ($i == 0) echo "active" ?>">
                                             <!-- Slide Background -->
                                             <img src="<?= $gambar ?>" alt="in_th_030_01" />
                                         </div>
@@ -137,7 +144,7 @@ $namaTour = $_GET['tourName'];
                                         </div>
                                         <div class="destination-content sidebar-package-content">
                                             <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>
-                                            <a href="tour?tourName=<?php echo $namaTour; ?>" class="btn-blue btn-red">Tour Detail</a>
+                                            <a href="tour?tourID=<?php echo $data['id']; ?>" class="btn-blue btn-red">Tour Detail</a>
                                         </div>
                                     </div>
                                 <?php } ?>

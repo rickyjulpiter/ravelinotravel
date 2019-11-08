@@ -7,11 +7,17 @@
     $peta = $_POST['peta'];
     $timeline = mysqli_escape_string($koneksi,$_POST['timeline']);
     $data_des = $_POST['data_des'];
-    $nama_gambar = $_FILES['gambar']['name'];
-    $lokasi_gambar = $_FILES['gambar']['tmp_name'];
-    $idgambar = $_POST['idgambar'];
+    $nama_gambar = array();
+    $lokasi_gambar = array();
+    if(!empty($_FILES['gambar']['name'])){
+        $nama_gambar = $_FILES['gambar']['name'];
+        $lokasi_gambar = $_FILES['gambar']['tmp_name'];
+        $idgambar = $_POST['idgambar'];
+    }
+
     $add_nama_gambar = array();
     $add_lokasi_gambar = array();
+
     if(!empty($_FILES['tambahgambar']['name'])){
         $add_nama_gambar = $_FILES['tambahgambar']['name'];
         $add_lokasi_gambar = $_FILES['tambahgambar']['tmp_name'];    
