@@ -8,6 +8,7 @@
     $deskripsi = $tentang['deskripsi'];
     $alamat = $tentang['alamat'];
     $telepon = $tentang['telepon'];
+    $whatsapp = $tentang['whatsapp'];
     $email = $tentang['email'];
     $facebook = $tentang['facebook'];
     $twitter = $tentang['twitter'];
