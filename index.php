@@ -108,34 +108,6 @@ function limit_words($string, $word_limit)
                 <?php } ?>
             </div>
         </div>
-
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="section-title text-center">
-                        <h2>Our Partners</h2>
-                        <div class="section-icon section-icon-white">
-                            <i class="flaticon-diamond"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <i class="fa fa-superpowers" aria-hidden="true"></i>
-                        </div>
-                        <div class="about-content">
-                            <h3>Perfect Planning</h3>
-                            <p>Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive offers!</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div> -->
     </section>
     <!-- Banner Ends -->
 

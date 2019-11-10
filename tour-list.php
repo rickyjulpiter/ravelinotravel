@@ -80,7 +80,7 @@ $idList = $data['id'];
                                     </div>
                                     <div class="col-md-8">
                                         <div class="destination-fw-desc fw-content">
-                                            <h3><a href="tour?tourName=<?php echo $namaPaket; ?>"><?= $namaPaket ?></a></h3>
+                                            <h3><a href="tour?tourID=<?php echo $area['id']; ?>"><?= $namaPaket ?></a></h3>
                                             <p><?php echo limit_words(strip_tags($deskripsiPaket), 20) . "..."; ?></p>
                                             <!-- <div class="destination-fw-content">
                                             <p class="fw-info"><i class="fa fa-user-o" aria-hidden="true"></i> 23</p>
