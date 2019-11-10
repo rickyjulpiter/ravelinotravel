@@ -1,14 +1,15 @@
 <?php include 'koneksi.php'; ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
-<?php 
+<?php
 function limit_words($string, $word_limit)
 {
-    $words = explode(" ",$string);
-    return implode(" ",array_splice($words,0,$word_limit));
+    $words = explode(" ", $string);
+    return implode(" ", array_splice($words, 0, $word_limit));
 }
 ?>
 <?php include 'template/head.php' ?>
+
 <body>
 
     <!-- Preloader -->
@@ -24,7 +25,8 @@ function limit_words($string, $word_limit)
     <!-- Navigation Bar Ends -->
 
     <!-- Banner -->
-    <?php //include 'slider.php' ?>
+    <?php //include 'slider.php' 
+    ?>
 
 
     <!-- Breadcrumb -->
@@ -49,24 +51,24 @@ function limit_words($string, $word_limit)
         <div class="container">
             <div class="row">
                 <?php
-                $query_mysql = mysqli_query($koneksi,"SELECT * FROM galeri")or die(mysqli_error());
-                while($data = mysqli_fetch_array($query_mysql)){
+                $query_mysql = mysqli_query($koneksi, "SELECT * FROM galeri") or die(mysqli_error());
+                while ($data = mysqli_fetch_array($query_mysql)) {
                     $idTicket = $data['id'];
                     $namaTicket = $data['nama'];
                     $deskripsiTicket = $data['deskripsi'];
                     $gambarTicket = $data['gambar'];
-                ?>
-                <div class="col-md-6 col-sm-6">
-                    <div class="destination-item destination-4-col">
-                        <div class="destination-image">
-                            <img src="<?php echo $gambarTicket; ?>" alt="Image" style="height: 300px;">
-                        </div>
-                        <div class="destination-content">
-                            <h3><a href="#"><?php echo $namaTicket; ?></a></h3>
-                            <p><?php echo limit_words(strip_tags($deskripsiTicket),50)."..."; ?></p>
+                    ?>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="destination-item destination-4-col">
+                            <div class="destination-image">
+                                <img src="<?php echo $gambarTicket; ?>" alt="Image" style="height: 300px;object-fit: cover;">
+                            </div>
+                            <div class="destination-content">
+                                <h3><a href="#"><?php echo $namaTicket; ?></a></h3>
+                                <p><?php echo limit_words(strip_tags($deskripsiTicket), 50) . "..."; ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
             <!--<div class="row">
@@ -89,7 +91,7 @@ function limit_words($string, $word_limit)
 
     <!-- Footer -->
     <?php include 'template/footer.php' ?>
-    <!-- Footer Ends -->  
+    <!-- Footer Ends -->
 
     <!-- Back to top start -->
     <div id="back-to-top">
@@ -105,4 +107,5 @@ function limit_words($string, $word_limit)
     <script src="js/main-1.js"></script>
     <script src="js/preloader.js"></script>
 </body>
+
 </html>
