@@ -111,7 +111,7 @@ else{
                                                     $tampakGambar = 'display:none;';
                                                 }
                                                 else {
-                                                    echo "<label>Gambar Destinasi Area Saat Ini</label><br>";
+                                                    echo "<label>Gambar Galeri Area Saat Ini</label><br>";
                                                 }
                                                 ?>
                                                 <img src="<?php echo "../../".$gambar; ?>" width="30%" style="<?php echo($tampakGambar); ?>">

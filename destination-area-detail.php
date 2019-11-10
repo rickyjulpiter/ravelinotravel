@@ -1,4 +1,4 @@
-<?php include 'koneksi.php'; 
+<?php include 'koneksi.php';
 
 $namaWisata = $_GET['destination'];
 
@@ -7,6 +7,7 @@ $namaWisata = $_GET['destination'];
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
 <?php include 'template/head.php' ?>
+
 <body>
 
     <!-- Preloader -->
@@ -21,9 +22,9 @@ $namaWisata = $_GET['destination'];
     <?php include 'template/nav.php' ?>
     <!-- Navigation Bar Ends -->
 
-    <?php 
+    <?php
     $query_sql = "SELECT * FROM destinasi_area WHERE nama_area = '$namaWisata'";
-    $queryDetailDestinasi = mysqli_query($koneksi,$query_sql)or die(mysqli_error());
+    $queryDetailDestinasi = mysqli_query($koneksi, $query_sql) or die(mysqli_error());
     $data = mysqli_fetch_assoc($queryDetailDestinasi);
     $namaDestinasi = $data['nama_area'];
     $deskripsi_singkatDestinasi = $data['deskripsi_area_singkat'];
@@ -51,7 +52,7 @@ $namaWisata = $_GET['destination'];
     <section class="item-content" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-8 col-md-offset-0">
                     <div class="item-wrapper">
                         <div class="cover-content">
                             <div class="author-detail">
@@ -66,41 +67,90 @@ $namaWisata = $_GET['destination'];
                                 <ol class="carousel-indicators">
                                     <!-- 1st Indicator -->
                                     <?php
-                                    $i=0;
-                                    $query_mysql = mysqli_query($koneksi,"SELECT dag.gambar FROM destinasi_area_gambar AS dag INNER JOIN destinasi_area AS da ON dag.destinasi_area_id = da.id_area WHERE da.nama_area = '$namaWisata' ")or die(mysqli_error());
-                                    while($data = mysqli_fetch_array($query_mysql)){
+                                    $i = 0;
+                                    $query_mysql = mysqli_query($koneksi, "SELECT dag.gambar FROM destinasi_area_gambar AS dag INNER JOIN destinasi_area AS da ON dag.destinasi_area_id = da.id_area WHERE da.nama_area = '$namaWisata' ") or die(mysqli_error());
+                                    while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
-                                    ?>
-                                    <li data-target="#in_th_030" data-slide-to="<?= $i?>" class="<?php if($i==1) echo 'active' ?>">
-                                        <!-- 1st Indicator Image -->
-                                        <img src="<?= $gambar?>" alt="in_th_030_01_sm" />
-                                    </li>
-                                    <!-- 2nd Indicator -->
-                                    <?php $i++; } ?>
+                                        ?>
+                                        <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 1) echo 'active' ?>">
+                                            <!-- 1st Indicator Image -->
+                                            <img src="<?= $gambar ?>" alt="in_th_030_01_sm" />
+                                        </li>
+                                        <!-- 2nd Indicator -->
+                                    <?php $i++;
+                                    } ?>
                                 </ol> <!-- /Indicators -->
                                 <!-- Wrapper For Slides -->
                                 <div class="carousel-inner" role="listbox">
                                     <!-- First Slide -->
                                     <?php
-                                    $i=0;
-                                    $query_mysql = mysqli_query($koneksi,"SELECT dag.gambar FROM destinasi_area_gambar AS dag INNER JOIN destinasi_area AS da ON dag.destinasi_area_id = da.id_area WHERE da.nama_area = '$namaWisata' ")or die(mysqli_error());
-                                    while($data = mysqli_fetch_array($query_mysql)){
+                                    $i = 0;
+                                    $query_mysql = mysqli_query($koneksi, "SELECT dag.gambar FROM destinasi_area_gambar AS dag INNER JOIN destinasi_area AS da ON dag.destinasi_area_id = da.id_area WHERE da.nama_area = '$namaWisata' ") or die(mysqli_error());
+                                    while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
-                                    ?>
-                                    <div class="item <?php if($i==0) echo "active" ?>">
-                                        <!-- Slide Background -->
-                                        <img src="<?= $gambar?>" alt="in_th_030_01" />                                        
-                                    </div>
+                                        ?>
+                                        <div class="item <?php if ($i == 0) echo "active" ?>">
+                                            <!-- Slide Background -->
+                                            <img src="<?= $gambar ?>" alt="in_th_030_01" />
+                                        </div>
 
-                                    <!-- End of Slide -->
-                                    <?php $i++; } ?>
+                                        <!-- End of Slide -->
+                                    <?php $i++;
+                                    } ?>
                                 </div> <!-- End of Wrapper For Slides -->
                             </div> <!-- End Paradise Slider -->
                         </div>
                         <div class="item-detail">
-                            <?php echo($deskripsiDestinasi);?>
+                            <?php echo ($deskripsiDestinasi); ?>
                         </div>
                     </div>
+                </div>
+                <div id="sidebar-sticky" class="col-md-4">
+                    <aside class="detail-sidebar sidebar-wrapper">
+                        <div class="sidebar-item">
+                            <div class="detail-title">
+                                <h3><?php echo $namaDestinasi; ?> Packages</h3>
+                            </div>
+                            <div class="sidebar-content sidebar-slider">
+                                <?php
+                                $query_mysql = mysqli_query($koneksi, "SELECT * FROM (SELECT DISTINCT(A.id), A.nama AS nama, A.deskripsi AS deskripsi, B.gambar, E.nama AS destinasi FROM paket_wisata A, paket_wisata_gambar B, paket_wisata_detail C, destinasi_area D, destinasi E WHERE A.id = B.paket_wisata_id AND C.paket_wisata_id = A.id AND C.destinasi_area_id = D.id_area AND D.destinasi_id = E.id AND D.nama_area = '$namaDestinasi' ) AS tabel GROUP BY id") or die(mysqli_error());
+                                while ($data = mysqli_fetch_array($query_mysql)) {
+                                    //$id = $data['id'];
+                                    $namaTour = $data['nama'];
+                                    $deskripsiTour = $data['deskripsi'];
+                                    $gambarTour = $data['gambar'];
+                                    ?>
+                                    <div class="sidebar-package">
+                                        <div class="sidebar-package-image">
+                                            <img src="<?php echo $gambarTour; ?>" alt="Images" style="height:200px;background-size: cover;">
+                                        </div>
+                                        <div class="destination-content sidebar-package-content">
+                                            <h4><a href="tour?tourID=<?php echo $data['id']; ?>"><?php echo $namaTour; ?></a></h4>
+                                            <a href="tour?tourID=<?php echo $data['id']; ?>" class="btn-blue btn-red">Tour Detail</a>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <?php
+                        $queryTentang = mysqli_query($koneksi, "SELECT * FROM tentang WHERE id = 1") or die(mysqli_error());
+                        $tentang = mysqli_fetch_assoc($queryTentang);
+                        // $namaTentang = $tentang['nama'];
+                        // $deskripsiTentang = $tentang['deskripsi'];
+                        $telepon = $tentang['telepon'];
+                        $email = $tentang['email'];
+                        $whatsapp = $tentang['whatsapp'];
+                        ?>
+                        <div class="sidebar-item sidebar-helpline">
+                            <div class="sidebar-helpline-content">
+                                <h3>Any Questions?</h3>
+                                <p>If you require any further information, please call or write us to our below contact.</p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $telepon; ?></p>
+                                <p><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></p>
+                                <p><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></p>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>
@@ -108,7 +158,7 @@ $namaWisata = $_GET['destination'];
 
     <!-- Footer -->
     <?php include 'template/footer.php' ?>
-    <!-- Footer Ends -->  
+    <!-- Footer Ends -->
 
     <!-- Back to top start -->
     <div id="back-to-top">
@@ -124,4 +174,5 @@ $namaWisata = $_GET['destination'];
     <script src="js/main-1.js"></script>
     <script src="js/preloader.js"></script>
 </body>
+
 </html>
