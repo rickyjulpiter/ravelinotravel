@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
 <?php include 'template/head.php' ?>
+
 <body>
     <!-- Preloader -->
     <?php include 'template/preloader.php' ?>
@@ -70,7 +71,8 @@
                                     <textarea name="pesan" placeholder="Enter a message" required></textarea>
                                 </div>
                                 <?php
-                                function generateRandomString($length = 10) {
+                                function generateRandomString($length = 10)
+                                {
                                     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                                     $charactersLength = strlen($characters);
                                     $randomString = '';
@@ -79,16 +81,16 @@
                                     }
                                     return $randomString;
                                 }
-                                    $captchaCode = generateRandomString(5);
+                                $captchaCode = generateRandomString(5);
                                 ?>
                                 <div class="col-xs-12" style="margin-top: 10px;">
                                     <label style="color: white;background-color: grey;font-weight: 20px;margin-right: 20px; padding: 10px"><?php echo $captchaCode; ?></label>
-                                    <input name="captcha" placeholder="Fill Captcha Here" required></input>
+                                    <input name="captcha" placeholder="Fill Captcha Here" required style="border:1px solid grey;"></input>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input type="hidden" name="verif" value="<?php echo($captchaCode) ?>">
+                                    <input type="hidden" name="verif" value="<?php echo ($captchaCode) ?>">
                                     <div class="comment-btn">
-                                         <input type="submit" class="btn-blue btn-red" id="submit" value="Send Message">
+                                        <input type="submit" class="btn-blue btn-red" id="submit" value="Send Message">
                                     </div>
                                 </div>
                             </div>
@@ -101,11 +103,12 @@
                             <img src="<?php echo $logo; ?>" alt="Image" style="width: 100%">
                         </div>
                         <h4><?php echo $slogan; ?></h4>
-                        <p><?php //echo $deskripsi; ?></p>
+                        <p><?php //echo $deskripsi; 
+                            ?></p>
                         <div class="contact-location">
                             <ul>
                                 <li><i class="flaticon-maps-and-flags" aria-hidden="true"></i> <?php echo $alamat; ?></li>
-                                <li><i class="flaticon-phone-call"></i> <?php echo $telepon; ?></li>                                        
+                                <li><i class="flaticon-phone-call"></i> <?php echo $telepon; ?></li>
                                 <li><i class="flaticon-mail"></i> <?php echo $email; ?></li>
                             </ul>
                         </div>
@@ -116,16 +119,16 @@
                                 <li class="social-icon"><a href="<?php echo $twitter; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <li class="social-icon"><a href="<?php echo $youtube; ?>"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                             </ul>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <?php include 'template/footer.php' ?>
-    <!-- Footer Ends -->  
+    <!-- Footer Ends -->
 
     <!-- back to top start -->
     <div id="back-to-top">
@@ -141,4 +144,5 @@
     <script src="js/preloader.js"></script>
 
 </body>
+
 </html>

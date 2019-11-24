@@ -7,7 +7,7 @@
                 $query_mysql = mysqli_query($koneksi,"SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON pw.id = pwg.paket_wisata_id) AS tabel GROUP BY id")or die(mysqli_error());
                 $no = 0;
                 while($data = mysqli_fetch_array($query_mysql)){
-                    //$idDestinasi = $data['id'];
+                    $idDestinasi = $data['id'];
                     $namaDestinasi = $data['nama'];
                     $deskripsiDestinasi = $data['deskripsi'];
                     $gambarDestiansi = $data['gambar'];
@@ -28,7 +28,7 @@
                         <h2 style="/*padding-top: 50px*/;"><?php echo $namaDestinasi; ?></h2>
                         <p class="slider1" style="color: white;/*font-size: 27px*/;"><?php echo limit_words(strip_tags($deskripsiDestinasi),50)."..."; ?></p>
 
-                        <a href="tour?tourName=<?php echo $namaDestinasi; ?>" class="btn-blue btn-red">Tour Detail</a>
+                        <a href="tour?tourID=<?= $idDestinasi; ?>" class="btn-blue btn-red">Tour Detail</a>
                     </div><!-- /Left Slide Text Layer -->
                 </div><!-- /item -->
                 <!-- End of Slide -->

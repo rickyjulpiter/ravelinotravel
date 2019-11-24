@@ -36,9 +36,13 @@ else if (isset($_GET['tourID'])){
     $deskripsi_tour = $detail['deskripsi'];
     $peta_tour = $detail['peta'];
     $timeline_tour = $detail['timeline'];
+
+    $queryBreadCumb = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTour' LIMIT 1") or die (mysqli_error());
+    $tampilGambar = mysqli_fetch_assoc($queryBreadCumb);
+    $gambarBreadCumb = $tampilGambar['gambar'];
     ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url('<?= $gambarBreadCumb; ?>') no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2><?php echo ($nama_tour); ?></h2>
@@ -140,7 +144,7 @@ else if (isset($_GET['tourID'])){
                                     ?>
                                     <div class="sidebar-package">
                                         <div class="sidebar-package-image">
-                                            <img src="<?php echo $gambarTour; ?>" alt="Images">
+                                            <img src="<?php echo $gambarTour; ?>" alt="Images" style="height:200px;">
                                         </div>
                                         <div class="destination-content sidebar-package-content">
                                             <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>

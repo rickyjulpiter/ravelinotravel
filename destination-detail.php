@@ -26,14 +26,19 @@ $namaWisata = $_GET['destination'];
     $query_sql = "SELECT * FROM destinasi WHERE nama = '$namaWisata'";
     $queryDetailDestinasi = mysqli_query($koneksi, $query_sql) or die(mysqli_error());
     $data = mysqli_fetch_assoc($queryDetailDestinasi);
+    $idDestinasi = $data['id'];
     $namaDestinasi = $data['nama'];
     $deskripsi_singkatDestinasi = $data['deskripsi_singkat'];
     $deskripsiDestinasi = $data['deskripsi'];
     $gambarDestinasi = $data['gambar'];
 
+    $query = "SELECT gambar FROM destinasi_gambar WHERE destinasi_id = '$idDestinasi'";
+    $query_mysql = mysqli_query($koneksi, $query) or die(mysqli_error());
+    $data = mysqli_fetch_assoc($query_mysql);
+    $gambarBreadCumb = $data['gambar'];
     ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url('<?= $gambarBreadCumb ?>') no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2><?php echo $namaDestinasi; ?></h2>

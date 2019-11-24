@@ -1,9 +1,10 @@
-<?php include 'koneksi.php'; 
+<?php include 'koneksi.php';
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
 <?php include 'template/head.php' ?>
+
 <body>
 
     <!-- Preloader -->
@@ -19,7 +20,7 @@
     <!-- Navigation Bar Ends -->
     <?php $namaDestinasi = $_GET['name']; ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url('<?= $gambarBreadCumb; ?>') no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2>Destination on <?php echo $namaDestinasi; ?></h2>
@@ -42,28 +43,28 @@
                 <div class="col-md-12">
                     <div class="destination-outer">
                         <?php
-                        $query_mysql = mysqli_query($koneksi,"SELECT * FROM destinasi_area LIMIT 6")or die(mysqli_error());
-                        while($data = mysqli_fetch_array($query_mysql)){
+                        $query_mysql = mysqli_query($koneksi, "SELECT * FROM destinasi_area LIMIT 6") or die(mysqli_error());
+                        while ($data = mysqli_fetch_array($query_mysql)) {
                             $idDestinasi = $data['id_area'];
                             $namaDestinasi = $data['nama_area'];
                             $deskripsiDestinasi = $data['deskripsi_area'];
                             $gambarDestinasi = $data['gambar_area'];
-                        ?>
-                        <div class="destination-fw-item">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="destination-fw-image">
-                                        <img src="<?php echo $gambarDestinasi; ?>" alt="Image">
+                            ?>
+                            <div class="destination-fw-item">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="destination-fw-image">
+                                            <img src="<?php echo $gambarDestinasi; ?>" alt="Image">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="destination-fw-desc fw-content">
-                                        <h3><a href="destination-area-detail?destination=<?php echo $namaDestinasi; ?>"><?php echo $namaDestinasi; ?></a></h3>
-                                        <p><?php echo $deskripsiDestinasi; ?></p>
+                                    <div class="col-md-9">
+                                        <div class="destination-fw-desc fw-content">
+                                            <h3><a href="destination-area-detail?destination=<?php echo $namaDestinasi; ?>"><?php echo $namaDestinasi; ?></a></h3>
+                                            <p><?php echo $deskripsiDestinasi; ?></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -90,7 +91,7 @@
 
     <!-- Footer -->
     <?php include 'template/footer.php' ?>
-    <!-- Footer Ends -->  
+    <!-- Footer Ends -->
 
     <!-- Back to top start -->
     <div id="back-to-top">
@@ -106,4 +107,5 @@
     <script src="js/main-1.js"></script>
     <script src="js/preloader.js"></script>
 </body>
+
 </html>

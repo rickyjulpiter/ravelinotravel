@@ -39,7 +39,13 @@ $idList = $data['id'];
     // $timeline_tour = $detail['timeline'];
     ?>
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
+    <?php
+    $query = "SELECT gambar FROM destinasi_gambar WHERE destinasi_id = '$idList'";
+    $query_mysql = mysqli_query($koneksi, $query) or die(mysqli_error());
+    $data = mysqli_fetch_assoc($query_mysql);
+    $gambarBreadCumb = $data['gambar'];
+    ?>
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url('<?= $gambarBreadCumb; ?>') no-repeat;background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2><?php echo ($namaList); ?></h2>

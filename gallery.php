@@ -61,11 +61,11 @@ function limit_words($string, $word_limit)
                     <div class="col-md-6 col-sm-6">
                         <div class="destination-item destination-4-col">
                             <div class="destination-image">
-                                <img src="<?php echo $gambarTicket; ?>" alt="Image" style="height: 500px;object-fit: cover;">
+                                <img src="<?= $gambarTicket; ?>" alt="Image" style="height: 500px;object-fit: cover;">
                             </div>
                             <div class="destination-content">
-                                <h3><a href="#"><?php echo $namaTicket; ?></a></h3>
-                                <p><?php echo limit_words(strip_tags($deskripsiTicket), 50) . "..."; ?></p>
+                                <h3><a href="#"><?= $namaTicket; ?></a></h3>
+                                <p><?= limit_words(strip_tags($deskripsiTicket), 50) . "..."; ?></p>
                             </div>
                         </div>
                     </div>

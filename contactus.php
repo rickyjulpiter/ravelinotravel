@@ -73,7 +73,7 @@
                                 ?>
                                 <div class="col-xs-12" style="margin-top: 10px;">
                                     <label style="color: white;background-color: grey;font-weight: 20px;margin-right: 20px; padding: 10px"><?php echo $captchaCode; ?></label>
-                                    <input name="captcha" placeholder="Fill Captcha Here" required></input>
+                                    <input name="captcha" placeholder="Fill Captcha Here" required style="border:1px solid grey;"></input>
                                 </div>
                                 <div class="col-xs-12">
                                     <input type="hidden" name="verif" value="<?php echo ($captchaCode) ?>">

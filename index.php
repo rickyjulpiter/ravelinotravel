@@ -22,6 +22,11 @@ function limit_words($string, $word_limit)
         /* background: #ccc;
         border-bottom: black 1px solid; */
     }
+
+    h2 {
+        /* text-align: center; */
+        padding: 20px;
+    }
 </style>
 
 <body>
@@ -41,7 +46,6 @@ function limit_words($string, $word_limit)
 
     <!-- Slider -->
     <?php include 'slider.php' ?>
-
 
     <section class="amazing-tours popular-packages pad-bottom-80" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
@@ -108,10 +112,32 @@ function limit_words($string, $word_limit)
                 <?php } ?>
             </div>
         </div>
+
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Our Partner</h2>
+            </div>
+            <div class="row">
+                <?php
+                $query_mysql = mysqli_query($koneksi, "SELECT * FROM partner") or die(mysqli_error());
+                while ($data = mysqli_fetch_array($query_mysql)) {
+                    $idPartner = $data['id'];
+                    $namaPartner = $data['nama'];
+                    $gambarPartner = $data['gambar'];
+                    ?>
+                    <a href="#">
+                        <div class="col-md-3">
+                            <img src="<?php echo $gambarPartner ?>" alt="Image" style="width:80%; height:80%">
+                        </div>
+                    </a>
+                <?php } ?>
+            </div>
+        </div>
     </section>
     <!-- Banner Ends -->
 
-    <?php include 'partner.php' ?>
+    <?php // include 'partner.php' 
+    ?>
 
     <!-- Testimonials -->
     <?php //include 'partner.php' 
