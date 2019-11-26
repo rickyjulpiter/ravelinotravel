@@ -51,25 +51,25 @@
     $tentang = mysqli_fetch_assoc($queryTentang);
     $kepada = $tentang['email'];
     $title = "Special Request Page Ravelino Travel Web";
-    $pesan = "From : <br/> 
-              Name :" .$nama."<br/>
-              Email :" .$email."<br/>
-              Phone No :" .$telepon."<br/>
-              Whatsapp No :" .$whatsapp."<br/>
-              Address :" .$alamat."<br/>
-              Subject :" .$tentang."<br/>
-              Message :" .$pesan."<br/>";
+    $pesan = "From :  
+              Name :" .$nama."
+              Email :" .$email."
+              Phone No :" .$telepon."
+              Whatsapp No :" .$whatsapp."
+              Address :" .$alamat."
+              Subject :" .$tentang."
+              Message :" .$pesan;
     $kepada2 = "hello@sistempintar.com";
     mail($kepada2, $title, $pesan);
     if (mail($kepada, $title, $pesan)) {
         echo "<script>
             alert('Your message has been sent, thank you!');
-            window.location.href='contactus';
+            window.location.href='request';
             </script>";
     } else {
         echo "<script>
             alert('Gagal dikirim!');
-            window.location.href='contactus';
+            window.location.href='request';
             </script>";
     }
     }
