@@ -27,28 +27,36 @@
             // </script>";
         // }
         
-        $to = "rickyjulpiter14@gmail.com";
-        $to2 = "rickyjulpiter@gmail.com";
-        $to3 = "dumbemailtest@gmail.com";
-        $nama = str_replace("\n.", "\n..", $_POST['nama']);
-        $email = str_replace("\n.", "\n..", $_POST['email']);
-        $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
-        $pesan = str_replace("\n.", "\n..", $_POST['pesan']);
+        // $to = "rickyjulpiter14@gmail.com";
+        // $to2 = "rickyjulpiter@gmail.com";
+        // $to3 = "dumbemailtest@gmail.com";
+        // $nama = str_replace("\n.", "\n..", $_POST['nama']);
+        // $email = str_replace("\n.", "\n..", $_POST['email']);
+        // $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
+        // $pesan = str_replace("\n.", "\n..", $_POST['pesan']);
 
-        $subject = "Contact Us Page";
-        $message = $pesan . " Telepon : " . $telepon;
-        $header = "FROM : " . $email;
+        // $subject = "Contact Us Page";
+        // $message = $pesan . " Telepon : " . $telepon;
+        // $header = "FROM : " . $email;
 
-        mail($to, $subject, $message, $header);
-        mail($to2, $subject, $message, $header);
-        mail($to3, $subject, $message, $header);
-        echo "<script>
+        // mail($to, $subject, $message, $header);
+        // mail($to2, $subject, $message, $header);
+        // mail($to3, $subject, $message, $header);
+
+        $kepada = "hello@sistempintar.com";
+        $title = "Contact Page Ravelino Travel Web";
+        $pesan = $_POST['pesan'];
+        if (mail($kepada, $title, $pesan)) {
+            echo "<script>
             alert('Your message has been sent, thank you!');
             window.location.href='contactus';
             </script>";
-        
-    } 
-    else {
-    echo "<script>alert('Something went wrong. Please try again');</script>";
+        }
+        else {
+            echo "<script>
+            alert('Gagal dikirim!');
+            window.location.href='contactus';
+            </script>";
+        }
     }
 ?>
