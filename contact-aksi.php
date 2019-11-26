@@ -27,7 +27,7 @@
             // </script>";
         // }
         
-        $to = "master@sistempintar.com";
+        $to = "hello@sistempintar.com";
         $nama = str_replace("\n.", "\n..", $_POST['nama']);
         $email = str_replace("\n.", "\n..", $_POST['email']);
         $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
