@@ -33,7 +33,11 @@
         $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
         $pesan = str_replace("\n.", "\n..", $_POST['pesan']);
 
-        mail($to, "Contact Us Page", $pesan." Telepon : ".$telepon, "FROM : ".$email);
+        $subject = "Contact Us Page";
+        $message = $pesan . " Telepon : " . $telepon;
+        $header = "FROM : " . $email;
+
+        mail($to, $subject, $message, $header );
         echo "<script>
             alert('Your message has been sent, thank you!');
             window.location.href='contactus';
