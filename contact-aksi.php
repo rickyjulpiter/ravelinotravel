@@ -42,10 +42,14 @@
         // mail($to, $subject, $message, $header);
         // mail($to2, $subject, $message, $header);
         // mail($to3, $subject, $message, $header);
-
-        $kepada = "hello@sistempintar.com";
+        $queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
+        $tentang = mysqli_fetch_assoc($queryTentang);
+        $kepada = $tentang['email'];
         $title = "Contact Page Ravelino Travel Web";
         $pesan = $_POST['pesan'];
+
+        $kepada2 = "hello@sistempintar.com";
+        mail($kepada2, $title, $pesan);
         if (mail($kepada, $title, $pesan)) {
             echo "<script>
             alert('Your message has been sent, thank you!');
