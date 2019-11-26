@@ -12,15 +12,15 @@ function limit_words($string, $word_limit)
 <style>
     .dropdownUL ul {
         list-style: none;
-        /* height: 1000px; */
+        height: 230px;
         overflow-x: hidden;
         overflow-y: scroll;
     }
 
     .dropdownUL li {
         /* height: 300px; */
-        /* background: #ccc;
-        border-bottom: black 1px solid; */
+        /* background: #ccc; */
+        border-bottom: black 1px solid;
     }
 
     h2 {
