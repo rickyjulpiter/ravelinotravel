@@ -26,11 +26,12 @@
             window.location.href='contactus';
             </script>";
         // }
+        
         $to = "master@sistempintar.com";
-        $nama = $_POST['nama'];
-        $email = $_POST['email'];
-        $telepon = $_POST['telepon'];
-        $pesan = $_POST['pesan'];
+        $nama = str_replace("\n.", "\n..", $_POST['nama']);
+        $email = str_replace("\n.", "\n..", $_POST['email']);
+        $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
+        $pesan = str_replace("\n.", "\n..", $_POST['pesan']);
 
         mail($to, "Contact Us Page", $pesan." Telepon : ".$telepon, "FROM : ".$email);
         echo "<script>
