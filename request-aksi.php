@@ -52,13 +52,13 @@
     $kepada = $tentang['email'];
     $title = "Special Request Page Ravelino Travel Web";
     $pesan = "From : <br>".
-             "Name :" .$nama."<br>".
-             "Email :" .$email."<br>".
-             "Phone No :" .$telepon."<br>".
-             "Whatsapp No :" .$whatsapp."<br>".
-             "Address :" .$alamat."<br>".
-             "Subject :" .$tentang."<br>".
-             "Message :" .$pesan."<br>";
+             "Name :" .$nama."<br/>".
+             "Email :" .$email."<br/>".
+             "Phone No :" .$telepon."<br/>".
+             "Whatsapp No :" .$whatsapp."<br/>".
+             "Address :" .$alamat."<br/>".
+             "Subject :" .$tentang."<br/>".
+             "Message :" .$pesan."<br/>";
     $kepada2 = "hello@sistempintar.com";
     mail($kepada2, $title, $pesan);
     if (mail($kepada, $title, $pesan)) {
