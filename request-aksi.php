@@ -48,8 +48,8 @@
     // }
 
     $queryTentang = mysqli_query($koneksi, "SELECT * FROM tentang WHERE id = 1") or die(mysqli_error());
-    $tentang = mysqli_fetch_assoc($queryTentang);
-    $kepada = $tentang['email'];
+    $tentangQuery = mysqli_fetch_assoc($queryTentang);
+    $kepada = $tentangQuery['email'];
     $title = "Special Request Page Ravelino Travel Web";
     $pesan = "From :  
               Name :" .$nama."
