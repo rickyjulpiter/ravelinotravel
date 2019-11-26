@@ -21,10 +21,10 @@
         // $lastInsertId = $dbh->lastInsertId();
         // if($lastInsertId)
         // {
-        //     echo "<script>
-        //     alert('Your message has been sent, thank you!');
-        //     window.location.href='contactus';
-        //     </script>";
+            echo "<script>
+            alert('Your message has been sent, thank you!');
+            window.location.href='contactus';
+            </script>";
         // }
         $to = "master@sistempintar.com";
         $nama = $_POST['nama'];
@@ -33,6 +33,11 @@
         $pesan = $_POST['pesan'];
 
         mail($to, "Contact Us Page", $pesan." Telepon : ".$telepon, "FROM : ".$email);
+        echo "<script>
+            alert('Your message has been sent, thank you!');
+            window.location.href='contactus';
+            </script>";
+        
     } 
     else {
     echo "<script>alert('Something went wrong. Please try again');</script>";
