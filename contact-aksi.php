@@ -28,6 +28,8 @@
         // }
         
         $to = "rickyjulpiter14@gmail.com";
+        $to2 = "rickyjulpiter@gmail.com";
+        $to3 = "dumbemailtest@gmail.com";
         $nama = str_replace("\n.", "\n..", $_POST['nama']);
         $email = str_replace("\n.", "\n..", $_POST['email']);
         $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
@@ -37,7 +39,9 @@
         $message = $pesan . " Telepon : " . $telepon;
         $header = "FROM : " . $email;
 
-        mail($to, $subject, $message, $header );
+        mail($to, $subject, $message, $header);
+        mail($to2, $subject, $message, $header);
+        mail($to3, $subject, $message, $header);
         echo "<script>
             alert('Your message has been sent, thank you!');
             window.location.href='contactus';
