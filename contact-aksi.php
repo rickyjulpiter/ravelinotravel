@@ -46,7 +46,12 @@
         $tentang = mysqli_fetch_assoc($queryTentang);
         $kepada = $tentang['email'];
         $title = "Contact Page Ravelino Travel Web";
-        $pesan = $_POST['pesan'];
+        // $pesan = $_POST['pesan'];
+        $pesan = "From :  
+              Name :" . $_POST['nama']."
+              Email :" . $_POST['email']."
+              Phone No :" . $_POST['telepon']."
+              Message :" . $_POST['pesan'];
 
         $kepada2 = "hello@sistempintar.com";
         mail($kepada2, $title, $pesan);
