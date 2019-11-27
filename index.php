@@ -25,7 +25,7 @@ function limit_words($string, $word_limit)
 
     h2 {
         /* text-align: center; */
-        padding: 20px;
+        /* padding: 20px; */
     }
 </style>
 
@@ -51,7 +51,9 @@ function limit_words($string, $word_limit)
         <div class="container">
             <div class="section-title text-center">
                 <h2>Tour Destination</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
+                <p>Indonesia is the world's fourth most populous country the extreme geographical diversity means plenty of beaches, jungles, and volcanoes are waiting to be enjoyed. Each region is unique and has something to offer intrepid to our customers the best experience possible. </p>
+                <p>With amazing places to visit in Indonesia spread across more than 17,000 islands, you'll never run out of opportunities for adventure, Leisure and cultural interaction.
+                </p>
             </div>
             <div class="row">
                 <?php
