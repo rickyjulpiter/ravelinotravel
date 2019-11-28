@@ -46,6 +46,7 @@
         $tentang = mysqli_fetch_assoc($queryTentang);
         $kepada = $tentang['email'];
         $title = "Contact Page Ravelino Travel Web";
+        $headers = $_POST['email'];
         // $pesan = $_POST['pesan'];
         $pesan = "From :  
               Name :" . $_POST['nama']."
@@ -54,7 +55,7 @@
               Message :" . $_POST['pesan'];
 
         $kepada2 = "hello@sistempintar.com";
-        mail($kepada2, $title, $pesan);
+        mail($kepada2, $title, $pesan, $headers);
         if (mail($kepada, $title, $pesan)) {
             echo "<script>
             alert('Your message has been sent, thank you!');
