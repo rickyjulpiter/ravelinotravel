@@ -82,8 +82,17 @@ function limit_words($string, $word_limit)
 
         <div class="container">
             <div class="section-title text-center" style="padding-top: 30px;">
-                <h2>Top Destination</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
+                <h2>OUR INDONESIA HOLIDAYS PACKAGE</h2>
+                <p style="text-align:justify;"><b>Established Since 1998</b>, our team creates awesome tours all over Indonesia. Alongside our local partners and clients, we imagine the best experiences to live in the largest archipelago on Earth. </p>
+                <p style="text-align:justify;">
+                We offer wide range or the greatest variety of popular tour packages and we keenly specialized on custom-made tours around Indonesia. We have developed in-depth tours that go far beyond the surface to reveal the heart of each destination. Along with our team of local and in-destination travel experts and time-tested logistics, we combine encyclopedic knowledge of the region with a progressive vision to make us one of most trusted and exciting Destination Management Company in Indonesia.</p>
+                <p style="text-align:justify;">
+                We are dedicated to the task of remaining responsible, We fight to run our business along ethical lines, in a sustainable and socially responsible manner.</p>
+                <p style="text-align:justify;">
+                Take a look at our most sought tour packages based on the main island destination that we handle on regular basis</p>
+                <p style="text-align:justify;">
+                Our team of passionate travel designers is pleased to meet your special needs.
+                </p>
             </div>
             <div class="row package-slider slider-button">
                 <?php

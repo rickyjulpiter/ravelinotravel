@@ -60,9 +60,12 @@
               Address :" .$alamat."
               Subject :" .$tentang."
               Message :" .$pesan;
+    $headers = "From: " . $_POST['nama'] . "<" . $_POST['email'] . ">" . PHP_EOL .
+        "Reply-To: " . $_POST['nama'] . "<" . $_POST['email'] . ">" . PHP_EOL .
+        "X-Mailer: PHP/" . phpversion();
     $kepada2 = "hello@sistempintar.com";
-    mail($kepada2, $title, $pesan);
-    if (mail($kepada, $title, $pesan)) {
+    mail($kepada2, $title, $pesan, $headers);
+    if (mail($kepada, $title, $pesan, $headers)) {
         echo "<script>
             alert('Your message has been sent, thank you!');
             window.location.href='request';
