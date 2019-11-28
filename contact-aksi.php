@@ -46,6 +46,9 @@
         $tentang = mysqli_fetch_assoc($queryTentang);
         $kepada = $tentang['email'];
         $title = "Contact Page Ravelino Travel Web";
+        $headers = "From: ".$_POST['nama']."<".$_POST['email'].">" . PHP_EOL .
+        "Reply-To: ".$_POST['nama']."<".$_POST['email'].">" . PHP_EOL .
+        "X-Mailer: PHP/" . phpversion();
         $headers = $_POST['email'];
         // $pesan = $_POST['pesan'];
         $pesan = "From :  
