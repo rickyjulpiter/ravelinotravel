@@ -43,7 +43,7 @@
 
         $kepada2 = "hello@sistempintar.com";
         mail($kepada2, $subject, $pesan, $headers);
-        if (mail($kepada, $title, $pesan, $headers)) {
+        if (mail($kepada, $subject, $pesan, $headers)) {
             echo "<script>
             alert('Your message has been sent, thank you!');
             window.location.href='contactus';
