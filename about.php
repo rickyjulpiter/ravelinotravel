@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 <?php include 'koneksi.php';
 
-$queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
+$queryTentang = mysqli_query($koneksi, "SELECT * FROM tentang WHERE id = 1") or die(mysqli_error());
 $tentang = mysqli_fetch_assoc($queryTentang);
 $namaTentang = $tentang['nama'];
 $deskripsiTentang = $tentang['deskripsi'];
 ?>
 <?php include 'template/head.php' ?>
+
 <body>
     <!-- Preloader -->
     <?php include 'template/preloader.php' ?>
@@ -44,7 +45,7 @@ $deskripsiTentang = $tentang['deskripsi'];
                     <div id="contact-form" class="contact-form">
 
                         <div id="contactform-error-msg"></div>
-                        <?php echo($deskripsiTentang); ?>
+                        <?php echo ($deskripsiTentang); ?>
                         <!--<form method="post" action="kirim-pesan">
                             <div class="row">
                                 <div class="form-group col-xs-12">
@@ -78,12 +79,14 @@ $deskripsiTentang = $tentang['deskripsi'];
                             <img src="<?php echo $logo; ?>" alt="Image" style="width: 100%">
                         </div>
                         <h4><?php echo $slogan; ?></h4>
-                        <p><?php //echo $deskripsi; ?></p>
+                        <p><?php //echo $deskripsi; 
+                            ?></p>
                         <div class="contact-location">
                             <ul>
-                                <li><i class="flaticon-maps-and-flags" aria-hidden="true"></i> <?php echo $alamat; ?></li>
-                                <li><i class="flaticon-phone-call"></i> <?php echo $telepon; ?></li>                                        
-                                <li><i class="flaticon-mail"></i> <?php echo $email; ?></li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i></i> <?php echo $alamat; ?></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $telepon; ?></li>
+                                <li><a href="https://wa.me/<?= $whatsapp; ?>" style="color:#777;"><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></a></li>
+                                <li><a href="mailto:<?= $email ?>" style="color:#777;"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></a></li>
                             </ul>
                         </div>
                         <div class="footer-social-links">
@@ -93,16 +96,16 @@ $deskripsiTentang = $tentang['deskripsi'];
                                 <li class="social-icon"><a href="<?php echo $twitter; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <li class="social-icon"><a href="<?php echo $youtube; ?>"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                             </ul>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <?php include 'template/footer.php' ?>
-    <!-- Footer Ends -->  
+    <!-- Footer Ends -->
 
     <!-- back to top start -->
     <div id="back-to-top">
@@ -118,4 +121,5 @@ $deskripsiTentang = $tentang['deskripsi'];
     <script src="js/preloader.js"></script>
 
 </body>
+
 </html>
