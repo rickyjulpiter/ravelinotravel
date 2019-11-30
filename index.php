@@ -105,7 +105,7 @@ function limit_words($string, $word_limit)
                     <div class="col-sm-4">
                         <div class="package-item">
                             <div class="package-image">
-                                <img src="<?= $gambarTour; ?>" alt="Image" height="300">
+                                <img src="<?= $gambarTour; ?>" alt="Image" style="height: 300px;object-fit: cover;">
                                 <div class="package-price">
                                     <p><?php echo $namaTour; ?></p>
                                 </div>
