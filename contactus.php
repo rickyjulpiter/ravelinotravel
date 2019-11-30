@@ -43,8 +43,12 @@
                         <form method="post" action="contact-aksi">
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <label>Name:</label>
-                                    <input type="text" name="nama" class="form-control" id="Name" placeholder="Enter full name" required>
+                                    <label>Company Name:</label>
+                                    <input type="text" name="company_name" class="form-control" id="Name" placeholder="Enter company name">
+                                </div>
+                                <div class="form-group col-xs-12">
+                                    <label>Full Name:</label>
+                                    <input type="text" name="full_name" class="form-control" id="Name" placeholder="Enter full name" required>
                                 </div>
                                 <div class="form-group col-xs-6">
                                     <label>Email:</label>
@@ -54,9 +58,13 @@
                                     <label>Phone Number:</label>
                                     <input type="text" name="telepon" class="form-control" id="phnumber" placeholder="XXXX-XXXXXX" required>
                                 </div>
+                                <div class="form-group col-xs-12">
+                                    <label>Subject:</label>
+                                    <input type="text" name="subject" class="form-control" id="Name" placeholder="Enter subject" required>
+                                </div>
                                 <div class="textarea col-xs-12">
                                     <label>Message:</label>
-                                    <textarea name="pesan" placeholder="Enter a message" required></textarea>
+                                    <textarea name="pesan" placeholder="Enter message" required></textarea>
                                 </div>
                                 <?php
                                 function generateRandomString($length = 10)

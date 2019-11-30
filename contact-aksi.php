@@ -11,54 +11,34 @@
             </script>";
     }
     else if ($captcha == $verif) {
-        // $sql = "INSERT INTO pesan (nama,email,telepon,pesan) VALUES (:nama,:email,:telepon,:pesan)";
-        // $query = $dbh->prepare($sql);
-        // $query->bindParam(':nama',$nama,PDO::PARAM_STR);
-        // $query->bindParam(':email',$email,PDO::PARAM_STR);
-        // $query->bindParam(':telepon',$telepon,PDO::PARAM_STR);
-        // $query->bindParam(':pesan',$pesan,PDO::PARAM_STR);
-        // $query->execute();
-        // $lastInsertId = $dbh->lastInsertId();
-        // if($lastInsertId)
-        // {
-            // echo "<script>
-            // alert('Your message has been sent, thank you!');
-            // window.location.href='contactus';
-            // </script>";
-        // }
-        
-        // $to = "rickyjulpiter14@gmail.com";
-        // $to2 = "rickyjulpiter@gmail.com";
-        // $to3 = "dumbemailtest@gmail.com";
-        // $nama = str_replace("\n.", "\n..", $_POST['nama']);
-        // $email = str_replace("\n.", "\n..", $_POST['email']);
-        // $telepon = str_replace("\n.", "\n..", $_POST['telepon']);
-        // $pesan = str_replace("\n.", "\n..", $_POST['pesan']);
 
-        // $subject = "Contact Us Page";
-        // $message = $pesan . " Telepon : " . $telepon;
-        // $header = "FROM : " . $email;
+        $companyName = $_POST['company_name'];
+        $fullName = $_POST['full_name'];
+        $email = $_POST['email'];
+        $telepon = $_POST['telepon'];
+        $subject = $_POST['subject'];
+        $pesan = $_POST['pesan'];
 
-        // mail($to, $subject, $message, $header);
-        // mail($to2, $subject, $message, $header);
-        // mail($to3, $subject, $message, $header);
         $queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
         $tentang = mysqli_fetch_assoc($queryTentang);
         $kepada = $tentang['email'];
-        $title = "Contact Page Ravelino Travel Web";
-        $headers = "From: ".$_POST['nama']."<".$_POST['email'].">" . PHP_EOL .
-        "Reply-To: ".$_POST['nama']."<".$_POST['email'].">" . PHP_EOL .
+
+        // $title = "Contact Page Ravelino Travel Web";
+        $headers = "From: ".$fullName."<".$email.">" . PHP_EOL .
+        "Reply-To: ".$fullName."<".$email.">" . PHP_EOL .
         "X-Mailer: PHP/" . phpversion();
         // $headers = $_POST['email'];
         // $pesan = $_POST['pesan'];
-        $pesan = "From :  
-              Name :" . $_POST['nama']."
-              Email :" . $_POST['email']."
-              Phone No :" . $_POST['telepon']."
-              Message :" . $_POST['pesan'];
+        $pesan =
+        "From :
+        Company Name :" . $companyName . "
+        Name :" . $fullName."
+        Email :" . $email."
+        Phone No :" . $telepon."
+        Message :" . $pesan;
 
         $kepada2 = "hello@sistempintar.com";
-        mail($kepada2, $title, $pesan, $headers);
+        mail($kepada2, $subject, $pesan, $headers);
         if (mail($kepada, $title, $pesan)) {
             echo "<script>
             alert('Your message has been sent, thank you!');
