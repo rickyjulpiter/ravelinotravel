@@ -51,8 +51,8 @@ function limit_words($string, $word_limit)
         <div class="container">
             <div class="section-title text-center">
                 <h2>Tour Destination</h2>
-                <p>Indonesia is the world's fourth most populous country the extreme geographical diversity means plenty of beaches, jungles, and volcanoes are waiting to be enjoyed. Each region is unique and has something to offer intrepid to our customers the best experience possible. </p>
-                <p>With amazing places to visit in Indonesia spread across more than 17,000 islands, you'll never run out of opportunities for adventure, Leisure and cultural interaction.
+                <p style="text-align:justify">Indonesia is the world's fourth most populous country the extreme geographical diversity means plenty of beaches, jungles, and volcanoes are waiting to be enjoyed. Each region is unique and has something to offer intrepid to our customers the best experience possible. <br />
+                With amazing places to visit in Indonesia spread across more than 17,000 islands, you'll never run out of opportunities for adventure, Leisure and cultural interaction.
                 </p>
             </div>
             <div class="row">
@@ -83,14 +83,14 @@ function limit_words($string, $word_limit)
         <div class="container">
             <div class="section-title text-center" style="padding-top: 30px;">
                 <h2>OUR INDONESIA HOLIDAYS PACKAGE</h2>
-                <p style="text-align:justify;"><b>Established Since 1998</b>, our team creates awesome tours all over Indonesia. Alongside our local partners and clients, we imagine the best experiences to live in the largest archipelago on Earth. </p>
-                <p style="text-align:justify;">
-                We offer wide range or the greatest variety of popular tour packages and we keenly specialized on custom-made tours around Indonesia. We have developed in-depth tours that go far beyond the surface to reveal the heart of each destination. Along with our team of local and in-destination travel experts and time-tested logistics, we combine encyclopedic knowledge of the region with a progressive vision to make us one of most trusted and exciting Destination Management Company in Indonesia.</p>
-                <p style="text-align:justify;">
-                We are dedicated to the task of remaining responsible, We fight to run our business along ethical lines, in a sustainable and socially responsible manner.</p>
-                <p style="text-align:justify;">
-                Take a look at our most sought tour packages based on the main island destination that we handle on regular basis</p>
-                <p style="text-align:justify;">
+                <p style="text-align:justify;"><b>Established Since 1998</b>, our team creates awesome tours all over Indonesia. Alongside our local partners and clients, we imagine the best experiences to live in the largest archipelago on Earth. <br />
+
+                We offer wide range or the greatest variety of popular tour packages and we keenly specialized on custom-made tours around Indonesia. We have developed in-depth tours that go far beyond the surface to reveal the heart of each destination. Along with our team of local and in-destination travel experts and time-tested logistics, we combine encyclopedic knowledge of the region with a progressive vision to make us one of most trusted and exciting Destination Management Company in Indonesia. <br />
+                
+                We are dedicated to the task of remaining responsible, We fight to run our business along ethical lines, in a sustainable and socially responsible manner. <br />
+                
+                Take a look at our most sought tour packages based on the main island destination that we handle on regular basis. <br />
+                
                 Our team of passionate travel designers is pleased to meet your special needs.
                 </p>
             </div>

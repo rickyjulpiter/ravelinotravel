@@ -105,8 +105,8 @@
                             <ul>
                                 <li><i class="fa fa-map-marker" aria-hidden="true"></i></i> <?php echo $alamat; ?></li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $telepon; ?></li>
-                                <li><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></li>
+                                <li><a href="https://wa.me/<?= $whatsapp; ?>" style="color:#777;"><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></a></li>
+                                <li><a href="mailto:<?= $email ?>" style="color:#777;"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></a></li>
                             </ul>
                         </div>
                         <div class="footer-social-links">

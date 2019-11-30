@@ -4,8 +4,7 @@
 
 if (isset($_GET['tourName'])) {
     $namaTour = $_GET['tourName'];
-}
-else if (isset($_GET['tourID'])){
+} else if (isset($_GET['tourID'])) {
     $idTour = $_GET['tourID'];
 }
 //echo($namaTour);
@@ -37,7 +36,7 @@ else if (isset($_GET['tourID'])){
     $peta_tour = $detail['peta'];
     $timeline_tour = $detail['timeline'];
 
-    $queryBreadCumb = mysqli_query($koneksi,"SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTour' LIMIT 1") or die (mysqli_error());
+    $queryBreadCumb = mysqli_query($koneksi, "SELECT gambar FROM paket_wisata_gambar WHERE paket_wisata_id = '$idTour' LIMIT 1") or die(mysqli_error());
     $tampilGambar = mysqli_fetch_assoc($queryBreadCumb);
     $gambarBreadCumb = $tampilGambar['gambar'];
     ?>
@@ -168,8 +167,8 @@ else if (isset($_GET['tourID'])){
                                 <h3>Any Questions?</h3>
                                 <p>If you require any further information, please call or write us to our below contact.</p>
                                 <p><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $telepon; ?></p>
-                                <p><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></p>
-                                <p><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></p>
+                                <p><a href="https://wa.me/<?= $whatsapp; ?>" style="color:white;"><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></a></p>
+                                <p><a href="mailto:<?= $email ?>" style="color:white;"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></a></p>
                             </div>
                         </div>
                     </aside>

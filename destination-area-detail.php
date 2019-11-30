@@ -152,8 +152,8 @@ $namaWisata = $_GET['destination'];
                                 <h3>Any Questions?</h3>
                                 <p>If you require any further information, please call or write us to our below contact.</p>
                                 <p><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $telepon; ?></p>
-                                <p><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></p>
-                                <p><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></p>
+                                <p><a href="https://wa.me/<?= $whatsapp; ?>" style="color:white;"><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php echo $whatsapp; ?></a></p>
+                                <p><a href="mailto:<?= $email ?>" style="color:white;"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $email; ?></a></p>
                             </div>
                         </div>
                     </aside>
