@@ -22,7 +22,7 @@
                 <!-- Slide -->
                 <div class="item <?php echo $status; ?> ">
                     <!-- Slide Background -->
-                    <img src="<?php echo $gambarDestiansi; ?>" alt="kenburns_061_01" />
+                    <img src="<?php echo $gambarDestiansi; ?>" alt="kenburns_061_01" style="height:500px; object-fit: cover;" />
                     <!-- Left Slide Text Layer -->
                     <div class="kenburns_061_slide" data-animation="animated fadeInRight">
                         <h2 style="/*padding-top: 50px*/;"><?= strip_tags($namaDestinasi); ?></h2>

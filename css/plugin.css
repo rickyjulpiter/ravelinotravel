@@ -5094,7 +5094,7 @@
   }
   /*---------- SLIDE CAPTION ----------*/
   .kenburns_061_slide{
-    top: 4% !important;
+    /*top: 2.5% !important;*/
     left: 5%;
     width: 90%;
   }
