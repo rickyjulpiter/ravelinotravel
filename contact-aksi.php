@@ -23,14 +23,14 @@
         $tentang = mysqli_fetch_assoc($queryTentang);
         $kepada = $tentang['email'];
 
-        // $title = "Contact Page Ravelino Travel Web";
-        // $headers = "From: ".$fullName."<".$email.">" . PHP_EOL .
-        // "Reply-To: ".$fullName."<".$email.">" . PHP_EOL .
-        // "X-Mailer: PHP/" . phpversion();
+        $title = "Contact Page Ravelino Travel Web";
+        $headers = "From: ".$fullName."<".$email.">" . PHP_EOL .
+        "Reply-To: ".$fullName."<".$email.">" . PHP_EOL .
+        "X-Mailer: PHP/" . phpversion();
   
-        $headers = 'From: '.$kepada."\r\n" .
-        'Reply-To: '.$kepada. "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+        // $headers = 'From: '.$kepada."\r\n" .
+        // 'Reply-To: '.$kepada. "\r\n" .
+        // 'X-Mailer: PHP/' . phpversion();
 
         $pesan =
         "From :
@@ -42,7 +42,7 @@
 
         $kepada2 = "hello@sistempintar.com";
         mail($kepada2, $subject, $pesan, $headers);
-        if (mail($kepada, $title, $pesan)) {
+        if (mail($kepada, $title, $pesan, $headers)) {
             echo "<script>
             alert('Your message has been sent, thank you!');
             window.location.href='contactus';
