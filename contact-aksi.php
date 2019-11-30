@@ -37,7 +37,8 @@
         Company Name :" . $companyName . "
         Name :" . $fullName."
         Email :" . $email."
-        Phone No :" . $telepon."
+        Phone No :" . $telepon. "
+        Subject :" . $subject . "
         Message :" . $pesan;
 
         $kepada2 = "hello@sistempintar.com";
