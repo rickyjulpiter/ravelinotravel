@@ -24,11 +24,14 @@
         $kepada = $tentang['email'];
 
         // $title = "Contact Page Ravelino Travel Web";
-        $headers = "From: ".$fullName."<".$email.">" . PHP_EOL .
-        "Reply-To: ".$fullName."<".$email.">" . PHP_EOL .
-        "X-Mailer: PHP/" . phpversion();
-        // $headers = $_POST['email'];
-        // $pesan = $_POST['pesan'];
+        // $headers = "From: ".$fullName."<".$email.">" . PHP_EOL .
+        // "Reply-To: ".$fullName."<".$email.">" . PHP_EOL .
+        // "X-Mailer: PHP/" . phpversion();
+  
+        $headers = 'From: '.$kepada."\r\n" .
+        'Reply-To: '.$kepada. "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
         $pesan =
         "From :
         Company Name :" . $companyName . "
