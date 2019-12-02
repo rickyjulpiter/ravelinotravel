@@ -49,10 +49,12 @@ function limit_words($string, $word_limit)
 
     <section class="amazing-tours popular-packages pad-bottom-80" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="text-center">
                 <h2>Tour Destination</h2>
-                <p style="text-align:justify">Indonesia is the world's fourth most populous country the extreme geographical diversity means plenty of beaches, jungles, and volcanoes are waiting to be enjoyed. Each region is unique and has something to offer intrepid to our customers the best experience possible. <br />
-                With amazing places to visit in Indonesia spread across more than 17,000 islands, you'll never run out of opportunities for adventure, Leisure and cultural interaction.
+                <p style="text-align:center">Indonesia is a very unique destination located in South east region. The country is famous throughout the world for its islands and beautiful landscapes <br> 
+                    Indonesia is the world's fourth most populous country the extreme geographical diversity means plenty of beaches, jungles, and volcanoes are waiting to be enjoyed. Each region is unique and has something to offer intrepid to our customers the best experience possible. <br>
+With amazing places to visit in Indonesia spread across more than 17,000 islands, you'll never run out of opportunities for adventure, Leisure and cultural interaction. <br>
+Having stopover in myriad places in Indonesia is what makes this country a wonderful place to visit. The beauty of scenic natural landscapes blended with various unique culture of its people. Enjoy the untouched beaches, mountains, lakes, and many more pleasing destinations as well as the magnificent city skylines throughout the country. And when you decide to see them all, a visit won’t be enough to embrace the wonders of Indonesia.
                 </p>
             </div>
             <div class="row">
@@ -81,9 +83,9 @@ function limit_words($string, $word_limit)
         </div>
 
         <div class="container">
-            <div class="section-title text-center" style="padding-top: 30px;">
+            <div class="text-center" style="padding-top: 30px;">
                 <h2>OUR INDONESIA HOLIDAYS PACKAGE</h2>
-                <p style="text-align:justify;"><b>Established Since 1998</b>, our team creates awesome tours all over Indonesia. Alongside our local partners and clients, we imagine the best experiences to live in the largest archipelago on Earth. <br />
+                <p style="text-align:center;"><b>Established Since 1998</b>, our team creates awesome tours all over Indonesia. Alongside our local partners and clients, we imagine the best experiences to live in the largest archipelago on Earth. <br />
 
                 We offer wide range or the greatest variety of popular tour packages and we keenly specialized on custom-made tours around Indonesia. We have developed in-depth tours that go far beyond the surface to reveal the heart of each destination. Along with our team of local and in-destination travel experts and time-tested logistics, we combine encyclopedic knowledge of the region with a progressive vision to make us one of most trusted and exciting Destination Management Company in Indonesia. <br />
                 
