@@ -2,17 +2,17 @@
 include '../../koneksi.php';
 
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../login");
+if ($_SESSION['status'] != "login") {
+    header("location:../login");
 }
 
 ?>
 <style type="text/css">
-    #image-preview{
-    display:none;
-    width : 293px;
-    height : 195px;
-}
+    #image-preview {
+        display: none;
+        width: 293px;
+        height: 195px;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -25,7 +25,8 @@ if($_SESSION['status']!="login"){
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
-        <?php //include 'adm_template/navbar.php'; ?>
+        <?php //include 'adm_template/navbar.php'; 
+        ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
@@ -62,11 +63,15 @@ if($_SESSION['status']!="login"){
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
-                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="">
+                                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ravelino Travel">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Link</label>
+                                            <input name="link" type="text" class="form-control" id="exampleInputEmail1" placeholder="https://ravelinotravel.com">
                                         </div>
                                         <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
-                                            <img id="image-preview" alt="image preview"/><br/>
+                                            <img id="image-preview" alt="image preview" /><br />
                                             <div class="custom-file">
                                                 <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();" accept="image/*">
                                             </div>
@@ -97,32 +102,32 @@ if($_SESSION['status']!="login"){
     <?php include '../adm_template/script.php'; ?>
     <script src="plugins/summernote/summernote-bs4.min.js"></script>
     <script>
-        $(function () {
+        $(function() {
             // Summernote
             $('.textarea').summernote({
                 toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']]
                 ]
             });
         })
-      </script>
-      <script type="text/javascript">
-          function previewImage() {
+    </script>
+    <script type="text/javascript">
+        function previewImage() {
             document.getElementById("image-preview").style.display = "block";
             var oFReader = new FileReader();
-             oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+            oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
 
             oFReader.onload = function(oFREvent) {
-              document.getElementById("image-preview").src = oFREvent.target.result;
+                document.getElementById("image-preview").src = oFREvent.target.result;
             };
-          };
-      </script>
+        };
+    </script>
 
 </body>
 

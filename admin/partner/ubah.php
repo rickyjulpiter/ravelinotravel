@@ -2,23 +2,22 @@
 include '../../koneksi.php';
 
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../login");
+if ($_SESSION['status'] != "login") {
+    header("location:../login");
 }
 
-if(!empty($_GET['id'])){
+if (!empty($_GET['id'])) {
     $id = $_GET['id'];
-}
-else{
-    header("location:../destination-area");   
+} else {
+    header("location:../destination-area");
 }
 ?>
 <style type="text/css">
-    #image-preview{
-    display:none;
-    width : 293px;
-    height : 195px;
-}
+    #image-preview {
+        display: none;
+        width: 293px;
+        height: 195px;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -30,12 +29,13 @@ else{
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-    	<!-- Navbar -->
-    	<?php //include 'adm_template/navbar.php'; ?>
-		<!-- /.navbar -->
+        <!-- Navbar -->
+        <?php //include 'adm_template/navbar.php'; 
+        ?>
+        <!-- /.navbar -->
 
-		<!-- Main Sidebar Container -->
-		<?php include '../adm_template/sidebar.php'; ?>
+        <!-- Main Sidebar Container -->
+        <?php include '../adm_template/sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -66,21 +66,26 @@ else{
                                 <!-- form start -->
                                 <form role="form" method="POST" action="ubah-aksi" enctype="multipart/form-data">
                                     <?php
-                                    $queryDetailAdmin = mysqli_query($koneksi,"SELECT * FROM partner WHERE id = $id ");
+                                    $queryDetailAdmin = mysqli_query($koneksi, "SELECT * FROM partner WHERE id = $id ");
                                     $d = mysqli_fetch_assoc($queryDetailAdmin);
                                     $id = $d['id'];
                                     $nama = $d['nama'];
+                                    $link = $d['link'];
                                     $gambar = $d['gambar'];
                                     ?>
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Nama</label>
                                             <input name="nama" type="text" class="form-control" id="exampleInputEmail1" value="<?= $nama; ?>">
-                                            <input type="hidden" name="id" value="<?= $id;?>">
+                                            <input type="hidden" name="id" value="<?= $id; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Link</label>
+                                            <input name="link" type="text" class="form-control" id="exampleInputEmail1" value="<?= $link; ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
-                                            <img id="image-preview" alt="image preview"/><br/>
+                                            <img id="image-preview" alt="image preview" /><br />
                                             <div class="custom-file">
                                                 <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();" accept="image/*">
                                             </div>
@@ -88,12 +93,11 @@ else{
                                                 <?php
                                                 if ($gambar == '') {
                                                     $tampakGambar = 'display:none;';
-                                                }
-                                                else {
+                                                } else {
                                                     echo "<label>Gambar Destinasi Area Saat Ini</label><br>";
                                                 }
                                                 ?>
-                                                <img src="<?php echo "../../".$gambar; ?>" width="30%" style="<?php echo($tampakGambar); ?>">
+                                                <img src="<?php echo "../../" . $gambar; ?>" width="30%" style="<?php echo ($tampakGambar); ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -122,32 +126,32 @@ else{
     <?php include '../adm_template/script.php'; ?>
     <script src="plugins/summernote/summernote-bs4.min.js"></script>
     <script>
-        $(function () {
+        $(function() {
             // Summernote
             $('.textarea').summernote({
                 toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']]
                 ]
             });
         })
-      </script>
-      <script type="text/javascript">
-          function previewImage() {
+    </script>
+    <script type="text/javascript">
+        function previewImage() {
             document.getElementById("image-preview").style.display = "block";
             var oFReader = new FileReader();
-             oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+            oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
 
             oFReader.onload = function(oFREvent) {
-              document.getElementById("image-preview").src = oFREvent.target.result;
+                document.getElementById("image-preview").src = oFREvent.target.result;
             };
-          };
-      </script>
+        };
+    </script>
 
 </body>
 

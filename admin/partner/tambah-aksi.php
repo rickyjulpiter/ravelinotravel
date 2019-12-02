@@ -2,6 +2,7 @@
     include '../../koneksi.php';
 
     $nama = $_POST['nama'];
+    $link = $_POST['link'];
     $image = "images/".$nama."-".basename( $_FILES["gambar"]["name"]);
 
     $lokasi_file= $_FILES['gambar']['tmp_name'];
@@ -10,7 +11,7 @@
     $folder = "../../images/".$nama."-".$nama_file;
 
     if ($nama_file != '') {
-        $queryInsert = "INSERT INTO partner (nama,gambar) VALUES ('$nama','$image')";
+        $queryInsert = "INSERT INTO partner (nama,link,gambar) VALUES ('$nama','$link','$image')";
         if (move_uploaded_file($lokasi_file, "$folder")) {
             mysqli_query($koneksi,$queryInsert);
             echo "<script>
@@ -25,7 +26,7 @@
         }
     }
     else if ($nama_file == '') {
-        $queryInsert = "INSERT INTO partner (nama) VALUES ('$nama')";
+        $queryInsert = "INSERT INTO partner (nama,link) VALUES ('$nama','$link')";
         mysqli_query($koneksi,$queryInsert);
         echo "<script>
         alert('Berhasil ditambahkan');

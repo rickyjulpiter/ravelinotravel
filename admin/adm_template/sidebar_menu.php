@@ -65,14 +65,14 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="../request" class="nav-link">
               <i class="nav-icon fa fa-sticky-note"></i>
               <p style="color: white">
                 Special Request
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="../galeri" class="nav-link">
               <i class="nav-icon fa fa-camera"></i>
@@ -107,14 +107,14 @@
               </p>
             </a>
           </li> -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="../inbox" class="nav-link">
               <i class="nav-icon fa fa-comment"></i>
               <p style="color: white">
                 Inbox
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="../admin" class="nav-link">
               <i class="nav-icon fa fa-user"></i>

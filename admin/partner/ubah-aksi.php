@@ -6,6 +6,7 @@
 
     $id = $_POST['id'];
     $nama = $_POST['nama'];
+    $link = $_POST['link'];
 
     $folder = "../../images/".$nama."$nama_file";
     $save = 'images/'.$nama.$nama_file;
@@ -13,6 +14,7 @@
     if ($nama_file != '') {
         $queryUpdate = "UPDATE partner SET
                         nama = '$nama',
+                        link = '$link',
                         gambar = '$save'
                         WHERE id = '$id'
                         ";
@@ -29,7 +31,8 @@
     }
     else if ($nama_file == '') {
         $queryUpdate = "UPDATE galeri SET
-                        nama = '$nama'
+                        nama = '$nama',
+                        link = '$link'
                         WHERE id = '$id'
                         ";
         mysqli_query($koneksi,$queryUpdate);
