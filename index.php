@@ -117,9 +117,10 @@ Having stopover in myriad places in Indonesia is what makes this country a wonde
                 while ($data = mysqli_fetch_array($query_mysql)) {
                     $idPartner = $data['id'];
                     $namaPartner = $data['nama'];
+                    $link = $data['link'];
                     $gambarPartner = $data['gambar'];
                     ?>
-                    <a href="#">
+                    <a href="<?= $link ?>">
                         <div class="col-md-3" style="margin-bottom:10px;">
                             <img src="<?php echo $gambarPartner ?>" alt="Image" style="width:240px; height:120px;object-fit:contain;">
                         </div>
