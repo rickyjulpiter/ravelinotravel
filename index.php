@@ -120,8 +120,8 @@ Having stopover in myriad places in Indonesia is what makes this country a wonde
                     $gambarPartner = $data['gambar'];
                     ?>
                     <a href="#">
-                        <div class="col-md-3">
-                            <img src="<?php echo $gambarPartner ?>" alt="Image" style="width:80%; height:80%">
+                        <div class="col-md-3" style="margin-bottom:10px;">
+                            <img src="<?php echo $gambarPartner ?>" alt="Image" style="width:240px; height:120px;object-fit:contain;">
                         </div>
                     </a>
                 <?php } ?>
