@@ -120,7 +120,8 @@ Having stopover in myriad places in Indonesia is what makes this country a wonde
                     $link = $data['link'];
                     $gambarPartner = $data['gambar'];
                     ?>
-                    <a href="<?= $link ?>">
+                    <!--<a href="<?= $link ?>">-->
+                    <a target="_blank" href="http://<?= $link ?>">
                         <div class="col-md-3" style="margin-bottom:10px;">
                             <img src="<?php echo $gambarPartner ?>" alt="Image" style="width:240px; height:120px;object-fit:contain;">
                         </div>

@@ -53,10 +53,10 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="destination-item destination-4-col">
                         <div class="destination-image">
-                            <img src="<?php echo $gambarRent; ?>" alt="Image" style="height: 200px;">
+                            <img src="<?php echo $gambarRent; ?>" alt="Image" style="height: 200px;object-fit:cover">
                             <div class="destination-overlay"></div>
                             <div class="destination-btn">
-                                <a href="#" class="btn-blue btn-red">Contact Us For Further Book</a>
+                                <a href="contactus" class="btn-blue btn-red">Contact Us For Further Book</a>
                             </div>
                         </div>
                         <div class="destination-content">

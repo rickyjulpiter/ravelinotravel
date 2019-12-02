@@ -30,7 +30,7 @@
         }
     }
     else if ($nama_file == '') {
-        $queryUpdate = "UPDATE galeri SET
+        $queryUpdate = "UPDATE partner SET
                         nama = '$nama',
                         link = '$link'
                         WHERE id = '$id'
@@ -40,6 +40,7 @@
         alert('Berhasil diupdate');
         window.location.href='index';
         </script>";
+        // echo $queryUpdate;
         //header("location:jenis-paket");
     }
     else{
