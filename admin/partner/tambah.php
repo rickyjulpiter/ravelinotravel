@@ -67,7 +67,7 @@ if ($_SESSION['status'] != "login") {
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Link</label>
-                                            <input name="link" type="text" class="form-control" id="exampleInputEmail1" placeholder="https://ravelinotravel.com">
+                                            <input name="link" type="text" class="form-control" id="exampleInputEmail1" placeholder="www.ravelinotravel.com">
                                         </div>
                                         <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
