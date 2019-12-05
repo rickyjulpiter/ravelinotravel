@@ -45,10 +45,8 @@
         <div class="container">
             <div class="row">
                 <div class="text-center">
-                    <p style="text-align:center;font-size:16px;">Indonesia is a very unique destination located in South east region. The country is famous throughout the world for its islands and beautiful landscapes <br>
-                        Indonesia is the world's fourth most populous country the extreme geographical diversity means plenty of beaches, jungles, and volcanoes are waiting to be enjoyed. Each region is unique and has something to offer intrepid to our customers the best experience possible. <br>
-                        With amazing places to visit in Indonesia spread across more than 17,000 islands, you'll never run out of opportunities for adventure, Leisure and cultural interaction. <br>
-                        Having stopover in myriad places in Indonesia is what makes this country a wonderful place to visit. The beauty of scenic natural landscapes blended with various unique culture of its people. Enjoy the untouched beaches, mountains, lakes, and many more pleasing destinations as well as the magnificent city skylines throughout the country. And when you decide to see them all, a visit won’t be enough to embrace the wonders of Indonesia.
+                    <p style="text-align:center;font-size:16px;">We provide car rental with a range of quality rental cars available from compact city cars, medium family cars, mini-jeeps to 12 / 20 seats mini-buses and 45 seaters tourist coach. All vehicles are in good condition, well maintained and safe. Exploring Su,atra and Indonesia with the convenience of stopping when you want to explore the villages, mountains and stunning beaches is a great way to discover the beauty of Indonesia.
+                        Our private drivers can be considered as a friend to assist you in translation and some contributes with some notable facts about some of points of interest and the tourist destinations.
                     </p>
                 </div>
                 <?php

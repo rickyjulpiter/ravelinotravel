@@ -47,11 +47,17 @@ function limit_words($string, $word_limit)
     <!-- BreadCrumb Ends -->
 
     <!-- Destinations -->
-    <section class="destinations destination-padding" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
+    <section class="destinations destination-padding" style="padding-top: 50px; background: url(images/83.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="text-center">
-                    <p style="text-align:center;font-size:16px;">We provide all types of International Air Ticket, domestic tour, domestic travel & tour packages. domestic flights services.
+                    <p style="text-align:center;font-size:16px;">We provide all types of International air ticket, domestic tour, domestic travel & tour packages, domestic flights services. We attend to all your air ticket services. We provide ticket services for all individuals, groups and families. We take an in-depth view about the requirements of the customers and provide tem tour package accordingly. Our services are marked by the following features:
+                        High levels of customization :
+                        Timely delivery of information and service
+                        Take care of the comfort levels of our clients
+                        Affordable rates of service
+                        Provides all types of travel documentation, hotel reservations, cargo clearing and forwarding services
+                        Adept in customer handling and event management
                     </p>
                 </div>
                 <?php
