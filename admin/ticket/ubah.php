@@ -185,7 +185,7 @@ while($data = mysqli_fetch_array($query_mysql)){
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Update Data</button>
+                                        <button type="submit" class="btn btn-block btn-info">Update Ticket</button>
                                     </div>
                                 </form>
                             </div>
