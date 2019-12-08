@@ -11,7 +11,7 @@
     $nama = $_POST['nama'];
     $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
     $data_des = $_POST['data_des'];
-    $fasilitas = $_POST['fasilitas'];
+    // $fasilitas = $_POST['fasilitas'];
     
 
     //$queryCariJenis = "SELECT * FROM rent WHERE nama_paket = '$jenis'";
@@ -62,14 +62,14 @@
                         ";
         mysqli_query($koneksi,$queryInsert);
 
-        $queryCheckMax = mysqli_query($koneksi,"SELECT MAX(id) FROM ticket");
-        $d = mysqli_fetch_assoc($queryCheckMax);
-        $id = $d['MAX(id)'];
+        // $queryCheckMax = mysqli_query($koneksi,"SELECT MAX(id) FROM ticket");
+        // $d = mysqli_fetch_assoc($queryCheckMax);
+        // $id = $d['MAX(id)'];
 
-        for($i=0; $i<sizeof($data_des); $i++){
-            $queryInsert = "INSERT INTO ticket_detail (ticket_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
-            mysqli_query($koneksi,$queryInsert);
-        }
+        // for($i=0; $i<sizeof($data_des); $i++){
+        //     $queryInsert = "INSERT INTO ticket_detail (ticket_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
+        //     mysqli_query($koneksi,$queryInsert);
+        // }
 
         echo "<script>
         alert('Berhasil ditambahkan');

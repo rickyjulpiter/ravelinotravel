@@ -10,7 +10,7 @@
     $nama = $_POST['nama'];
     $deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
     $data_des = $_POST['data_des'];
-    $fasilitas = $_POST['fasilitas'];
+    // $fasilitas = $_POST['fasilitas'];
     
 
     if ($nama_file != '') {
@@ -51,13 +51,13 @@
                         ";
         mysqli_query($koneksi,$queryUpdate);
 
-        $queryDelete = "DELETE FROM ticket_detail WHERE ticket_id = '$id'";
-        mysqli_query($koneksi,$queryDelete);
+        // $queryDelete = "DELETE FROM ticket_detail WHERE ticket_id = '$id'";
+        // mysqli_query($koneksi,$queryDelete);
 
-        for($i=0; $i<sizeof($data_des); $i++){
-            $queryInsert = "INSERT INTO ticket_detail (ticket_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
-            mysqli_query($koneksi,$queryInsert);
-        }
+        // for($i=0; $i<sizeof($data_des); $i++){
+        //     $queryInsert = "INSERT INTO ticket_detail (ticket_id,destinasi_area_id) VALUES ('$id','$data_des[$i]')";
+        //     mysqli_query($koneksi,$queryInsert);
+        // }
 
         echo "<script>
         alert('Berhasil diupdate');

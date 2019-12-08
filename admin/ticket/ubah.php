@@ -108,9 +108,9 @@ while($data = mysqli_fetch_array($query_mysql)){
                                             </div>
                                                <!-- /. tools -->
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="exampleInputPassword1">Fasilitas</label>
-                                            <!-- tools box -->
+                                            
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                                                     <i class="fas fa-minus"></i>
@@ -126,8 +126,8 @@ while($data = mysqli_fetch_array($query_mysql)){
                                                     </textarea>
                                                 </div>
                                             </div>
-                                               <!-- /. tools -->
-                                        </div>
+                                            
+                                        </div> -->
                                         <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
                                             <img id="image-preview" alt="image preview"/><br/>
@@ -148,9 +148,9 @@ while($data = mysqli_fetch_array($query_mysql)){
                                                 
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="exampleInputPassword1">Destinasi Area</label>
-                                            <!-- tools box -->
+
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                                                     <i class="fas fa-minus"></i>
@@ -179,8 +179,8 @@ while($data = mysqli_fetch_array($query_mysql)){
                                                 <?php } ?>
                                                 </div>
                                             </div>
-                                               <!-- /. tools -->
-                                        </div>
+                                            
+                                        </div> -->
                                     </div>
                                     <!-- /.card-body -->
 

@@ -96,7 +96,7 @@ if($_SESSION['status']!="login"){
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Tambah Data Destination</button>
+                                        <button type="submit" class="btn btn-block btn-info">Add New Car</button>
                                     </div>
                                 </form>
                             </div>

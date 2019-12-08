@@ -85,9 +85,8 @@ if($_SESSION['status']!="login"){
                                             </div>
                                                <!-- /. tools -->
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="exampleInputPassword1">Fasilitas</label>
-                                            <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
                                                 <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                                                     <i class="fas fa-minus"></i>
@@ -103,8 +102,7 @@ if($_SESSION['status']!="login"){
                                                     </textarea>
                                                 </div>
                                             </div>
-                                               <!-- /. tools -->
-                                        </div>
+                                        </div> -->
                                         <div class="form-group">
                                             <label for="customFile">Preview Gambar</label>
                                             <img id="image-preview" alt="image preview"/><br/>
@@ -112,7 +110,7 @@ if($_SESSION['status']!="login"){
                                                 <input type="file" class="" name="gambar" id="image-source" onchange="previewImage();">
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="exampleInputPassword1">Destinasi Area</label>
                                             <div class="">
                                                 <?php
@@ -130,7 +128,7 @@ if($_SESSION['status']!="login"){
                                                 <?php } ?>
                                                 <?php } ?>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <!-- /.card-body -->
 
