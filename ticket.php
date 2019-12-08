@@ -9,6 +9,14 @@ function limit_words($string, $word_limit)
 }
 ?>
 <?php include 'template/head.php' ?>
+<style>
+    .ticketStyle {
+        margin-left:10px;
+    }
+    .ticketStyle p {
+        text-align:left;
+    }
+</style>
 
 <body>
 
@@ -79,8 +87,10 @@ function limit_words($string, $word_limit)
                             </div>
                             <div class="destination-content">
                                 <h3><a href="contactus"><?php echo $namaTicket; ?></a></h3>
-                                <p style="text-align: left"><?= $deskripsiTicket; ?></p>
-                                <!-- <p><?php echo limit_words(strip_tags($deskripsiTicket), 20) . "..."; ?></p> -->
+                                <div class="ticketStyle">
+                                    <?= $deskripsiTicket; ?>
+                                </div>
+                                <!-- <p><?php //echo limit_words(strip_tags($deskripsiTicket), 20) . "..."; ?></p> -->
                             </div>
                         </div>
                     </div>
