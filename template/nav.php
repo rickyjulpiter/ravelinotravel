@@ -1,4 +1,4 @@
-    <div class="navigation" style="background: url(images/83.jpg) no-repeat;background-size: cover; padding-bottom: -100px;">
+    <div class="navigation" style="background: url(3040791.jpg) no-repeat;background-size: cover; padding-bottom: -100px;">
         <div class="container" style="">
             <div class="navigation-content">
                 <div class="header_menu">
