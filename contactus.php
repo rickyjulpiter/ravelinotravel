@@ -32,7 +32,7 @@
     </section>
     <!-- BreadCrumb Ends -->
 
-    <section class="contact" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
+    <section class="contact" style="background: url(3040791.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">

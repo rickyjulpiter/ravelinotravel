@@ -41,7 +41,7 @@
     <!-- BreadCrumb Ends -->
 
     <!-- Destinations -->
-    <section class="destinations destination-padding" style="background: url(images/83.jpg) no-repeat;background-size: cover;">
+    <section class="destinations destination-padding" style="background: url(3040791.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="text-center">
