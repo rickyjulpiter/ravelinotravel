@@ -47,7 +47,7 @@ function limit_words($string, $word_limit)
     <!-- BreadCrumb Ends -->
 
     <!-- Destinations -->
-    <section class="destinations destination-padding" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
+    <section class="destinations destination-padding" style="padding-top: 50px; background: url(3040791.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <?php
