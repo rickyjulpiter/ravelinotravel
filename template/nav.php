@@ -1,4 +1,4 @@
-    <div class="navigation" style="background: url(https://ak0.picdn.net/shutterstock/videos/343000/thumb/1.jpg) no-repeat;background-size: cover; padding-bottom: -100px;">
+    <div class="navigation" style="background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/fgCoXl1PAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=) no-repeat;background-size: cover; padding-bottom: -100px;">
         <div class="container" style="">
             <div class="navigation-content">
                 <div class="header_menu">
