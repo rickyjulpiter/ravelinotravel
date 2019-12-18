@@ -28,7 +28,7 @@ function limit_words($string, $word_limit)
     <!-- Slider -->
     <?php include 'slider.php' ?>
 
-    <section class="amazing-tours popular-packages pad-bottom-80" style="padding-top: 50px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/fgCoXl1PAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=) no-repeat;background-size: cover;">
+    <section class="amazing-tours popular-packages pad-bottom-80" style="padding-top: 50px; background: url(3040791.jpg) no-repeat;background-size: cover;">
         <div class="container">
             <div class="text-center">
                 <h2>Tour Destination</h2>
