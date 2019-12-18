@@ -22,7 +22,7 @@ $deskripsiTentang = $tentang['deskripsi'];
     <?php include 'template/nav.php' ?>
     <!-- Navigation Bar Ends -->
     <!-- Breadcrumb -->
-    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background: url(images/bg442.jpg) no-repeat;background-size: cover;">
+    <section class="breadcrumb-outer text-center" style="padding-top: 50px; background-size: cover;">
         <div class="container">
             <div class="breadcrumb-content">
                 <h2>About Us</h2>

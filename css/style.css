@@ -367,6 +367,7 @@ abtn-blue:hover{
 breadcrumb*/
 section.breadcrumb-outer{
   /* background: url(../images/danautosba.jpg) no-repeat; */
+  background-color: lightgray;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
