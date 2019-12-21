@@ -1130,6 +1130,7 @@ section.popular-packages{
 .package-content{
   padding: 25px;
   border-bottom: 1px solid #ddd;
+  height: 640px;
 }
 .package-content h3{
   display: inline-block;
@@ -1183,6 +1184,7 @@ section.popular-packages{
   text-align: center;
   box-shadow: 1px 1px 5px #cccccc57;
   width: 100%;
+  height: 130px;
 }
 .package-price .deal-rating{
   display: inline-block;
