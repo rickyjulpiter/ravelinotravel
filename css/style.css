@@ -6312,3 +6312,31 @@ section#mt_services {
   /* background: #ccc; */
   border-bottom: black 1px solid;
 }
+
+.float {
+  position: fixed;
+  width: 200px;
+  height: 53px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  font-size: 22px;
+}
+
+@media(max-width: 479px){
+  .float{
+    font-size: 15px;
+    width: 150px;
+    height: 45px;
+  }
+}
+
+.my-float {
+  margin-top: 16px;
+}
