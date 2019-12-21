@@ -1130,7 +1130,7 @@ section.popular-packages{
 .package-content{
   padding: 25px;
   border-bottom: 1px solid #ddd;
-  height: 640px;
+  /*height: 640px;*/
 }
 .package-content h3{
   display: inline-block;

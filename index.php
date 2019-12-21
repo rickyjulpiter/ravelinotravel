@@ -93,7 +93,7 @@ function limit_words($string, $word_limit)
                                     <p><?php echo $namaTour; ?></p>
                                 </div>
                             </div>
-                            <div class="package-content">
+                            <div class="package-content" style="height:640px;">
                                 <!--<h3><?php //echo $namaWisata; 
                                             ?></h3>-->
                                 <p><?php echo limit_words(strip_tags($deskripsiTour), 20) . "..."; ?></p>
