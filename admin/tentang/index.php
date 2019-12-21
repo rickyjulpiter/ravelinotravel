@@ -1,4 +1,4 @@
-<?php
+Ω<?php
 include '../../koneksi.php';
 
 session_start();
@@ -98,15 +98,15 @@ if ($_SESSION['status'] != "login") {
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Link Twitter</label>
-                                                <input name="twitter" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['facebook']; ?>">
+                                                <input name="twitter" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['twitter']; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Link Instagram</label>
-                                                <input name="instagram" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['facebook']; ?>">
+                                                <input name="instagram" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['instagram']; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Link Youtube</label>
-                                                <input name="youtube" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['facebook']; ?>">
+                                                <input name="youtube" type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $d['youtube']; ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Deskripsi</label>
