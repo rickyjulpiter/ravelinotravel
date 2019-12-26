@@ -82,13 +82,13 @@ function limit_words($string, $word_limit)
                                 <img src="<?php echo $gambarTicket; ?>" alt="Image" style="height:200px;object-fit:contain;">
                                 <div class="destination-overlay"></div>
                                 <div class="destination-btn">
-                                    <a href="contactus" class="btn-blue btn-red">Contact Us For Further Book</a>
+                                    <a href="ticket-detail?id=<?php echo $idTicket ?>" class="btn-blue btn-red">Ticket Detail</a>
                                 </div>
                             </div>
                             <div class="destination-content">
                                 <h3><a href="contactus"><?php echo $namaTicket; ?></a></h3>
                                 <div class="ticketStyle">
-                                    <?= $deskripsiTicket; ?>
+                                    <?php // echo $deskripsiTicket; ?>
                                 </div>
                                 <!-- <p><?php //echo limit_words(strip_tags($deskripsiTicket), 20) . "..."; ?></p> -->
                             </div>
