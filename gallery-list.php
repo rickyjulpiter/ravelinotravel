@@ -7,6 +7,7 @@ function limit_words($string, $word_limit)
     $words = explode(" ", $string);
     return implode(" ", array_splice($words, 0, $word_limit));
 }
+$idGallery = $_GET['idDestinasi'];
 ?>
 <?php include 'template/head.php' ?>
 
@@ -37,7 +38,7 @@ function limit_words($string, $word_limit)
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Photo Gallery</li>
+                        <li class="breadcrumb-item active" aria-current="page">Photo Gallery List</li>
                     </ul>
                 </nav>
             </div>
@@ -51,7 +52,7 @@ function limit_words($string, $word_limit)
         <div class="container">
             <div class="row">
                 <?php
-                $query = "SELECT DISTINCT(D.nama),D.id, A.gambar FROM galeri A, galeri_detail B, destinasi_area C, destinasi D WHERE A.id = B.galeri_id AND B.destinasi_area_id = C.id_area AND C.destinasi_id = D.id GROUP BY D.id ORDER BY D.id ASC";
+                $query = "SELECT A.id, A.gambar, A.nama, A.deskripsi FROM galeri A, galeri_detail B, destinasi_area C, destinasi D WHERE A.id = B.galeri_id AND B.destinasi_area_id = C.id_area AND C.destinasi_id = D.id AND D.id = '$idGallery'";
                 // echo $query;
                 $query_mysql = mysqli_query($koneksi, $query) or die(mysqli_error());
                 while ($data = mysqli_fetch_array($query_mysql)) {
