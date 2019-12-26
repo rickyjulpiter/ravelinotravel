@@ -77,6 +77,7 @@ else{
                                     $nama = $d['nama'];
                                     $deskripsi = $d['deskripsi'];
                                     $deskripsi_singkat = $d['deskripsi_singkat'];
+                                    $prioritas = $d['prioritas'];
                                     // $gambar = $d['gambar'];
                                     ?>
                                     <div class="card-body">
@@ -124,6 +125,10 @@ else{
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Prioritas</label>
+                                            <input name="prioritas" type="number" class="form-control" id="prioritas" value='<?= $prioritas;?>'>
                                         </div>
                                         <div class="form-group">
                                             <div>

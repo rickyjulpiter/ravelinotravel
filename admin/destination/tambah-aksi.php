@@ -7,8 +7,9 @@
     $images = $_FILES["gambar"]["name"];
     $lokasi_file= $_FILES['gambar']['tmp_name'];
     // $folder = "../../images/".$nama."-".$nama_file;
+    $prioritas = $_POST['prioritas'];
 
-    $queryInsert = "INSERT INTO destinasi (nama,deskripsi,deskripsi_singkat) VALUES ('$nama','$deskripsi','$deskripsi_singkat')";
+    $queryInsert = "INSERT INTO destinasi (nama,deskripsi,deskripsi_singkat,prioritas) VALUES ('$nama','$deskripsi','$deskripsi_singkat','$prioritas')";
     $proses = mysqli_query($koneksi,$queryInsert);
     if($proses){
         $queryCheckMax = mysqli_query($koneksi,"SELECT MAX(id) FROM destinasi");

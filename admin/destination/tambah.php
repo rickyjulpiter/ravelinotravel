@@ -111,6 +111,10 @@ if($_SESSION['status']!="login"){
                                                <!-- /. tools -->
                                         </div>
                                         <div class="form-group">
+                                            <label for="exampleInputEmail1">Prioritas</label>
+                                            <input name="prioritas" type="number" class="form-control" id="prioritas">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="exampleInputPassword1">Gambar</label>
                                             <!-- tools box -->
                                             <div class="card-tools" style="margin-top: -22px;">
