@@ -63,7 +63,7 @@ $id_ticket = $_GET['id'];
                         <br>
                         <div class="description detail-box">
                             <div class="detail-title">
-                                <h3>Description</h3>
+                                <h3>Flight route</h3>
                             </div>
                             <?php echo $deskripsiTicket; ?>
                         </div>

@@ -63,7 +63,7 @@
                                 <img src="<?php echo $gambarRent; ?>" alt="Image" style="height: 200px;object-fit:cover">
                                 <div class="destination-overlay"></div>
                                 <div class="destination-btn">
-                                    <a href="contactus" class="btn-blue btn-red">Contact Us For Further Book</a>
+                                    <a href="contactus" class="btn-blue btn-red">Contact us for reservation or further information.</a>
                                 </div>
                             </div>
                             <div class="destination-content">
