@@ -58,7 +58,7 @@ $id_ticket = $_GET['id'];
                 <div id="content" class="col-md-8">
                     <div class="detail-content content-wrapper">
                         <div>
-                            <img src="<?php echo $gambarTicket; ?>" style="height:100%; width:100%; background-color:white">
+                            <img src="<?php echo $gambarTicket; ?>" style="height:100%;width:100%;background-color: white;">
                         </div>
                         <br>
                         <div class="description detail-box">
