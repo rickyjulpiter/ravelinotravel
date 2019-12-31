@@ -76,6 +76,7 @@ else{
                                     $idDestinasiArea = $d['id_area'];
                                     $nama = $d['nama_area'];
                                     $deskripsi = $d['deskripsi_area'];
+                                    $prioritas = $d['prioritas'];
                                     $deskripsi_singkat = $d['deskripsi_area_singkat'];
                                     $gambar = $d['gambar_area'];
                                     $idDestinasi = $d['destinasi_id'];
@@ -125,6 +126,10 @@ else{
                                                 </div>
                                             </div>
                                                <!-- /. tools -->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Prioritas</label>
+                                            <input name="prioritas" type="number" class="form-control" id="prioritas" value='<?= $prioritas;?>'>
                                         </div>
                                         <div class="form-group">
                                             <div>
