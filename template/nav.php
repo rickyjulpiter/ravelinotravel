@@ -31,7 +31,7 @@
                                                 <a href="destination-detail?destination=<?php echo $namaDestinasi; ?>"><?php echo $namaDestinasi; ?> <i class="arrow-indicator fa fa-angle-right"></i></a>
                                                 <ul style="display: none;">
                                                     <?php
-                                                        $query_area_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi_area WHERE destinasi_id = '$idDestinasi'") or die(mysqli_error());
+                                                        $query_area_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi_area WHERE destinasi_id = '$idDestinasi' ORDER BY prioritas ASC") or die(mysqli_error());
                                                         while ($area = mysqli_fetch_array($query_area_destinasi)) {
                                                             $namaDestinasiArea = $area['nama_area'];
                                                             ?>
