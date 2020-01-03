@@ -18,4 +18,3 @@ $koneksi = mysqli_connect($svr_name,$user,$password,$dbname);
 if (mysqli_connect_errno()){
 	echo "Koneksi database gagal : " . mysqli_connect_error();
 }
-?>

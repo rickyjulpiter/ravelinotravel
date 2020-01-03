@@ -26,15 +26,15 @@
                                         while ($data = mysqli_fetch_array($query_destinasi)) {
                                             $idDestinasi = $data['id'];
                                             $namaDestinasi = $data['nama'];
-                                            ?>
+                                        ?>
                                             <li>
                                                 <a href="destination-detail?destination=<?php echo $namaDestinasi; ?>"><?php echo $namaDestinasi; ?> <i class="arrow-indicator fa fa-angle-right"></i></a>
                                                 <ul style="display: none;">
                                                     <?php
-                                                        $query_area_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi_area WHERE destinasi_id = '$idDestinasi' ORDER BY prioritas ASC") or die(mysqli_error());
-                                                        while ($area = mysqli_fetch_array($query_area_destinasi)) {
-                                                            $namaDestinasiArea = $area['nama_area'];
-                                                            ?>
+                                                    $query_area_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi_area WHERE destinasi_id = '$idDestinasi' ORDER BY prioritas ASC") or die(mysqli_error());
+                                                    while ($area = mysqli_fetch_array($query_area_destinasi)) {
+                                                        $namaDestinasiArea = $area['nama_area'];
+                                                    ?>
                                                         <li><a href="destination-area-detail?destination=<?php echo $namaDestinasiArea; ?>"><?php echo $namaDestinasiArea; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
@@ -51,7 +51,7 @@
                                         while ($data = mysqli_fetch_array($query_destinasi)) {
                                             $idDestinasi = $data['id'];
                                             $namaDestinasi = $data['nama'];
-                                            ?>
+                                        ?>
                                             <li>
                                                 <a href="tour-list?name=<?= $namaDestinasi ?>"><?= $namaDestinasi ?></a>
                                             </li>
@@ -60,7 +60,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#" style="font-size: 12px;">Services</a>
+                                    <a href="#" style="font-size: 12px;">Ticketing & Car Rentral</a>
                                     <ul style="display: none;">
                                         <li> <a href="ticket">Ticketing</a></li>
                                         <li> <a href="rent">Car Rental</a></li>
