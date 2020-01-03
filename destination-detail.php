@@ -138,11 +138,11 @@ $namaWisata = $_GET['destination'];
                     <aside class="detail-sidebar sidebar-wrapper">
                         <div class="sidebar-item">
                             <div class="detail-title">
-                                <h3><?php echo $namaDestinasi; ?> Packages</h3>
+                                <h3>Popular Tour Packages</h3>
                             </div>
                             <div class="sidebar-content sidebar-slider">
                                 <?php
-                                $query_mysql = mysqli_query($koneksi, "SELECT * FROM (SELECT DISTINCT(A.id), A.nama AS nama, A.deskripsi AS deskripsi, B.gambar, E.nama AS destinasi FROM paket_wisata A, paket_wisata_gambar B, paket_wisata_detail C, destinasi_area D, destinasi E WHERE A.id = B.paket_wisata_id AND C.paket_wisata_id = A.id AND C.destinasi_area_id = D.id_area AND D.destinasi_id = E.id AND E.nama = '$namaDestinasi' ) AS tabel GROUP BY id") or die(mysqli_error());
+                                $query_mysql = mysqli_query($koneksi, "SELECT * FROM (SELECT DISTINCT(pw.id),pw.nama AS nama,pw.deskripsi AS deskripsi,pwg.gambar FROM paket_wisata AS pw INNER JOIN paket_wisata_gambar AS pwg ON pw.id = pwg.paket_wisata_id) AS tabel GROUP BY id") or die(mysqli_error());
                                 while ($data = mysqli_fetch_array($query_mysql)) {
                                     //$id = $data['id'];
                                     $namaTour = $data['nama'];
@@ -151,10 +151,10 @@ $namaWisata = $_GET['destination'];
                                 ?>
                                     <div class="sidebar-package">
                                         <div class="sidebar-package-image">
-                                            <img src="<?php echo $gambarTour; ?>" alt="Images" style="height:200px;background-size: cover;">
+                                            <img src="<?php echo $gambarTour; ?>" alt="Images" height="250px">
                                         </div>
                                         <div class="destination-content sidebar-package-content">
-                                            <h4><a href="tour?tourID=<?php echo $data['id']; ?>"><?php echo $namaTour; ?></a></h4>
+                                            <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>
                                             <a href="tour?tourID=<?php echo $data['id']; ?>" class="btn-blue btn-red">Tour Detail</a>
                                         </div>
                                     </div>
