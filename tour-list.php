@@ -75,7 +75,7 @@ $idList = $data['id'];
                             $namaPaket = $area['nama'];
                             $deskripsiPaket = $area['deskripsi'];
                             $gambarPaket = $area['gambar'];
-                            ?>
+                        ?>
                             <!-- <li><a href="tour?tourName=<?= $namaPaket; ?>"><?= $namaPaket ?></a></li> -->
                             <div class="destination-fw-item">
                                 <div class="row">
@@ -114,10 +114,10 @@ $idList = $data['id'];
                                     $namaTour = $data['nama'];
                                     $deskripsiTour = $data['deskripsi'];
                                     $gambarTour = $data['gambar'];
-                                    ?>
+                                ?>
                                     <div class="sidebar-package">
                                         <div class="sidebar-package-image">
-                                            <img src="<?php echo $gambarTour; ?>" alt="Images">
+                                            <img src="<?php echo $gambarTour; ?>" alt="Images" height="200px" style=" object-fit: cover;">
                                         </div>
                                         <div class="destination-content sidebar-package-content">
                                             <h4><a href="tour?tourName=<?php echo $namaTour; ?>"><?php echo $namaTour; ?></a></h4>

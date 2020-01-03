@@ -22,7 +22,7 @@
                                     <a href="#" style="font-size: 12px;">Destination <i class="fa fa-angle-down"></i></a>
                                     <ul style="display: none;" class="dropdownUL">
                                         <?php
-                                        $query_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi ORDER BY prioritas DESC") or die(mysqli_error());
+                                        $query_destinasi = mysqli_query($koneksi, "SELECT * FROM destinasi ORDER BY prioritas ASC") or die(mysqli_error());
                                         while ($data = mysqli_fetch_array($query_destinasi)) {
                                             $idDestinasi = $data['id'];
                                             $namaDestinasi = $data['nama'];
