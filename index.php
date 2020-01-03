@@ -48,7 +48,7 @@ function limit_words($string, $word_limit)
             </div>
             <div class="row">
                 <?php
-                $query_mysql = mysqli_query($koneksi, "SELECT A.id, A.nama,A.deskripsi, A.deskripsi_singkat, A.prioritas, B.gambar FROM destinasi A, destinasi_gambar B WHERE A.id = B.destinasi_id LIMIT 6") or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi, "SELECT A.id, A.nama,A.deskripsi, A.deskripsi_singkat, A.prioritas, B.gambar FROM destinasi A, destinasi_gambar B WHERE A.id = B.destinasi_id ORDER BY A.prioritas ASC LIMIT 6") or die(mysqli_error());
                 while ($data = mysqli_fetch_array($query_mysql)) {
                     $idDestinasi = $data['id'];
                     $namaDestinasi = $data['nama'];
