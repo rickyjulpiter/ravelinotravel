@@ -12,7 +12,7 @@ function limit_words($string, $word_limit)
 
 <body>
     <?php
-    $queryTentang = mysqli_query($koneksi,"SELECT * FROM tentang WHERE id = 1")or die(mysqli_error());
+    $queryTentang = mysqli_query($koneksi, "SELECT * FROM tentang WHERE id = 1") or die(mysqli_error());
     $tentang = mysqli_fetch_assoc($queryTentang);
     $whatsapp = $tentang['whatsapp'];
     ?>
@@ -48,13 +48,13 @@ function limit_words($string, $word_limit)
             </div>
             <div class="row">
                 <?php
-                $query_mysql = mysqli_query($koneksi, "SELECT * FROM destinasi LIMIT 6") or die(mysqli_error());
+                $query_mysql = mysqli_query($koneksi, "SELECT A.id, A.nama,A.deskripsi, A.deskripsi_singkat, A.prioritas, B.gambar FROM destinasi A, destinasi_gambar B WHERE A.id = B.destinasi_id LIMIT 6") or die(mysqli_error());
                 while ($data = mysqli_fetch_array($query_mysql)) {
                     $idDestinasi = $data['id'];
                     $namaDestinasi = $data['nama'];
                     $deskripsiDestinasi = $data['deskripsi'];
                     $gambarDestinasi = $data['gambar'];
-                    ?>
+                ?>
                     <a href="destination-detail?destination=<?php echo $namaDestinasi; ?>">
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="package-item">
@@ -92,7 +92,7 @@ function limit_words($string, $word_limit)
                     $namaTour = $data['nama'];
                     $deskripsiTour = $data['deskripsi'];
                     $gambarTour = $data['gambar'];
-                    ?>
+                ?>
                     <div class="col-sm-4">
                         <div class="package-item">
                             <div class="package-image">
@@ -103,7 +103,7 @@ function limit_words($string, $word_limit)
                             </div>
                             <div class="package-content" style="height:640px;">
                                 <!--<h3><?php //echo $namaWisata; 
-                                            ?></h3>-->
+                                        ?></h3>-->
                                 <p><?php echo limit_words(strip_tags($deskripsiTour), 20) . "..."; ?></p>
                                 <div class="package-info">
                                     <a href="tour?tourID=<?php echo $data['id']; ?>" class="btn-blue btn-red">Tour Detail</a>
@@ -127,7 +127,7 @@ function limit_words($string, $word_limit)
                     $namaPartner = $data['nama'];
                     $link = $data['link'];
                     $gambarPartner = $data['gambar'];
-                    ?>
+                ?>
                     <!--<a href="<?= $link ?>">-->
                     <a target="_blank" href="http://<?= $link ?>">
                         <div class="col-md-3" style="margin-bottom:10px;">

@@ -77,7 +77,7 @@ $namaWisata = $_GET['destination'];
                                     $query_mysql = mysqli_query($koneksi, "SELECT dg.gambar FROM destinasi_gambar AS dg INNER JOIN destinasi AS d ON dg.destinasi_id = d.id WHERE d.nama = '$namaDestinasi' ") or die(mysqli_error());
                                     while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
-                                        ?>
+                                    ?>
                                         <li data-target="#in_th_030" data-slide-to="<?= $i ?>" class="<?php if ($i == 0) echo 'active' ?>">
                                             <!-- 1st Indicator Image -->
                                             <img src="<?= $gambar ?>" alt="in_th_030_01_sm" style="width:100px; height:100px;background-size: cover;" />
@@ -94,7 +94,7 @@ $namaWisata = $_GET['destination'];
                                     $query_mysql = mysqli_query($koneksi, "SELECT dg.gambar FROM destinasi_gambar AS dg INNER JOIN destinasi AS d ON dg.destinasi_id = d.id WHERE d.nama = '$namaDestinasi' ") or die(mysqli_error());
                                     while ($data = mysqli_fetch_array($query_mysql)) {
                                         $gambar = $data['gambar'];
-                                        ?>
+                                    ?>
                                         <div class="item <?php if ($i == 0) echo "active" ?>">
                                             <!-- Slide Background -->
                                             <img src="<?= $gambar ?>" alt="in_th_030_01" style="width:100%;" />
@@ -108,6 +108,29 @@ $namaWisata = $_GET['destination'];
                         </div>
                         <div class="item-detail">
                             <?php echo ($deskripsiDestinasi); ?>
+                        </div>
+
+                        <!-- destinasi area -->
+                        <div class="row">
+                            <?php
+                            $query_mysql = mysqli_query($koneksi, "SELECT B.id_area, B.nama_area, B.deskripsi_area, B.deskripsi_area_singkat, B.prioritas, C.gambar FROM destinasi A, destinasi_area B, destinasi_area_gambar C WHERE A.id = B.destinasi_id AND B.id_area = C.destinasi_area_id AND A.nama = '$namaWisata' GROUP BY B.nama_area ORDER BY B.prioritas ASC") or die(mysqli_error());
+                            while ($data = mysqli_fetch_array($query_mysql)) {
+                                $idDestinasi = $data['id_area'];
+                                $namaDestinasi = $data['nama_area'];
+                                $deskripsiDestinasi = $data['deskripsi_area'];
+                                $gambarDestinasi = $data['gambar'];
+                            ?>
+                                <a href="destination-area-detail?destination=<?php echo $namaDestinasi; ?>">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="package-item">
+                                            <img src="<?php echo $gambarDestinasi ?>" alt="Image" height="200px" style="object-fit: cover;">
+                                            <div class="package-content" style="padding:10px;height:120px;">
+                                                <h2 style="text-align: center;"><a href="destination-area-detail?destination=<?php echo $namaDestinasi; ?>" style="font-size:20px;color: green; text-align: center;"><?php echo $namaDestinasi ?></a></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -125,7 +148,7 @@ $namaWisata = $_GET['destination'];
                                     $namaTour = $data['nama'];
                                     $deskripsiTour = $data['deskripsi'];
                                     $gambarTour = $data['gambar'];
-                                    ?>
+                                ?>
                                     <div class="sidebar-package">
                                         <div class="sidebar-package-image">
                                             <img src="<?php echo $gambarTour; ?>" alt="Images" style="height:200px;background-size: cover;">
