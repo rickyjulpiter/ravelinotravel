@@ -59,7 +59,7 @@ function limit_words($string, $word_limit)
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="package-item">
                                 <img src="<?php echo $gambarDestinasi ?>" alt="Image" width="100%" height="100%" style="object-fit: cover;">
-                                <div class="package-content" style="padding-bottom: 5px;">
+                                <div class="package-content" style="padding-bottom: 5px;height:125px">
                                     <center>
                                         <h2 style="text-align: center;"><a href="destination-detail?destination=<?php echo $namaDestinasi; ?>" style="color: green; text-align: center;"><?php echo $namaDestinasi ?></a></h2>
                                     </center>
