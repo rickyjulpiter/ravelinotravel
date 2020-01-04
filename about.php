@@ -46,7 +46,7 @@ $staticImage = $tentang['static_image'];
                     <div id="contact-form" class="contact-form">
 
                         <div id="contactform-error-msg"></div>
-                        <img src="<?= $staticImage ?>" style="padding-bottom: 15px;">
+                        <img src="<?= $staticImage ?>" style="padding-bottom: 15px;height:400px;width:650px;object-fit:contain">
                         <?php echo ($deskripsiTentang); ?>
                     </div>
                 </div>
