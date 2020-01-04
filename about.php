@@ -45,32 +45,8 @@ $deskripsiTentang = $tentang['deskripsi'];
                     <div id="contact-form" class="contact-form">
 
                         <div id="contactform-error-msg"></div>
+                        <img src="https://www.kirbor.com/wp-content/uploads/2018/11/image-placeholder.jpg" style="padding-bottom: 15px;">
                         <?php echo ($deskripsiTentang); ?>
-                        <!--<form method="post" action="kirim-pesan">
-                            <div class="row">
-                                <div class="form-group col-xs-12">
-                                    <label>Name:</label>
-                                    <input type="text" name="nama" class="form-control" id="Name" placeholder="Enter full name" required>
-                                </div>
-                                <div class="form-group col-xs-6">
-                                    <label>Email:</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="abc@xyz.com" required>
-                                </div>
-                                <div class="form-group col-xs-6 col-left-padding">
-                                    <label>Phone Number:</label>
-                                    <input type="text" name="telepon" class="form-control" id="phnumber" placeholder="XXXX-XXXXXX" required>
-                                </div>
-                                <div class="textarea col-xs-12">
-                                    <label>Message:</label>
-                                    <textarea name="pesan" placeholder="Enter a message" required></textarea>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="comment-btn">
-                                         <input type="submit" class="btn-blue btn-red" id="submit" value="Send Message">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>-->
                     </div>
                 </div>
                 <div class="col-md-4">
