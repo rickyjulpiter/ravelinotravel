@@ -13,6 +13,12 @@ if ($_SESSION['status'] != "login") {
         width: 293px;
         height: 195px;
     }
+
+    #image-preview1 {
+        display: none;
+        width: 293px;
+        height: 195px;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -65,7 +71,7 @@ if ($_SESSION['status'] != "login") {
                                     while ($d = mysqli_fetch_array($data)) {
                                         //echo $d['nama_wisata'];
                                         //echo $d['deskripsi_wisata'];
-                                        ?>
+                                    ?>
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Nama</label>
@@ -135,18 +141,36 @@ if ($_SESSION['status'] != "login") {
                                                 </div>
                                                 <div>
                                                     <?php
-                                                        if ($d['logo'] == '') {
-                                                            $tampakGambar = 'display:none;';
-                                                        } else {
-                                                            echo "<label>Logo Perusahaan Saat Ini</label><br>";
-                                                            //$tampakGambar = '';
-                                                        }
-                                                        ?>
+                                                    if ($d['logo'] == '') {
+                                                        $tampakGambar = 'display:none;';
+                                                    } else {
+                                                        echo "<label>Logo Perusahaan Saat Ini</label><br>";
+                                                        //$tampakGambar = '';
+                                                    }
+                                                    ?>
                                                     <img src="<?php echo "../../" . $d['logo']; ?>" width="30%" style="<?php echo ($tampakGambar); ?>">
-
-
                                                 </div>
                                             </div>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label for="customFile">Preview Static Image</label>
+                                                <img id="image-preview1" alt="image preview1" /><br />
+                                                <div class="custom-file">
+                                                    <input type="file" class="" name="static_image" id="image-source1" onchange="previewImage1();">
+                                                </div>
+                                                <div>
+                                                    <?php
+                                                    if ($d['static_image'] == '') {
+                                                        $tampakGambar = 'display:none;';
+                                                    } else {
+                                                        echo "<label>Static image saat ini</label><br>";
+                                                        //$tampakGambar = '';
+                                                    }
+                                                    ?>
+                                                    <img src="<?php echo "../../" . $d['static_image']; ?>" width="30%" style="<?php echo ($tampakGambar); ?>">
+                                                </div>
+                                            </div>
+
                                         </div>
                                     <?php } ?>
                                     <!-- /.card-body -->
@@ -197,6 +221,16 @@ if ($_SESSION['status'] != "login") {
 
             oFReader.onload = function(oFREvent) {
                 document.getElementById("image-preview").src = oFREvent.target.result;
+            };
+        };
+
+        function previewImage1() {
+            document.getElementById("image-preview1").style.display = "block";
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("image-source1").files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                document.getElementById("image-preview1").src = oFREvent.target.result;
             };
         };
     </script>

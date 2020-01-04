@@ -6,6 +6,7 @@ $queryTentang = mysqli_query($koneksi, "SELECT * FROM tentang WHERE id = 1") or 
 $tentang = mysqli_fetch_assoc($queryTentang);
 $namaTentang = $tentang['nama'];
 $deskripsiTentang = $tentang['deskripsi'];
+$staticImage = $tentang['static_image'];
 ?>
 <?php include 'template/head.php' ?>
 
@@ -45,7 +46,7 @@ $deskripsiTentang = $tentang['deskripsi'];
                     <div id="contact-form" class="contact-form">
 
                         <div id="contactform-error-msg"></div>
-                        <img src="https://www.kirbor.com/wp-content/uploads/2018/11/image-placeholder.jpg" style="padding-bottom: 15px;">
+                        <img src="<?= $staticImage ?>" style="padding-bottom: 15px;">
                         <?php echo ($deskripsiTentang); ?>
                     </div>
                 </div>
