@@ -65,6 +65,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="../news" class="nav-link">
+              <i class="nav-icon fa fa-info"></i>
+              <p style="color: white">
+                News & Event
+              </p>
+            </a>
+          </li>
           <!-- <li class="nav-item">
             <a href="../request" class="nav-link">
               <i class="nav-icon fa fa-sticky-note"></i>

@@ -18,7 +18,7 @@
                                 <li>
                                     <a href="about" style="font-size: 12px;">About</a>
                                     <ul>
-                                        <li><a href="index" style="font-size: 12px;">News & Event</a></li>
+                                        <li><a href="news" style="font-size: 12px;">News & Event</a></li>
                                     </ul>
                                 </li>
                                 <li>
