@@ -17,6 +17,9 @@
                                 </li>
                                 <li>
                                     <a href="about" style="font-size: 12px;">About</a>
+                                    <ul>
+                                        <li><a href="index" style="font-size: 12px;">News & Event</a></li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#" style="font-size: 12px;">Destination <i class="fa fa-angle-down"></i></a>
@@ -74,8 +77,11 @@
                                     <a href="contactus" style="font-size: 12px;">Contact</a>
                                 </li>
                                 <li>
-                                    <a href="request" style="font-size: 12px;">Special Request</a>
+                                    <a href="request" style="font-size: 12px;">Customize Your Trip</a>
                                 </li>
+                                <!--<li>-->
+                                <!--    <a href="request" style="font-size: 12px;">News & Event</a>-->
+                                <!--</li>-->
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
