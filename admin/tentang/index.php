@@ -208,7 +208,8 @@ if ($_SESSION['status'] != "login") {
                     ['fontsize', ['fontsize']],
                     ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']]
+                    ['height', ['height']],
+                    ['view', ['fullscreen', 'codeview']]
                 ]
             });
         })
