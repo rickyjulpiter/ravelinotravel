@@ -5,8 +5,8 @@ $lokasi_file = $_FILES['gambar']['tmp_name'];
 $nama_file = $_FILES['gambar']['name'];
 
 $id = $_POST['id'];
-$nama = $_POST['nama'];
-$deskripsi = $_POST['deskripsi'];
+$nama = mysqli_escape_string($koneksi,$_POST['nama']);
+$deskripsi = mysqli_escape_string($koneksi,$_POST['deskripsi']);
 
 $folder = "../../images/" . $nama . "$nama_file";
 $save = 'images/' . $nama . $nama_file;
@@ -34,10 +34,11 @@ if ($nama_file != '') {
                         WHERE id = '$id'
                         ";
     mysqli_query($koneksi, $queryUpdate);
-    echo "<script>
-        alert('Berhasil diupdate');
-        window.location.href='index';
-        </script>";
+    echo $queryUpdate;
+    // echo "<script>
+    //     alert('Berhasil diupdate');
+    //     window.location.href='index';
+    //     </script>";
     // echo $queryUpdate;
     //header("location:jenis-paket");
 } else {

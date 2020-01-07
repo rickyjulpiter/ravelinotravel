@@ -60,13 +60,13 @@
                     <div class="col-md-4 col-sm-4">
                         <div class="destination-item destination-4-col">
                             <div class="destination-image">
-                                <img src="<?php echo $gambar; ?>" alt="Image" style="height: 200px;object-fit:cover">
+                                <img src="<?php echo $gambar; ?>" alt="Image" style="height: 200px;object-fit:contain">
                                 <div class="destination-overlay"></div>
                                 <div class="destination-btn">
                                     <a href="news-detail?id=<?= $id ?>" class="btn-blue btn-red">News & Event Detail</a>
                                 </div>
                             </div>
-                            <div class="destination-content">
+                            <div class="destination-content" style ="height:150px;">
                                 <h3><a href="#"><?php echo $nama; ?></a></h3>
                                 <!-- <p><?php echo $deskripsi; ?></p> -->
                             </div>

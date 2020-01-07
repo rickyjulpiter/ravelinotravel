@@ -95,7 +95,7 @@ if ($_SESSION['status'] != "login") {
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-block btn-info">Add Partner</button>
+                                        <button type="submit" class="btn btn-block btn-info">Add News & Event</button>
                                     </div>
                                 </form>
                             </div>

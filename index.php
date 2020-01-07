@@ -142,23 +142,23 @@ function limit_words($string, $word_limit)
             <div class="section-title text-center">
                 <h2>News & Event</h2>
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-12 col-sm-12">
                 <div class="blog-wrapper">
                     <div class="row">
                         <?php
-                        $query_mysql = mysqli_query($koneksi, "SELECT * FROM news") or die(mysqli_error());
+                        $query_mysql = mysqli_query($koneksi, "SELECT * FROM news ORDER BY id DESC LIMIT 4") or die(mysqli_error());
                         while ($data = mysqli_fetch_array($query_mysql)) {
                             $id = $data['id'];
                             $nama = $data['nama'];
                             $deskripsi = $data['deskripsi'];
                             $gambar = $data['gambar'];
                         ?>
-                            <div class="col-sm-6 col-xs-12">
+                            <div class="col-sm-3 col-xs-12">
                                 <div class="blog-item">
-                                    <div class="blog-image">
-                                        <img src="<?= $gambar ?>" alt="Image" height="200px;" style="object-fit: cover">
+                                    <div class="blog-image" style="background-color:white">
+                                        <img src="<?= $gambar ?>" alt="Image" style="width:240px; height:120px;object-fit: contain;background-color:white">
                                     </div>
-                                    <div class="blog-content">
+                                    <div class="blog-content" style="height:250px">
                                         <h5>
                                             <a href="news-detail?id=<?= $id ?>"><?php echo limit_words(strip_tags(trim($deskripsi)), 20) . "..."; ?></p>
                                                 <div class="blog-date">
